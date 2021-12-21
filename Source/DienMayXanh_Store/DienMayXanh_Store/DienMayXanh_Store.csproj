@@ -135,6 +135,18 @@
   <ItemGroup>
     <None Include="Resources\show1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonLogin-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitLogin-hover.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

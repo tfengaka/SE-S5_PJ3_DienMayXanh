@@ -12,30 +12,39 @@ namespace DienMayXanh_Store
 {
     public partial class FormLogin : Form
     {
+        private bool isShowPassword = false;
         private Bitmap hide = global::DienMayXanh_Store.Properties.Resources.hide;
         private Bitmap show = global::DienMayXanh_Store.Properties.Resources.show;
         public FormLogin()
         {
             InitializeComponent();
+            txbPassword.UseSystemPasswordChar = true;
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
+        private void showPassword(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtPassword_IconRightClick(object sender, EventArgs e)
-        {
-            if (txtPassword.IconRight.Equals(show))
+            if (isShowPassword)
             {
-                txtPassword.UseSystemPasswordChar = false;
-                txtPassword.IconRight = hide;
+                txbPassword.UseSystemPasswordChar = true;
+                isShowPassword = false;
+                txbPassword.IconRight = hide;
             }
             else
             {
-                txtPassword.UseSystemPasswordChar = true;
-                txtPassword.IconRight = show;
+                txbPassword.UseSystemPasswordChar = false;
+                isShowPassword = true;
+                txbPassword.IconRight = show;
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đang Đăng Nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
