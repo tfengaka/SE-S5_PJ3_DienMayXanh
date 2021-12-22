@@ -10,19 +10,19 @@ namespace DienMayXanh_Store.Models
     public partial class ACCOUNT
     {
         [Key]
-        [StringLength(1)]
+        [StringLength(30)]
         public string StaffID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string LoginName { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string Password { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string Permission { get; set; }
 
         public virtual STAFF STAFF { get; set; }

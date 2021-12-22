@@ -15,19 +15,18 @@ namespace DienMayXanh_Store.Models
             RECIEPTs = new HashSet<RECIEPT>();
         }
 
-        [StringLength(1)]
+        [StringLength(30)]
         public string CustomerID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string Name { get; set; }
 
         [Required]
-        [StringLength(1)]
         public string Address { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(10)]
         public string Phone { get; set; }
 
         public bool Gender { get; set; }

@@ -17,19 +17,19 @@ namespace DienMayXanh_Store.Models
             PRODUCTAVAILABLEs = new HashSet<PRODUCTAVAILABLE>();
         }
 
-        [StringLength(1)]
+        [StringLength(30)]
         public string ProductID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string BrandID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string CategoryID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string Name { get; set; }
 
         public decimal Price { get; set; }

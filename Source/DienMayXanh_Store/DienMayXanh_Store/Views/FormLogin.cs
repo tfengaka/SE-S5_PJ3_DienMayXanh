@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DienMayXanh_Store.Models;
+using DienMayXanh_Store.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +14,17 @@ namespace DienMayXanh_Store
 {
     public partial class FormLogin : Form
     {
+        public static FormLogin instance;
+        public STAFF info = null;
+
+        private ContextDB context = Program.context;
         private bool isShowPassword = false;
         private Bitmap hide = global::DienMayXanh_Store.Properties.Resources.hide;
         private Bitmap show = global::DienMayXanh_Store.Properties.Resources.show;
         public FormLogin()
         {
             InitializeComponent();
+            instance = this;
             txbPassword.UseSystemPasswordChar = true;
         }
 
@@ -44,7 +51,28 @@ namespace DienMayXanh_Store
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Đang Đăng Nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (txbLoginName.Text.Equals("") || txbPassword.Text.Equals(""))
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else if (!checkLogin())
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                new FormMenu().Show();
+                this.Visible = false;
+            }    
+        }
+
+        private bool checkLogin()
+        {
+            ACCOUNT getAccount = context.ACCOUNTS
+                .FirstOrDefault(x => x.LoginName.Equals(txbLoginName.Text)
+                && x.Password.Equals(txbPassword.Text));
+            if (getAccount != null)
+            {
+                info = getAccount.STAFF;
+                return true;
+            }
+            return false;
         }
     }
 }

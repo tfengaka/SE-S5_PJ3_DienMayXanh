@@ -15,15 +15,14 @@ namespace DienMayXanh_Store.Models
             PRODUCTs = new HashSet<PRODUCT>();
         }
 
-        [StringLength(1)]
+        [StringLength(30)]
         public string BrandID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string Name { get; set; }
 
         [Required]
-        [StringLength(1)]
         public string Address { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

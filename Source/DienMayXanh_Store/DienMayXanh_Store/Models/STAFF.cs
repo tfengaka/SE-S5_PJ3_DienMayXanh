@@ -16,25 +16,24 @@ namespace DienMayXanh_Store.Models
             RECIEPTs = new HashSet<RECIEPT>();
         }
 
-        [StringLength(1)]
+        [StringLength(30)]
         public string StaffID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string Name { get; set; }
 
         [Required]
-        [StringLength(1)]
         public string Address { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(10)]
         public string Phone { get; set; }
 
         public bool Gender { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string Position { get; set; }
 
         public virtual ACCOUNT ACCOUNT { get; set; }
@@ -44,9 +43,5 @@ namespace DienMayXanh_Store.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RECIEPT> RECIEPTs { get; set; }
-
-        public virtual STAFF STAFF1 { get; set; }
-
-        public virtual STAFF STAFF2 { get; set; }
     }
 }

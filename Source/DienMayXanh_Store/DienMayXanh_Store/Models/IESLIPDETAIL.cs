@@ -11,12 +11,12 @@ namespace DienMayXanh_Store.Models
     {
         [Key]
         [Column(Order = 0)]
-        [StringLength(1)]
+        [StringLength(30)]
         public string IESlipID { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [StringLength(1)]
+        [StringLength(30)]
         public string ProductID { get; set; }
 
         [Column(TypeName = "numeric")]

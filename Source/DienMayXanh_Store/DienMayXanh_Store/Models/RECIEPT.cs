@@ -15,19 +15,19 @@ namespace DienMayXanh_Store.Models
             CARTITEMs = new HashSet<CARTITEM>();
         }
 
-        [StringLength(1)]
+        [StringLength(30)]
         public string RecieptID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string CustomerID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string StaffID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string PaymentMethod { get; set; }
 
         public DateTime CreateAt { get; set; }

@@ -113,3 +113,4 @@ D:\Code\Cshaps\Project\STS5-PJ3\STS5-PJ3-DienMayXanh\Source\DienMayXanh_Store\Di
 D:\Code\Cshaps\Project\STS5-PJ3\STS5-PJ3-DienMayXanh\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.csproj.CopyComplete
 D:\Code\Cshaps\Project\STS5-PJ3\STS5-PJ3-DienMayXanh\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.exe
 D:\Code\Cshaps\Project\STS5-PJ3\STS5-PJ3-DienMayXanh\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.pdb
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormMenu.resources

@@ -15,7 +15,7 @@ namespace DienMayXanh_Store.Models
             IESLIPDETAILs = new HashSet<IESLIPDETAIL>();
         }
 
-        [StringLength(1)]
+        [StringLength(30)]
         public string IESlipID { get; set; }
 
         public DateTime CreateAt { get; set; }
@@ -23,11 +23,11 @@ namespace DienMayXanh_Store.Models
         public decimal TotalPrice { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string StaffID { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(30)]
         public string WarehouseID { get; set; }
 
         public virtual STAFF STAFF { get; set; }

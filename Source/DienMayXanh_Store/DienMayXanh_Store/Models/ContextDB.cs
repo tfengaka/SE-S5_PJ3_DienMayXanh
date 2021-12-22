@@ -205,10 +205,6 @@ namespace DienMayXanh_Store.Models
                 .WithRequired(e => e.STAFF)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<STAFF>()
-                .HasOptional(e => e.STAFF1)
-                .WithRequired(e => e.STAFF2);
-
             modelBuilder.Entity<WAREHOUSE>()
                 .Property(e => e.WarehouseID)
                 .IsUnicode(false);
