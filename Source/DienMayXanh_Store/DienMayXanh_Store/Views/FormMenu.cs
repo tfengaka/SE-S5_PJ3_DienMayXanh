@@ -33,6 +33,7 @@ namespace DienMayXanh_Store.Views
 
             ptbAvatar.ImageLocation = string.Format(@"..\..\Images\" + info.StaffID + ".jpg");
             lblFullName.Text = info.Name;
+            lblPosition.Text = info.Position;
         }
 
         public void openChildForm(Form childForm)
@@ -80,6 +81,7 @@ namespace DienMayXanh_Store.Views
         private void btnProduct_Click(object sender, EventArgs e)
         {
             activateButton(sender);
+            openChildForm(new FormProduct());
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -97,10 +99,20 @@ namespace DienMayXanh_Store.Views
             activateButton(sender);
         }
 
+        private void btnWarehouse_Click(object sender, EventArgs e)
+        {
+            activateButton(sender);
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             FormLogin.instance.Visible = true;
             this.Dispose();
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            FormLogin.instance.Dispose();   
         }
     }
 }

@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
-            this.guna2Shapes2 = new Guna.UI2.WinForms.Guna2Shapes();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txbLoginName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2Shapes2 = new Guna.UI2.WinForms.Guna2Shapes();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,51 +65,9 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(495, 411);
             this.guna2ShadowPanel1.TabIndex = 4;
             // 
-            // guna2Shapes1
-            // 
-            this.guna2Shapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2Shapes1.BorderThickness = 0;
-            this.guna2Shapes1.FillColor = System.Drawing.Color.Khaki;
-            this.guna2Shapes1.Location = new System.Drawing.Point(420, 298);
-            this.guna2Shapes1.Name = "guna2Shapes1";
-            this.guna2Shapes1.PolygonSkip = 1;
-            this.guna2Shapes1.Rotate = 0F;
-            this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Ellipse;
-            this.guna2Shapes1.Size = new System.Drawing.Size(129, 103);
-            this.guna2Shapes1.TabIndex = 6;
-            this.guna2Shapes1.Text = "guna2Shapes1";
-            this.guna2Shapes1.Zoom = 80;
-            // 
-            // guna2Shapes2
-            // 
-            this.guna2Shapes2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2Shapes2.BorderThickness = 0;
-            this.guna2Shapes2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2Shapes2.Location = new System.Drawing.Point(-59, -51);
-            this.guna2Shapes2.Name = "guna2Shapes2";
-            this.guna2Shapes2.PolygonSkip = 1;
-            this.guna2Shapes2.Rotate = 0F;
-            this.guna2Shapes2.Shape = Guna.UI2.WinForms.Enums.ShapeType.Ellipse;
-            this.guna2Shapes2.Size = new System.Drawing.Size(129, 114);
-            this.guna2Shapes2.TabIndex = 7;
-            this.guna2Shapes2.Text = "guna2Shapes2";
-            this.guna2Shapes2.Zoom = 80;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.InitialImage = null;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(41, 43);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(382, 100);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 5;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // txbLoginName
             // 
+            this.txbLoginName.Animated = true;
             this.txbLoginName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.txbLoginName.BorderRadius = 8;
             this.txbLoginName.BorderThickness = 2;
@@ -140,6 +98,21 @@
             this.txbLoginName.TabIndex = 0;
             this.txbLoginName.TextOffset = new System.Drawing.Point(10, 0);
             // 
+            // guna2Shapes1
+            // 
+            this.guna2Shapes1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2Shapes1.BorderThickness = 0;
+            this.guna2Shapes1.FillColor = System.Drawing.Color.Khaki;
+            this.guna2Shapes1.Location = new System.Drawing.Point(420, 298);
+            this.guna2Shapes1.Name = "guna2Shapes1";
+            this.guna2Shapes1.PolygonSkip = 1;
+            this.guna2Shapes1.Rotate = 0F;
+            this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Ellipse;
+            this.guna2Shapes1.Size = new System.Drawing.Size(129, 103);
+            this.guna2Shapes1.TabIndex = 6;
+            this.guna2Shapes1.Text = "guna2Shapes1";
+            this.guna2Shapes1.Zoom = 80;
+            // 
             // btnExit
             // 
             this.btnExit.AnimatedGIF = true;
@@ -164,6 +137,7 @@
             // 
             // txbPassword
             // 
+            this.txbPassword.Animated = true;
             this.txbPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.txbPassword.BorderRadius = 8;
             this.txbPassword.BorderThickness = 2;
@@ -218,6 +192,35 @@
             this.btnLogin.Size = new System.Drawing.Size(150, 50);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Enter += new System.EventHandler(this.btnLogin_Enter);
+            // 
+            // guna2Shapes2
+            // 
+            this.guna2Shapes2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2Shapes2.BorderThickness = 0;
+            this.guna2Shapes2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2Shapes2.Location = new System.Drawing.Point(-59, -51);
+            this.guna2Shapes2.Name = "guna2Shapes2";
+            this.guna2Shapes2.PolygonSkip = 1;
+            this.guna2Shapes2.Rotate = 0F;
+            this.guna2Shapes2.Shape = Guna.UI2.WinForms.Enums.ShapeType.Ellipse;
+            this.guna2Shapes2.Size = new System.Drawing.Size(129, 114);
+            this.guna2Shapes2.TabIndex = 7;
+            this.guna2Shapes2.Text = "guna2Shapes2";
+            this.guna2Shapes2.Zoom = 80;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.InitialImage = null;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(41, 43);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(382, 100);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // FormLogin
             // 

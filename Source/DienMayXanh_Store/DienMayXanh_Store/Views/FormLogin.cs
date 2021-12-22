@@ -51,6 +51,11 @@ namespace DienMayXanh_Store
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            login(); 
+        }
+
+        private void login()
+        {
             if (txbLoginName.Text.Equals("") || txbPassword.Text.Equals(""))
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (!checkLogin())
@@ -59,7 +64,7 @@ namespace DienMayXanh_Store
             {
                 new FormMenu().Show();
                 this.Visible = false;
-            }    
+            }
         }
 
         private bool checkLogin()
@@ -73,6 +78,11 @@ namespace DienMayXanh_Store
                 return true;
             }
             return false;
+        }
+
+        private void btnLogin_Enter(object sender, EventArgs e)
+        {
+            login();
         }
     }
 }
