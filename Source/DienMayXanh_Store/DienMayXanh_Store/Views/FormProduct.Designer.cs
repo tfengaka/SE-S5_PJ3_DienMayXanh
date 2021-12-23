@@ -58,7 +58,7 @@ namespace DienMayXanh_Store.Views
             this.cbmFilter.Location = new System.Drawing.Point(119, 32);
             this.cbmFilter.Name = "cbmFilter";
             this.cbmFilter.ShadowDecoration.Parent = this.cbmFilter;
-            this.cbmFilter.Size = new System.Drawing.Size(205, 36);
+            this.cbmFilter.Size = new System.Drawing.Size(224, 36);
             this.cbmFilter.TabIndex = 0;
             // 
             // lblPosition
@@ -91,7 +91,7 @@ namespace DienMayXanh_Store.Views
             this.btnAddProducer.Image = global::DienMayXanh_Store.Properties.Resources.add_producer;
             this.btnAddProducer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddProducer.ImageOffset = new System.Drawing.Point(-1, 0);
-            this.btnAddProducer.Location = new System.Drawing.Point(760, 32);
+            this.btnAddProducer.Location = new System.Drawing.Point(772, 32);
             this.btnAddProducer.Name = "btnAddProducer";
             this.btnAddProducer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddProducer.ShadowDecoration.Parent = this.btnAddProducer;
@@ -118,7 +118,7 @@ namespace DienMayXanh_Store.Views
             this.btnAddProduct.Image = global::DienMayXanh_Store.Properties.Resources.add_product;
             this.btnAddProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddProduct.ImageOffset = new System.Drawing.Point(-1, 0);
-            this.btnAddProduct.Location = new System.Drawing.Point(830, 32);
+            this.btnAddProduct.Location = new System.Drawing.Point(842, 32);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddProduct.ShadowDecoration.Parent = this.btnAddProduct;
@@ -145,7 +145,7 @@ namespace DienMayXanh_Store.Views
             this.btnReload.HoverState.Parent = this.btnReload;
             this.btnReload.Image = global::DienMayXanh_Store.Properties.Resources.reload;
             this.btnReload.ImageOffset = new System.Drawing.Point(0, -1);
-            this.btnReload.Location = new System.Drawing.Point(690, 32);
+            this.btnReload.Location = new System.Drawing.Point(702, 32);
             this.btnReload.Name = "btnReload";
             this.btnReload.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnReload.ShadowDecoration.Parent = this.btnReload;

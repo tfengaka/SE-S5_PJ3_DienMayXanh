@@ -81,6 +81,30 @@
     <Compile Include="Models\RECIEPT.cs" />
     <Compile Include="Models\STAFF.cs" />
     <Compile Include="Models\WAREHOUSE.cs" />
+    <Compile Include="Views\Dialogs\FormAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dialogs\FormAddCategory.Designer.cs">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormAddProduct.Designer.cs">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormIESlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormIESlip.Designer.cs">
+      <DependentUpon>FormIESlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormImportProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormImportProduct.Designer.cs">
+      <DependentUpon>FormImportProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +136,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Dialogs\FormAddCategory.resx">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormIESlip.resx">
+      <DependentUpon>FormIESlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormImportProduct.resx">
+      <DependentUpon>FormImportProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +258,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_producer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

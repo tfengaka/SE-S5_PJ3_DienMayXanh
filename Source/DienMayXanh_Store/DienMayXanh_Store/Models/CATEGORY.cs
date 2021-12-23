@@ -24,6 +24,8 @@ namespace DienMayXanh_Store.Models
 
         public string Des { get; set; }
 
+        public DateTime CreateAt { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRODUCT> PRODUCTs { get; set; }
     }

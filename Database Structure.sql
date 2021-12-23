@@ -70,10 +70,12 @@ CREATE TABLE CATEGORY
 (
 	CategoryID varchar(30) not null,
 	[Name] nvarchar(30) not null,
+	CreateAt datetime default getdate() not null,
 	[Des] nvarchar(max),
 
 	primary key (CategoryID)
 )
+GO
 
 CREATE TABLE PRODUCT
 (
@@ -153,3 +155,4 @@ GO
 
 INSERT INTO STAFF VALUES ('NV0932765080', N'Võ Đoàn Hoàng Long', N'Éo có', '0932765080', 1, N'Quản Lý')
 INSERT INTO ACCOUNT VALUES('NV0932765080', 'hoanglong', '1', 'Manager')
+

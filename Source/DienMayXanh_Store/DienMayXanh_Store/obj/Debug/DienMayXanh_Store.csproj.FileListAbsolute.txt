@@ -115,3 +115,6 @@ D:\Code\Cshaps\Project\STS5-PJ3\STS5-PJ3-DienMayXanh\Source\DienMayXanh_Store\Di
 D:\Code\Cshaps\Project\STS5-PJ3\STS5-PJ3-DienMayXanh\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.pdb
 D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormMenu.resources
 D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormProduct.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.Dialogs.FormAddCategory.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormIESlip.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormImportProduct.resources

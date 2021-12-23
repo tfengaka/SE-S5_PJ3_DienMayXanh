@@ -23,6 +23,8 @@ namespace DienMayXanh_Store.Views
         public FormMenu()
         {
             InitializeComponent();
+            this.panelHeader.SendToBack();
+            this.panelMenu.SendToBack();
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
@@ -87,6 +89,7 @@ namespace DienMayXanh_Store.Views
         private void btnOrder_Click(object sender, EventArgs e)
         {
             activateButton(sender);
+            openChildForm(new FormIESlip());
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
