@@ -29,94 +29,86 @@ namespace DienMayXanh_Store.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlOrderHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlOrderContent = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnImport = new Guna.UI2.WinForms.Guna2Button();
-            this.btnExport = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlOrderHeader.SuspendLayout();
+            Guna.UI2.WinForms.Guna2TabControl tabControl;
+            this.pageImport = new System.Windows.Forms.TabPage();
+            this.pageExport = new System.Windows.Forms.TabPage();
+            this.pageOrder = new System.Windows.Forms.TabPage();
+            tabControl = new Guna.UI2.WinForms.Guna2TabControl();
+            tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlOrderHeader
+            // tabControl
             // 
-            this.pnlOrderHeader.Controls.Add(this.btnExport);
-            this.pnlOrderHeader.Controls.Add(this.btnImport);
-            this.pnlOrderHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlOrderHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlOrderHeader.Name = "pnlOrderHeader";
-            this.pnlOrderHeader.ShadowDecoration.Parent = this.pnlOrderHeader;
-            this.pnlOrderHeader.Size = new System.Drawing.Size(1135, 63);
-            this.pnlOrderHeader.TabIndex = 2;
+            tabControl.Controls.Add(this.pageOrder);
+            tabControl.Controls.Add(this.pageImport);
+            tabControl.Controls.Add(this.pageExport);
+            tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            tabControl.ItemSize = new System.Drawing.Size(180, 40);
+            tabControl.Location = new System.Drawing.Point(0, 0);
+            tabControl.Margin = new System.Windows.Forms.Padding(0);
+            tabControl.Name = "tabControl";
+            tabControl.Padding = new System.Drawing.Point(0, 0);
+            tabControl.SelectedIndex = 0;
+            tabControl.Size = new System.Drawing.Size(1135, 672);
+            tabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            tabControl.TabButtonHoverState.FillColor = System.Drawing.Color.Gainsboro;
+            tabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            tabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.Black;
+            tabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.Gainsboro;
+            tabControl.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            tabControl.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            tabControl.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            tabControl.TabButtonIdleState.ForeColor = System.Drawing.Color.Black;
+            tabControl.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            tabControl.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            tabControl.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            tabControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            tabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            tabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            tabControl.TabButtonSize = new System.Drawing.Size(180, 40);
+            tabControl.TabIndex = 0;
+            tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            tabControl.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
             // 
-            // pnlOrderContent
+            // pageImport
             // 
-            this.pnlOrderContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlOrderContent.Location = new System.Drawing.Point(0, 63);
-            this.pnlOrderContent.Name = "pnlOrderContent";
-            this.pnlOrderContent.ShadowDecoration.Parent = this.pnlOrderContent;
-            this.pnlOrderContent.Size = new System.Drawing.Size(1135, 609);
-            this.pnlOrderContent.TabIndex = 3;
+            this.pageImport.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pageImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.pageImport.ForeColor = System.Drawing.Color.Coral;
+            this.pageImport.Location = new System.Drawing.Point(4, 44);
+            this.pageImport.Margin = new System.Windows.Forms.Padding(0);
+            this.pageImport.Name = "pageImport";
+            this.pageImport.Padding = new System.Windows.Forms.Padding(3);
+            this.pageImport.Size = new System.Drawing.Size(1127, 624);
+            this.pageImport.TabIndex = 1;
+            this.pageImport.Text = "Nhập Hàng";
+            this.pageImport.UseVisualStyleBackColor = true;
             // 
-            // btnImport
+            // pageExport
             // 
-            this.btnImport.Animated = true;
-            this.btnImport.BackColor = System.Drawing.Color.Transparent;
-            this.btnImport.BorderRadius = 10;
-            this.btnImport.BorderThickness = 1;
-            this.btnImport.CheckedState.FillColor = System.Drawing.Color.Black;
-            this.btnImport.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btnImport.CheckedState.Parent = this.btnImport;
-            this.btnImport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImport.CustomImages.Parent = this.btnImport;
-            this.btnImport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnImport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnImport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnImport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnImport.DisabledState.Parent = this.btnImport;
-            this.btnImport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.btnImport.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnImport.HoverState.Parent = this.btnImport;
-            this.btnImport.Location = new System.Drawing.Point(348, 3);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.ShadowDecoration.BorderRadius = 10;
-            this.btnImport.ShadowDecoration.Depth = 10;
-            this.btnImport.ShadowDecoration.Enabled = true;
-            this.btnImport.ShadowDecoration.Parent = this.btnImport;
-            this.btnImport.Size = new System.Drawing.Size(143, 45);
-            this.btnImport.TabIndex = 2;
-            this.btnImport.Text = "Nhập hàng";
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.pageExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pageExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.pageExport.ForeColor = System.Drawing.Color.Coral;
+            this.pageExport.Location = new System.Drawing.Point(4, 44);
+            this.pageExport.Margin = new System.Windows.Forms.Padding(0);
+            this.pageExport.Name = "pageExport";
+            this.pageExport.Size = new System.Drawing.Size(1127, 624);
+            this.pageExport.TabIndex = 2;
+            this.pageExport.Text = "Xuất Hàng";
+            this.pageExport.UseVisualStyleBackColor = true;
             // 
-            // btnExport
+            // pageOrder
             // 
-            this.btnExport.Animated = true;
-            this.btnExport.BackColor = System.Drawing.Color.Transparent;
-            this.btnExport.BorderRadius = 10;
-            this.btnExport.BorderThickness = 1;
-            this.btnExport.CheckedState.FillColor = System.Drawing.Color.Black;
-            this.btnExport.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btnExport.CheckedState.Parent = this.btnExport;
-            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExport.CustomImages.Parent = this.btnExport;
-            this.btnExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExport.DisabledState.Parent = this.btnExport;
-            this.btnExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.btnExport.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnExport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnExport.HoverState.Parent = this.btnExport;
-            this.btnExport.Location = new System.Drawing.Point(617, 3);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.ShadowDecoration.BorderRadius = 10;
-            this.btnExport.ShadowDecoration.Depth = 10;
-            this.btnExport.ShadowDecoration.Enabled = true;
-            this.btnExport.ShadowDecoration.Parent = this.btnExport;
-            this.btnExport.Size = new System.Drawing.Size(143, 45);
-            this.btnExport.TabIndex = 3;
-            this.btnExport.Text = "Xuất hàng";
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.pageOrder.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pageOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.pageOrder.ForeColor = System.Drawing.Color.Black;
+            this.pageOrder.Location = new System.Drawing.Point(4, 44);
+            this.pageOrder.Margin = new System.Windows.Forms.Padding(0);
+            this.pageOrder.Name = "pageOrder";
+            this.pageOrder.Padding = new System.Windows.Forms.Padding(3);
+            this.pageOrder.Size = new System.Drawing.Size(1127, 624);
+            this.pageOrder.TabIndex = 0;
+            this.pageOrder.Text = "Tạo Đơn Hàng";
             // 
             // FormIESlip
             // 
@@ -124,21 +116,19 @@ namespace DienMayXanh_Store.Views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(1135, 672);
-            this.Controls.Add(this.pnlOrderContent);
-            this.Controls.Add(this.pnlOrderHeader);
+            this.Controls.Add(tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormIESlip";
             this.Text = "FormIESlip";
             this.Load += new System.EventHandler(this.FormIESlip_Load);
-            this.pnlOrderHeader.ResumeLayout(false);
+            tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Panel pnlOrderHeader;
-        private Guna.UI2.WinForms.Guna2Panel pnlOrderContent;
-        private Guna.UI2.WinForms.Guna2Button btnExport;
-        private Guna.UI2.WinForms.Guna2Button btnImport;
+        private System.Windows.Forms.TabPage pageImport;
+        private System.Windows.Forms.TabPage pageExport;
+        private System.Windows.Forms.TabPage pageOrder;
     }
 }

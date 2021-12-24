@@ -23,8 +23,6 @@ namespace DienMayXanh_Store.Views
         public FormMenu()
         {
             InitializeComponent();
-            this.panelHeader.SendToBack();
-            this.panelMenu.SendToBack();
         }
 
         private void FormMenu_Load(object sender, EventArgs e)

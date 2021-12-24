@@ -31,20 +31,6 @@ namespace DienMayXanh_Store.Views
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlFunc = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblFunc = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.pnlStaff = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblFullName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.pnlPosition = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblPosition = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panelTitle = new Guna.UI2.WinForms.Guna2Panel();
-            this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.minium = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.close = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.btnWarehouse = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnStaff = new Guna.UI2.WinForms.Guna2Button();
@@ -52,15 +38,25 @@ namespace DienMayXanh_Store.Views
             this.btnOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btnProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlFunc = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblFunc = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.pnlStaff = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblFullName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ptbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.pnlPosition = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblPosition = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panelTitle = new Guna.UI2.WinForms.Guna2Panel();
             this.ptbTitle = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.panelMenu.SuspendLayout();
             this.pnlFunc.SuspendLayout();
             this.pnlStaff.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).BeginInit();
             this.pnlPosition.SuspendLayout();
             this.panelTitle.SuspendLayout();
-            this.panelHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTitle)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,163 +86,6 @@ namespace DienMayXanh_Store.Views
             this.panelMenu.ShadowDecoration.Parent = this.panelMenu;
             this.panelMenu.Size = new System.Drawing.Size(273, 750);
             this.panelMenu.TabIndex = 1;
-            // 
-            // pnlFunc
-            // 
-            this.pnlFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
-            this.pnlFunc.Controls.Add(this.lblFunc);
-            this.pnlFunc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFunc.Location = new System.Drawing.Point(0, 231);
-            this.pnlFunc.Name = "pnlFunc";
-            this.pnlFunc.ShadowDecoration.Parent = this.pnlFunc;
-            this.pnlFunc.Size = new System.Drawing.Size(273, 59);
-            this.pnlFunc.TabIndex = 8;
-            // 
-            // lblFunc
-            // 
-            this.lblFunc.BackColor = System.Drawing.Color.Transparent;
-            this.lblFunc.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.lblFunc.Location = new System.Drawing.Point(12, 17);
-            this.lblFunc.Name = "lblFunc";
-            this.lblFunc.Size = new System.Drawing.Size(102, 27);
-            this.lblFunc.TabIndex = 0;
-            this.lblFunc.Text = "Chức Năng";
-            // 
-            // guna2Separator2
-            // 
-            this.guna2Separator2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
-            this.guna2Separator2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Separator2.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2Separator2.Location = new System.Drawing.Point(0, 221);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(273, 10);
-            this.guna2Separator2.TabIndex = 7;
-            // 
-            // pnlStaff
-            // 
-            this.pnlStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
-            this.pnlStaff.Controls.Add(this.lblFullName);
-            this.pnlStaff.Controls.Add(this.ptbAvatar);
-            this.pnlStaff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlStaff.Location = new System.Drawing.Point(0, 164);
-            this.pnlStaff.Name = "pnlStaff";
-            this.pnlStaff.ShadowDecoration.Parent = this.pnlStaff;
-            this.pnlStaff.Size = new System.Drawing.Size(273, 57);
-            this.pnlStaff.TabIndex = 6;
-            // 
-            // lblFullName
-            // 
-            this.lblFullName.BackColor = System.Drawing.Color.Transparent;
-            this.lblFullName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.lblFullName.Location = new System.Drawing.Point(71, 16);
-            this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(54, 23);
-            this.lblFullName.TabIndex = 1;
-            this.lblFullName.Text = "Họ tên";
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
-            this.guna2Separator1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Separator1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 154);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(273, 10);
-            this.guna2Separator1.TabIndex = 5;
-            // 
-            // pnlPosition
-            // 
-            this.pnlPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
-            this.pnlPosition.Controls.Add(this.lblPosition);
-            this.pnlPosition.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPosition.Location = new System.Drawing.Point(0, 107);
-            this.pnlPosition.Name = "pnlPosition";
-            this.pnlPosition.ShadowDecoration.Parent = this.pnlPosition;
-            this.pnlPosition.Size = new System.Drawing.Size(273, 47);
-            this.pnlPosition.TabIndex = 4;
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.BackColor = System.Drawing.Color.Transparent;
-            this.lblPosition.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.lblPosition.Location = new System.Drawing.Point(12, 17);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(96, 27);
-            this.lblPosition.TabIndex = 0;
-            this.lblPosition.Text = "Nhân Viên";
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.Controls.Add(this.ptbTitle);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.ShadowDecoration.Parent = this.panelTitle;
-            this.panelTitle.Size = new System.Drawing.Size(273, 107);
-            this.panelTitle.TabIndex = 0;
-            // 
-            // Elipse
-            // 
-            this.Elipse.BorderRadius = 15;
-            this.Elipse.TargetControl = this;
-            // 
-            // panelHeader
-            // 
-            this.panelHeader.BackColor = System.Drawing.SystemColors.Control;
-            this.panelHeader.Controls.Add(this.minium);
-            this.panelHeader.Controls.Add(this.close);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.panelHeader.Location = new System.Drawing.Point(273, 0);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.ShadowDecoration.Parent = this.panelHeader;
-            this.panelHeader.Size = new System.Drawing.Size(1167, 28);
-            this.panelHeader.TabIndex = 3;
-            // 
-            // minium
-            // 
-            this.minium.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minium.BackColor = System.Drawing.Color.Transparent;
-            this.minium.BorderColor = System.Drawing.Color.Transparent;
-            this.minium.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.minium.FillColor = System.Drawing.Color.Transparent;
-            this.minium.HoverState.Parent = this.minium;
-            this.minium.IconColor = System.Drawing.Color.Black;
-            this.minium.Location = new System.Drawing.Point(1097, 0);
-            this.minium.Name = "minium";
-            this.minium.ShadowDecoration.Parent = this.minium;
-            this.minium.Size = new System.Drawing.Size(32, 25);
-            this.minium.TabIndex = 10;
-            // 
-            // close
-            // 
-            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.close.BackColor = System.Drawing.Color.Transparent;
-            this.close.BorderColor = System.Drawing.Color.Transparent;
-            this.close.FillColor = System.Drawing.Color.Transparent;
-            this.close.HoverState.FillColor = System.Drawing.Color.Red;
-            this.close.HoverState.Parent = this.close;
-            this.close.IconColor = System.Drawing.Color.Black;
-            this.close.Location = new System.Drawing.Point(1135, 0);
-            this.close.Name = "close";
-            this.close.ShadowDecoration.Parent = this.close;
-            this.close.Size = new System.Drawing.Size(32, 25);
-            this.close.TabIndex = 9;
-            this.close.Click += new System.EventHandler(this.close_Click);
-            // 
-            // panelContent
-            // 
-            this.panelContent.BackColor = System.Drawing.SystemColors.Control;
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.panelContent.Location = new System.Drawing.Point(273, 0);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.ShadowDecoration.Parent = this.panelContent;
-            this.panelContent.Size = new System.Drawing.Size(1167, 750);
-            this.panelContent.TabIndex = 2;
             // 
             // btnWarehouse
             // 
@@ -513,6 +352,61 @@ namespace DienMayXanh_Store.Views
             this.btnHome.TextOffset = new System.Drawing.Point(10, 0);
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // pnlFunc
+            // 
+            this.pnlFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
+            this.pnlFunc.Controls.Add(this.lblFunc);
+            this.pnlFunc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFunc.Location = new System.Drawing.Point(0, 231);
+            this.pnlFunc.Name = "pnlFunc";
+            this.pnlFunc.ShadowDecoration.Parent = this.pnlFunc;
+            this.pnlFunc.Size = new System.Drawing.Size(273, 59);
+            this.pnlFunc.TabIndex = 8;
+            // 
+            // lblFunc
+            // 
+            this.lblFunc.BackColor = System.Drawing.Color.Transparent;
+            this.lblFunc.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.lblFunc.Location = new System.Drawing.Point(12, 17);
+            this.lblFunc.Name = "lblFunc";
+            this.lblFunc.Size = new System.Drawing.Size(102, 27);
+            this.lblFunc.TabIndex = 0;
+            this.lblFunc.Text = "Chức Năng";
+            // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
+            this.guna2Separator2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Separator2.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2Separator2.Location = new System.Drawing.Point(0, 221);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(273, 10);
+            this.guna2Separator2.TabIndex = 7;
+            // 
+            // pnlStaff
+            // 
+            this.pnlStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
+            this.pnlStaff.Controls.Add(this.lblFullName);
+            this.pnlStaff.Controls.Add(this.ptbAvatar);
+            this.pnlStaff.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlStaff.Location = new System.Drawing.Point(0, 164);
+            this.pnlStaff.Name = "pnlStaff";
+            this.pnlStaff.ShadowDecoration.Parent = this.pnlStaff;
+            this.pnlStaff.Size = new System.Drawing.Size(273, 57);
+            this.pnlStaff.TabIndex = 6;
+            // 
+            // lblFullName
+            // 
+            this.lblFullName.BackColor = System.Drawing.Color.Transparent;
+            this.lblFullName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.lblFullName.Location = new System.Drawing.Point(71, 16);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(54, 23);
+            this.lblFullName.TabIndex = 1;
+            this.lblFullName.Text = "Họ tên";
+            // 
             // ptbAvatar
             // 
             this.ptbAvatar.ImageRotate = 0F;
@@ -524,6 +418,48 @@ namespace DienMayXanh_Store.Views
             this.ptbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbAvatar.TabIndex = 0;
             this.ptbAvatar.TabStop = false;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
+            this.guna2Separator1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Separator1.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 154);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(273, 10);
+            this.guna2Separator1.TabIndex = 5;
+            // 
+            // pnlPosition
+            // 
+            this.pnlPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
+            this.pnlPosition.Controls.Add(this.lblPosition);
+            this.pnlPosition.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlPosition.Location = new System.Drawing.Point(0, 107);
+            this.pnlPosition.Name = "pnlPosition";
+            this.pnlPosition.ShadowDecoration.Parent = this.pnlPosition;
+            this.pnlPosition.Size = new System.Drawing.Size(273, 47);
+            this.pnlPosition.TabIndex = 4;
+            // 
+            // lblPosition
+            // 
+            this.lblPosition.BackColor = System.Drawing.Color.Transparent;
+            this.lblPosition.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.lblPosition.Location = new System.Drawing.Point(12, 17);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(96, 27);
+            this.lblPosition.TabIndex = 0;
+            this.lblPosition.Text = "Nhân Viên";
+            // 
+            // panelTitle
+            // 
+            this.panelTitle.Controls.Add(this.ptbTitle);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.ShadowDecoration.Parent = this.panelTitle;
+            this.panelTitle.Size = new System.Drawing.Size(273, 107);
+            this.panelTitle.TabIndex = 0;
             // 
             // ptbTitle
             // 
@@ -539,12 +475,27 @@ namespace DienMayXanh_Store.Views
             this.ptbTitle.TabIndex = 0;
             this.ptbTitle.TabStop = false;
             // 
+            // Elipse
+            // 
+            this.Elipse.BorderRadius = 15;
+            this.Elipse.TargetControl = this;
+            // 
+            // panelContent
+            // 
+            this.panelContent.BackColor = System.Drawing.SystemColors.Control;
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.panelContent.Location = new System.Drawing.Point(273, 0);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.ShadowDecoration.Parent = this.panelContent;
+            this.panelContent.Size = new System.Drawing.Size(1167, 750);
+            this.panelContent.TabIndex = 2;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 750);
-            this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -557,11 +508,10 @@ namespace DienMayXanh_Store.Views
             this.pnlFunc.PerformLayout();
             this.pnlStaff.ResumeLayout(false);
             this.pnlStaff.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).EndInit();
             this.pnlPosition.ResumeLayout(false);
             this.pnlPosition.PerformLayout();
             this.panelTitle.ResumeLayout(false);
-            this.panelHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTitle)).EndInit();
             this.ResumeLayout(false);
 
@@ -589,9 +539,6 @@ namespace DienMayXanh_Store.Views
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Elipse Elipse;
         private Guna.UI2.WinForms.Guna2Button btnWarehouse;
-        private Guna.UI2.WinForms.Guna2Panel panelHeader;
-        private Guna.UI2.WinForms.Guna2ControlBox minium;
-        private Guna.UI2.WinForms.Guna2ControlBox close;
         private Guna.UI2.WinForms.Guna2Panel panelContent;
     }
 }

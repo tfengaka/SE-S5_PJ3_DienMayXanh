@@ -14,6 +14,7 @@ namespace DienMayXanh_Store.Views.Dialogs
     public partial class FormAddCategory : Form
     {
         private ContextDB context = Program.context;
+        private string currID;
         public FormAddCategory()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace DienMayXanh_Store.Views.Dialogs
         private void close_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            FormImportProduct.instance.loadCbmFilter();
         }
 
         private void btnAddCatergory_Click(object sender, EventArgs e)
@@ -49,6 +51,14 @@ namespace DienMayXanh_Store.Views.Dialogs
                 MessageBox.Show("Vui lòng nhập danh mục");
             else
                 saveCategory();
+        }
+
+        private void reload()
+        {
+            loadData();
+            txtCategory.Text = "";
+            btnEditCategory.Visible = false;
+            btnCancel.Visible = false;
         }
 
         private void saveCategory()
@@ -61,7 +71,43 @@ namespace DienMayXanh_Store.Views.Dialogs
             context.CATEGORIES.Add(newCate);
             context.SaveChanges();
             MessageBox.Show("Thêm thành công");
-            loadData();
+            reload();
+        }
+
+        private void updateCategory()
+        {
+            context.CATEGORIES.Find(currID).Name = txtCategory.Text;
+            context.SaveChanges();
+            MessageBox.Show("Cập nhật thành công");
+            reload();
+        }
+
+        private void btnEditCategory_Click(object sender, EventArgs e)
+        {
+            if (txtCategory.Text.Equals(""))
+                MessageBox.Show("Vui lòng nhập danh mục");
+            else
+                updateCategory();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtCategory.Text = "";
+            btnEditCategory.Visible = false;
+            btnCancel.Visible = false;
+        }
+
+        private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView senderGrid = (DataGridView)sender;
+
+            if (e.RowIndex >= 0)
+            {
+                currID = senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtCategory.Text = senderGrid.Rows[e.RowIndex].Cells[1].Value.ToString();          
+                btnEditCategory.Visible = true;
+                btnCancel.Visible = true;
+            }
         }
     }
 }

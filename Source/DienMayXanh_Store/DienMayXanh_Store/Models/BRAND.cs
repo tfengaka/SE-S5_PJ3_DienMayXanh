@@ -25,6 +25,8 @@ namespace DienMayXanh_Store.Models
         [Required]
         public string Address { get; set; }
 
+        public DateTime CreateAt { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRODUCT> PRODUCTs { get; set; }
     }

@@ -61,10 +61,12 @@ CREATE TABLE BRAND
 	BrandID varchar(30) not null,
 	[Name] nvarchar(30) not null,
 	[Address] nvarchar(max) not null,
+	CreateAt datetime default getdate() not null,
 
 	Primary key (BrandID)
 )
 GO
+
 
 CREATE TABLE CATEGORY
 (
