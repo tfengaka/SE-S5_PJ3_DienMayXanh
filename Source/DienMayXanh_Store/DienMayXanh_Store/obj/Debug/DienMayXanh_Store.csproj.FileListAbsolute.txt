@@ -262,3 +262,4 @@ D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store
 D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\bin\Debug\es\DevExpress.XtraVerticalGrid.v21.2.resources.dll
 D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\bin\Debug\ja\DevExpress.XtraVerticalGrid.v21.2.resources.dll
 D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\bin\Debug\ru\DevExpress.XtraVerticalGrid.v21.2.resources.dll
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormExportProduct.resources

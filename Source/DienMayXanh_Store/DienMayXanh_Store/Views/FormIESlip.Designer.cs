@@ -31,17 +31,42 @@ namespace DienMayXanh_Store.Views
         {
             Guna.UI2.WinForms.Guna2TabControl tabControl;
             this.pageImport = new System.Windows.Forms.TabPage();
-            this.pageExport = new System.Windows.Forms.TabPage();
             this.pageOrder = new System.Windows.Forms.TabPage();
             tabControl = new Guna.UI2.WinForms.Guna2TabControl();
             tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
+            // pageImport
+            // 
+            this.pageImport.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pageImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.pageImport.ForeColor = System.Drawing.Color.Coral;
+            this.pageImport.Location = new System.Drawing.Point(4, 44);
+            this.pageImport.Margin = new System.Windows.Forms.Padding(0);
+            this.pageImport.Name = "pageImport";
+            this.pageImport.Padding = new System.Windows.Forms.Padding(3);
+            this.pageImport.Size = new System.Drawing.Size(1127, 624);
+            this.pageImport.TabIndex = 1;
+            this.pageImport.Text = "Nhập Hàng";
+            this.pageImport.UseVisualStyleBackColor = true;
+            // 
+            // pageOrder
+            // 
+            this.pageOrder.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pageOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.pageOrder.ForeColor = System.Drawing.Color.Black;
+            this.pageOrder.Location = new System.Drawing.Point(4, 44);
+            this.pageOrder.Margin = new System.Windows.Forms.Padding(0);
+            this.pageOrder.Name = "pageOrder";
+            this.pageOrder.Padding = new System.Windows.Forms.Padding(3);
+            this.pageOrder.Size = new System.Drawing.Size(1127, 624);
+            this.pageOrder.TabIndex = 0;
+            this.pageOrder.Text = "Tạo Đơn Hàng";
+            // 
             // tabControl
             // 
             tabControl.Controls.Add(this.pageOrder);
             tabControl.Controls.Add(this.pageImport);
-            tabControl.Controls.Add(this.pageExport);
             tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             tabControl.ItemSize = new System.Drawing.Size(180, 40);
             tabControl.Location = new System.Drawing.Point(0, 0);
@@ -70,46 +95,6 @@ namespace DienMayXanh_Store.Views
             tabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             tabControl.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
             // 
-            // pageImport
-            // 
-            this.pageImport.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pageImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.pageImport.ForeColor = System.Drawing.Color.Coral;
-            this.pageImport.Location = new System.Drawing.Point(4, 44);
-            this.pageImport.Margin = new System.Windows.Forms.Padding(0);
-            this.pageImport.Name = "pageImport";
-            this.pageImport.Padding = new System.Windows.Forms.Padding(3);
-            this.pageImport.Size = new System.Drawing.Size(1127, 624);
-            this.pageImport.TabIndex = 1;
-            this.pageImport.Text = "Nhập Hàng";
-            this.pageImport.UseVisualStyleBackColor = true;
-            // 
-            // pageExport
-            // 
-            this.pageExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pageExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.pageExport.ForeColor = System.Drawing.Color.Coral;
-            this.pageExport.Location = new System.Drawing.Point(4, 44);
-            this.pageExport.Margin = new System.Windows.Forms.Padding(0);
-            this.pageExport.Name = "pageExport";
-            this.pageExport.Size = new System.Drawing.Size(1127, 624);
-            this.pageExport.TabIndex = 2;
-            this.pageExport.Text = "Xuất Hàng";
-            this.pageExport.UseVisualStyleBackColor = true;
-            // 
-            // pageOrder
-            // 
-            this.pageOrder.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pageOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.pageOrder.ForeColor = System.Drawing.Color.Black;
-            this.pageOrder.Location = new System.Drawing.Point(4, 44);
-            this.pageOrder.Margin = new System.Windows.Forms.Padding(0);
-            this.pageOrder.Name = "pageOrder";
-            this.pageOrder.Padding = new System.Windows.Forms.Padding(3);
-            this.pageOrder.Size = new System.Drawing.Size(1127, 624);
-            this.pageOrder.TabIndex = 0;
-            this.pageOrder.Text = "Tạo Đơn Hàng";
-            // 
             // FormIESlip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,8 +112,8 @@ namespace DienMayXanh_Store.Views
         }
 
         #endregion
+
         private System.Windows.Forms.TabPage pageImport;
-        private System.Windows.Forms.TabPage pageExport;
         private System.Windows.Forms.TabPage pageOrder;
     }
 }

@@ -31,7 +31,7 @@ namespace DienMayXanh_Store.Views
         {
             this.components = new System.ComponentModel.Container();
             this.lblPosition = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cbmFilterCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbFilterCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.lblProducer = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbFilterProducer = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -69,30 +69,30 @@ namespace DienMayXanh_Store.Views
             this.lblPosition.TabIndex = 3;
             this.lblPosition.Text = "Danh mục";
             // 
-            // cbmFilterCategory
+            // cmbFilterCategory
             // 
-            this.cbmFilterCategory.BackColor = System.Drawing.Color.Transparent;
-            this.cbmFilterCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.cbmFilterCategory.BorderRadius = 5;
-            this.cbmFilterCategory.BorderThickness = 2;
-            this.cbmFilterCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbmFilterCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmFilterCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbmFilterCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbmFilterCategory.FocusedState.Parent = this.cbmFilterCategory;
-            this.cbmFilterCategory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.cbmFilterCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbmFilterCategory.HoverState.Parent = this.cbmFilterCategory;
-            this.cbmFilterCategory.ItemHeight = 30;
-            this.cbmFilterCategory.ItemsAppearance.Parent = this.cbmFilterCategory;
-            this.cbmFilterCategory.Location = new System.Drawing.Point(147, 12);
-            this.cbmFilterCategory.Name = "cbmFilterCategory";
-            this.cbmFilterCategory.ShadowDecoration.BorderRadius = 15;
-            this.cbmFilterCategory.ShadowDecoration.Depth = 10;
-            this.cbmFilterCategory.ShadowDecoration.Enabled = true;
-            this.cbmFilterCategory.ShadowDecoration.Parent = this.cbmFilterCategory;
-            this.cbmFilterCategory.Size = new System.Drawing.Size(224, 36);
-            this.cbmFilterCategory.TabIndex = 2;
+            this.cmbFilterCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cmbFilterCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
+            this.cmbFilterCategory.BorderRadius = 5;
+            this.cmbFilterCategory.BorderThickness = 2;
+            this.cmbFilterCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbFilterCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFilterCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFilterCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFilterCategory.FocusedState.Parent = this.cmbFilterCategory;
+            this.cmbFilterCategory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.cmbFilterCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbFilterCategory.HoverState.Parent = this.cmbFilterCategory;
+            this.cmbFilterCategory.ItemHeight = 30;
+            this.cmbFilterCategory.ItemsAppearance.Parent = this.cmbFilterCategory;
+            this.cmbFilterCategory.Location = new System.Drawing.Point(147, 12);
+            this.cmbFilterCategory.Name = "cmbFilterCategory";
+            this.cmbFilterCategory.ShadowDecoration.BorderRadius = 15;
+            this.cmbFilterCategory.ShadowDecoration.Depth = 10;
+            this.cmbFilterCategory.ShadowDecoration.Enabled = true;
+            this.cmbFilterCategory.ShadowDecoration.Parent = this.cmbFilterCategory;
+            this.cmbFilterCategory.Size = new System.Drawing.Size(224, 36);
+            this.cmbFilterCategory.TabIndex = 2;
             // 
             // lblProducer
             // 
@@ -592,7 +592,7 @@ namespace DienMayXanh_Store.Views
             this.Controls.Add(this.cmbFilterProducer);
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.lblPosition);
-            this.Controls.Add(this.cbmFilterCategory);
+            this.Controls.Add(this.cmbFilterCategory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormImportProduct";
             this.Text = "FormImportProduct";
@@ -608,7 +608,7 @@ namespace DienMayXanh_Store.Views
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPosition;
-        private Guna.UI2.WinForms.Guna2ComboBox cbmFilterCategory;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbFilterCategory;
         private Guna.UI2.WinForms.Guna2CircleButton btnAddCategory;
         private System.Windows.Forms.ToolTip toolTip;
         private Guna.UI2.WinForms.Guna2CircleButton btnAddProducer;

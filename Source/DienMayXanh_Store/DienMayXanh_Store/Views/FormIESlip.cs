@@ -20,6 +20,7 @@ namespace DienMayXanh_Store.Views
 
         private void FormIESlip_Load(object sender, EventArgs e)
         {
+            openChildForm(new FormExportProduct(), pageOrder);
             openChildForm(new FormImportProduct(), pageImport);
         }
 

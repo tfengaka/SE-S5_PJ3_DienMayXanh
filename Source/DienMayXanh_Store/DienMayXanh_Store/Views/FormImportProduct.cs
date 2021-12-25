@@ -50,9 +50,9 @@ namespace DienMayXanh_Store.Views
 
         public void loadCbmFilter()
         {
-            cbmFilterCategory.ValueMember = "CategoryID";
-            cbmFilterCategory.DisplayMember = "Name";
-            cbmFilterCategory.DataSource = context.CATEGORIES.ToList();
+            cmbFilterCategory.ValueMember = "CategoryID";
+            cmbFilterCategory.DisplayMember = "Name";
+            cmbFilterCategory.DataSource = context.CATEGORIES.ToList();
 
             cmbFilterProducer.ValueMember = "BrandID";
             cmbFilterProducer.DisplayMember = "Name";
@@ -138,7 +138,7 @@ namespace DienMayXanh_Store.Views
             newProduct.Name = txtProductName.Text;
             newProduct.Price = Convert.ToDecimal(txtPrice.Text);
             newProduct.Quantity = (int)nudQuantity.Value;
-            newProduct.CategoryID = cbmFilterCategory.SelectedValue.ToString();
+            newProduct.CategoryID = cmbFilterCategory.SelectedValue.ToString();
             newProduct.BrandID = cmbFilterProducer.SelectedValue.ToString();
             listProduct.Add(newProduct);
             string fileExt = System.IO.Path.GetExtension(selectedFile);
@@ -362,7 +362,7 @@ namespace DienMayXanh_Store.Views
             }    
             currItem.Price = Convert.ToDecimal(txtPrice.Text);
             currItem.Quantity = (int)nudQuantity.Value;
-            currItem.CategoryID = cbmFilterCategory.SelectedValue.ToString();
+            currItem.CategoryID = cmbFilterCategory.SelectedValue.ToString();
             currItem.BrandID = cmbFilterProducer.SelectedValue.ToString();
             string fileExt = System.IO.Path.GetExtension(selectedFile);
             string resultFileCopy = newImg + currItem.ProductID + fileExt;
@@ -398,7 +398,7 @@ namespace DienMayXanh_Store.Views
             btnAddImg.Visible = false;
             btnChangeImg.Visible = true;
             currItem = listProduct.FirstOrDefault(x => x.ProductID.Equals(currPnl.Name));
-            cbmFilterCategory.SelectedValue = currItem.CategoryID;
+            cmbFilterCategory.SelectedValue = currItem.CategoryID;
             cmbFilterProducer.SelectedValue = currItem.BrandID;
             txtProductName.Text = currItem.Name;
             nudQuantity.Value = currItem.Quantity;
