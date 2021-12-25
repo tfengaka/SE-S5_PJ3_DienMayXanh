@@ -27,7 +27,7 @@ namespace DienMayXanh_Store.Views
         private List<ImportSlip> listProduct = new List<ImportSlip>();
         private string filterImg = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
         private string newImg = @"..\..\Images\Products\";
-        private string selectedFile;
+        private string selectedFile, currName;
         public static FormImportProduct instance;
         public FormImportProduct()
         {
@@ -319,7 +319,18 @@ namespace DienMayXanh_Store.Views
 
         private void btnEditProduct_Click(object sender, EventArgs e)
         {
-            currItem.Name = txtProductName.Text;
+            if(txtProductName.Text.Equals(currName))
+                currItem.Name = currName;
+            else
+            {
+                ImportSlip check = listProduct.FirstOrDefault(x => x.Name.Equals(txtProductName.Text));
+                if(check != null)
+                {
+                    MessageBox.Show("Tên sản phẩm đã có trong danh sách");
+                    return;
+                }
+                currItem.Name = txtProductName.Text;
+            }    
             currItem.Price = Convert.ToDecimal(txtPrice.Text);
             currItem.Quantity = (int)nudQuantity.Value;
             currItem.CategoryID = cbmFilterCategory.SelectedValue.ToString();
@@ -365,6 +376,7 @@ namespace DienMayXanh_Store.Views
             txtPrice.Text = currItem.Price.ToString();
             ptbAddImg.ImageLocation = string.Format(@"..\..\Images\Products\" + currItem.ProductID + ".jpg");
             selectedFile = ptbAddImg.ImageLocation;
+            currName = currItem.Name;
         }
 
         // delete product list
