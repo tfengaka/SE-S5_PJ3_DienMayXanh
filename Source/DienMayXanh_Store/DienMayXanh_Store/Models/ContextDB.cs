@@ -136,17 +136,17 @@ namespace DienMayXanh_Store.Models
                 .HasPrecision(18, 0);
 
             modelBuilder.Entity<PRODUCT>()
-                .HasMany(e => e.CARTITEMs)
+                .HasMany(e => e.CARTITEMS)
                 .WithRequired(e => e.PRODUCT)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PRODUCT>()
-                .HasMany(e => e.IESLIPDETAILs)
+                .HasMany(e => e.IESLIPDETAILS)
                 .WithRequired(e => e.PRODUCT)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PRODUCT>()
-                .HasMany(e => e.PRODUCTAVAILABLEs)
+                .HasMany(e => e.PRODUCTAVAILABLES)
                 .WithRequired(e => e.PRODUCT)
                 .WillCascadeOnDelete(false);
 

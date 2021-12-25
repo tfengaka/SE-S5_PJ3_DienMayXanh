@@ -158,3 +158,6 @@ GO
 INSERT INTO STAFF VALUES ('NV0932765080', N'Võ Đoàn Hoàng Long', N'Éo có', '0932765080', 1, N'Quản Lý')
 INSERT INTO ACCOUNT VALUES('NV0932765080', 'hoanglong', '1', 'Manager')
 
+INSERT INTO WAREHOUSE VALUES ('WH0932765080', N'Kho TD', N'Thủ Đức'),
+							('WH0909230102', N'Kho DN', N'Đồng Nai')
+

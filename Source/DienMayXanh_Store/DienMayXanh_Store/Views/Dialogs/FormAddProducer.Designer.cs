@@ -40,12 +40,12 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtProducerAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvProducer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddProducer = new Guna.UI2.WinForms.Guna2Button();
             this.BrandID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameProducer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddProducer = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditProducer = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducer)).BeginInit();
             this.SuspendLayout();
@@ -222,6 +222,34 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.dgvProducer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvProducer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducer_CellContentClick);
             // 
+            // BrandID
+            // 
+            this.BrandID.DataPropertyName = "BrandID";
+            this.BrandID.HeaderText = "Mã NCC";
+            this.BrandID.Name = "BrandID";
+            this.BrandID.ReadOnly = true;
+            // 
+            // nameProducer
+            // 
+            this.nameProducer.DataPropertyName = "Name";
+            this.nameProducer.HeaderText = "Tên NCC";
+            this.nameProducer.Name = "nameProducer";
+            this.nameProducer.ReadOnly = true;
+            // 
+            // createAt
+            // 
+            this.createAt.DataPropertyName = "CreateAt";
+            this.createAt.HeaderText = "Ngày lưu";
+            this.createAt.Name = "createAt";
+            this.createAt.ReadOnly = true;
+            // 
+            // address
+            // 
+            this.address.DataPropertyName = "Address";
+            this.address.HeaderText = "Địa chỉ NCC";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            // 
             // btnCancel
             // 
             this.btnCancel.Animated = true;
@@ -280,34 +308,6 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnAddProducer.TabIndex = 17;
             this.btnAddProducer.Text = "Thêm";
             this.btnAddProducer.Click += new System.EventHandler(this.btnAddProducer_Click);
-            // 
-            // BrandID
-            // 
-            this.BrandID.DataPropertyName = "BrandID";
-            this.BrandID.HeaderText = "Mã NCC";
-            this.BrandID.Name = "BrandID";
-            this.BrandID.ReadOnly = true;
-            // 
-            // nameProducer
-            // 
-            this.nameProducer.DataPropertyName = "Name";
-            this.nameProducer.HeaderText = "Tên NCC";
-            this.nameProducer.Name = "nameProducer";
-            this.nameProducer.ReadOnly = true;
-            // 
-            // createAt
-            // 
-            this.createAt.DataPropertyName = "CreateAt";
-            this.createAt.HeaderText = "Ngày lưu";
-            this.createAt.Name = "createAt";
-            this.createAt.ReadOnly = true;
-            // 
-            // address
-            // 
-            this.address.DataPropertyName = "Address";
-            this.address.HeaderText = "Địa chỉ NCC";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
             // 
             // btnEditProducer
             // 
