@@ -40,19 +40,19 @@ namespace DienMayXanh_Store.Views
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblQuantity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.nudQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.btnAddImg = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.ptbAddImg = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnAddProducer = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnAddCategory = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnChangeImg = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
-            this.ptbProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTotalPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnImport = new Guna.UI2.WinForms.Guna2Button();
             this.lblWarehouse = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbFilterWarehouse = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnEditProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddImg = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.ptbAddImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnAddProducer = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnAddCategory = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.ptbProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAddImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbProduct)).BeginInit();
@@ -256,106 +256,6 @@ namespace DienMayXanh_Store.Views
             this.nudQuantity.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.nudQuantity.UpDownButtonForeColor = System.Drawing.Color.Black;
             // 
-            // btnAddImg
-            // 
-            this.btnAddImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.btnAddImg.CheckedState.Parent = this.btnAddImg;
-            this.btnAddImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddImg.CustomImages.Parent = this.btnAddImg;
-            this.btnAddImg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddImg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddImg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddImg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddImg.DisabledState.Parent = this.btnAddImg;
-            this.btnAddImg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(31)))));
-            this.btnAddImg.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddImg.ForeColor = System.Drawing.Color.White;
-            this.btnAddImg.HoverState.Parent = this.btnAddImg;
-            this.btnAddImg.Image = global::DienMayXanh_Store.Properties.Resources.add_img;
-            this.btnAddImg.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnAddImg.Location = new System.Drawing.Point(97, 386);
-            this.btnAddImg.Name = "btnAddImg";
-            this.btnAddImg.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnAddImg.ShadowDecoration.Parent = this.btnAddImg;
-            this.btnAddImg.Size = new System.Drawing.Size(50, 50);
-            this.btnAddImg.TabIndex = 19;
-            this.btnAddImg.Click += new System.EventHandler(this.btnAddImg_Click);
-            // 
-            // ptbAddImg
-            // 
-            this.ptbAddImg.BackColor = System.Drawing.Color.Transparent;
-            this.ptbAddImg.BorderRadius = 10;
-            this.ptbAddImg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.ptbAddImg.ImageRotate = 0F;
-            this.ptbAddImg.Location = new System.Drawing.Point(12, 313);
-            this.ptbAddImg.Name = "ptbAddImg";
-            this.ptbAddImg.ShadowDecoration.BorderRadius = 15;
-            this.ptbAddImg.ShadowDecoration.Depth = 10;
-            this.ptbAddImg.ShadowDecoration.Enabled = true;
-            this.ptbAddImg.ShadowDecoration.Parent = this.ptbAddImg;
-            this.ptbAddImg.Size = new System.Drawing.Size(230, 210);
-            this.ptbAddImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbAddImg.TabIndex = 18;
-            this.ptbAddImg.TabStop = false;
-            this.ptbAddImg.DragDrop += new System.Windows.Forms.DragEventHandler(this.ptbAddImg_DragDrop);
-            this.ptbAddImg.DragEnter += new System.Windows.Forms.DragEventHandler(this.ptbAddImg_DragEnter);
-            // 
-            // btnAddProducer
-            // 
-            this.btnAddProducer.Animated = true;
-            this.btnAddProducer.BorderThickness = 2;
-            this.btnAddProducer.CheckedState.Parent = this.btnAddProducer;
-            this.btnAddProducer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddProducer.CustomImages.Parent = this.btnAddProducer;
-            this.btnAddProducer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddProducer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddProducer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddProducer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddProducer.DisabledState.Parent = this.btnAddProducer;
-            this.btnAddProducer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.btnAddProducer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddProducer.ForeColor = System.Drawing.Color.White;
-            this.btnAddProducer.HoverState.Parent = this.btnAddProducer;
-            this.btnAddProducer.Image = global::DienMayXanh_Store.Properties.Resources.add_producer;
-            this.btnAddProducer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddProducer.ImageOffset = new System.Drawing.Point(-1, 0);
-            this.btnAddProducer.Location = new System.Drawing.Point(393, 66);
-            this.btnAddProducer.Name = "btnAddProducer";
-            this.btnAddProducer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnAddProducer.ShadowDecoration.Parent = this.btnAddProducer;
-            this.btnAddProducer.Size = new System.Drawing.Size(35, 36);
-            this.btnAddProducer.TabIndex = 8;
-            this.btnAddProducer.Tag = "";
-            this.btnAddProducer.Click += new System.EventHandler(this.btnAddProducer_Click);
-            // 
-            // btnAddCategory
-            // 
-            this.btnAddCategory.Animated = true;
-            this.btnAddCategory.BorderThickness = 2;
-            this.btnAddCategory.CheckedState.Parent = this.btnAddCategory;
-            this.btnAddCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddCategory.CustomImages.Parent = this.btnAddCategory;
-            this.btnAddCategory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddCategory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddCategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddCategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddCategory.DisabledState.Parent = this.btnAddCategory;
-            this.btnAddCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.btnAddCategory.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddCategory.ForeColor = System.Drawing.Color.White;
-            this.btnAddCategory.HoverState.Parent = this.btnAddCategory;
-            this.btnAddCategory.Image = global::DienMayXanh_Store.Properties.Resources.add_product;
-            this.btnAddCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddCategory.ImageOffset = new System.Drawing.Point(-1, 0);
-            this.btnAddCategory.Location = new System.Drawing.Point(393, 12);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnAddCategory.ShadowDecoration.Parent = this.btnAddCategory;
-            this.btnAddCategory.Size = new System.Drawing.Size(35, 36);
-            this.btnAddCategory.TabIndex = 5;
-            this.btnAddCategory.Tag = "";
-            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
-            // 
             // btnChangeImg
             // 
             this.btnChangeImg.Animated = true;
@@ -416,16 +316,6 @@ namespace DienMayXanh_Store.Views
             this.btnAddProduct.TabIndex = 21;
             this.btnAddProduct.Text = "Thêm";
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
-            // ptbProduct
-            // 
-            this.ptbProduct.ImageRotate = 0F;
-            this.ptbProduct.Location = new System.Drawing.Point(0, 0);
-            this.ptbProduct.Name = "ptbProduct";
-            this.ptbProduct.ShadowDecoration.Parent = this.ptbProduct;
-            this.ptbProduct.Size = new System.Drawing.Size(300, 200);
-            this.ptbProduct.TabIndex = 0;
-            this.ptbProduct.TabStop = false;
             // 
             // lblTotalPrice
             // 
@@ -565,6 +455,116 @@ namespace DienMayXanh_Store.Views
             this.btnCancel.Text = "Hủy";
             this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAddImg
+            // 
+            this.btnAddImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.btnAddImg.CheckedState.Parent = this.btnAddImg;
+            this.btnAddImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddImg.CustomImages.Parent = this.btnAddImg;
+            this.btnAddImg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddImg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddImg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddImg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddImg.DisabledState.Parent = this.btnAddImg;
+            this.btnAddImg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(26)))), ((int)(((byte)(31)))));
+            this.btnAddImg.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddImg.ForeColor = System.Drawing.Color.White;
+            this.btnAddImg.HoverState.Parent = this.btnAddImg;
+            this.btnAddImg.Image = global::DienMayXanh_Store.Properties.Resources.add_img;
+            this.btnAddImg.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnAddImg.Location = new System.Drawing.Point(97, 386);
+            this.btnAddImg.Name = "btnAddImg";
+            this.btnAddImg.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnAddImg.ShadowDecoration.Parent = this.btnAddImg;
+            this.btnAddImg.Size = new System.Drawing.Size(50, 50);
+            this.btnAddImg.TabIndex = 19;
+            this.btnAddImg.Click += new System.EventHandler(this.btnAddImg_Click);
+            // 
+            // ptbAddImg
+            // 
+            this.ptbAddImg.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAddImg.BorderRadius = 10;
+            this.ptbAddImg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.ptbAddImg.ImageRotate = 0F;
+            this.ptbAddImg.Location = new System.Drawing.Point(12, 313);
+            this.ptbAddImg.Name = "ptbAddImg";
+            this.ptbAddImg.ShadowDecoration.BorderRadius = 15;
+            this.ptbAddImg.ShadowDecoration.Depth = 10;
+            this.ptbAddImg.ShadowDecoration.Enabled = true;
+            this.ptbAddImg.ShadowDecoration.Parent = this.ptbAddImg;
+            this.ptbAddImg.Size = new System.Drawing.Size(230, 210);
+            this.ptbAddImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbAddImg.TabIndex = 18;
+            this.ptbAddImg.TabStop = false;
+            this.ptbAddImg.DragDrop += new System.Windows.Forms.DragEventHandler(this.ptbAddImg_DragDrop);
+            this.ptbAddImg.DragEnter += new System.Windows.Forms.DragEventHandler(this.ptbAddImg_DragEnter);
+            // 
+            // btnAddProducer
+            // 
+            this.btnAddProducer.Animated = true;
+            this.btnAddProducer.BorderThickness = 2;
+            this.btnAddProducer.CheckedState.Parent = this.btnAddProducer;
+            this.btnAddProducer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddProducer.CustomImages.Parent = this.btnAddProducer;
+            this.btnAddProducer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddProducer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddProducer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddProducer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddProducer.DisabledState.Parent = this.btnAddProducer;
+            this.btnAddProducer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.btnAddProducer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddProducer.ForeColor = System.Drawing.Color.White;
+            this.btnAddProducer.HoverState.Parent = this.btnAddProducer;
+            this.btnAddProducer.Image = global::DienMayXanh_Store.Properties.Resources.add_producer;
+            this.btnAddProducer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddProducer.ImageOffset = new System.Drawing.Point(-1, 0);
+            this.btnAddProducer.Location = new System.Drawing.Point(393, 66);
+            this.btnAddProducer.Name = "btnAddProducer";
+            this.btnAddProducer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnAddProducer.ShadowDecoration.Parent = this.btnAddProducer;
+            this.btnAddProducer.Size = new System.Drawing.Size(35, 36);
+            this.btnAddProducer.TabIndex = 8;
+            this.btnAddProducer.Tag = "";
+            this.btnAddProducer.Click += new System.EventHandler(this.btnAddProducer_Click);
+            // 
+            // btnAddCategory
+            // 
+            this.btnAddCategory.Animated = true;
+            this.btnAddCategory.BorderThickness = 2;
+            this.btnAddCategory.CheckedState.Parent = this.btnAddCategory;
+            this.btnAddCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCategory.CustomImages.Parent = this.btnAddCategory;
+            this.btnAddCategory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCategory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddCategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddCategory.DisabledState.Parent = this.btnAddCategory;
+            this.btnAddCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.btnAddCategory.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddCategory.ForeColor = System.Drawing.Color.White;
+            this.btnAddCategory.HoverState.Parent = this.btnAddCategory;
+            this.btnAddCategory.Image = global::DienMayXanh_Store.Properties.Resources.add_product;
+            this.btnAddCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddCategory.ImageOffset = new System.Drawing.Point(-1, 0);
+            this.btnAddCategory.Location = new System.Drawing.Point(393, 12);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnAddCategory.ShadowDecoration.Parent = this.btnAddCategory;
+            this.btnAddCategory.Size = new System.Drawing.Size(35, 36);
+            this.btnAddCategory.TabIndex = 5;
+            this.btnAddCategory.Tag = "";
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
+            // 
+            // ptbProduct
+            // 
+            this.ptbProduct.ImageRotate = 0F;
+            this.ptbProduct.Location = new System.Drawing.Point(0, 0);
+            this.ptbProduct.Name = "ptbProduct";
+            this.ptbProduct.ShadowDecoration.Parent = this.ptbProduct;
+            this.ptbProduct.Size = new System.Drawing.Size(300, 200);
+            this.ptbProduct.TabIndex = 0;
+            this.ptbProduct.TabStop = false;
             // 
             // FormImportProduct
             // 
