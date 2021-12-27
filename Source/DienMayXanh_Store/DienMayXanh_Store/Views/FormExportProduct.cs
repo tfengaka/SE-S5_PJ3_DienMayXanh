@@ -16,7 +16,7 @@ namespace DienMayXanh_Store.Views
     {
         private ContextDB context = Program.context;
         private string currKey = "", warehouseID;
-        private Guna2Panel pnlProduct, currPnl;
+        private Guna2Panel pnlProduct;
         private Guna2PictureBox ptbProduct;
         private Guna2HtmlLabel lblInfo;
         private Guna2CircleButton btnDelete, currBtn;
@@ -364,7 +364,29 @@ namespace DienMayXanh_Store.Views
 
         private void saveData()
         {
+            DateTime date = DateTime.Now;
+            string warehouseID = cmbWarehouse.SelectedValue.ToString();
+            IESLIP newE = new IESLIP();
+            newE.IESlipID = "E" + date.ToString("yyyyMMddHHmmss");
+            newE.TotalPrice = calculTotalPrice();
+            newE.StaffID = FormLogin.instance.info.StaffID;
+            newE.WarehouseID = warehouseID;
+            newE.CreateAt = date;
+            context.IESLIPS.Add(newE);
 
+            listProduct.ForEach(item =>
+            {
+                IESLIPDETAIL newED = new IESLIPDETAIL();
+                newED.IESlipID = newE.IESlipID;
+                newED.ProductID = item.ProductID;
+                newED.Quantity = item.Quantity;
+                context.IESLIPDETAILS.Add(newED);
+                context.SaveChanges();
+            });
+            context.SaveChanges();
+            this.pnlListOrder.Controls.Clear();
+            this.lblTotalPice.Text = "Thành tiền: " + calculTotalPrice() + " VNĐ";
+            MessageBox.Show("Thanh toán thành công");
         }
     }
 }
