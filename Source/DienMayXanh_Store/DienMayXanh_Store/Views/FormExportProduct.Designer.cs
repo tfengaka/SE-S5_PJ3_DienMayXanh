@@ -149,7 +149,7 @@ namespace DienMayXanh_Store.Views
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.RowHeadersVisible = false;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(853, 205);
+            this.dgvProduct.Size = new System.Drawing.Size(864, 205);
             this.dgvProduct.TabIndex = 15;
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -281,7 +281,6 @@ namespace DienMayXanh_Store.Views
             // pnlContainerOrder
             // 
             this.pnlContainerOrder.BackColor = System.Drawing.Color.Transparent;
-            this.pnlContainerOrder.Controls.Add(this.pnlListOrder);
             this.pnlContainerOrder.Controls.Add(this.pblListOrderHeader);
             this.pnlContainerOrder.FillColor = System.Drawing.Color.White;
             this.pnlContainerOrder.Location = new System.Drawing.Point(12, 224);
@@ -289,24 +288,24 @@ namespace DienMayXanh_Store.Views
             this.pnlContainerOrder.Radius = 10;
             this.pnlContainerOrder.ShadowColor = System.Drawing.Color.Gray;
             this.pnlContainerOrder.ShadowDepth = 150;
-            this.pnlContainerOrder.Size = new System.Drawing.Size(1124, 383);
+            this.pnlContainerOrder.Size = new System.Drawing.Size(1135, 253);
             this.pnlContainerOrder.TabIndex = 19;
             // 
             // pnlListOrder
             // 
             this.pnlListOrder.AutoScroll = true;
             this.pnlListOrder.BackColor = System.Drawing.Color.Transparent;
-            this.pnlListOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlListOrder.FillColor = System.Drawing.Color.White;
-            this.pnlListOrder.Location = new System.Drawing.Point(0, 58);
+            this.pnlListOrder.Location = new System.Drawing.Point(3, 58);
             this.pnlListOrder.Name = "pnlListOrder";
             this.pnlListOrder.ShadowColor = System.Drawing.Color.Black;
-            this.pnlListOrder.Size = new System.Drawing.Size(1124, 325);
+            this.pnlListOrder.Size = new System.Drawing.Size(1100, 245);
             this.pnlListOrder.TabIndex = 1;
             // 
             // pblListOrderHeader
             // 
             this.pblListOrderHeader.BackColor = System.Drawing.Color.Transparent;
+            this.pblListOrderHeader.Controls.Add(this.pnlListOrder);
             this.pblListOrderHeader.Controls.Add(this.guna2HtmlLabel7);
             this.pblListOrderHeader.Controls.Add(this.guna2HtmlLabel6);
             this.pblListOrderHeader.Controls.Add(this.guna2HtmlLabel5);
@@ -314,12 +313,11 @@ namespace DienMayXanh_Store.Views
             this.pblListOrderHeader.Controls.Add(this.guna2HtmlLabel3);
             this.pblListOrderHeader.Controls.Add(this.guna2HtmlLabel2);
             this.pblListOrderHeader.Controls.Add(this.guna2HtmlLabel1);
-            this.pblListOrderHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pblListOrderHeader.FillColor = System.Drawing.Color.White;
             this.pblListOrderHeader.Location = new System.Drawing.Point(0, 0);
             this.pblListOrderHeader.Name = "pblListOrderHeader";
             this.pblListOrderHeader.ShadowColor = System.Drawing.Color.Black;
-            this.pblListOrderHeader.Size = new System.Drawing.Size(1124, 58);
+            this.pblListOrderHeader.Size = new System.Drawing.Size(1135, 58);
             this.pblListOrderHeader.TabIndex = 0;
             // 
             // guna2HtmlLabel7
@@ -520,7 +518,7 @@ namespace DienMayXanh_Store.Views
             this.lblTotalPice.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalPice.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.lblTotalPice.Location = new System.Drawing.Point(12, 625);
+            this.lblTotalPice.Location = new System.Drawing.Point(12, 485);
             this.lblTotalPice.Name = "lblTotalPice";
             this.lblTotalPice.Size = new System.Drawing.Size(102, 27);
             this.lblTotalPice.TabIndex = 19;
@@ -545,7 +543,7 @@ namespace DienMayXanh_Store.Views
             this.btnPayment.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnPayment.HoverState.Parent = this.btnPayment;
-            this.btnPayment.Location = new System.Drawing.Point(998, 613);
+            this.btnPayment.Location = new System.Drawing.Point(1009, 485);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.ShadowDecoration.BorderRadius = 15;
             this.btnPayment.ShadowDecoration.Depth = 10;
@@ -561,7 +559,7 @@ namespace DienMayXanh_Store.Views
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1148, 664);
+            this.ClientSize = new System.Drawing.Size(1159, 537);
             this.Controls.Add(this.btnPayment);
             this.Controls.Add(this.lblTotalPice);
             this.Controls.Add(this.pnlContainerOrder);

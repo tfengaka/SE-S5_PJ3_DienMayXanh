@@ -20,9 +20,11 @@ namespace DienMayXanh_Store.Views
         private Guna2Button currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm;
+        public static FormMenu instance;
         public FormMenu()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace DienMayXanh_Store.Views
             leftBorderBtn = new Panel();
             panelMenu.Controls.Add(leftBorderBtn);
             activateButton(btnHome);
-
+            lb_title.Text = "Tổng Quan";
             ptbAvatar.ImageLocation = string.Format(@"..\..\Images\" + info.StaffID + ".jpg");
             lblFullName.Text = info.Name;
             lblPosition.Text = info.Position;
@@ -76,33 +78,40 @@ namespace DienMayXanh_Store.Views
         private void btnHome_Click(object sender, EventArgs e)
         {
             activateButton(sender);
+            lb_title.Text = "Tổng Quan";
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
             activateButton(sender);
+            lb_title.Text = "Danh Mục Sản Phẩm";
             openChildForm(new FormProduct());
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             activateButton(sender);
+            lb_title.Text = "Quản Lý Đơn Hàng";
             openChildForm(new FormIESlip());
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             activateButton(sender);
+            lb_title.Text = "Quản Lý Khách Hàng";
+            openChildForm(new FormCustomer());
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
             activateButton(sender);
+            lb_title.Text = "Quản lý Nhân Viên";
         }
 
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
             activateButton(sender);
+            lb_title.Text = "Kho Hàng";
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -111,9 +120,14 @@ namespace DienMayXanh_Store.Views
             this.Dispose();
         }
 
-        private void close_Click(object sender, EventArgs e)
+        private void CtlB_Exit_Click(object sender, EventArgs e)
         {
-            FormLogin.instance.Dispose();   
+            FormLogin.instance.Dispose();
+        }
+
+        private void CtlB_Minimize_Click(object sender, EventArgs e)
+        {
+            this.MinimizeBox = true;
         }
     }
 }

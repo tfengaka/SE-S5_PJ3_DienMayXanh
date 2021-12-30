@@ -51,6 +51,11 @@ namespace DienMayXanh_Store.Views
             this.ptbTitle = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
+            this.ControlPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.lb_title = new System.Windows.Forms.Label();
+            this.CtlB_Minimize = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.CtlB_Exit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelMenu.SuspendLayout();
             this.pnlFunc.SuspendLayout();
             this.pnlStaff.SuspendLayout();
@@ -58,6 +63,7 @@ namespace DienMayXanh_Store.Views
             this.pnlPosition.SuspendLayout();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTitle)).BeginInit();
+            this.ControlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -84,7 +90,7 @@ namespace DienMayXanh_Store.Views
             this.panelMenu.ShadowDecoration.Depth = 3;
             this.panelMenu.ShadowDecoration.Enabled = true;
             this.panelMenu.ShadowDecoration.Parent = this.panelMenu;
-            this.panelMenu.Size = new System.Drawing.Size(273, 750);
+            this.panelMenu.Size = new System.Drawing.Size(273, 621);
             this.panelMenu.TabIndex = 1;
             // 
             // btnWarehouse
@@ -114,7 +120,7 @@ namespace DienMayXanh_Store.Views
             this.btnWarehouse.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnWarehouse.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnWarehouse.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnWarehouse.Location = new System.Drawing.Point(0, 515);
+            this.btnWarehouse.Location = new System.Drawing.Point(0, 444);
             this.btnWarehouse.Name = "btnWarehouse";
             this.btnWarehouse.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
             this.btnWarehouse.ShadowDecoration.Parent = this.btnWarehouse;
@@ -151,7 +157,7 @@ namespace DienMayXanh_Store.Views
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnLogout.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnLogout.Location = new System.Drawing.Point(0, 705);
+            this.btnLogout.Location = new System.Drawing.Point(0, 576);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
             this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
@@ -189,7 +195,7 @@ namespace DienMayXanh_Store.Views
             this.btnStaff.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnStaff.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnStaff.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnStaff.Location = new System.Drawing.Point(0, 470);
+            this.btnStaff.Location = new System.Drawing.Point(0, 399);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
             this.btnStaff.ShadowDecoration.Parent = this.btnStaff;
@@ -227,7 +233,7 @@ namespace DienMayXanh_Store.Views
             this.btnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomer.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnCustomer.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnCustomer.Location = new System.Drawing.Point(0, 425);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 354);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
             this.btnCustomer.ShadowDecoration.Parent = this.btnCustomer;
@@ -265,7 +271,7 @@ namespace DienMayXanh_Store.Views
             this.btnOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnOrder.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnOrder.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnOrder.Location = new System.Drawing.Point(0, 380);
+            this.btnOrder.Location = new System.Drawing.Point(0, 309);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
             this.btnOrder.ShadowDecoration.Parent = this.btnOrder;
@@ -303,7 +309,7 @@ namespace DienMayXanh_Store.Views
             this.btnProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProduct.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnProduct.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnProduct.Location = new System.Drawing.Point(0, 335);
+            this.btnProduct.Location = new System.Drawing.Point(0, 264);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
             this.btnProduct.ShadowDecoration.Parent = this.btnProduct;
@@ -341,7 +347,7 @@ namespace DienMayXanh_Store.Views
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnHome.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnHome.Location = new System.Drawing.Point(0, 290);
+            this.btnHome.Location = new System.Drawing.Point(0, 219);
             this.btnHome.Name = "btnHome";
             this.btnHome.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
             this.btnHome.ShadowDecoration.Parent = this.btnHome;
@@ -357,7 +363,7 @@ namespace DienMayXanh_Store.Views
             this.pnlFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
             this.pnlFunc.Controls.Add(this.lblFunc);
             this.pnlFunc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFunc.Location = new System.Drawing.Point(0, 231);
+            this.pnlFunc.Location = new System.Drawing.Point(0, 160);
             this.pnlFunc.Name = "pnlFunc";
             this.pnlFunc.ShadowDecoration.Parent = this.pnlFunc;
             this.pnlFunc.Size = new System.Drawing.Size(273, 59);
@@ -379,7 +385,7 @@ namespace DienMayXanh_Store.Views
             this.guna2Separator2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
             this.guna2Separator2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Separator2.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2Separator2.Location = new System.Drawing.Point(0, 221);
+            this.guna2Separator2.Location = new System.Drawing.Point(0, 150);
             this.guna2Separator2.Name = "guna2Separator2";
             this.guna2Separator2.Size = new System.Drawing.Size(273, 10);
             this.guna2Separator2.TabIndex = 7;
@@ -390,7 +396,7 @@ namespace DienMayXanh_Store.Views
             this.pnlStaff.Controls.Add(this.lblFullName);
             this.pnlStaff.Controls.Add(this.ptbAvatar);
             this.pnlStaff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlStaff.Location = new System.Drawing.Point(0, 164);
+            this.pnlStaff.Location = new System.Drawing.Point(0, 93);
             this.pnlStaff.Name = "pnlStaff";
             this.pnlStaff.ShadowDecoration.Parent = this.pnlStaff;
             this.pnlStaff.Size = new System.Drawing.Size(273, 57);
@@ -424,7 +430,7 @@ namespace DienMayXanh_Store.Views
             this.guna2Separator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
             this.guna2Separator1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Separator1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 154);
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 83);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(273, 10);
             this.guna2Separator1.TabIndex = 5;
@@ -434,7 +440,7 @@ namespace DienMayXanh_Store.Views
             this.pnlPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
             this.pnlPosition.Controls.Add(this.lblPosition);
             this.pnlPosition.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPosition.Location = new System.Drawing.Point(0, 107);
+            this.pnlPosition.Location = new System.Drawing.Point(0, 36);
             this.pnlPosition.Name = "pnlPosition";
             this.pnlPosition.ShadowDecoration.Parent = this.pnlPosition;
             this.pnlPosition.Size = new System.Drawing.Size(273, 47);
@@ -458,19 +464,18 @@ namespace DienMayXanh_Store.Views
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.ShadowDecoration.Parent = this.panelTitle;
-            this.panelTitle.Size = new System.Drawing.Size(273, 107);
+            this.panelTitle.Size = new System.Drawing.Size(273, 36);
             this.panelTitle.TabIndex = 0;
             // 
             // ptbTitle
             // 
             this.ptbTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.ptbTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ptbTitle.Image = global::DienMayXanh_Store.Properties.Resources.Logo;
             this.ptbTitle.ImageRotate = 0F;
             this.ptbTitle.Location = new System.Drawing.Point(0, 0);
             this.ptbTitle.Name = "ptbTitle";
             this.ptbTitle.ShadowDecoration.Parent = this.ptbTitle;
-            this.ptbTitle.Size = new System.Drawing.Size(273, 107);
+            this.ptbTitle.Size = new System.Drawing.Size(273, 36);
             this.ptbTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbTitle.TabIndex = 0;
             this.ptbTitle.TabStop = false;
@@ -482,20 +487,89 @@ namespace DienMayXanh_Store.Views
             // 
             // panelContent
             // 
-            this.panelContent.BackColor = System.Drawing.SystemColors.Control;
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.panelContent.Location = new System.Drawing.Point(273, 0);
+            this.panelContent.BackColor = System.Drawing.Color.White;
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelContent.FillColor = System.Drawing.Color.LightGray;
+            this.panelContent.Location = new System.Drawing.Point(273, 36);
             this.panelContent.Name = "panelContent";
             this.panelContent.ShadowDecoration.Parent = this.panelContent;
-            this.panelContent.Size = new System.Drawing.Size(1167, 750);
+            this.panelContent.Size = new System.Drawing.Size(1167, 585);
             this.panelContent.TabIndex = 2;
+            // 
+            // guna2Shapes1
+            // 
+            this.guna2Shapes1.BorderThickness = 0;
+            this.guna2Shapes1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Shapes1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.guna2Shapes1.Flip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
+            this.guna2Shapes1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Shapes1.Name = "guna2Shapes1";
+            this.guna2Shapes1.PolygonSkip = 1;
+            this.guna2Shapes1.Rotate = 0F;
+            this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle;
+            this.guna2Shapes1.Size = new System.Drawing.Size(1167, 36);
+            this.guna2Shapes1.TabIndex = 0;
+            this.guna2Shapes1.Text = "guna2Shapes1";
+            this.guna2Shapes1.Zoom = 100;
+            // 
+            // ControlPanel
+            // 
+            this.ControlPanel.Controls.Add(this.lb_title);
+            this.ControlPanel.Controls.Add(this.CtlB_Minimize);
+            this.ControlPanel.Controls.Add(this.CtlB_Exit);
+            this.ControlPanel.Controls.Add(this.guna2Shapes1);
+            this.ControlPanel.Location = new System.Drawing.Point(273, 0);
+            this.ControlPanel.Name = "ControlPanel";
+            this.ControlPanel.ShadowDecoration.Parent = this.ControlPanel;
+            this.ControlPanel.Size = new System.Drawing.Size(1167, 36);
+            this.ControlPanel.TabIndex = 3;
+            // 
+            // lb_title
+            // 
+            this.lb_title.AutoSize = true;
+            this.lb_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.lb_title.Font = new System.Drawing.Font("SVN-Neutraface 2", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_title.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lb_title.Location = new System.Drawing.Point(464, 5);
+            this.lb_title.Name = "lb_title";
+            this.lb_title.Size = new System.Drawing.Size(0, 27);
+            this.lb_title.TabIndex = 5;
+            // 
+            // CtlB_Minimize
+            // 
+            this.CtlB_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CtlB_Minimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.CtlB_Minimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.CtlB_Minimize.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.CtlB_Minimize.HoverState.Parent = this.CtlB_Minimize;
+            this.CtlB_Minimize.IconColor = System.Drawing.Color.White;
+            this.CtlB_Minimize.Location = new System.Drawing.Point(1050, 0);
+            this.CtlB_Minimize.Name = "CtlB_Minimize";
+            this.CtlB_Minimize.ShadowDecoration.Parent = this.CtlB_Minimize;
+            this.CtlB_Minimize.Size = new System.Drawing.Size(54, 36);
+            this.CtlB_Minimize.TabIndex = 2;
+            this.CtlB_Minimize.Click += new System.EventHandler(this.CtlB_Minimize_Click);
+            // 
+            // CtlB_Exit
+            // 
+            this.CtlB_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CtlB_Exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.CtlB_Exit.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(3)))), ((int)(((byte)(54)))));
+            this.CtlB_Exit.HoverState.Parent = this.CtlB_Exit;
+            this.CtlB_Exit.IconColor = System.Drawing.Color.White;
+            this.CtlB_Exit.Location = new System.Drawing.Point(1110, 0);
+            this.CtlB_Exit.Name = "CtlB_Exit";
+            this.CtlB_Exit.ShadowDecoration.Parent = this.CtlB_Exit;
+            this.CtlB_Exit.Size = new System.Drawing.Size(57, 36);
+            this.CtlB_Exit.TabIndex = 1;
+            this.CtlB_Exit.Click += new System.EventHandler(this.CtlB_Exit_Click);
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 750);
+            this.ClientSize = new System.Drawing.Size(1440, 621);
+            this.Controls.Add(this.ControlPanel);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -513,6 +587,8 @@ namespace DienMayXanh_Store.Views
             this.pnlPosition.PerformLayout();
             this.panelTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbTitle)).EndInit();
+            this.ControlPanel.ResumeLayout(false);
+            this.ControlPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -520,8 +596,6 @@ namespace DienMayXanh_Store.Views
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel panelMenu;
-        private Guna.UI2.WinForms.Guna2Panel panelTitle;
-        private Guna.UI2.WinForms.Guna2PictureBox ptbTitle;
         private Guna.UI2.WinForms.Guna2Panel pnlPosition;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPosition;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
@@ -539,6 +613,13 @@ namespace DienMayXanh_Store.Views
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Elipse Elipse;
         private Guna.UI2.WinForms.Guna2Button btnWarehouse;
-        private Guna.UI2.WinForms.Guna2Panel panelContent;
+        public  Guna.UI2.WinForms.Guna2Panel panelContent;
+        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
+        private Guna.UI2.WinForms.Guna2Panel ControlPanel;
+        private Guna.UI2.WinForms.Guna2ControlBox CtlB_Minimize;
+        private Guna.UI2.WinForms.Guna2ControlBox CtlB_Exit;
+        private Guna.UI2.WinForms.Guna2Panel panelTitle;
+        private Guna.UI2.WinForms.Guna2PictureBox ptbTitle;
+        private System.Windows.Forms.Label lb_title;
     }
 }
