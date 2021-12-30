@@ -116,30 +116,6 @@
     <Compile Include="Models\RECIEPT.cs" />
     <Compile Include="Models\STAFF.cs" />
     <Compile Include="Models\WAREHOUSE.cs" />
-    <Compile Include="Report\CustomerInvoice.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\CustomerInvoice.Designer.cs">
-      <DependentUpon>CustomerInvoice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\ExportsProducts.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\ExportsProducts.Designer.cs">
-      <DependentUpon>ExportsProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\ImportProducts.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\ImportProducts.Designer.cs">
-      <DependentUpon>ImportProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\PrintReports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\PrintReports.Designer.cs">
-      <DependentUpon>PrintReports.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\CustomerDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,7 +125,7 @@
     <Compile Include="Views\Dialogs\EditCustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Dialogs\EditCustomerInfo.Designer.cs">
+    <Compile Include="Views\Dialogs\EditCustomerInfo.designer.cs">
       <DependentUpon>EditCustomerInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Dialogs\FormAddCategory.cs">
@@ -167,7 +143,7 @@
     <Compile Include="Views\Dialogs\InvoiceDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Dialogs\InvoiceDetail.Designer.cs">
+    <Compile Include="Views\Dialogs\InvoiceDetail.designer.cs">
       <DependentUpon>InvoiceDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormAddProduct.cs">
@@ -185,7 +161,7 @@
     <Compile Include="Views\FormExportProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormExportProduct.designer.cs">
+    <Compile Include="Views\FormExportProduct.Designer.cs">
       <DependentUpon>FormExportProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormIESlip.cs">
@@ -211,7 +187,7 @@
     <Compile Include="Views\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormMenu.Designer.cs">
+    <Compile Include="Views\FormMenu.designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormProduct.cs">
@@ -231,18 +207,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report\CustomerInvoice.resx">
-      <DependentUpon>CustomerInvoice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\ExportsProducts.resx">
-      <DependentUpon>ExportsProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\ImportProducts.resx">
-      <DependentUpon>ImportProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\PrintReports.resx">
-      <DependentUpon>PrintReports.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerDetail.resx">
       <DependentUpon>CustomerDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,9 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dialogs\InvoiceDetail.resx">
       <DependentUpon>InvoiceDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormAddProduct.resx">
-      <DependentUpon>FormAddProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormCustomer.resx">
       <DependentUpon>FormCustomer.cs</DependentUpon>
@@ -394,10 +355,10 @@
     <None Include="Resources\add_img.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minus.png" />
+    <None Include="Resources\delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\delete.png" />
+    <None Include="Resources\minus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

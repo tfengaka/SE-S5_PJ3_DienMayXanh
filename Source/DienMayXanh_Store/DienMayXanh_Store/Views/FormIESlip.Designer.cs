@@ -32,7 +32,6 @@ namespace DienMayXanh_Store.Views
             Guna.UI2.WinForms.Guna2TabControl tabControl;
             this.pageOrder = new System.Windows.Forms.TabPage();
             this.pageImport = new System.Windows.Forms.TabPage();
-            this.pageExport = new System.Windows.Forms.TabPage();
             tabControl = new Guna.UI2.WinForms.Guna2TabControl();
             tabControl.SuspendLayout();
             this.SuspendLayout();
@@ -41,7 +40,6 @@ namespace DienMayXanh_Store.Views
             // 
             tabControl.Controls.Add(this.pageOrder);
             tabControl.Controls.Add(this.pageImport);
-            tabControl.Controls.Add(this.pageExport);
             tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             tabControl.ItemSize = new System.Drawing.Size(180, 40);
             tabControl.Location = new System.Drawing.Point(0, 0);
@@ -97,19 +95,6 @@ namespace DienMayXanh_Store.Views
             this.pageImport.Text = "Nhập Hàng";
             this.pageImport.UseVisualStyleBackColor = true;
             // 
-            // pageExport
-            // 
-            this.pageExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pageExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.pageExport.ForeColor = System.Drawing.Color.Coral;
-            this.pageExport.Location = new System.Drawing.Point(4, 44);
-            this.pageExport.Margin = new System.Windows.Forms.Padding(0);
-            this.pageExport.Name = "pageExport";
-            this.pageExport.Size = new System.Drawing.Size(1127, 624);
-            this.pageExport.TabIndex = 2;
-            this.pageExport.Text = "Xuất Hàng";
-            this.pageExport.UseVisualStyleBackColor = true;
-            // 
             // FormIESlip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,8 +112,8 @@ namespace DienMayXanh_Store.Views
         }
 
         #endregion
+
         private System.Windows.Forms.TabPage pageImport;
-        private System.Windows.Forms.TabPage pageExport;
         private System.Windows.Forms.TabPage pageOrder;
     }
 }

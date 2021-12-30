@@ -24,10 +24,11 @@ namespace DienMayXanh_Store.Views
         private Guna2ShadowPanel pnlProduct, currPnl;
         private Guna2PictureBox ptbProduct;
         private Guna2HtmlLabel lblInfo;
+        private Guna2CircleButton btnDelete, currBtn;
         private List<ImportSlip> listProduct = new List<ImportSlip>();
         private string filterImg = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
         private string newImg = @"..\..\Images\Products\";
-        private string selectedFile;
+        private string selectedFile, currName;
         public static FormImportProduct instance;
         public FormImportProduct()
         {
@@ -49,9 +50,9 @@ namespace DienMayXanh_Store.Views
 
         public void loadCbmFilter()
         {
-            cbmFilterCategory.ValueMember = "CategoryID";
-            cbmFilterCategory.DisplayMember = "Name";
-            cbmFilterCategory.DataSource = context.CATEGORIES.ToList();
+            cmbFilterCategory.ValueMember = "CategoryID";
+            cmbFilterCategory.DisplayMember = "Name";
+            cmbFilterCategory.DataSource = context.CATEGORIES.ToList();
 
             cmbFilterProducer.ValueMember = "BrandID";
             cmbFilterProducer.DisplayMember = "Name";
@@ -137,7 +138,7 @@ namespace DienMayXanh_Store.Views
             newProduct.Name = txtProductName.Text;
             newProduct.Price = Convert.ToDecimal(txtPrice.Text);
             newProduct.Quantity = (int)nudQuantity.Value;
-            newProduct.CategoryID = cbmFilterCategory.SelectedValue.ToString();
+            newProduct.CategoryID = cmbFilterCategory.SelectedValue.ToString();
             newProduct.BrandID = cmbFilterProducer.SelectedValue.ToString();
             listProduct.Add(newProduct);
             string fileExt = System.IO.Path.GetExtension(selectedFile);
@@ -281,10 +282,11 @@ namespace DienMayXanh_Store.Views
             this.pnlProduct.Size = new System.Drawing.Size(652, 118);
             this.pnlProduct.Cursor = Cursors.Hand;
             this.pnlProduct.Click += this.pnlProduct_Click;
-            this.pnlProduct.DoubleClick += this.pnlProduct_DoubleClick;
             this.pnlProduct.ResumeLayout(false);
             this.pnlProduct.PerformLayout();
             this.gbListProduct.Controls.Add(this.pnlProduct);
+            setBtnDelete(id);
+            toolTip.SetToolTip(btnDelete, "Xóa sản phẩm");
         }
 
 
@@ -317,12 +319,50 @@ namespace DienMayXanh_Store.Views
             this.pnlProduct.Controls.Add(this.ptbProduct);
         }
 
+        private void setBtnDelete(string id)
+        {
+            this.btnDelete = new Guna2CircleButton();
+            this.btnDelete.Animated = true;
+            this.btnDelete.BorderThickness = 2;
+            this.btnDelete.CheckedState.Parent = this.btnDelete;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.CustomImages.Parent = this.btnDelete;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.DisabledState.Parent = this.btnDelete;
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.HoverState.Parent = this.btnDelete;
+            this.btnDelete.Image = global::DienMayXanh_Store.Properties.Resources.delete;
+            this.btnDelete.Location = new System.Drawing.Point(605, 42);
+            this.btnDelete.Name = "btnDelete." + id;
+            this.btnDelete.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
+            this.btnDelete.Size = new System.Drawing.Size(35, 36);
+            this.btnDelete.Click += btnDelete_Click;
+            this.pnlProduct.Controls.Add(this.btnDelete);
+        }
+
         private void btnEditProduct_Click(object sender, EventArgs e)
         {
-            currItem.Name = txtProductName.Text;
+            if(txtProductName.Text.Equals(currName))
+                currItem.Name = currName;
+            else
+            {
+                ImportSlip check = listProduct.FirstOrDefault(x => x.Name.Equals(txtProductName.Text));
+                if(check != null)
+                {
+                    MessageBox.Show("Tên sản phẩm đã có trong danh sách");
+                    return;
+                }
+                currItem.Name = txtProductName.Text;
+            }    
             currItem.Price = Convert.ToDecimal(txtPrice.Text);
             currItem.Quantity = (int)nudQuantity.Value;
-            currItem.CategoryID = cbmFilterCategory.SelectedValue.ToString();
+            currItem.CategoryID = cmbFilterCategory.SelectedValue.ToString();
             currItem.BrandID = cmbFilterProducer.SelectedValue.ToString();
             string fileExt = System.IO.Path.GetExtension(selectedFile);
             string resultFileCopy = newImg + currItem.ProductID + fileExt;
@@ -358,23 +398,25 @@ namespace DienMayXanh_Store.Views
             btnAddImg.Visible = false;
             btnChangeImg.Visible = true;
             currItem = listProduct.FirstOrDefault(x => x.ProductID.Equals(currPnl.Name));
-            cbmFilterCategory.SelectedValue = currItem.CategoryID;
+            cmbFilterCategory.SelectedValue = currItem.CategoryID;
             cmbFilterProducer.SelectedValue = currItem.BrandID;
             txtProductName.Text = currItem.Name;
             nudQuantity.Value = currItem.Quantity;
             txtPrice.Text = currItem.Price.ToString();
             ptbAddImg.ImageLocation = string.Format(@"..\..\Images\Products\" + currItem.ProductID + ".jpg");
             selectedFile = ptbAddImg.ImageLocation;
+            currName = currItem.Name;
         }
 
         // delete product list
-        private void pnlProduct_DoubleClick(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            currPnl = (Guna2ShadowPanel)sender;
+            currBtn = (Guna2CircleButton)sender;
+            string id = currBtn.Name.Split('.')[1];
             string fileExt = System.IO.Path.GetExtension(selectedFile);
-            string oldFile = newImg + currPnl.Name + fileExt;
+            string oldFile = newImg + id + fileExt;
             System.IO.File.Delete(oldFile);
-            ImportSlip item = listProduct.FirstOrDefault(x => x.ProductID.Equals(currPnl.Name));
+            ImportSlip item = listProduct.FirstOrDefault(x => x.ProductID.Equals(id));
             listProduct.Remove(item);
             currIndex = 0;
             containerY = 60;
