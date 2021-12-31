@@ -116,6 +116,30 @@
     <Compile Include="Models\RECIEPT.cs" />
     <Compile Include="Models\STAFF.cs" />
     <Compile Include="Models\WAREHOUSE.cs" />
+    <Compile Include="Report\CustomerInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CustomerInvoice.Designer.cs">
+      <DependentUpon>CustomerInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ExportsProducts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ExportsProducts.Designer.cs">
+      <DependentUpon>ExportsProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ImportProducts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ImportProducts.Designer.cs">
+      <DependentUpon>ImportProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PrintReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\PrintReports.Designer.cs">
+      <DependentUpon>PrintReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CustomerDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +225,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\CustomerInvoice.resx">
+      <DependentUpon>CustomerInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ExportsProducts.resx">
+      <DependentUpon>ExportsProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ImportProducts.resx">
+      <DependentUpon>ImportProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintReports.resx">
+      <DependentUpon>PrintReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerDetail.resx">
       <DependentUpon>CustomerDetail.cs</DependentUpon>
     </EmbeddedResource>
