@@ -37,6 +37,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterProducer = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
             this.gbListProduct = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cmbProduct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblQuantity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.nudQuantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -53,6 +54,7 @@ namespace DienMayXanh_Store.Views
             this.btnAddProducer = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnAddCategory = new Guna.UI2.WinForms.Guna2CircleButton();
             this.ptbProduct = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.toogleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAddImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbProduct)).BeginInit();
@@ -93,13 +95,14 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterCategory.ShadowDecoration.Parent = this.cmbFilterCategory;
             this.cmbFilterCategory.Size = new System.Drawing.Size(224, 36);
             this.cmbFilterCategory.TabIndex = 2;
+            this.cmbFilterCategory.SelectionChangeCommitted += new System.EventHandler(this.cmbFilterCategory_SelectionChangeCommitted);
             // 
             // lblProducer
             // 
             this.lblProducer.BackColor = System.Drawing.Color.Transparent;
             this.lblProducer.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.lblProducer.Location = new System.Drawing.Point(7, 72);
+            this.lblProducer.Location = new System.Drawing.Point(7, 67);
             this.lblProducer.Name = "lblProducer";
             this.lblProducer.Size = new System.Drawing.Size(125, 27);
             this.lblProducer.TabIndex = 7;
@@ -121,7 +124,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterProducer.HoverState.Parent = this.cmbFilterProducer;
             this.cmbFilterProducer.ItemHeight = 30;
             this.cmbFilterProducer.ItemsAppearance.Parent = this.cmbFilterProducer;
-            this.cmbFilterProducer.Location = new System.Drawing.Point(147, 66);
+            this.cmbFilterProducer.Location = new System.Drawing.Point(147, 61);
             this.cmbFilterProducer.Name = "cmbFilterProducer";
             this.cmbFilterProducer.ShadowDecoration.BorderRadius = 15;
             this.cmbFilterProducer.ShadowDecoration.Depth = 10;
@@ -151,7 +154,7 @@ namespace DienMayXanh_Store.Views
             this.txtProductName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.txtProductName.HoverState.Parent = this.txtProductName;
             this.txtProductName.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtProductName.Location = new System.Drawing.Point(7, 109);
+            this.txtProductName.Location = new System.Drawing.Point(7, 153);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductName.MaxLength = 30;
             this.txtProductName.Name = "txtProductName";
@@ -162,7 +165,7 @@ namespace DienMayXanh_Store.Views
             this.txtProductName.ShadowDecoration.Depth = 10;
             this.txtProductName.ShadowDecoration.Enabled = true;
             this.txtProductName.ShadowDecoration.Parent = this.txtProductName;
-            this.txtProductName.Size = new System.Drawing.Size(364, 45);
+            this.txtProductName.Size = new System.Drawing.Size(364, 37);
             this.txtProductName.TabIndex = 13;
             this.txtProductName.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -181,10 +184,37 @@ namespace DienMayXanh_Store.Views
             this.gbListProduct.ShadowDecoration.Depth = 10;
             this.gbListProduct.ShadowDecoration.Enabled = true;
             this.gbListProduct.ShadowDecoration.Parent = this.gbListProduct;
-            this.gbListProduct.Size = new System.Drawing.Size(678, 507);
+            this.gbListProduct.Size = new System.Drawing.Size(678, 523);
             this.gbListProduct.TabIndex = 14;
             this.gbListProduct.Text = "DANH SÁCH SẢN PHẨM";
             this.gbListProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cmbProduct
+            // 
+            this.cmbProduct.BackColor = System.Drawing.Color.Transparent;
+            this.cmbProduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
+            this.cmbProduct.BorderRadius = 5;
+            this.cmbProduct.BorderThickness = 2;
+            this.cmbProduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProduct.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbProduct.FocusedState.Parent = this.cmbProduct;
+            this.cmbProduct.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.cmbProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbProduct.HoverState.Parent = this.cmbProduct;
+            this.cmbProduct.ItemHeight = 30;
+            this.cmbProduct.ItemsAppearance.Parent = this.cmbProduct;
+            this.cmbProduct.Location = new System.Drawing.Point(7, 153);
+            this.cmbProduct.Name = "cmbProduct";
+            this.cmbProduct.ShadowDecoration.BorderRadius = 15;
+            this.cmbProduct.ShadowDecoration.Depth = 10;
+            this.cmbProduct.ShadowDecoration.Enabled = true;
+            this.cmbProduct.ShadowDecoration.Parent = this.cmbProduct;
+            this.cmbProduct.Size = new System.Drawing.Size(364, 36);
+            this.cmbProduct.TabIndex = 29;
+            this.cmbProduct.Visible = false;
+            this.cmbProduct.SelectionChangeCommitted += new System.EventHandler(this.cmbProduct_SelectionChangeCommitted);
             // 
             // txtPrice
             // 
@@ -207,7 +237,7 @@ namespace DienMayXanh_Store.Views
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
             this.txtPrice.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtPrice.Location = new System.Drawing.Point(217, 161);
+            this.txtPrice.Location = new System.Drawing.Point(217, 199);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPrice.MaxLength = 30;
             this.txtPrice.Name = "txtPrice";
@@ -218,7 +248,7 @@ namespace DienMayXanh_Store.Views
             this.txtPrice.ShadowDecoration.Depth = 10;
             this.txtPrice.ShadowDecoration.Enabled = true;
             this.txtPrice.ShadowDecoration.Parent = this.txtPrice;
-            this.txtPrice.Size = new System.Drawing.Size(154, 33);
+            this.txtPrice.Size = new System.Drawing.Size(154, 37);
             this.txtPrice.TabIndex = 15;
             this.txtPrice.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -227,7 +257,7 @@ namespace DienMayXanh_Store.Views
             this.lblQuantity.BackColor = System.Drawing.Color.Transparent;
             this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.lblQuantity.Location = new System.Drawing.Point(12, 161);
+            this.lblQuantity.Location = new System.Drawing.Point(12, 204);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(85, 27);
             this.lblQuantity.TabIndex = 16;
@@ -244,14 +274,14 @@ namespace DienMayXanh_Store.Views
             this.nudQuantity.FocusedState.Parent = this.nudQuantity;
             this.nudQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.nudQuantity.ForeColor = System.Drawing.Color.Black;
-            this.nudQuantity.Location = new System.Drawing.Point(104, 162);
+            this.nudQuantity.Location = new System.Drawing.Point(104, 200);
             this.nudQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.ShadowDecoration.BorderRadius = 15;
             this.nudQuantity.ShadowDecoration.Depth = 10;
             this.nudQuantity.ShadowDecoration.Enabled = true;
             this.nudQuantity.ShadowDecoration.Parent = this.nudQuantity;
-            this.nudQuantity.Size = new System.Drawing.Size(82, 26);
+            this.nudQuantity.Size = new System.Drawing.Size(87, 36);
             this.nudQuantity.TabIndex = 17;
             this.nudQuantity.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.nudQuantity.UpDownButtonForeColor = System.Drawing.Color.Black;
@@ -275,13 +305,13 @@ namespace DienMayXanh_Store.Views
             this.btnChangeImg.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnChangeImg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnChangeImg.HoverState.Parent = this.btnChangeImg;
-            this.btnChangeImg.Location = new System.Drawing.Point(260, 369);
+            this.btnChangeImg.Location = new System.Drawing.Point(260, 425);
             this.btnChangeImg.Name = "btnChangeImg";
             this.btnChangeImg.ShadowDecoration.BorderRadius = 15;
             this.btnChangeImg.ShadowDecoration.Depth = 10;
             this.btnChangeImg.ShadowDecoration.Enabled = true;
             this.btnChangeImg.ShadowDecoration.Parent = this.btnChangeImg;
-            this.btnChangeImg.Size = new System.Drawing.Size(111, 50);
+            this.btnChangeImg.Size = new System.Drawing.Size(168, 50);
             this.btnChangeImg.TabIndex = 20;
             this.btnChangeImg.Text = "Xóa ảnh";
             this.btnChangeImg.Visible = false;
@@ -306,13 +336,13 @@ namespace DienMayXanh_Store.Views
             this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnAddProduct.HoverState.Parent = this.btnAddProduct;
-            this.btnAddProduct.Location = new System.Drawing.Point(260, 257);
+            this.btnAddProduct.Location = new System.Drawing.Point(260, 369);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.ShadowDecoration.BorderRadius = 15;
             this.btnAddProduct.ShadowDecoration.Depth = 10;
             this.btnAddProduct.ShadowDecoration.Enabled = true;
             this.btnAddProduct.ShadowDecoration.Parent = this.btnAddProduct;
-            this.btnAddProduct.Size = new System.Drawing.Size(111, 50);
+            this.btnAddProduct.Size = new System.Drawing.Size(168, 50);
             this.btnAddProduct.TabIndex = 21;
             this.btnAddProduct.Text = "Thêm";
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
@@ -322,7 +352,7 @@ namespace DienMayXanh_Store.Views
             this.lblTotalPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalPrice.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.lblTotalPrice.Location = new System.Drawing.Point(7, 440);
+            this.lblTotalPrice.Location = new System.Drawing.Point(7, 498);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(118, 27);
             this.lblTotalPrice.TabIndex = 22;
@@ -347,13 +377,13 @@ namespace DienMayXanh_Store.Views
             this.btnImport.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnImport.HoverState.Parent = this.btnImport;
-            this.btnImport.Location = new System.Drawing.Point(285, 459);
+            this.btnImport.Location = new System.Drawing.Point(260, 481);
             this.btnImport.Name = "btnImport";
             this.btnImport.ShadowDecoration.BorderRadius = 15;
             this.btnImport.ShadowDecoration.Depth = 10;
             this.btnImport.ShadowDecoration.Enabled = true;
             this.btnImport.ShadowDecoration.Parent = this.btnImport;
-            this.btnImport.Size = new System.Drawing.Size(143, 50);
+            this.btnImport.Size = new System.Drawing.Size(168, 50);
             this.btnImport.TabIndex = 23;
             this.btnImport.Text = "Nhập hàng";
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
@@ -363,7 +393,7 @@ namespace DienMayXanh_Store.Views
             this.lblWarehouse.BackColor = System.Drawing.Color.Transparent;
             this.lblWarehouse.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWarehouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.lblWarehouse.Location = new System.Drawing.Point(7, 473);
+            this.lblWarehouse.Location = new System.Drawing.Point(12, 110);
             this.lblWarehouse.Name = "lblWarehouse";
             this.lblWarehouse.Size = new System.Drawing.Size(38, 27);
             this.lblWarehouse.TabIndex = 24;
@@ -385,7 +415,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterWarehouse.HoverState.Parent = this.cmbFilterWarehouse;
             this.cmbFilterWarehouse.ItemHeight = 30;
             this.cmbFilterWarehouse.ItemsAppearance.Parent = this.cmbFilterWarehouse;
-            this.cmbFilterWarehouse.Location = new System.Drawing.Point(51, 473);
+            this.cmbFilterWarehouse.Location = new System.Drawing.Point(147, 110);
             this.cmbFilterWarehouse.Name = "cmbFilterWarehouse";
             this.cmbFilterWarehouse.ShadowDecoration.BorderRadius = 15;
             this.cmbFilterWarehouse.ShadowDecoration.Depth = 10;
@@ -413,13 +443,13 @@ namespace DienMayXanh_Store.Views
             this.btnEditProduct.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnEditProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnEditProduct.HoverState.Parent = this.btnEditProduct;
-            this.btnEditProduct.Location = new System.Drawing.Point(260, 201);
+            this.btnEditProduct.Location = new System.Drawing.Point(260, 253);
             this.btnEditProduct.Name = "btnEditProduct";
             this.btnEditProduct.ShadowDecoration.BorderRadius = 15;
             this.btnEditProduct.ShadowDecoration.Depth = 10;
             this.btnEditProduct.ShadowDecoration.Enabled = true;
             this.btnEditProduct.ShadowDecoration.Parent = this.btnEditProduct;
-            this.btnEditProduct.Size = new System.Drawing.Size(111, 50);
+            this.btnEditProduct.Size = new System.Drawing.Size(168, 50);
             this.btnEditProduct.TabIndex = 26;
             this.btnEditProduct.Text = "Sửa";
             this.btnEditProduct.Visible = false;
@@ -444,13 +474,13 @@ namespace DienMayXanh_Store.Views
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnCancel.HoverState.Parent = this.btnCancel;
-            this.btnCancel.Location = new System.Drawing.Point(260, 313);
+            this.btnCancel.Location = new System.Drawing.Point(260, 309);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.BorderRadius = 15;
             this.btnCancel.ShadowDecoration.Depth = 10;
             this.btnCancel.ShadowDecoration.Enabled = true;
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
-            this.btnCancel.Size = new System.Drawing.Size(111, 50);
+            this.btnCancel.Size = new System.Drawing.Size(168, 50);
             this.btnCancel.TabIndex = 27;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.Visible = false;
@@ -473,7 +503,7 @@ namespace DienMayXanh_Store.Views
             this.btnAddImg.HoverState.Parent = this.btnAddImg;
             this.btnAddImg.Image = global::DienMayXanh_Store.Properties.Resources.add_img;
             this.btnAddImg.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnAddImg.Location = new System.Drawing.Point(92, 274);
+            this.btnAddImg.Location = new System.Drawing.Point(94, 334);
             this.btnAddImg.Name = "btnAddImg";
             this.btnAddImg.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddImg.ShadowDecoration.Parent = this.btnAddImg;
@@ -487,13 +517,13 @@ namespace DienMayXanh_Store.Views
             this.ptbAddImg.BorderRadius = 10;
             this.ptbAddImg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.ptbAddImg.ImageRotate = 0F;
-            this.ptbAddImg.Location = new System.Drawing.Point(7, 201);
+            this.ptbAddImg.Location = new System.Drawing.Point(7, 257);
             this.ptbAddImg.Name = "ptbAddImg";
             this.ptbAddImg.ShadowDecoration.BorderRadius = 15;
             this.ptbAddImg.ShadowDecoration.Depth = 10;
             this.ptbAddImg.ShadowDecoration.Enabled = true;
             this.ptbAddImg.ShadowDecoration.Parent = this.ptbAddImg;
-            this.ptbAddImg.Size = new System.Drawing.Size(230, 210);
+            this.ptbAddImg.Size = new System.Drawing.Size(230, 218);
             this.ptbAddImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbAddImg.TabIndex = 18;
             this.ptbAddImg.TabStop = false;
@@ -519,7 +549,7 @@ namespace DienMayXanh_Store.Views
             this.btnAddProducer.Image = global::DienMayXanh_Store.Properties.Resources.add_producer;
             this.btnAddProducer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddProducer.ImageOffset = new System.Drawing.Point(-1, 0);
-            this.btnAddProducer.Location = new System.Drawing.Point(393, 66);
+            this.btnAddProducer.Location = new System.Drawing.Point(393, 61);
             this.btnAddProducer.Name = "btnAddProducer";
             this.btnAddProducer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddProducer.ShadowDecoration.Parent = this.btnAddProducer;
@@ -566,16 +596,42 @@ namespace DienMayXanh_Store.Views
             this.ptbProduct.TabIndex = 0;
             this.ptbProduct.TabStop = false;
             // 
+            // toogleSwitch
+            // 
+            this.toogleSwitch.Animated = true;
+            this.toogleSwitch.BackColor = System.Drawing.Color.Transparent;
+            this.toogleSwitch.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.toogleSwitch.CheckedState.FillColor = System.Drawing.Color.White;
+            this.toogleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.toogleSwitch.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.toogleSwitch.CheckedState.Parent = this.toogleSwitch;
+            this.toogleSwitch.Location = new System.Drawing.Point(393, 162);
+            this.toogleSwitch.Name = "toogleSwitch";
+            this.toogleSwitch.ShadowDecoration.BorderRadius = 10;
+            this.toogleSwitch.ShadowDecoration.Depth = 10;
+            this.toogleSwitch.ShadowDecoration.Enabled = true;
+            this.toogleSwitch.ShadowDecoration.Parent = this.toogleSwitch;
+            this.toogleSwitch.Size = new System.Drawing.Size(35, 20);
+            this.toogleSwitch.TabIndex = 28;
+            this.toogleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.toogleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.toogleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.toogleSwitch.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.toogleSwitch.UncheckedState.Parent = this.toogleSwitch;
+            this.toogleSwitch.CheckedChanged += new System.EventHandler(this.toogleSwitch_CheckedChanged);
+            // 
             // FormImportProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1159, 537);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnEditProduct);
+            this.Controls.Add(this.cmbProduct);
+            this.Controls.Add(this.toogleSwitch);
             this.Controls.Add(this.cmbFilterWarehouse);
             this.Controls.Add(this.lblWarehouse);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnEditProduct);
             this.Controls.Add(this.btnImport);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.btnAddProduct);
@@ -629,5 +685,7 @@ namespace DienMayXanh_Store.Views
         private Guna.UI2.WinForms.Guna2ComboBox cmbFilterWarehouse;
         private Guna.UI2.WinForms.Guna2Button btnEditProduct;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch toogleSwitch;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbProduct;
     }
 }

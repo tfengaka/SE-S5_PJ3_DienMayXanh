@@ -15,6 +15,9 @@ namespace DienMayXanh_Store.Views
 {
     public partial class FormImportProduct : Form
     {
+        public static FormImportProduct instance;
+        public List<ImportSlip> listProduct = new List<ImportSlip>();
+
         private ContextDB context = Program.context;
         private decimal total;
         private int currIndex = 0;
@@ -25,11 +28,9 @@ namespace DienMayXanh_Store.Views
         private Guna2PictureBox ptbProduct;
         private Guna2HtmlLabel lblInfo;
         private Guna2CircleButton btnDelete, currBtn;
-        private List<ImportSlip> listProduct = new List<ImportSlip>();
         private string filterImg = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
         private string newImg = @"..\..\Images\Products\";
         private string selectedFile, currName;
-        public static FormImportProduct instance;
         public FormImportProduct()
         {
             InitializeComponent();
@@ -48,6 +49,55 @@ namespace DienMayXanh_Store.Views
             loadCbmFilter();
         }
 
+        private void toogleSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            resetInput();
+            cmbFilterCategory.SelectedIndex = 0;
+            cmbFilterCategory_SelectionChangeCommitted(sender, e);
+            if (toogleSwitch.Checked)
+            {
+                cmbProduct.Visible = true;
+                txtProductName.Visible = false;
+                btnAddImg.Visible = false;
+            }
+            else
+            {
+                cmbProduct.Visible = false;
+                txtProductName.Visible = true;
+                btnAddImg.Visible = true;
+            }
+
+        }
+
+        private void cmbFilterCategory_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (toogleSwitch.Checked)
+            {
+                cmbProduct.DataSource = context.PRODUCTS
+               .AsEnumerable()
+               .Where(x => x.CategoryID.Equals(cmbFilterCategory.SelectedValue.ToString()))
+               .ToList();
+                setAutoSelectCmbProduct(cmbProduct.SelectedValue.ToString());
+            }
+              
+        }
+
+
+        private void cmbProduct_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            setAutoSelectCmbProduct(cmbProduct.SelectedValue.ToString());
+        }
+
+
+        private void setAutoSelectCmbProduct(string id)
+        {
+            PRODUCT product = context.PRODUCTS.Find(id);
+            txtPrice.Text = product.Price.ToString();
+            nudQuantity.Value = 0;
+            ptbAddImg.ImageLocation = string.Format(@"..\..\Images\Products\" + product.ProductID + ".jpg");
+            cmbFilterProducer.SelectedValue = product.BrandID;
+        }
+
         public void loadCbmFilter()
         {
             cmbFilterCategory.ValueMember = "CategoryID";
@@ -61,6 +111,10 @@ namespace DienMayXanh_Store.Views
             cmbFilterWarehouse.ValueMember = "WarehouseID";
             cmbFilterWarehouse.DisplayMember = "Name";
             cmbFilterWarehouse.DataSource = context.WAREHOUSES.ToList();
+
+            cmbProduct.ValueMember = "ProductID";
+            cmbProduct.DisplayMember = "Name";
+
         }
 
         private void btnAddCategory_Click(object sender, EventArgs e)
@@ -114,7 +168,7 @@ namespace DienMayXanh_Store.Views
             btnChangeImg.Visible = false;
         }
 
-        private void resetInput()
+        public void resetInput()
         {
             nudQuantity.Value = 0;
             txtProductName.Text = "";
@@ -134,16 +188,25 @@ namespace DienMayXanh_Store.Views
             }
             DateTime date = DateTime.Now;
             ImportSlip newProduct = new ImportSlip();
-            newProduct.ProductID = "SP" + date.ToString("yyyyMMddHHmmss");
-            newProduct.Name = txtProductName.Text;
+            if (toogleSwitch.Checked)
+            {
+                newProduct.ProductID = cmbProduct.SelectedValue.ToString();
+                newProduct.Name = cmbProduct.Text;
+            }
+            else
+            {
+                newProduct.ProductID = "SP" + date.ToString("yyyyMMddHHmmss");
+                newProduct.Name = txtProductName.Text;
+                string fileExt = System.IO.Path.GetExtension(selectedFile);
+                string resultFileCopy = newImg + newProduct.ProductID + fileExt;
+                System.IO.File.Copy(selectedFile, resultFileCopy);
+            }
             newProduct.Price = Convert.ToDecimal(txtPrice.Text);
             newProduct.Quantity = (int)nudQuantity.Value;
             newProduct.CategoryID = cmbFilterCategory.SelectedValue.ToString();
             newProduct.BrandID = cmbFilterProducer.SelectedValue.ToString();
             listProduct.Add(newProduct);
-            string fileExt = System.IO.Path.GetExtension(selectedFile);
-            string resultFileCopy = newImg + newProduct.ProductID + fileExt;
-            System.IO.File.Copy(selectedFile, resultFileCopy);
+
             resetInput();
             setLayout();
             lblTotalPrice.Text = "Thành tiền: " + calculTotalPrice() + " VNĐ";
@@ -151,14 +214,25 @@ namespace DienMayXanh_Store.Views
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
-        {
-            if (txtProductName.Text == "" || txtPrice.Text == ""
-                || nudQuantity.Value == 0)
-                MessageBox.Show("Vui lòng nhập đủ thông tin");
-            else if (ptbAddImg.Image == null)
-                MessageBox.Show("Vui lòng chọn ảnh cho sản phẩm");
+        {             
+            if(cmbProduct.Visible)
+            {
+                if (txtPrice.Text == ""
+               || nudQuantity.Value == 0)
+                    MessageBox.Show("Vui lòng nhập đủ thông tin");
+                else addProdut();
+            }
             else
-                addProdut();
+            {
+                if (txtProductName.Text == "" || txtPrice.Text == ""
+                || nudQuantity.Value == 0)
+                    MessageBox.Show("Vui lòng nhập đủ thông tin");
+                else if (ptbAddImg.Image == null)
+                    MessageBox.Show("Vui lòng chọn ảnh cho sản phẩm");
+                else
+                    addProdut();
+            }
+            
         }
 
         private decimal calculTotalPrice()
@@ -204,11 +278,14 @@ namespace DienMayXanh_Store.Views
                     checkProduct
                     .Quantity += x.Quantity;
                     checkProduct.PRODUCT.Price = x.Price;
-                    string fileExt = System.IO.Path.GetExtension(selectedFile);
-                    string oldFile = newImg + x.ProductID + fileExt;
-                    string resultFileCopy = newImg + id + fileExt;
-                    System.IO.File.Copy(oldFile, resultFileCopy, true);
-                    System.IO.File.Delete(oldFile);
+                    if(!toogleSwitch.Checked)
+                    {
+                        string fileExt = System.IO.Path.GetExtension(selectedFile);
+                        string oldFile = newImg + x.ProductID + fileExt;
+                        string resultFileCopy = newImg + id + fileExt;
+                        System.IO.File.Copy(oldFile, resultFileCopy, true);
+                        System.IO.File.Delete(oldFile);
+                    }
 
                     newIED.ProductID = id;
                     newIED.IESlipID = newIE.IESlipID;
@@ -247,7 +324,7 @@ namespace DienMayXanh_Store.Views
             this.gbListProduct.Controls.Clear();
         }
 
-        private void setLayout()
+        public void setLayout()
         {
             int labelX = 125, labelY = 15;
             ImportSlip item = listProduct[currIndex++];
@@ -427,7 +504,7 @@ namespace DienMayXanh_Store.Views
         }
     }
 
-    class ImportSlip
+    public class ImportSlip
     {
         public string ProductID { get; set; }
         public string Name { get; set; }

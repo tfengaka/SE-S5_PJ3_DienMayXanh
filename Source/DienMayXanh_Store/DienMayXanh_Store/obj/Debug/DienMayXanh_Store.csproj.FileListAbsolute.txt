@@ -474,3 +474,6 @@ C:\Users\nthoa\Desktop\STS5-PJ3-DienMayXanh-0da9e2f15af595308edd07c901dafd060739
 C:\Users\nthoa\Desktop\STS5-PJ3-DienMayXanh-0da9e2f15af595308edd07c901dafd060739ef30\STS5-PJ3-DienMayXanh-0da9e2f15af595308edd07c901dafd060739ef30\Source\DienMayXanh_Store\DienMayXanh_Store\bin\Debug\ja\DevExpress.XtraVerticalGrid.v21.2.resources.dll
 C:\Users\nthoa\Desktop\STS5-PJ3-DienMayXanh-0da9e2f15af595308edd07c901dafd060739ef30\STS5-PJ3-DienMayXanh-0da9e2f15af595308edd07c901dafd060739ef30\Source\DienMayXanh_Store\DienMayXanh_Store\bin\Debug\ru\DevExpress.XtraVerticalGrid.v21.2.resources.dll
 C:\Users\nthoa\Desktop\STS5-PJ3-DienMayXanh-0da9e2f15af595308edd07c901dafd060739ef30\STS5-PJ3-DienMayXanh-0da9e2f15af595308edd07c901dafd060739ef30\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.csproj.CopyComplete
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.CustomerDetail.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.Dialogs.InvoiceDetail.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormCustomer.resources

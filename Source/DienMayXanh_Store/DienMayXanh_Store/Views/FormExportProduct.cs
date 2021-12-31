@@ -14,6 +14,8 @@ namespace DienMayXanh_Store.Views
 {
     public partial class FormExportProduct : Form
     {
+        public static FormExportProduct instance;
+
         private ContextDB context = Program.context;
         private string currKey = "", warehouseID;
         private Guna2Panel pnlProduct;
@@ -30,6 +32,7 @@ namespace DienMayXanh_Store.Views
         public FormExportProduct()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void FormExportProduct_Load(object sender, EventArgs e)
@@ -93,7 +96,7 @@ namespace DienMayXanh_Store.Views
             cmbWarehouse.DataSource = context.WAREHOUSES.ToList();
         }
 
-        private DataTable setTable(string id, string name, string label,
+        public DataTable setTable(string id, string name, string label,
             List<CATEGORY> category)
         {
             DataTable table = new DataTable();
