@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DienMayXanh_Store.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,52 +13,81 @@ namespace DienMayXanh_Store.Views
 {
     public partial class CustomerDetail : Form
     {
+        private ContextDB context = Program.context;
+        private object _customer;
         public CustomerDetail()
         {
             InitializeComponent();
         }
-
+        public CustomerDetail(object customer)
+        {
+            InitializeComponent();
+            _customer = customer;
+        }
         private void closePanel(object sender, EventArgs e)
         {
             FormMenu.instance.openChildForm(new FormCustomer());
             this.Dispose();
         }
 
-        public void addTestData(DataGridView dgv)
-        {
-            
-                DataGridViewRow row = new DataGridViewRow();
-                DataGridViewCell _cell;
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = 1;
-                row.Cells.Add(_cell);
 
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = "HD00000001";
-                row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = "Võ Đoàn hoang long";
-                row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = "20/11/2021";
-                row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = "Tiền mặt";
-                row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = "5000000";
-                row.Cells.Add(_cell);
-
-            dgv.Rows.Add(row);
-        }
 
         private void CustomerDetail_Load(object sender, EventArgs e)
+
         {
-            addTestData(dgv_ListInvoice);
+            System.Reflection.PropertyInfo _ID = _customer.GetType().GetProperty("_ID");
+            string _customerID = (String)_ID.GetValue(_customer, null);
+            lb_CustomerID.Text = _customerID;
+            System.Reflection.PropertyInfo _Name = _customer.GetType().GetProperty("_Name");
+            lb_CustomerName.Text = (String)_Name.GetValue(_customer, null);
+            System.Reflection.PropertyInfo _Phone = _customer.GetType().GetProperty("_Phone");
+            lb_CustomerPhone.Text = (String)_Phone.GetValue(_customer, null);
+            System.Reflection.PropertyInfo _Address = _customer.GetType().GetProperty("_Address");
+            lb_CusotmerAddress.Text = (String)_Address.GetValue(_customer, null);
+
+            var Orders = context.RECIEPTS.Where(item => item.CustomerID == _customerID);
+
+            int totalQuantity = 0;
+            decimal totalPayment = 0;
+            int numberRecord = 0;
+            foreach (var item in Orders.ToList())
+            {
+                DataGridViewRow _row = new DataGridViewRow();
+                DataGridViewCell _cell;
+
+                _cell = new DataGridViewTextBoxCell();
+                _cell.Value = numberRecord + 1;
+                _row.Cells.Add(_cell);
+
+                _cell = new DataGridViewTextBoxCell();
+                _cell.Value = item.RecieptID;
+                totalQuantity = context.CARTITEMS.Where(ele => ele.RecieptID == item.RecieptID).Count();
+                _row.Cells.Add(_cell);
+
+                _cell = new DataGridViewTextBoxCell();
+                var staff = context.STAFFS.Find(item.StaffID);
+                _cell.Value = staff.Name.ToString();
+                _row.Cells.Add(_cell);
+
+                _cell = new DataGridViewTextBoxCell();
+                _cell.Value = item.CreateAt;
+                _row.Cells.Add(_cell);
+
+                _cell = new DataGridViewTextBoxCell();
+                _cell.Value = item.PaymentMethod;
+                _row.Cells.Add(_cell);
+
+                _cell = new DataGridViewTextBoxCell();
+                _cell.Value = item.Total;
+                totalPayment += item.Total;
+                _row.Cells.Add(_cell);
+                numberRecord++;
+                dgv_ListInvoice.Rows.Add(_row);
+            }
+            lb_totalPrice.Text = totalPayment.ToString();
+            lb_totalQuantity.Text = totalQuantity.ToString();
+
+
         }
 
         private void btn_invoiceDetail_Click(object sender, DataGridViewCellEventArgs e)

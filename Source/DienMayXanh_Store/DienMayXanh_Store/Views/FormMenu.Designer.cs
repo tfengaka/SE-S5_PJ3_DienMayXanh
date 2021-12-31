@@ -575,7 +575,7 @@ namespace DienMayXanh_Store.Views
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMenu";
+            this.Text = "Cửa hàng điện máy xanh";
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.panelMenu.ResumeLayout(false);
             this.pnlFunc.ResumeLayout(false);

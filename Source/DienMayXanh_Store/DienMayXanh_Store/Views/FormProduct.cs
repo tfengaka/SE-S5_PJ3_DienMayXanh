@@ -26,7 +26,7 @@ namespace DienMayXanh_Store.Views
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-
+            new FormAddProduct().ShowDialog();
         }
     }
 }

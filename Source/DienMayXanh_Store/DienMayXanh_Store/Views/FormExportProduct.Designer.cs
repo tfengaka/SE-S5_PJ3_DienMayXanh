@@ -33,18 +33,10 @@ namespace DienMayXanh_Store.Views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPosition = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbFilterCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dgvProduct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddProduct = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.BrandID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblWarehouse = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbWarehouse = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pnlContainerOrder = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -65,6 +57,15 @@ namespace DienMayXanh_Store.Views
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTotalPice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnPayment = new Guna.UI2.WinForms.Guna2Button();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Brand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddProduct = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.BrandID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.pnlContainerOrder.SuspendLayout();
             this.pblListOrderHeader.SuspendLayout();
@@ -92,7 +93,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbFilterCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbFilterCategory.FocusedState.Parent = this.cmbFilterCategory;
-            this.cmbFilterCategory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.cmbFilterCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFilterCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbFilterCategory.HoverState.Parent = this.cmbFilterCategory;
             this.cmbFilterCategory.ItemHeight = 30;
@@ -109,18 +110,23 @@ namespace DienMayXanh_Store.Views
             // 
             // dgvProduct
             // 
+            this.dgvProduct.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(210)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
             this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -137,19 +143,28 @@ namespace DienMayXanh_Store.Views
             this.CategoryID});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(210)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProduct.EnableHeadersVisualStyles = false;
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProduct.Location = new System.Drawing.Point(283, 12);
             this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProduct.RowHeadersVisible = false;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(853, 205);
+            this.dgvProduct.Size = new System.Drawing.Size(876, 205);
             this.dgvProduct.TabIndex = 15;
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvProduct.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -159,7 +174,7 @@ namespace DienMayXanh_Store.Views
             this.dgvProduct.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.dgvProduct.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProduct.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvProduct.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvProduct.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvProduct.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvProduct.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvProduct.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
@@ -173,73 +188,6 @@ namespace DienMayXanh_Store.Views
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
-            // 
-            // ProductID
-            // 
-            this.ProductID.DataPropertyName = "ProductID";
-            this.ProductID.FillWeight = 104.8223F;
-            this.ProductID.HeaderText = "Mã SP";
-            this.ProductID.Name = "ProductID";
-            this.ProductID.ReadOnly = true;
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "Name";
-            this.ProductName.FillWeight = 104.8223F;
-            this.ProductName.HeaderText = "Tên sản phẩm";
-            this.ProductName.Name = "ProductName";
-            // 
-            // ProductPrice
-            // 
-            this.ProductPrice.DataPropertyName = "Price";
-            this.ProductPrice.FillWeight = 104.8223F;
-            this.ProductPrice.HeaderText = "Giá";
-            this.ProductPrice.Name = "ProductPrice";
-            this.ProductPrice.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.FillWeight = 104.8223F;
-            this.Quantity.HeaderText = "Tồn kho";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Category
-            // 
-            this.Category.DataPropertyName = "CateName";
-            this.Category.FillWeight = 104.8223F;
-            this.Category.HeaderText = "Danh mục";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // Brand
-            // 
-            this.Brand.DataPropertyName = "BrandName";
-            this.Brand.FillWeight = 104.8223F;
-            this.Brand.HeaderText = "NCC";
-            this.Brand.Name = "Brand";
-            this.Brand.ReadOnly = true;
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.FillWeight = 71.06599F;
-            this.btnAddProduct.HeaderText = "Thêm vào đơn";
-            this.btnAddProduct.Name = "btnAddProduct";
-            // 
-            // BrandID
-            // 
-            this.BrandID.DataPropertyName = "BrandID";
-            this.BrandID.HeaderText = "BrandID";
-            this.BrandID.Name = "BrandID";
-            this.BrandID.Visible = false;
-            // 
-            // CategoryID
-            // 
-            this.CategoryID.DataPropertyName = "CategoryID";
-            this.CategoryID.HeaderText = "CateID";
-            this.CategoryID.Name = "CategoryID";
-            this.CategoryID.Visible = false;
             // 
             // lblWarehouse
             // 
@@ -263,7 +211,7 @@ namespace DienMayXanh_Store.Views
             this.cmbWarehouse.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbWarehouse.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbWarehouse.FocusedState.Parent = this.cmbWarehouse;
-            this.cmbWarehouse.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.cmbWarehouse.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbWarehouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbWarehouse.HoverState.Parent = this.cmbWarehouse;
             this.cmbWarehouse.ItemHeight = 30;
@@ -284,12 +232,12 @@ namespace DienMayXanh_Store.Views
             this.pnlContainerOrder.Controls.Add(this.pnlListOrder);
             this.pnlContainerOrder.Controls.Add(this.pblListOrderHeader);
             this.pnlContainerOrder.FillColor = System.Drawing.Color.White;
-            this.pnlContainerOrder.Location = new System.Drawing.Point(12, 224);
+            this.pnlContainerOrder.Location = new System.Drawing.Point(0, 224);
             this.pnlContainerOrder.Name = "pnlContainerOrder";
             this.pnlContainerOrder.Radius = 10;
             this.pnlContainerOrder.ShadowColor = System.Drawing.Color.Gray;
             this.pnlContainerOrder.ShadowDepth = 150;
-            this.pnlContainerOrder.Size = new System.Drawing.Size(1124, 256);
+            this.pnlContainerOrder.Size = new System.Drawing.Size(1159, 256);
             this.pnlContainerOrder.TabIndex = 19;
             // 
             // pnlListOrder
@@ -300,7 +248,7 @@ namespace DienMayXanh_Store.Views
             this.pnlListOrder.Location = new System.Drawing.Point(0, 58);
             this.pnlListOrder.Name = "pnlListOrder";
             this.pnlListOrder.ShadowColor = System.Drawing.Color.Black;
-            this.pnlListOrder.Size = new System.Drawing.Size(1124, 195);
+            this.pnlListOrder.Size = new System.Drawing.Size(1159, 195);
             this.pnlListOrder.TabIndex = 1;
             // 
             // pblListOrderHeader
@@ -318,7 +266,7 @@ namespace DienMayXanh_Store.Views
             this.pblListOrderHeader.Location = new System.Drawing.Point(0, 0);
             this.pblListOrderHeader.Name = "pblListOrderHeader";
             this.pblListOrderHeader.ShadowColor = System.Drawing.Color.Black;
-            this.pblListOrderHeader.Size = new System.Drawing.Size(1124, 58);
+            this.pblListOrderHeader.Size = new System.Drawing.Size(1159, 58);
             this.pblListOrderHeader.TabIndex = 0;
             // 
             // guna2HtmlLabel7
@@ -491,7 +439,7 @@ namespace DienMayXanh_Store.Views
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.Black;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
@@ -555,6 +503,75 @@ namespace DienMayXanh_Store.Views
             this.btnPayment.Text = "Thanh toán";
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
+            // ProductID
+            // 
+            this.ProductID.DataPropertyName = "ProductID";
+            this.ProductID.FillWeight = 104.8223F;
+            this.ProductID.HeaderText = "Mã SP";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.ReadOnly = true;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "Name";
+            this.ProductName.FillWeight = 104.8223F;
+            this.ProductName.HeaderText = "Tên sản phẩm";
+            this.ProductName.Name = "ProductName";
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.DataPropertyName = "Price";
+            this.ProductPrice.FillWeight = 104.8223F;
+            this.ProductPrice.HeaderText = "Giá";
+            this.ProductPrice.Name = "ProductPrice";
+            this.ProductPrice.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 104.8223F;
+            this.Quantity.HeaderText = "Tồn kho";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.DataPropertyName = "CateName";
+            this.Category.FillWeight = 104.8223F;
+            this.Category.HeaderText = "Danh mục";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // Brand
+            // 
+            this.Brand.DataPropertyName = "BrandName";
+            this.Brand.FillWeight = 104.8223F;
+            this.Brand.HeaderText = "NCC";
+            this.Brand.Name = "Brand";
+            this.Brand.ReadOnly = true;
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.FillWeight = 71.06599F;
+            this.btnAddProduct.HeaderText = ".....";
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Text = "Thêm";
+            this.btnAddProduct.UseColumnTextForButtonValue = true;
+            // 
+            // BrandID
+            // 
+            this.BrandID.DataPropertyName = "BrandID";
+            this.BrandID.HeaderText = "BrandID";
+            this.BrandID.Name = "BrandID";
+            this.BrandID.Visible = false;
+            // 
+            // CategoryID
+            // 
+            this.CategoryID.DataPropertyName = "CategoryID";
+            this.CategoryID.HeaderText = "CateID";
+            this.CategoryID.Name = "CategoryID";
+            this.CategoryID.Visible = false;
+            // 
             // FormExportProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,6 +621,8 @@ namespace DienMayXanh_Store.Views
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private System.Windows.Forms.ToolTip toolTip;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalPice;
+        private Guna.UI2.WinForms.Guna2Button btnPayment;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
@@ -613,7 +632,5 @@ namespace DienMayXanh_Store.Views
         private System.Windows.Forms.DataGridViewButtonColumn btnAddProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn BrandID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryID;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalPice;
-        private Guna.UI2.WinForms.Guna2Button btnPayment;
     }
 }

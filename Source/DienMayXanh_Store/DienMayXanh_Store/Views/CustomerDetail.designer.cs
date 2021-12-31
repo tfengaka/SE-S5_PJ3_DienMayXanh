@@ -30,12 +30,32 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lb_CustomerID = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lb_CustomerPhone = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lb_CusotmerAddress = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lb_CustomerName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgv_ListInvoice = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.FromDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.ToDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.btn_filter = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lb_totalPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lb_totalQuantity = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btn_EditInfo = new Guna.UI2.WinForms.Guna2Button();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvc_Staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,24 +63,6 @@
             this.MethodPay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_Button = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lb_CustomerName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lb_CusotmerAddress = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lb_CustomerPhone = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.FromDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.ToDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.btn_filter = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lb_totalQuantity = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lb_totalPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btn_EditInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListInvoice)).BeginInit();
@@ -93,7 +95,7 @@
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BorderRadius = 5;
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel6);
+            this.guna2GroupBox1.Controls.Add(this.lb_CustomerID);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel5);
             this.guna2GroupBox1.Controls.Add(this.lb_CustomerPhone);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
@@ -110,6 +112,98 @@
             this.guna2GroupBox1.TabIndex = 6;
             this.guna2GroupBox1.Text = "Thông tin khách hàng";
             this.guna2GroupBox1.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            // 
+            // lb_CustomerID
+            // 
+            this.lb_CustomerID.BackColor = System.Drawing.Color.Transparent;
+            this.lb_CustomerID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_CustomerID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lb_CustomerID.Location = new System.Drawing.Point(146, 51);
+            this.lb_CustomerID.Name = "lb_CustomerID";
+            this.lb_CustomerID.Size = new System.Drawing.Size(85, 23);
+            this.lb_CustomerID.TabIndex = 7;
+            this.lb_CustomerID.Text = "KH0000001";
+            this.lb_CustomerID.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(3, 51);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(137, 23);
+            this.guna2HtmlLabel5.TabIndex = 6;
+            this.guna2HtmlLabel5.Text = "Mã số khách hàng:";
+            // 
+            // lb_CustomerPhone
+            // 
+            this.lb_CustomerPhone.BackColor = System.Drawing.Color.Transparent;
+            this.lb_CustomerPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_CustomerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lb_CustomerPhone.Location = new System.Drawing.Point(446, 51);
+            this.lb_CustomerPhone.Name = "lb_CustomerPhone";
+            this.lb_CustomerPhone.Size = new System.Drawing.Size(90, 23);
+            this.lb_CustomerPhone.TabIndex = 5;
+            this.lb_CustomerPhone.Text = "0868104306";
+            this.lb_CustomerPhone.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(337, 51);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(103, 23);
+            this.guna2HtmlLabel3.TabIndex = 4;
+            this.guna2HtmlLabel3.Text = "Số điện thoại:";
+            // 
+            // lb_CusotmerAddress
+            // 
+            this.lb_CusotmerAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lb_CusotmerAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_CusotmerAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lb_CusotmerAddress.Location = new System.Drawing.Point(65, 109);
+            this.lb_CusotmerAddress.Name = "lb_CusotmerAddress";
+            this.lb_CusotmerAddress.Size = new System.Drawing.Size(437, 23);
+            this.lb_CusotmerAddress.TabIndex = 3;
+            this.lb_CusotmerAddress.Text = "Số 40 Lê Văn Việt, P. Tăng Nhơn Phú A, TP.Thủ Đức, TP.HCM";
+            this.lb_CusotmerAddress.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(3, 109);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(55, 23);
+            this.guna2HtmlLabel2.TabIndex = 2;
+            this.guna2HtmlLabel2.Text = "Địa chỉ:";
+            // 
+            // lb_CustomerName
+            // 
+            this.lb_CustomerName.BackColor = System.Drawing.Color.Transparent;
+            this.lb_CustomerName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_CustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lb_CustomerName.Location = new System.Drawing.Point(172, 80);
+            this.lb_CustomerName.Name = "lb_CustomerName";
+            this.lb_CustomerName.Size = new System.Drawing.Size(159, 23);
+            this.lb_CustomerName.TabIndex = 1;
+            this.lb_CustomerName.Text = "Võ Đoàn Hoàng Long";
+            this.lb_CustomerName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(3, 80);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(163, 23);
+            this.guna2HtmlLabel1.TabIndex = 0;
+            this.guna2HtmlLabel1.Text = "Họ và tên khách hàng:";
             // 
             // guna2GroupBox3
             // 
@@ -128,9 +222,11 @@
             // 
             // dgv_ListInvoice
             // 
+            this.dgv_ListInvoice.AllowUserToAddRows = false;
+            this.dgv_ListInvoice.AllowUserToDeleteRows = false;
             this.dgv_ListInvoice.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(209)))), ((int)(((byte)(236)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
@@ -142,7 +238,7 @@
             this.dgv_ListInvoice.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -157,28 +253,29 @@
             this.MethodPay,
             this.TotalPrice,
             this.dgv_Button});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(209)))), ((int)(((byte)(236)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ListInvoice.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(209)))), ((int)(((byte)(236)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ListInvoice.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_ListInvoice.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_ListInvoice.EnableHeadersVisualStyles = false;
             this.dgv_ListInvoice.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_ListInvoice.Location = new System.Drawing.Point(0, 38);
             this.dgv_ListInvoice.Name = "dgv_ListInvoice";
+            this.dgv_ListInvoice.ReadOnly = true;
             this.dgv_ListInvoice.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_ListInvoice.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ListInvoice.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_ListInvoice.RowHeadersVisible = false;
             this.dgv_ListInvoice.RowTemplate.Height = 30;
             this.dgv_ListInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -197,7 +294,7 @@
             this.dgv_ListInvoice.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgv_ListInvoice.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv_ListInvoice.ThemeStyle.HeaderStyle.Height = 32;
-            this.dgv_ListInvoice.ThemeStyle.ReadOnly = false;
+            this.dgv_ListInvoice.ThemeStyle.ReadOnly = true;
             this.dgv_ListInvoice.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_ListInvoice.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgv_ListInvoice.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,144 +303,6 @@
             this.dgv_ListInvoice.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_ListInvoice.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_ListInvoice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btn_invoiceDetail_Click);
-            // 
-            // No
-            // 
-            this.No.FillWeight = 28.4264F;
-            this.No.HeaderText = "STT";
-            this.No.Name = "No";
-            this.No.ReadOnly = true;
-            // 
-            // InvoiceID
-            // 
-            this.InvoiceID.FillWeight = 122.2264F;
-            this.InvoiceID.HeaderText = "Mã Hóa Đơn";
-            this.InvoiceID.Name = "InvoiceID";
-            this.InvoiceID.ReadOnly = true;
-            // 
-            // dgvc_Staff
-            // 
-            this.dgvc_Staff.FillWeight = 122.2264F;
-            this.dgvc_Staff.HeaderText = "Tên Nhân Viên";
-            this.dgvc_Staff.Name = "dgvc_Staff";
-            // 
-            // CreateAt
-            // 
-            this.CreateAt.FillWeight = 122.2264F;
-            this.CreateAt.HeaderText = "Ngày Lập Hóa Đơn";
-            this.CreateAt.Name = "CreateAt";
-            // 
-            // MethodPay
-            // 
-            this.MethodPay.FillWeight = 122.2264F;
-            this.MethodPay.HeaderText = "Phương Thức Thanh Toán";
-            this.MethodPay.Name = "MethodPay";
-            // 
-            // TotalPrice
-            // 
-            this.TotalPrice.FillWeight = 122.2264F;
-            this.TotalPrice.HeaderText = "Tổng Thanh Toán";
-            this.TotalPrice.Name = "TotalPrice";
-            // 
-            // dgv_Button
-            // 
-            this.dgv_Button.FillWeight = 60.44162F;
-            this.dgv_Button.HeaderText = "";
-            this.dgv_Button.Name = "dgv_Button";
-            this.dgv_Button.Text = "Chi tiết";
-            this.dgv_Button.UseColumnTextForButtonValue = true;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(3, 80);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(163, 23);
-            this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "Họ và tên khách hàng:";
-            // 
-            // lb_CustomerName
-            // 
-            this.lb_CustomerName.BackColor = System.Drawing.Color.Transparent;
-            this.lb_CustomerName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_CustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lb_CustomerName.Location = new System.Drawing.Point(172, 80);
-            this.lb_CustomerName.Name = "lb_CustomerName";
-            this.lb_CustomerName.Size = new System.Drawing.Size(159, 23);
-            this.lb_CustomerName.TabIndex = 1;
-            this.lb_CustomerName.Text = "Võ Đoàn Hoàng Long";
-            this.lb_CustomerName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(3, 109);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(55, 23);
-            this.guna2HtmlLabel2.TabIndex = 2;
-            this.guna2HtmlLabel2.Text = "Địa chỉ:";
-            // 
-            // lb_CusotmerAddress
-            // 
-            this.lb_CusotmerAddress.BackColor = System.Drawing.Color.Transparent;
-            this.lb_CusotmerAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_CusotmerAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lb_CusotmerAddress.Location = new System.Drawing.Point(65, 109);
-            this.lb_CusotmerAddress.Name = "lb_CusotmerAddress";
-            this.lb_CusotmerAddress.Size = new System.Drawing.Size(437, 23);
-            this.lb_CusotmerAddress.TabIndex = 3;
-            this.lb_CusotmerAddress.Text = "Số 40 Lê Văn Việt, P. Tăng Nhơn Phú A, TP.Thủ Đức, TP.HCM";
-            this.lb_CusotmerAddress.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(337, 51);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(103, 23);
-            this.guna2HtmlLabel3.TabIndex = 4;
-            this.guna2HtmlLabel3.Text = "Số điện thoại:";
-            // 
-            // lb_CustomerPhone
-            // 
-            this.lb_CustomerPhone.BackColor = System.Drawing.Color.Transparent;
-            this.lb_CustomerPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_CustomerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lb_CustomerPhone.Location = new System.Drawing.Point(446, 51);
-            this.lb_CustomerPhone.Name = "lb_CustomerPhone";
-            this.lb_CustomerPhone.Size = new System.Drawing.Size(90, 23);
-            this.lb_CustomerPhone.TabIndex = 5;
-            this.lb_CustomerPhone.Text = "0868104306";
-            this.lb_CustomerPhone.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(3, 51);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(137, 23);
-            this.guna2HtmlLabel5.TabIndex = 6;
-            this.guna2HtmlLabel5.Text = "Mã số khách hàng:";
-            // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(146, 51);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(85, 23);
-            this.guna2HtmlLabel6.TabIndex = 7;
-            this.guna2HtmlLabel6.Text = "KH0000001";
-            this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FromDate
             // 
@@ -423,27 +382,27 @@
             this.guna2GroupBox2.Text = "Số liệu khách hàng";
             this.guna2GroupBox2.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             // 
-            // guna2HtmlLabel7
+            // guna2HtmlLabel9
             // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(18, 51);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(139, 23);
-            this.guna2HtmlLabel7.TabIndex = 7;
-            this.guna2HtmlLabel7.Text = "Tổng số đơn hàng:";
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(295, 80);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(36, 23);
+            this.guna2HtmlLabel9.TabIndex = 11;
+            this.guna2HtmlLabel9.Text = "VNĐ";
             // 
-            // guna2HtmlLabel8
+            // lb_totalPrice
             // 
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(18, 80);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(149, 23);
-            this.guna2HtmlLabel8.TabIndex = 8;
-            this.guna2HtmlLabel8.Text = "Tổng đã thanh toán:";
+            this.lb_totalPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lb_totalPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_totalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lb_totalPrice.Location = new System.Drawing.Point(173, 80);
+            this.lb_totalPrice.Name = "lb_totalPrice";
+            this.lb_totalPrice.Size = new System.Drawing.Size(105, 23);
+            this.lb_totalPrice.TabIndex = 10;
+            this.lb_totalPrice.Text = "2.200.000.000";
             // 
             // lb_totalQuantity
             // 
@@ -456,16 +415,27 @@
             this.lb_totalQuantity.TabIndex = 9;
             this.lb_totalQuantity.Text = "30";
             // 
-            // lb_totalPrice
+            // guna2HtmlLabel8
             // 
-            this.lb_totalPrice.BackColor = System.Drawing.Color.Transparent;
-            this.lb_totalPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_totalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lb_totalPrice.Location = new System.Drawing.Point(173, 80);
-            this.lb_totalPrice.Name = "lb_totalPrice";
-            this.lb_totalPrice.Size = new System.Drawing.Size(105, 23);
-            this.lb_totalPrice.TabIndex = 10;
-            this.lb_totalPrice.Text = "2.200.000.000";
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(18, 80);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(149, 23);
+            this.guna2HtmlLabel8.TabIndex = 8;
+            this.guna2HtmlLabel8.Text = "Tổng đã thanh toán:";
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(18, 51);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(139, 23);
+            this.guna2HtmlLabel7.TabIndex = 7;
+            this.guna2HtmlLabel7.Text = "Tổng số đơn hàng:";
             // 
             // btn_EditInfo
             // 
@@ -489,16 +459,62 @@
             this.btn_EditInfo.TabIndex = 15;
             this.btn_EditInfo.Text = "Cập nhật thông tin";
             // 
-            // guna2HtmlLabel9
+            // No
             // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(295, 80);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(36, 23);
-            this.guna2HtmlLabel9.TabIndex = 11;
-            this.guna2HtmlLabel9.Text = "VNĐ";
+            this.No.FillWeight = 28.4264F;
+            this.No.HeaderText = "STT";
+            this.No.Name = "No";
+            this.No.ReadOnly = true;
+            // 
+            // InvoiceID
+            // 
+            this.InvoiceID.FillWeight = 122.2264F;
+            this.InvoiceID.HeaderText = "Mã Hóa Đơn";
+            this.InvoiceID.Name = "InvoiceID";
+            this.InvoiceID.ReadOnly = true;
+            // 
+            // dgvc_Staff
+            // 
+            this.dgvc_Staff.FillWeight = 122.2264F;
+            this.dgvc_Staff.HeaderText = "Tên Nhân Viên";
+            this.dgvc_Staff.Name = "dgvc_Staff";
+            this.dgvc_Staff.ReadOnly = true;
+            // 
+            // CreateAt
+            // 
+            dataGridViewCellStyle3.Format = "g";
+            dataGridViewCellStyle3.NullValue = null;
+            this.CreateAt.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CreateAt.FillWeight = 122.2264F;
+            this.CreateAt.HeaderText = "Ngày Lập Hóa Đơn";
+            this.CreateAt.Name = "CreateAt";
+            this.CreateAt.ReadOnly = true;
+            // 
+            // MethodPay
+            // 
+            this.MethodPay.FillWeight = 122.2264F;
+            this.MethodPay.HeaderText = "Phương Thức Thanh Toán";
+            this.MethodPay.Name = "MethodPay";
+            this.MethodPay.ReadOnly = true;
+            // 
+            // TotalPrice
+            // 
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = null;
+            this.TotalPrice.DefaultCellStyle = dataGridViewCellStyle4;
+            this.TotalPrice.FillWeight = 122.2264F;
+            this.TotalPrice.HeaderText = "Tổng Thanh Toán";
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.ReadOnly = true;
+            // 
+            // dgv_Button
+            // 
+            this.dgv_Button.FillWeight = 60.44162F;
+            this.dgv_Button.HeaderText = "";
+            this.dgv_Button.Name = "dgv_Button";
+            this.dgv_Button.ReadOnly = true;
+            this.dgv_Button.Text = "Chi tiết";
+            this.dgv_Button.UseColumnTextForButtonValue = true;
             // 
             // CustomerDetail
             // 
@@ -537,18 +553,11 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_ListInvoice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn No;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvc_Staff;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CreateAt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MethodPay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
-        private System.Windows.Forms.DataGridViewButtonColumn dgv_Button;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_CustomerName;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_CusotmerAddress;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lb_CustomerID;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel lb_CustomerPhone;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
@@ -562,5 +571,12 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2Button btn_EditInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvc_Staff;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CreateAt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MethodPay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalPrice;
+        private System.Windows.Forms.DataGridViewButtonColumn dgv_Button;
     }
 }
