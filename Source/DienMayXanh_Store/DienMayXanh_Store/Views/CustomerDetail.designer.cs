@@ -234,7 +234,6 @@
             this.dgv_ListInvoice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ListInvoice.BackgroundColor = System.Drawing.Color.White;
             this.dgv_ListInvoice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_ListInvoice.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_ListInvoice.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
@@ -312,7 +311,7 @@
             this.FromDate.CheckedState.Parent = this.FromDate;
             this.FromDate.FillColor = System.Drawing.Color.White;
             this.FromDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.FromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FromDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FromDate.HoverState.Parent = this.FromDate;
             this.FromDate.Location = new System.Drawing.Point(649, 163);
             this.FromDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -331,7 +330,7 @@
             this.ToDate.CheckedState.Parent = this.ToDate;
             this.ToDate.FillColor = System.Drawing.Color.White;
             this.ToDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ToDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ToDate.HoverState.Parent = this.ToDate;
             this.ToDate.Location = new System.Drawing.Point(835, 163);
             this.ToDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -461,6 +460,7 @@
             // 
             // No
             // 
+            this.No.DataPropertyName = "No";
             this.No.FillWeight = 28.4264F;
             this.No.HeaderText = "STT";
             this.No.Name = "No";
@@ -468,6 +468,7 @@
             // 
             // InvoiceID
             // 
+            this.InvoiceID.DataPropertyName = "RecieptID";
             this.InvoiceID.FillWeight = 122.2264F;
             this.InvoiceID.HeaderText = "Mã Hóa Đơn";
             this.InvoiceID.Name = "InvoiceID";
@@ -475,6 +476,7 @@
             // 
             // dgvc_Staff
             // 
+            this.dgvc_Staff.DataPropertyName = "Name";
             this.dgvc_Staff.FillWeight = 122.2264F;
             this.dgvc_Staff.HeaderText = "Tên Nhân Viên";
             this.dgvc_Staff.Name = "dgvc_Staff";
@@ -482,6 +484,7 @@
             // 
             // CreateAt
             // 
+            this.CreateAt.DataPropertyName = "CreateAt";
             dataGridViewCellStyle3.Format = "g";
             dataGridViewCellStyle3.NullValue = null;
             this.CreateAt.DefaultCellStyle = dataGridViewCellStyle3;
@@ -492,6 +495,7 @@
             // 
             // MethodPay
             // 
+            this.MethodPay.DataPropertyName = "PaymentMethod";
             this.MethodPay.FillWeight = 122.2264F;
             this.MethodPay.HeaderText = "Phương Thức Thanh Toán";
             this.MethodPay.Name = "MethodPay";
@@ -499,6 +503,7 @@
             // 
             // TotalPrice
             // 
+            this.TotalPrice.DataPropertyName = "Total";
             dataGridViewCellStyle4.Format = "N0";
             dataGridViewCellStyle4.NullValue = null;
             this.TotalPrice.DefaultCellStyle = dataGridViewCellStyle4;

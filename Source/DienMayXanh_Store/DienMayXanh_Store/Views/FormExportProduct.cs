@@ -1,4 +1,5 @@
 ﻿using DienMayXanh_Store.Models;
+using DienMayXanh_Store.Report;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -390,6 +391,8 @@ namespace DienMayXanh_Store.Views
             this.pnlListOrder.Controls.Clear();
             this.lblTotalPice.Text = "Thành tiền: " + calculTotalPrice() + " VNĐ";
             MessageBox.Show("Thanh toán thành công");
+
+           
         }
     }
 }

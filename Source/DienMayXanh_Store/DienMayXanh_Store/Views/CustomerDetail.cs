@@ -35,6 +35,10 @@ namespace DienMayXanh_Store.Views
         private void CustomerDetail_Load(object sender, EventArgs e)
 
         {
+            dgv_ListInvoice.Columns["CreateAt"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
+            FromDate.CustomFormat = "dd/MM/yyyy";
+            ToDate.CustomFormat = "dd/MM/yyyy";
+
             System.Reflection.PropertyInfo _ID = _customer.GetType().GetProperty("_ID");
             string _customerID = (String)_ID.GetValue(_customer, null);
             lb_CustomerID.Text = _customerID;
@@ -45,45 +49,27 @@ namespace DienMayXanh_Store.Views
             System.Reflection.PropertyInfo _Address = _customer.GetType().GetProperty("_Address");
             lb_CusotmerAddress.Text = (String)_Address.GetValue(_customer, null);
 
-            var Orders = context.RECIEPTS.Where(item => item.CustomerID == _customerID);
+            var Orders = context.RECIEPTS
+                .Where(item => item.CustomerID == _customerID)
+                .AsEnumerable()
+                .Select((item, index) => new 
+                {
+                    No = ++index,
+                    item.RecieptID,
+                    item.STAFF.Name,
+                    item.CreateAt,
+                    item.PaymentMethod,
+                    item.Total
+                }).ToList();
+            dgv_ListInvoice.DataSource = Orders;
 
-            int totalQuantity = 0;
-            decimal totalPayment = 0;
-            int numberRecord = 0;
-            foreach (var item in Orders.ToList())
-            {
-                DataGridViewRow _row = new DataGridViewRow();
-                DataGridViewCell _cell;
+            int totalQuantity = context.RECIEPTS
+                .Where(item => item.CustomerID.Equals(_customerID))
+                .Count();
+            decimal totalPayment = context.RECIEPTS
+                .Where(item => item.CustomerID.Equals(_customerID))
+                .Sum(item => item.Total);
 
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = numberRecord + 1;
-                _row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = item.RecieptID;
-                totalQuantity = context.CARTITEMS.Where(ele => ele.RecieptID == item.RecieptID).Count();
-                _row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                var staff = context.STAFFS.Find(item.StaffID);
-                _cell.Value = staff.Name.ToString();
-                _row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = item.CreateAt;
-                _row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = item.PaymentMethod;
-                _row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = item.Total;
-                totalPayment += item.Total;
-                _row.Cells.Add(_cell);
-                numberRecord++;
-                dgv_ListInvoice.Rows.Add(_row);
-            }
             lb_totalPrice.Text = totalPayment.ToString();
             lb_totalQuantity.Text = totalQuantity.ToString();
 

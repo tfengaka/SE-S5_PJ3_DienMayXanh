@@ -689,3 +689,10 @@ D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\obj
 D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.ExportsProducts.resources
 D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.ImportProducts.resources
 D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.PrintReports.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.CustomerInvoice.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.ExportsProducts.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.ImportProducts.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.PrintReports.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.CustomerDetail.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.Dialogs.InvoiceDetail.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormCustomer.resources

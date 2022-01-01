@@ -17,58 +17,23 @@ namespace DienMayXanh_Store.Views
         public FormCustomer()
         {
             InitializeComponent();
+            dgv_listCustomer.AutoGenerateColumns = false;
         }
 
         private void initialData(object sender, EventArgs e)
         {
-            var customers = context.CUSTOMERS.Select(customer => new
-            {
-                customer.CustomerID,
-                customer.Name,
-                customer.Address,
-                customer.Gender,
-                customer.Phone,
-            }).ToList();
-            int i = 0;
-            foreach (var customer in customers)
-            {
-                DataGridViewRow _row = new DataGridViewRow();
-                DataGridViewCell _cell;
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = i + 1;
-                _row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = customer.CustomerID;
-                _row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = customer.Name;
-                _row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                if(customer.Gender)
-                {
-                    _cell.Value = "Nam";
-                }
-                else
-                {
-                    _cell.Value = "Nữ";
-                }
-                _row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = customer.Phone;
-                _row.Cells.Add(_cell);
-
-                _cell = new DataGridViewTextBoxCell();
-                _cell.Value = customer.Address;
-                _row.Cells.Add(_cell);
-
-                dgv_listCustomer.Rows.Add(_row);
-                i++;
-            }
+            var customers = context.CUSTOMERS
+                .AsEnumerable()
+                .Select((customer, index) => new
+                    {
+                        No = ++index,
+                        customer.CustomerID,
+                        customer.Name,
+                        customer.Address,
+                        Gender = customer.Gender ? "Nam" : "Nữ",
+                        customer.Phone,
+                    }).ToList();
+            dgv_listCustomer.DataSource = customers;
         }
 
         private void btn_ViewDetail_Click(object sender, DataGridViewCellEventArgs e)
