@@ -363,36 +363,40 @@ namespace DienMayXanh_Store.Views
         {
             if (listProduct.Count == 0)
                 MessageBox.Show("Vui lòng thêm sản phẩm vào đơn hàng");
-            else saveData();
-        }
-
-        private void saveData()
-        {
-            DateTime date = DateTime.Now;
-            string warehouseID = cmbWarehouse.SelectedValue.ToString();
-            IESLIP newE = new IESLIP();
-            newE.IESlipID = "E" + date.ToString("yyyyMMddHHmmss");
-            newE.TotalPrice = calculTotalPrice();
-            newE.StaffID = FormLogin.instance.info.StaffID;
-            newE.WarehouseID = warehouseID;
-            newE.CreateAt = date;
-            context.IESLIPS.Add(newE);
-
-            listProduct.ForEach(item =>
+            else
             {
-                IESLIPDETAIL newED = new IESLIPDETAIL();
-                newED.IESlipID = newE.IESlipID;
-                newED.ProductID = item.ProductID;
-                newED.Quantity = item.Quantity;
-                context.IESLIPDETAILS.Add(newED);
-                context.SaveChanges();
-            });
-            context.SaveChanges();
-            this.pnlListOrder.Controls.Clear();
-            this.lblTotalPice.Text = "Thành tiền: " + calculTotalPrice() + " VNĐ";
-            MessageBox.Show("Thanh toán thành công");
-
-           
+                createCartProduct();
+            }                
         }
+        private void createCartProduct()
+        {
+            List<CARTITEM> cart = new List<CARTITEM>();
+            DateTime date = DateTime.Now;
+            string recieptID = "HD" + date.ToString("yyyyMMddHHmm");
+            listProduct.ForEach(product =>
+            {
+                CARTITEM cartItem = new CARTITEM();
+                cartItem.RecieptID = recieptID;
+                cartItem.ProductID = product.ProductID;
+                cartItem.Quantity = product.Quantity;
+                cartItem.SubTotal = product.Price * product.Quantity;
+                cart.Add(cartItem);
+            });
+            formPayment frmpayment = new formPayment(recieptID, cart, cmbWarehouse.SelectedValue.ToString());
+            GotoNextStep(frmpayment);
+        }
+
+        public void GotoNextStep(Form childForm)
+        {
+            this.Hide();
+            FormMenu.instance.currChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            FormMenu.instance.panelContent.Controls.Add(childForm);
+            FormMenu.instance.panelContent.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        } 
     }
 }

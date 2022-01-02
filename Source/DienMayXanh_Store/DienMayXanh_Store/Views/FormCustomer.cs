@@ -23,16 +23,16 @@ namespace DienMayXanh_Store.Views
         private void initialData(object sender, EventArgs e)
         {
             var customers = context.CUSTOMERS
-                .AsEnumerable()
-                .Select((customer, index) => new
-                    {
-                        No = ++index,
-                        customer.CustomerID,
-                        customer.Name,
-                        customer.Address,
-                        Gender = customer.Gender ? "Nam" : "Nữ",
-                        customer.Phone,
-                    }).ToList();
+                 .AsEnumerable()
+                 .Select((customer, index) => new
+                 {
+                     No = ++index,
+                     customer.CustomerID,
+                     customer.Name,
+                     customer.Address,
+                     Gender = customer.Gender ? "Nam" : "Nữ",
+                     customer.Phone,
+                 }).ToList();
             dgv_listCustomer.DataSource = customers;
         }
 

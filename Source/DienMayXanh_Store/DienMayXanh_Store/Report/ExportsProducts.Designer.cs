@@ -36,23 +36,29 @@
             DevExpress.DataAccess.Sql.Table table1 = new DevExpress.DataAccess.Sql.Table();
             DevExpress.DataAccess.Sql.Column column2 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression2 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table2 = new DevExpress.DataAccess.Sql.Table();
             DevExpress.DataAccess.Sql.Column column3 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression3 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column4 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression4 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table2 = new DevExpress.DataAccess.Sql.Table();
+            DevExpress.DataAccess.Sql.Table table3 = new DevExpress.DataAccess.Sql.Table();
             DevExpress.DataAccess.Sql.Column column5 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression5 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table4 = new DevExpress.DataAccess.Sql.Table();
             DevExpress.DataAccess.Sql.Column column6 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression6 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.Table table3 = new DevExpress.DataAccess.Sql.Table();
             DevExpress.DataAccess.Sql.Column column7 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression7 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            DevExpress.DataAccess.Sql.Table table5 = new DevExpress.DataAccess.Sql.Table();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.Join join1 = new DevExpress.DataAccess.Sql.Join();
             DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo1 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
             DevExpress.DataAccess.Sql.Join join2 = new DevExpress.DataAccess.Sql.Join();
             DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo2 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
+            DevExpress.DataAccess.Sql.Join join3 = new DevExpress.DataAccess.Sql.Join();
+            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo3 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
+            DevExpress.DataAccess.Sql.Join join4 = new DevExpress.DataAccess.Sql.Join();
+            DevExpress.DataAccess.Sql.RelationColumnInfo relationColumnInfo4 = new DevExpress.DataAccess.Sql.RelationColumnInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExportsProducts));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.detailTable = new DevExpress.XtraReports.UI.XRTable();
@@ -64,6 +70,7 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.GroupHeader2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
@@ -84,7 +91,10 @@
             this.baseControlStyle = new DevExpress.XtraReports.UI.XRControlStyle();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.pRecieptID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.detailTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerTable)).BeginInit();
@@ -136,7 +146,7 @@
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.quantity.Summary = xrSummary1;
             this.quantity.Text = "1";
-            this.quantity.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.quantity.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.quantity.Weight = 0.25872026842754409D;
             // 
             // productName
@@ -144,7 +154,7 @@
             this.productName.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.productName.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Name]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PRODUCT_Name]")});
             this.productName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productName.Name = "productName";
             this.productName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 5, 0, 100F);
@@ -177,7 +187,7 @@
             this.lineTotal.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lineTotal.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SubTotal]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Quantity] * [Price]")});
             this.lineTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lineTotal.Name = "lineTotal";
             this.lineTotal.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 5, 0, 100F);
@@ -207,6 +217,10 @@
             // GroupHeader2
             // 
             this.GroupHeader2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel9,
+            this.xrLabel8,
+            this.xrLabel7,
+            this.xrLabel6,
             this.xrPictureBox1,
             this.xrLabel5,
             this.xrLabel4,
@@ -216,18 +230,27 @@
             this.GroupHeader2.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("InvoiceNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.GroupHeader2.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail;
-            this.GroupHeader2.HeightF = 257.7917F;
+            this.GroupHeader2.HeightF = 300.5F;
             this.GroupHeader2.Level = 1;
             this.GroupHeader2.Name = "GroupHeader2";
             this.GroupHeader2.StyleName = "baseControlStyle";
             this.GroupHeader2.StylePriority.UseBackColor = false;
+            // 
+            // xrPictureBox1
+            // 
+            this.xrPictureBox1.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
+            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::DienMayXanh_Store.Properties.Resources.Logo, true);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(648.8189F, 111.0833F);
+            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Cover;
             // 
             // xrLabel5
             // 
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CreateAt]")});
             this.xrLabel5.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(199.5833F, 217.5F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(151.6666F, 217.5001F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -241,9 +264,9 @@
             // xrLabel4
             // 
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RecieptID]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pRecieptID")});
             this.xrLabel4.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(199.5833F, 181.9999F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(151.6666F, 182F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -255,28 +278,28 @@
             // 
             // xrLabel3
             // 
-            this.xrLabel3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.xrLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 182F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(189.5833F, 35.49998F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(141.6666F, 35.49998F);
             this.xrLabel3.StylePriority.UseFont = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
-            this.xrLabel3.Text = "Mã số hóa đơn:";
+            this.xrLabel3.Text = "Mã số phiếu:";
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel2
             // 
-            this.xrLabel2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.xrLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 217.5F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(189.5833F, 30.29169F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(141.6666F, 30.29169F);
             this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "Ngày lập hóa đơn:";
+            this.xrLabel2.Text = "Ngày lập phiếu:";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel1
@@ -305,11 +328,11 @@
             // totalTable
             // 
             this.totalTable.ForeColor = System.Drawing.Color.Black;
-            this.totalTable.LocationFloat = new DevExpress.Utils.PointFloat(352.9486F, 0F);
+            this.totalTable.LocationFloat = new DevExpress.Utils.PointFloat(297.7402F, 0F);
             this.totalTable.Name = "totalTable";
             this.totalTable.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.totalRow});
-            this.totalTable.SizeF = new System.Drawing.SizeF(295.8703F, 36.48938F);
+            this.totalTable.SizeF = new System.Drawing.SizeF(351.0787F, 36.48938F);
             this.totalTable.StylePriority.UseForeColor = false;
             // 
             // totalRow
@@ -328,16 +351,16 @@
             this.totalCaption.StylePriority.UseFont = false;
             this.totalCaption.StylePriority.UsePadding = false;
             this.totalCaption.StylePriority.UseTextAlignment = false;
-            this.totalCaption.Text = "Tổng hóa đơn";
+            this.totalCaption.Text = "Tổng giá trị";
             this.totalCaption.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.totalCaption.Weight = 1.0875206238724315D;
+            this.totalCaption.Weight = 1.4805691267249306D;
             // 
             // total
             // 
             this.total.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.total.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Total]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TotalPrice]")});
             this.total.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.total.Name = "total";
             this.total.StylePriority.UseBorders = false;
@@ -441,32 +464,39 @@
             // 
             this.sqlDataSource1.ConnectionName = "ContextDB";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            columnExpression1.ColumnName = "RecieptID";
-            table1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"183\" />";
-            table1.Name = "RECIEPT";
+            columnExpression1.ColumnName = "TotalPrice";
+            table1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"163\" />";
+            table1.Name = "IESLIP";
             columnExpression1.Table = table1;
             column1.Expression = columnExpression1;
-            columnExpression2.ColumnName = "CreateAt";
-            columnExpression2.Table = table1;
+            columnExpression2.ColumnName = "Price";
+            table2.MetaSerializable = "<Meta X=\"340\" Y=\"30\" Width=\"125\" Height=\"163\" />";
+            table2.Name = "PRODUCT";
+            columnExpression2.Table = table2;
             column2.Expression = columnExpression2;
-            columnExpression3.ColumnName = "Total";
-            columnExpression3.Table = table1;
+            column3.Alias = "PRODUCT_Name";
+            columnExpression3.ColumnName = "Name";
+            columnExpression3.Table = table2;
             column3.Expression = columnExpression3;
             columnExpression4.ColumnName = "Quantity";
-            table2.MetaSerializable = "<Meta X=\"185\" Y=\"30\" Width=\"125\" Height=\"143\" />";
-            table2.Name = "CARTITEM";
-            columnExpression4.Table = table2;
+            table3.MetaSerializable = "<Meta X=\"185\" Y=\"30\" Width=\"125\" Height=\"123\" />";
+            table3.Name = "IESLIPDETAIL";
+            columnExpression4.Table = table3;
             column4.Expression = columnExpression4;
-            columnExpression5.ColumnName = "SubTotal";
-            columnExpression5.Table = table2;
+            column5.Alias = "WAREHOUSE_Name";
+            columnExpression5.ColumnName = "Name";
+            table4.MetaSerializable = "<Meta X=\"90\" Y=\"230\" Width=\"150\" Height=\"123\" />";
+            table4.Name = "WAREHOUSE";
+            columnExpression5.Table = table4;
             column5.Expression = columnExpression5;
-            columnExpression6.ColumnName = "Name";
-            table3.MetaSerializable = "<Meta X=\"340\" Y=\"30\" Width=\"125\" Height=\"163\" />";
-            table3.Name = "PRODUCT";
-            columnExpression6.Table = table3;
+            columnExpression6.ColumnName = "CreateAt";
+            columnExpression6.Table = table1;
             column6.Expression = columnExpression6;
-            columnExpression7.ColumnName = "Price";
-            columnExpression7.Table = table3;
+            column7.Alias = "STAFF_Name";
+            columnExpression7.ColumnName = "Name";
+            table5.MetaSerializable = "<Meta X=\"340\" Y=\"220\" Width=\"125\" Height=\"183\" />";
+            table5.Name = "STAFF";
+            columnExpression7.Table = table5;
             column7.Expression = columnExpression7;
             selectQuery1.Columns.Add(column1);
             selectQuery1.Columns.Add(column2);
@@ -475,29 +505,43 @@
             selectQuery1.Columns.Add(column5);
             selectQuery1.Columns.Add(column6);
             selectQuery1.Columns.Add(column7);
-            selectQuery1.FilterString = "[RECIEPT.RecieptID] = ?RecieptID";
+            selectQuery1.FilterString = "[IESLIP.IESlipID] = ?ieSlipID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "RECIEPT_1";
-            queryParameter1.Name = "RecieptID";
+            queryParameter1.Name = "ieSlipID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter1.Value = new DevExpress.DataAccess.Expression("?pRecieptID", typeof(string));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1});
-            relationColumnInfo1.NestedKeyColumn = "RecieptID";
-            relationColumnInfo1.ParentKeyColumn = "RecieptID";
+            relationColumnInfo1.NestedKeyColumn = "IESlipID";
+            relationColumnInfo1.ParentKeyColumn = "IESlipID";
             join1.KeyColumns.Add(relationColumnInfo1);
-            join1.Nested = table2;
+            join1.Nested = table3;
             join1.Parent = table1;
             relationColumnInfo2.NestedKeyColumn = "ProductID";
             relationColumnInfo2.ParentKeyColumn = "ProductID";
             join2.KeyColumns.Add(relationColumnInfo2);
-            join2.Nested = table3;
-            join2.Parent = table2;
+            join2.Nested = table2;
+            join2.Parent = table3;
+            relationColumnInfo3.NestedKeyColumn = "WarehouseID";
+            relationColumnInfo3.ParentKeyColumn = "WarehouseID";
+            join3.KeyColumns.Add(relationColumnInfo3);
+            join3.Nested = table4;
+            join3.Parent = table1;
+            relationColumnInfo4.NestedKeyColumn = "StaffID";
+            relationColumnInfo4.ParentKeyColumn = "StaffID";
+            join4.KeyColumns.Add(relationColumnInfo4);
+            join4.Nested = table5;
+            join4.Parent = table1;
             selectQuery1.Relations.Add(join1);
             selectQuery1.Relations.Add(join2);
+            selectQuery1.Relations.Add(join3);
+            selectQuery1.Relations.Add(join4);
             selectQuery1.Tables.Add(table1);
-            selectQuery1.Tables.Add(table2);
             selectQuery1.Tables.Add(table3);
+            selectQuery1.Tables.Add(table2);
+            selectQuery1.Tables.Add(table4);
+            selectQuery1.Tables.Add(table5);
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
@@ -507,14 +551,63 @@
             this.pRecieptID.Description = "Mã hóa đơn";
             this.pRecieptID.Name = "pRecieptID";
             // 
-            // xrPictureBox1
+            // xrLabel6
             // 
-            this.xrPictureBox1.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
-            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::DienMayXanh_Store.Properties.Resources.Logo, true);
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(648.8189F, 111.0833F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Cover;
+            this.xrLabel6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 247.7917F);
+            this.xrLabel6.Multiline = true;
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(141.6666F, 30.2917F);
+            this.xrLabel6.StylePriority.UseFont = false;
+            this.xrLabel6.StylePriority.UseTextAlignment = false;
+            this.xrLabel6.Text = "Nhân viên:";
+            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel7
+            // 
+            this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[STAFF_Name]")});
+            this.xrLabel7.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(151.6667F, 247.7918F);
+            this.xrLabel7.Multiline = true;
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(200.2727F, 30.29172F);
+            this.xrLabel7.StylePriority.UseFont = false;
+            this.xrLabel7.StylePriority.UseTextAlignment = false;
+            this.xrLabel7.Text = "xrLabel4";
+            this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel7.TextFormatString = "{0:dd/MM/yyyy}";
+            // 
+            // xrLabel8
+            // 
+            this.xrLabel8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(399.856F, 247.7917F);
+            this.xrLabel8.Multiline = true;
+            this.xrLabel8.Name = "xrLabel8";
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(51.68115F, 30.2917F);
+            this.xrLabel8.StylePriority.UseFont = false;
+            this.xrLabel8.StylePriority.UseTextAlignment = false;
+            this.xrLabel8.Text = "Kho:";
+            this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel9
+            // 
+            this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[WAREHOUSE_Name]")});
+            this.xrLabel9.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(451.5371F, 247.7917F);
+            this.xrLabel9.Multiline = true;
+            this.xrLabel9.Name = "xrLabel9";
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(197.2818F, 30.29176F);
+            this.xrLabel9.StylePriority.UseFont = false;
+            this.xrLabel9.StylePriority.UseTextAlignment = false;
+            this.xrLabel9.Text = "xrLabel4";
+            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel9.TextFormatString = "{0:dd/MM/yyyy}";
             // 
             // ExportsProducts
             // 
@@ -576,5 +669,9 @@
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter pRecieptID;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel8;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
     }
 }

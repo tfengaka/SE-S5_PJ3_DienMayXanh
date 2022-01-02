@@ -12,6 +12,9 @@ namespace DienMayXanh_Store.Report
         {
             InitializeComponent();
         }
-
+        public void setInvoiceID(string recieptID)
+        {
+            p_recieptID.Value = recieptID;
+        }
     }
 }

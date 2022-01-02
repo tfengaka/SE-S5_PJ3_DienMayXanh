@@ -1,4 +1,5 @@
 ﻿using DienMayXanh_Store.Models;
+using DienMayXanh_Store.Views.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,11 +34,11 @@ namespace DienMayXanh_Store.Views
 
 
         private void CustomerDetail_Load(object sender, EventArgs e)
-
         {
             dgv_ListInvoice.Columns["CreateAt"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
             FromDate.CustomFormat = "dd/MM/yyyy";
             ToDate.CustomFormat = "dd/MM/yyyy";
+
 
             System.Reflection.PropertyInfo _ID = _customer.GetType().GetProperty("_ID");
             string _customerID = (String)_ID.GetValue(_customer, null);
@@ -52,7 +53,7 @@ namespace DienMayXanh_Store.Views
             var Orders = context.RECIEPTS
                 .Where(item => item.CustomerID == _customerID)
                 .AsEnumerable()
-                .Select((item, index) => new 
+                .Select((item, index) => new
                 {
                     No = ++index,
                     item.RecieptID,
@@ -70,10 +71,29 @@ namespace DienMayXanh_Store.Views
                 .Where(item => item.CustomerID.Equals(_customerID))
                 .Sum(item => item.Total);
 
-            lb_totalPrice.Text = totalPayment.ToString();
+            lb_totalPrice.Text = String.Format("{0:n0}", totalPayment);
             lb_totalQuantity.Text = totalQuantity.ToString();
+        }
 
-
+        private List<object> convertCartToListObj(List<CARTITEM> cart)
+        {
+            List<object> result = new List<object>();
+            int index = 0;
+            foreach (CARTITEM item in cart)
+            {
+                PRODUCT product = context.PRODUCTS.Find(item.ProductID);
+                object cartitem = new
+                {
+                    No = ++index,
+                    ProductID = item.ProductID,
+                    ProductName = product.Name,
+                    Quantity = item.Quantity,
+                    UnitPrice = product.Price,
+                    Subtotal = item.SubTotal
+                };
+                result.Add(cartitem);
+            }
+            return result;
         }
 
         private void btn_invoiceDetail_Click(object sender, DataGridViewCellEventArgs e)
@@ -81,7 +101,11 @@ namespace DienMayXanh_Store.Views
             var dataGridView = (DataGridView)sender;
             if (dataGridView.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-               Dialogs.InvoiceDetail invoiceDetail = new Dialogs.InvoiceDetail();
+                string recieptID = dataGridView.Rows[e.RowIndex].Cells["InvoiceID"].Value.ToString();
+                RECIEPT reciept = context.RECIEPTS.Find(recieptID);
+                List<CARTITEM> Cart = context.CARTITEMS.Where(item => item.RecieptID == recieptID).ToList();
+                List<object> list = convertCartToListObj(Cart);
+                InvoiceDetail invoiceDetail = new InvoiceDetail(reciept, list, recieptID);
                 invoiceDetail.ShowDialog();
             }
         }

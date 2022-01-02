@@ -19,7 +19,7 @@ namespace DienMayXanh_Store.Views
 
         private Guna2Button currBtn;
         private Panel leftBorderBtn;
-        private Form currChildForm;
+        public Form currChildForm;
         public static FormMenu instance;
         public FormMenu()
         {
