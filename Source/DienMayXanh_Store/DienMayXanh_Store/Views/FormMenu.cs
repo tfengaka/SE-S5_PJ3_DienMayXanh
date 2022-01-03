@@ -36,6 +36,10 @@ namespace DienMayXanh_Store.Views
             ptbAvatar.ImageLocation = string.Format(@"..\..\Images\" + info.StaffID + ".jpg");
             lblFullName.Text = info.Name;
             lblPosition.Text = info.Position;
+
+            activateButton(btnHome);
+            lb_title.Text = "Tổng Quan";
+            openChildForm(new FormHome());
         }
 
         public void openChildForm(Form childForm)
@@ -79,6 +83,7 @@ namespace DienMayXanh_Store.Views
         {
             activateButton(sender);
             lb_title.Text = "Tổng Quan";
+            openChildForm(new FormHome());
         }
 
         private void btnProduct_Click(object sender, EventArgs e)

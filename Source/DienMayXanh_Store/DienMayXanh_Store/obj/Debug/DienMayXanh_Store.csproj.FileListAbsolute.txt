@@ -906,3 +906,13 @@ D:\Code\Cshaps\Project\STS5-PJ3\OnGit\STS5-PJ3-DienMayXanh\Source\DienMayXanh_St
 D:\Code\Cshaps\Project\STS5-PJ3\OnGit\STS5-PJ3-DienMayXanh\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.csproj.CopyComplete
 D:\Code\Cshaps\Project\STS5-PJ3\OnGit\STS5-PJ3-DienMayXanh\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.exe
 D:\Code\Cshaps\Project\STS5-PJ3\OnGit\STS5-PJ3-DienMayXanh\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.pdb
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.CustomerInvoice.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.ExportsProducts.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.ImportProducts.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Report.PrintReports.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.CustomerDetail.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.formPayment.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.Dialogs.InvoiceDetail.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormCustomer.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\bin\Debug\Guna.Charts.WinForms.dll
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormHome.resources
