@@ -6,7 +6,6 @@ namespace DienMayXanh_Store.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
     using System.Drawing;
-    using System.IO;
 
     [Table("PRODUCT")]
     public partial class PRODUCT
@@ -35,6 +34,7 @@ namespace DienMayXanh_Store.Models
         public string Name { get; set; }
 
         public decimal Price { get; set; }
+
 
         public Image Img
         {

@@ -33,12 +33,10 @@ namespace DienMayXanh_Store.Views
             panelMenu.Controls.Add(leftBorderBtn);
             activateButton(btnHome);
             lb_title.Text = "Tổng Quan";
-            ptbAvatar.ImageLocation = string.Format(@"..\..\Images\" + info.StaffID + ".jpg");
+            ptbAvatar.ImageLocation = string.Format(@"..\..\Images\" + info.StaffID + ".png");
             lblFullName.Text = info.Name;
             lblPosition.Text = info.Position;
-
             activateButton(btnHome);
-            lb_title.Text = "Tổng Quan";
             openChildForm(new FormHome());
         }
 
@@ -111,6 +109,7 @@ namespace DienMayXanh_Store.Views
         {
             activateButton(sender);
             lb_title.Text = "Quản lý Nhân Viên";
+            openChildForm(new formStaff());
         }
 
         private void btnWarehouse_Click(object sender, EventArgs e)

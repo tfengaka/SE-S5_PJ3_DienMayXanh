@@ -25,7 +25,6 @@ namespace DienMayXanh_Store.Views
         {
             toolTip.SetToolTip(btnAddCategory, "Thêm sản phẩm");
             toolTip.SetToolTip(btnAddCategory, "Thêm nhà cung cấp");
-            toolTip.SetToolTip(btnReload, "Đặt lại");
 
             loadCmbFilter();
 

@@ -192,7 +192,6 @@
             this.btnLogin.Size = new System.Drawing.Size(150, 50);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            this.btnLogin.Enter += new System.EventHandler(this.btnLogin_Enter);
             // 
             // guna2Shapes2
             // 

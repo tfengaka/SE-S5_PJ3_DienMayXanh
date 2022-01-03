@@ -33,7 +33,7 @@ CREATE TABLE ACCOUNT
 (
 	StaffID varchar(30) not null,
 	LoginName varchar(30) not null unique,
-	[Password] varchar(30) not null,
+	[Password] varchar(50) not null,
 	[Permission] varchar(30) not null,
 
 	Primary key (StaffID),

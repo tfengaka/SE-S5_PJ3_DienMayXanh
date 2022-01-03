@@ -40,6 +40,15 @@ namespace DienMayXanh_Store.Report
             documentViewer1.DocumentSource = report;
             report.CreateDocument();
         }
-
+        public void printListStaff()
+        {
+            ListStaff report = new ListStaff();
+            foreach (DevExpress.XtraReports.Parameters.Parameter p in report.Parameters)
+            {
+                p.Visible = false;
+            }
+            documentViewer1.DocumentSource = report;
+            report.CreateDocument();
+        }
     }
 }

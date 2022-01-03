@@ -5,6 +5,8 @@ namespace DienMayXanh_Store.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Drawing;
+    using System.IO;
 
     [Table("STAFF")]
     public partial class STAFF
@@ -43,5 +45,23 @@ namespace DienMayXanh_Store.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RECIEPT> RECIEPTs { get; set; }
+
+
+        public Image Avatar
+        {
+            get
+            {
+                string path = string.Format(@"..\..\Images\" + StaffID + ".png");
+                if (!string.IsNullOrEmpty(path))
+                {
+                    if (File.Exists(path))
+                    {
+                        return Image.FromFile(path);
+                    }
+                }
+                return null;
+            }
+        }
+
     }
 }
