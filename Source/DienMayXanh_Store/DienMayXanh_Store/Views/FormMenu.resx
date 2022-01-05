@@ -117,6 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="resource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EgAACxIB0t1+/AAAAJtJREFUSEvtlEEKxCAQBP3p7sc2X5OFvfuEJEiadGINuPFqQR2ke7yIkyb/sfxe
+        afmW3fVmrpno7TXUQjMky9Hq7zXwwKmgzA2hsisoc0Oo7ArK3BAqu4IfWOajBfDAqfjk936mhy41C2kH
+        rg5Dl7rD0KWuGPho94GrYn60UEGZG0JlV1DmhlDZFZS5Ib0r4PGq6F0Bj1fFpCGlDU5WnEX+gbPJAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnHome.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EgAACxIB0t1+/AAAAJdJREFUSEvtlMENgCAMRdlUl4OD4hzgFI7gCBrMV7GtScWb8pJ/4rU9kNZUHuH8
+        2Ng+zq6PyyU+TukNmtpjbAItOjLO0NQeQy44A03tMSQ5D7QPDBA/eE8XJ2gcsSALNGO70KZG9D0NtkNo
+        oXFoAQ20cqSmeaCVIzXNA+3FotECEmh10e4D7c8DtCeg+FRoT0DxqahwjFkBn4s/8RXHPYMAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
   <metadata name="Elipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

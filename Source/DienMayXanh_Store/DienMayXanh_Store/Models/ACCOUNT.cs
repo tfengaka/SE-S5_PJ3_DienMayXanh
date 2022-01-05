@@ -18,7 +18,7 @@ namespace DienMayXanh_Store.Models
         public string LoginName { get; set; }
 
         [Required]
-        [StringLength(30)]
+        [StringLength(50)]
         public string Password { get; set; }
 
         [Required]

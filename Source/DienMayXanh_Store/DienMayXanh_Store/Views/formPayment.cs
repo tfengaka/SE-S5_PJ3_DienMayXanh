@@ -108,13 +108,14 @@ namespace DienMayXanh_Store.Views
             else
             {
                 reciept.PaymentMethod = cb_payMethod.Text;
-
+                reciept.CustomerID = "KH" + tb_Phone.Text;
                 btn_refresh.Enabled = true;
                 btn_ConfirmInfo.Enabled = false;
                 tb_address.Enabled = false;
                 tb_Name.Enabled = false;
                 tb_Phone.Enabled = false;
                 cb_gender.Enabled = false;
+                dgv_savedCustomer.Columns["btn_Add"].Visible = false;
             }
         }
 
@@ -132,6 +133,7 @@ namespace DienMayXanh_Store.Views
             tb_Name.Enabled = true;
             tb_Phone.Enabled = true;
             cb_gender.Enabled = true;
+            dgv_savedCustomer.Columns["btn_Add"].Visible = true;
 
         }
 
@@ -148,43 +150,60 @@ namespace DienMayXanh_Store.Views
             context.IESLIPS.Add(exportBill);
             if (context.CUSTOMERS.Any(customer => customer.CustomerID == reciept.CustomerID))
             {
-                context.RECIEPTS.Add(reciept);
-                Cart.ForEach(item =>
+                try
                 {
-                    context.CARTITEMS.Add(item);
-                    IESLIPDETAIL exportDetail = new IESLIPDETAIL();
-                    exportDetail.ProductID = item.ProductID;
-                    exportDetail.IESlipID = exportBill.IESlipID;
-                    exportDetail.Quantity = item.Quantity;
-                    context.IESLIPDETAILS.Add(exportDetail);
+                    context.RECIEPTS.Add(reciept);
+                    Cart.ForEach(item =>
+                    {
+                        context.CARTITEMS.Add(item);
+                        IESLIPDETAIL exportDetail = new IESLIPDETAIL();
+                        exportDetail.ProductID = item.ProductID;
+                        exportDetail.IESlipID = exportBill.IESlipID;
+                        exportDetail.Quantity = item.Quantity;
+                        context.IESLIPDETAILS.Add(exportDetail);
+                        context.SaveChanges();
+                    });
                     context.SaveChanges();
-                });
-                context.SaveChanges();
+                    MessageBox.Show("Thanh Toán Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             else
             {
-                CUSTOMER customer = new CUSTOMER();
-                customer.CustomerID = reciept.CustomerID;
-                customer.Name = tb_Name.Text;
-                customer.Phone = tb_Phone.Text;
-                customer.Gender = cb_gender.SelectedIndex == 1 ? true : false;
-                customer.Address = tb_address.Text;
-                context.CUSTOMERS.Add(customer);
-                context.RECIEPTS.Add(reciept);
-                Cart.ForEach(item =>
+
+                try
                 {
-                    context.CARTITEMS.Add(item);
-                    IESLIPDETAIL exportDetail = new IESLIPDETAIL();
-                    exportDetail.ProductID = item.ProductID;
-                    exportDetail.IESlipID = exportBill.IESlipID;
-                    exportDetail.Quantity = item.Quantity;
-                    context.IESLIPDETAILS.Add(exportDetail);
+                    CUSTOMER customer = new CUSTOMER();
+                    customer.CustomerID = reciept.CustomerID;
+                    customer.Name = tb_Name.Text;
+                    customer.Phone = tb_Phone.Text;
+                    customer.Gender = cb_gender.SelectedIndex == 1 ? true : false;
+                    customer.Address = tb_address.Text;
+                    context.CUSTOMERS.Add(customer);
+                    context.RECIEPTS.Add(reciept);
+                    Cart.ForEach(item =>
+                    {
+                        context.CARTITEMS.Add(item);
+                        IESLIPDETAIL exportDetail = new IESLIPDETAIL();
+                        exportDetail.ProductID = item.ProductID;
+                        exportDetail.IESlipID = exportBill.IESlipID;
+                        exportDetail.Quantity = item.Quantity;
+                        context.IESLIPDETAILS.Add(exportDetail);
+                        context.SaveChanges();
+                    });
                     context.SaveChanges();
-                });
-                context.SaveChanges();
+                    MessageBox.Show("Thanh Toán Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
-            context.SaveChanges();
-            FormMenu.instance.MinimizeBox = true;
             Dialogs.InvoiceDetail invoiceDetail = new Dialogs.InvoiceDetail(reciept, accessListCartItem(Cart), exportBill.IESlipID);
             invoiceDetail.ShowDialog();
             Dispose();

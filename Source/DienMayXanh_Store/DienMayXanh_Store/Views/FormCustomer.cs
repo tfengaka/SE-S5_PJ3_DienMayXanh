@@ -39,13 +39,14 @@ namespace DienMayXanh_Store.Views
         private void btn_ViewDetail_Click(object sender, DataGridViewCellEventArgs e)
         {
             var dataGridView = (DataGridView)sender;
-            if(dataGridView.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            if (dataGridView.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
                 string _ID = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
                 string _Name = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
                 string _Phone = dataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
                 string _Address = dataGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
-                object _customer = new { _ID, _Name,_Phone,_Address};
+                string _Gender = dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                object _customer = new { _ID, _Name, _Gender, _Phone, _Address };
                 FormMenu.instance.openChildForm(new CustomerDetail(_customer));
                 this.Hide();
             }

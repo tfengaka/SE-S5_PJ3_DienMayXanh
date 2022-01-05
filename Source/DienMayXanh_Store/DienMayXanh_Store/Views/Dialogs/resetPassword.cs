@@ -30,5 +30,20 @@ namespace DienMayXanh_Store.Views.Dialogs
             }).ToList();
             dgv_Staff.DataSource = list;
         }
+
+        private void btn_resetPassword_Click(object sender, DataGridViewCellEventArgs e)
+        {
+            var dataGridView = (DataGridView)sender;
+            if (dataGridView.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                string staffId = dgv_Staff.Rows[e.RowIndex].Cells["StaffID"].Value.ToString();
+                string passReset = FormLogin.MD5Hash(FormLogin.Base64Encode("staff"));
+                var account = context.ACCOUNTS.Find(staffId);
+                account.Password = passReset;
+                context.SaveChanges();
+                MessageBox.Show("Cấp Lại Mật Khẩu Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
+        }
     }
 }

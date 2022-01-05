@@ -30,8 +30,8 @@ namespace DienMayXanh_Store.Views
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnWarehouse = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnStaff = new Guna.UI2.WinForms.Guna2Button();
             this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
@@ -68,7 +68,6 @@ namespace DienMayXanh_Store.Views
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.btnWarehouse);
             this.panelMenu.Controls.Add(this.btnLogout);
             this.panelMenu.Controls.Add(this.btnStaff);
             this.panelMenu.Controls.Add(this.btnCustomer);
@@ -92,44 +91,6 @@ namespace DienMayXanh_Store.Views
             this.panelMenu.ShadowDecoration.Parent = this.panelMenu;
             this.panelMenu.Size = new System.Drawing.Size(273, 621);
             this.panelMenu.TabIndex = 1;
-            // 
-            // btnWarehouse
-            // 
-            this.btnWarehouse.Animated = true;
-            this.btnWarehouse.BackColor = System.Drawing.Color.Transparent;
-            this.btnWarehouse.CheckedState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnWarehouse.CheckedState.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btnWarehouse.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
-            this.btnWarehouse.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.btnWarehouse.CheckedState.Image = global::DienMayXanh_Store.Properties.Resources.warehouse_color;
-            this.btnWarehouse.CheckedState.Parent = this.btnWarehouse;
-            this.btnWarehouse.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnWarehouse.CustomImages.Parent = this.btnWarehouse;
-            this.btnWarehouse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnWarehouse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnWarehouse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnWarehouse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnWarehouse.DisabledState.Parent = this.btnWarehouse;
-            this.btnWarehouse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnWarehouse.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
-            this.btnWarehouse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnWarehouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.btnWarehouse.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.btnWarehouse.HoverState.Parent = this.btnWarehouse;
-            this.btnWarehouse.Image = global::DienMayXanh_Store.Properties.Resources.warehouse;
-            this.btnWarehouse.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnWarehouse.ImageOffset = new System.Drawing.Point(5, 0);
-            this.btnWarehouse.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnWarehouse.Location = new System.Drawing.Point(0, 444);
-            this.btnWarehouse.Name = "btnWarehouse";
-            this.btnWarehouse.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.btnWarehouse.ShadowDecoration.Parent = this.btnWarehouse;
-            this.btnWarehouse.Size = new System.Drawing.Size(273, 45);
-            this.btnWarehouse.TabIndex = 15;
-            this.btnWarehouse.Text = "Kho hàng";
-            this.btnWarehouse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnWarehouse.TextOffset = new System.Drawing.Point(10, 0);
-            this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
             // 
             // btnLogout
             // 
@@ -328,7 +289,7 @@ namespace DienMayXanh_Store.Views
             this.btnHome.CheckedState.CustomBorderColor = System.Drawing.Color.Transparent;
             this.btnHome.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(242)))), ((int)(((byte)(247)))));
             this.btnHome.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.btnHome.CheckedState.Image = global::DienMayXanh_Store.Properties.Resources.dashboard_color;
+            this.btnHome.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnHome.CheckedState.Parent = this.btnHome;
             this.btnHome.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.CustomImages.Parent = this.btnHome;
@@ -343,7 +304,7 @@ namespace DienMayXanh_Store.Views
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
             this.btnHome.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.btnHome.HoverState.Parent = this.btnHome;
-            this.btnHome.Image = global::DienMayXanh_Store.Properties.Resources.dashboard;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnHome.ImageSize = new System.Drawing.Size(25, 25);
@@ -612,7 +573,6 @@ namespace DienMayXanh_Store.Views
         private Guna.UI2.WinForms.Guna2Button btnProduct;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Elipse Elipse;
-        private Guna.UI2.WinForms.Guna2Button btnWarehouse;
         public  Guna.UI2.WinForms.Guna2Panel panelContent;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
         private Guna.UI2.WinForms.Guna2Panel ControlPanel;

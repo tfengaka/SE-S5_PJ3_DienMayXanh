@@ -22,10 +22,8 @@ namespace DienMayXanh_Store.Charts
             dataset.Label = "Lợi nhuận";
             for (int i = 0; i < month.Count; i++)
                 dataset.DataPoints.Add(month[i], (double)data[i]);
-
             //Add a new dataset to a chart.Datasets
             chart.Datasets.Add(dataset);
-
             //An update was made to re-render the chart
             chart.Update();
         }

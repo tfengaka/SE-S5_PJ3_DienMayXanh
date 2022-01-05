@@ -697,3 +697,4 @@ D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\obj
 D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.Dialogs.resetPassword.resources
 D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormHome.resources
 D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\bin\Debug\Guna.Charts.WinForms.dll
+D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.FormAddProduct.resources

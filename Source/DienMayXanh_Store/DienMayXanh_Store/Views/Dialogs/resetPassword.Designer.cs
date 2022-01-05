@@ -38,13 +38,13 @@
             this.btn_exit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.dgv_Staff = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.tb_searchStaff = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btn_search = new Guna.UI2.WinForms.Guna2Button();
             this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_resetPassword = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tb_searchStaff = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_search = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Staff)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +108,6 @@
             this.dgv_Staff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Staff.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Staff.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Staff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Staff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
@@ -167,12 +166,55 @@
             this.dgv_Staff.ThemeStyle.HeaderStyle.Height = 36;
             this.dgv_Staff.ThemeStyle.ReadOnly = true;
             this.dgv_Staff.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_Staff.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_Staff.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgv_Staff.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_Staff.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_Staff.ThemeStyle.RowsStyle.Height = 30;
             this.dgv_Staff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.dgv_Staff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_Staff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.btn_resetPassword_Click);
+            // 
+            // StaffID
+            // 
+            this.StaffID.DataPropertyName = "StaffID";
+            this.StaffID.FillWeight = 88.11921F;
+            this.StaffID.HeaderText = "Mã Nhân Viên";
+            this.StaffID.Name = "StaffID";
+            this.StaffID.ReadOnly = true;
+            // 
+            // StaffName
+            // 
+            this.StaffName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StaffName.DataPropertyName = "StaffName";
+            this.StaffName.FillWeight = 142.1012F;
+            this.StaffName.HeaderText = "Tên Nhân Viên";
+            this.StaffName.Name = "StaffName";
+            this.StaffName.ReadOnly = true;
+            // 
+            // StaffPosition
+            // 
+            this.StaffPosition.DataPropertyName = "StaffPosition";
+            this.StaffPosition.FillWeight = 63.45177F;
+            this.StaffPosition.HeaderText = "Chức Vụ";
+            this.StaffPosition.Name = "StaffPosition";
+            this.StaffPosition.ReadOnly = true;
+            // 
+            // StaffPhone
+            // 
+            this.StaffPhone.DataPropertyName = "StaffPhone";
+            this.StaffPhone.FillWeight = 142.1012F;
+            this.StaffPhone.HeaderText = "Số Điện Thoại";
+            this.StaffPhone.Name = "StaffPhone";
+            this.StaffPhone.ReadOnly = true;
+            // 
+            // btn_resetPassword
+            // 
+            this.btn_resetPassword.FillWeight = 64.22654F;
+            this.btn_resetPassword.HeaderText = "Tùy Chọn";
+            this.btn_resetPassword.Name = "btn_resetPassword";
+            this.btn_resetPassword.ReadOnly = true;
+            this.btn_resetPassword.Text = "Cấp";
+            this.btn_resetPassword.UseColumnTextForButtonValue = true;
             // 
             // tb_searchStaff
             // 
@@ -218,48 +260,6 @@
             this.btn_search.Size = new System.Drawing.Size(164, 36);
             this.btn_search.TabIndex = 11;
             this.btn_search.Text = "Tìm kiếm";
-            // 
-            // StaffID
-            // 
-            this.StaffID.DataPropertyName = "StaffID";
-            this.StaffID.FillWeight = 88.11921F;
-            this.StaffID.HeaderText = "Mã Nhân Viên";
-            this.StaffID.Name = "StaffID";
-            this.StaffID.ReadOnly = true;
-            // 
-            // StaffName
-            // 
-            this.StaffName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.StaffName.DataPropertyName = "StaffName";
-            this.StaffName.FillWeight = 142.1012F;
-            this.StaffName.HeaderText = "Tên Nhân Viên";
-            this.StaffName.Name = "StaffName";
-            this.StaffName.ReadOnly = true;
-            // 
-            // StaffPosition
-            // 
-            this.StaffPosition.DataPropertyName = "StaffPosition";
-            this.StaffPosition.FillWeight = 63.45177F;
-            this.StaffPosition.HeaderText = "Chức Vụ";
-            this.StaffPosition.Name = "StaffPosition";
-            this.StaffPosition.ReadOnly = true;
-            // 
-            // StaffPhone
-            // 
-            this.StaffPhone.DataPropertyName = "StaffPhone";
-            this.StaffPhone.FillWeight = 142.1012F;
-            this.StaffPhone.HeaderText = "Số Điện Thoại";
-            this.StaffPhone.Name = "StaffPhone";
-            this.StaffPhone.ReadOnly = true;
-            // 
-            // btn_resetPassword
-            // 
-            this.btn_resetPassword.FillWeight = 64.22654F;
-            this.btn_resetPassword.HeaderText = "Tùy Chọn";
-            this.btn_resetPassword.Name = "btn_resetPassword";
-            this.btn_resetPassword.ReadOnly = true;
-            this.btn_resetPassword.Text = "Cấp";
-            this.btn_resetPassword.UseColumnTextForButtonValue = true;
             // 
             // resetPassword
             // 

@@ -112,12 +112,6 @@ namespace DienMayXanh_Store.Views
             openChildForm(new formStaff());
         }
 
-        private void btnWarehouse_Click(object sender, EventArgs e)
-        {
-            activateButton(sender);
-            lb_title.Text = "Kho Hàng";
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             FormLogin.instance.Visible = true;

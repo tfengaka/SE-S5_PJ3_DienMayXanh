@@ -38,23 +38,25 @@
             this.dgv_listStaff = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cb_StaffGender = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btn_Confirm = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_EditPassword = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_EditInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.tb_StaffID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tb_StaffName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tb_StaffAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tb_StaffPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tb_StaffAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tb_StaffName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tb_StaffID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_printListStaff = new Guna.UI2.WinForms.Guna2Button();
             this.btn_addCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.ManagerGroup = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btn_resetPassword = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_EditPassword = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Confirm = new Guna.UI2.WinForms.Guna2Button();
-            this.cb_StaffGender = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.StaffAvatar = new System.Windows.Forms.DataGridViewImageColumn();
             this.StaffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffPosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,8 +64,6 @@
             this.StaffPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Del = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.StaffAvatar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listStaff)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -89,6 +89,7 @@
             this.dgv_listStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_listStaff.BackgroundColor = System.Drawing.Color.White;
             this.dgv_listStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_listStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_listStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
@@ -111,7 +112,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(245)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -203,18 +204,85 @@
             this.guna2GroupBox2.TextOffset = new System.Drawing.Point(0, -4);
             this.guna2GroupBox2.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             // 
-            // guna2HtmlLabel2
+            // cb_StaffGender
             // 
-            this.guna2HtmlLabel2.AutoSize = false;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(3, 39);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(80, 30);
-            this.guna2HtmlLabel2.TabIndex = 0;
-            this.guna2HtmlLabel2.Text = "Mã Số";
-            this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cb_StaffGender.BackColor = System.Drawing.Color.Transparent;
+            this.cb_StaffGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_StaffGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_StaffGender.Enabled = false;
+            this.cb_StaffGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.cb_StaffGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.cb_StaffGender.FocusedState.Parent = this.cb_StaffGender;
+            this.cb_StaffGender.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.cb_StaffGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cb_StaffGender.HoverState.Parent = this.cb_StaffGender;
+            this.cb_StaffGender.ItemHeight = 30;
+            this.cb_StaffGender.Items.AddRange(new object[] {
+            "Nữ",
+            "Nam"});
+            this.cb_StaffGender.ItemsAppearance.Parent = this.cb_StaffGender;
+            this.cb_StaffGender.Location = new System.Drawing.Point(472, 81);
+            this.cb_StaffGender.Name = "cb_StaffGender";
+            this.cb_StaffGender.ShadowDecoration.Parent = this.cb_StaffGender;
+            this.cb_StaffGender.Size = new System.Drawing.Size(157, 36);
+            this.cb_StaffGender.TabIndex = 22;
+            // 
+            // btn_Confirm
+            // 
+            this.btn_Confirm.BorderRadius = 4;
+            this.btn_Confirm.CheckedState.Parent = this.btn_Confirm;
+            this.btn_Confirm.CustomImages.Parent = this.btn_Confirm;
+            this.btn_Confirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Confirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Confirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Confirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Confirm.DisabledState.Parent = this.btn_Confirm;
+            this.btn_Confirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(91)))), ((int)(((byte)(208)))));
+            this.btn_Confirm.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Confirm.ForeColor = System.Drawing.Color.White;
+            this.btn_Confirm.HoverState.Parent = this.btn_Confirm;
+            this.btn_Confirm.Location = new System.Drawing.Point(635, 81);
+            this.btn_Confirm.Name = "btn_Confirm";
+            this.btn_Confirm.ShadowDecoration.Parent = this.btn_Confirm;
+            this.btn_Confirm.Size = new System.Drawing.Size(176, 36);
+            this.btn_Confirm.TabIndex = 21;
+            this.btn_Confirm.Text = "Xác Nhận";
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
+            // 
+            // btn_EditPassword
+            // 
+            this.btn_EditPassword.BorderRadius = 4;
+            this.btn_EditPassword.CheckedState.Parent = this.btn_EditPassword;
+            this.btn_EditPassword.CustomImages.Parent = this.btn_EditPassword;
+            this.btn_EditPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_EditPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_EditPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_EditPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_EditPassword.DisabledState.Parent = this.btn_EditPassword;
+            this.btn_EditPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.btn_EditPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_EditPassword.ForeColor = System.Drawing.Color.White;
+            this.btn_EditPassword.HoverState.Parent = this.btn_EditPassword;
+            this.btn_EditPassword.Location = new System.Drawing.Point(635, 123);
+            this.btn_EditPassword.Name = "btn_EditPassword";
+            this.btn_EditPassword.ShadowDecoration.Parent = this.btn_EditPassword;
+            this.btn_EditPassword.Size = new System.Drawing.Size(176, 36);
+            this.btn_EditPassword.TabIndex = 20;
+            this.btn_EditPassword.Text = "Đổi Mật Khẩu";
+            this.btn_EditPassword.Click += new System.EventHandler(this.btn_EditPassword_Click);
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.AutoSize = false;
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(378, 81);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(88, 36);
+            this.guna2HtmlLabel6.TabIndex = 18;
+            this.guna2HtmlLabel6.Text = "Giới tính";
+            this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btn_EditInfo
             // 
@@ -237,107 +305,6 @@
             this.btn_EditInfo.TabIndex = 8;
             this.btn_EditInfo.Text = "Sửa Thông Tin";
             this.btn_EditInfo.Click += new System.EventHandler(this.btn_EditInfo_Click);
-            // 
-            // tb_StaffID
-            // 
-            this.tb_StaffID.BorderRadius = 4;
-            this.tb_StaffID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_StaffID.DefaultText = "";
-            this.tb_StaffID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_StaffID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_StaffID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_StaffID.DisabledState.Parent = this.tb_StaffID;
-            this.tb_StaffID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_StaffID.Enabled = false;
-            this.tb_StaffID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.tb_StaffID.FocusedState.Parent = this.tb_StaffID;
-            this.tb_StaffID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.tb_StaffID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_StaffID.HoverState.Parent = this.tb_StaffID;
-            this.tb_StaffID.Location = new System.Drawing.Point(89, 39);
-            this.tb_StaffID.Name = "tb_StaffID";
-            this.tb_StaffID.PasswordChar = '\0';
-            this.tb_StaffID.PlaceholderText = "";
-            this.tb_StaffID.SelectedText = "";
-            this.tb_StaffID.ShadowDecoration.Parent = this.tb_StaffID;
-            this.tb_StaffID.Size = new System.Drawing.Size(283, 36);
-            this.tb_StaffID.TabIndex = 9;
-            // 
-            // tb_StaffName
-            // 
-            this.tb_StaffName.BorderRadius = 4;
-            this.tb_StaffName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_StaffName.DefaultText = "";
-            this.tb_StaffName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_StaffName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_StaffName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_StaffName.DisabledState.Parent = this.tb_StaffName;
-            this.tb_StaffName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_StaffName.Enabled = false;
-            this.tb_StaffName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.tb_StaffName.FocusedState.Parent = this.tb_StaffName;
-            this.tb_StaffName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_StaffName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_StaffName.HoverState.Parent = this.tb_StaffName;
-            this.tb_StaffName.Location = new System.Drawing.Point(89, 81);
-            this.tb_StaffName.Name = "tb_StaffName";
-            this.tb_StaffName.PasswordChar = '\0';
-            this.tb_StaffName.PlaceholderText = "";
-            this.tb_StaffName.SelectedText = "";
-            this.tb_StaffName.ShadowDecoration.Parent = this.tb_StaffName;
-            this.tb_StaffName.Size = new System.Drawing.Size(283, 36);
-            this.tb_StaffName.TabIndex = 11;
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.AutoSize = false;
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(3, 81);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(80, 36);
-            this.guna2HtmlLabel3.TabIndex = 10;
-            this.guna2HtmlLabel3.Text = "Họ và Tên";
-            this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tb_StaffAddress
-            // 
-            this.tb_StaffAddress.BorderRadius = 4;
-            this.tb_StaffAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_StaffAddress.DefaultText = "";
-            this.tb_StaffAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_StaffAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_StaffAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_StaffAddress.DisabledState.Parent = this.tb_StaffAddress;
-            this.tb_StaffAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_StaffAddress.Enabled = false;
-            this.tb_StaffAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.tb_StaffAddress.FocusedState.Parent = this.tb_StaffAddress;
-            this.tb_StaffAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_StaffAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_StaffAddress.HoverState.Parent = this.tb_StaffAddress;
-            this.tb_StaffAddress.Location = new System.Drawing.Point(89, 123);
-            this.tb_StaffAddress.Name = "tb_StaffAddress";
-            this.tb_StaffAddress.PasswordChar = '\0';
-            this.tb_StaffAddress.PlaceholderText = "";
-            this.tb_StaffAddress.SelectedText = "";
-            this.tb_StaffAddress.ShadowDecoration.Parent = this.tb_StaffAddress;
-            this.tb_StaffAddress.Size = new System.Drawing.Size(540, 36);
-            this.tb_StaffAddress.TabIndex = 13;
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.AutoSize = false;
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(3, 123);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(80, 36);
-            this.guna2HtmlLabel4.TabIndex = 12;
-            this.guna2HtmlLabel4.Text = "Địa chỉ";
-            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tb_StaffPhone
             // 
@@ -377,18 +344,119 @@
             this.guna2HtmlLabel5.Text = "Số điện thoại";
             this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2HtmlLabel6
+            // tb_StaffAddress
             // 
-            this.guna2HtmlLabel6.AutoSize = false;
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(378, 81);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(88, 36);
-            this.guna2HtmlLabel6.TabIndex = 18;
-            this.guna2HtmlLabel6.Text = "Giới tính";
-            this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tb_StaffAddress.BorderRadius = 4;
+            this.tb_StaffAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_StaffAddress.DefaultText = "";
+            this.tb_StaffAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_StaffAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_StaffAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_StaffAddress.DisabledState.Parent = this.tb_StaffAddress;
+            this.tb_StaffAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_StaffAddress.Enabled = false;
+            this.tb_StaffAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.tb_StaffAddress.FocusedState.Parent = this.tb_StaffAddress;
+            this.tb_StaffAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_StaffAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_StaffAddress.HoverState.Parent = this.tb_StaffAddress;
+            this.tb_StaffAddress.Location = new System.Drawing.Point(89, 123);
+            this.tb_StaffAddress.Name = "tb_StaffAddress";
+            this.tb_StaffAddress.PasswordChar = '\0';
+            this.tb_StaffAddress.PlaceholderText = "";
+            this.tb_StaffAddress.SelectedText = "";
+            this.tb_StaffAddress.ShadowDecoration.Parent = this.tb_StaffAddress;
+            this.tb_StaffAddress.Size = new System.Drawing.Size(540, 36);
+            this.tb_StaffAddress.TabIndex = 13;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.AutoSize = false;
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(3, 123);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(80, 36);
+            this.guna2HtmlLabel4.TabIndex = 12;
+            this.guna2HtmlLabel4.Text = "Địa chỉ";
+            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tb_StaffName
+            // 
+            this.tb_StaffName.BorderRadius = 4;
+            this.tb_StaffName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_StaffName.DefaultText = "";
+            this.tb_StaffName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_StaffName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_StaffName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_StaffName.DisabledState.Parent = this.tb_StaffName;
+            this.tb_StaffName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_StaffName.Enabled = false;
+            this.tb_StaffName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.tb_StaffName.FocusedState.Parent = this.tb_StaffName;
+            this.tb_StaffName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_StaffName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_StaffName.HoverState.Parent = this.tb_StaffName;
+            this.tb_StaffName.Location = new System.Drawing.Point(89, 81);
+            this.tb_StaffName.Name = "tb_StaffName";
+            this.tb_StaffName.PasswordChar = '\0';
+            this.tb_StaffName.PlaceholderText = "";
+            this.tb_StaffName.SelectedText = "";
+            this.tb_StaffName.ShadowDecoration.Parent = this.tb_StaffName;
+            this.tb_StaffName.Size = new System.Drawing.Size(283, 36);
+            this.tb_StaffName.TabIndex = 11;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.AutoSize = false;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(3, 81);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(80, 36);
+            this.guna2HtmlLabel3.TabIndex = 10;
+            this.guna2HtmlLabel3.Text = "Họ và Tên";
+            this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tb_StaffID
+            // 
+            this.tb_StaffID.BorderRadius = 4;
+            this.tb_StaffID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_StaffID.DefaultText = "";
+            this.tb_StaffID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_StaffID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_StaffID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_StaffID.DisabledState.Parent = this.tb_StaffID;
+            this.tb_StaffID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_StaffID.Enabled = false;
+            this.tb_StaffID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.tb_StaffID.FocusedState.Parent = this.tb_StaffID;
+            this.tb_StaffID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.tb_StaffID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_StaffID.HoverState.Parent = this.tb_StaffID;
+            this.tb_StaffID.Location = new System.Drawing.Point(89, 39);
+            this.tb_StaffID.Name = "tb_StaffID";
+            this.tb_StaffID.PasswordChar = '\0';
+            this.tb_StaffID.PlaceholderText = "";
+            this.tb_StaffID.SelectedText = "";
+            this.tb_StaffID.ShadowDecoration.Parent = this.tb_StaffID;
+            this.tb_StaffID.Size = new System.Drawing.Size(283, 36);
+            this.tb_StaffID.TabIndex = 9;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.AutoSize = false;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(3, 39);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(80, 30);
+            this.guna2HtmlLabel2.TabIndex = 0;
+            this.guna2HtmlLabel2.Text = "Mã Số";
+            this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btn_printListStaff
             // 
@@ -474,72 +542,29 @@
             this.btn_resetPassword.Text = "Cấp lại mật khẩu";
             this.btn_resetPassword.Click += new System.EventHandler(this.btn_resetPassword_Click);
             // 
-            // btn_EditPassword
+            // dataGridViewImageColumn1
             // 
-            this.btn_EditPassword.BorderRadius = 4;
-            this.btn_EditPassword.CheckedState.Parent = this.btn_EditPassword;
-            this.btn_EditPassword.CustomImages.Parent = this.btn_EditPassword;
-            this.btn_EditPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_EditPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_EditPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_EditPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_EditPassword.DisabledState.Parent = this.btn_EditPassword;
-            this.btn_EditPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.btn_EditPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_EditPassword.ForeColor = System.Drawing.Color.White;
-            this.btn_EditPassword.HoverState.Parent = this.btn_EditPassword;
-            this.btn_EditPassword.Location = new System.Drawing.Point(635, 123);
-            this.btn_EditPassword.Name = "btn_EditPassword";
-            this.btn_EditPassword.ShadowDecoration.Parent = this.btn_EditPassword;
-            this.btn_EditPassword.Size = new System.Drawing.Size(176, 36);
-            this.btn_EditPassword.TabIndex = 20;
-            this.btn_EditPassword.Text = "Đổi Mật Khẩu";
-            this.btn_EditPassword.Click += new System.EventHandler(this.btn_EditPassword_Click);
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.DataPropertyName = "StaffAvatar";
+            this.dataGridViewImageColumn1.FillWeight = 108.4844F;
+            this.dataGridViewImageColumn1.HeaderText = "Avatar";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Width = 60;
             // 
-            // btn_Confirm
+            // StaffAvatar
             // 
-            this.btn_Confirm.BorderRadius = 4;
-            this.btn_Confirm.CheckedState.Parent = this.btn_Confirm;
-            this.btn_Confirm.CustomImages.Parent = this.btn_Confirm;
-            this.btn_Confirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Confirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Confirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Confirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Confirm.DisabledState.Parent = this.btn_Confirm;
-            this.btn_Confirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(91)))), ((int)(((byte)(208)))));
-            this.btn_Confirm.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Confirm.ForeColor = System.Drawing.Color.White;
-            this.btn_Confirm.HoverState.Parent = this.btn_Confirm;
-            this.btn_Confirm.Location = new System.Drawing.Point(635, 81);
-            this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.ShadowDecoration.Parent = this.btn_Confirm;
-            this.btn_Confirm.Size = new System.Drawing.Size(176, 36);
-            this.btn_Confirm.TabIndex = 21;
-            this.btn_Confirm.Text = "Xác Nhận";
-            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
-            // 
-            // cb_StaffGender
-            // 
-            this.cb_StaffGender.BackColor = System.Drawing.Color.Transparent;
-            this.cb_StaffGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_StaffGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_StaffGender.Enabled = false;
-            this.cb_StaffGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.cb_StaffGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
-            this.cb_StaffGender.FocusedState.Parent = this.cb_StaffGender;
-            this.cb_StaffGender.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.cb_StaffGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cb_StaffGender.HoverState.Parent = this.cb_StaffGender;
-            this.cb_StaffGender.ItemHeight = 30;
-            this.cb_StaffGender.Items.AddRange(new object[] {
-            "Nữ",
-            "Nam"});
-            this.cb_StaffGender.ItemsAppearance.Parent = this.cb_StaffGender;
-            this.cb_StaffGender.Location = new System.Drawing.Point(472, 81);
-            this.cb_StaffGender.Name = "cb_StaffGender";
-            this.cb_StaffGender.ShadowDecoration.Parent = this.cb_StaffGender;
-            this.cb_StaffGender.Size = new System.Drawing.Size(157, 36);
-            this.cb_StaffGender.TabIndex = 22;
+            this.StaffAvatar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.StaffAvatar.DataPropertyName = "StaffAvatar";
+            this.StaffAvatar.FillWeight = 108.4844F;
+            this.StaffAvatar.HeaderText = "Avatar";
+            this.StaffAvatar.Image = ((System.Drawing.Image)(resources.GetObject("StaffAvatar.Image")));
+            this.StaffAvatar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.StaffAvatar.Name = "StaffAvatar";
+            this.StaffAvatar.ReadOnly = true;
+            this.StaffAvatar.Width = 60;
             // 
             // StaffName
             // 
@@ -601,30 +626,6 @@
             this.btn_Del.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btn_Del.Text = "Xóa";
             this.btn_Del.UseColumnTextForButtonValue = true;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.DataPropertyName = "StaffAvatar";
-            this.dataGridViewImageColumn1.FillWeight = 108.4844F;
-            this.dataGridViewImageColumn1.HeaderText = "Avatar";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 60;
-            // 
-            // StaffAvatar
-            // 
-            this.StaffAvatar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.StaffAvatar.DataPropertyName = "StaffAvatar";
-            this.StaffAvatar.FillWeight = 108.4844F;
-            this.StaffAvatar.HeaderText = "Avatar";
-            this.StaffAvatar.Image = ((System.Drawing.Image)(resources.GetObject("StaffAvatar.Image")));
-            this.StaffAvatar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.StaffAvatar.Name = "StaffAvatar";
-            this.StaffAvatar.ReadOnly = true;
-            this.StaffAvatar.Width = 60;
             // 
             // formStaff
             // 

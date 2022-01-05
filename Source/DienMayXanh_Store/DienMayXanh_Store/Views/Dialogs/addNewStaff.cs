@@ -57,6 +57,7 @@ namespace DienMayXanh_Store.Views.Dialogs
                     MessageBox.Show("Thêm Mới Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FormMenu.instance.openChildForm(new formStaff());
                     this.Dispose();
+                    return;
                 }catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

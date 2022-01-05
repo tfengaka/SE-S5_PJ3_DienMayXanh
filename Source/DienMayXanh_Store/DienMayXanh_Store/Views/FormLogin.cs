@@ -47,7 +47,7 @@ namespace DienMayXanh_Store
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Dispose();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
