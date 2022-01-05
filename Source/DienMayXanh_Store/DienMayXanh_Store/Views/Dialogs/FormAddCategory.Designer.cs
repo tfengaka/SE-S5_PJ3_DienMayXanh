@@ -33,6 +33,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCategory = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtCategory = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddCatergory = new Guna.UI2.WinForms.Guna2Button();
@@ -80,7 +81,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.txtCategory.HoverState.Parent = this.txtCategory;
             this.txtCategory.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtCategory.Location = new System.Drawing.Point(12, 79);
+            this.txtCategory.Location = new System.Drawing.Point(12, 46);
             this.txtCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCategory.MaxLength = 30;
             this.txtCategory.Name = "txtCategory";
@@ -91,7 +92,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtCategory.ShadowDecoration.Depth = 10;
             this.txtCategory.ShadowDecoration.Enabled = true;
             this.txtCategory.ShadowDecoration.Parent = this.txtCategory;
-            this.txtCategory.Size = new System.Drawing.Size(315, 45);
+            this.txtCategory.Size = new System.Drawing.Size(359, 36);
             this.txtCategory.TabIndex = 6;
             this.txtCategory.TextOffset = new System.Drawing.Point(10, 0);
             // 
@@ -112,13 +113,13 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnAddCatergory.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnAddCatergory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnAddCatergory.HoverState.Parent = this.btnAddCatergory;
-            this.btnAddCatergory.Location = new System.Drawing.Point(371, 75);
+            this.btnAddCatergory.Location = new System.Drawing.Point(582, 46);
             this.btnAddCatergory.Name = "btnAddCatergory";
             this.btnAddCatergory.ShadowDecoration.BorderRadius = 15;
             this.btnAddCatergory.ShadowDecoration.Depth = 10;
             this.btnAddCatergory.ShadowDecoration.Enabled = true;
             this.btnAddCatergory.ShadowDecoration.Parent = this.btnAddCatergory;
-            this.btnAddCatergory.Size = new System.Drawing.Size(100, 50);
+            this.btnAddCatergory.Size = new System.Drawing.Size(100, 36);
             this.btnAddCatergory.TabIndex = 7;
             this.btnAddCatergory.Text = "Thêm";
             this.btnAddCatergory.Click += new System.EventHandler(this.btnAddCatergory_Click);
@@ -140,13 +141,13 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnEditCategory.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnEditCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnEditCategory.HoverState.Parent = this.btnEditCategory;
-            this.btnEditCategory.Location = new System.Drawing.Point(371, 75);
+            this.btnEditCategory.Location = new System.Drawing.Point(582, 46);
             this.btnEditCategory.Name = "btnEditCategory";
             this.btnEditCategory.ShadowDecoration.BorderRadius = 15;
             this.btnEditCategory.ShadowDecoration.Depth = 10;
             this.btnEditCategory.ShadowDecoration.Enabled = true;
             this.btnEditCategory.ShadowDecoration.Parent = this.btnEditCategory;
-            this.btnEditCategory.Size = new System.Drawing.Size(100, 50);
+            this.btnEditCategory.Size = new System.Drawing.Size(100, 36);
             this.btnEditCategory.TabIndex = 8;
             this.btnEditCategory.Text = "Sửa";
             this.btnEditCategory.Visible = false;
@@ -154,41 +155,58 @@ namespace DienMayXanh_Store.Views.Dialogs
             // 
             // dgvCategory
             // 
+            this.dgvCategory.AllowUserToAddRows = false;
+            this.dgvCategory.AllowUserToDeleteRows = false;
+            this.dgvCategory.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvCategory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCategory.BackgroundColor = System.Drawing.Color.White;
             this.dgvCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCategory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvCategory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dgvCategory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCategory.ColumnHeadersHeight = 21;
+            this.dgvCategory.ColumnHeadersHeight = 36;
             this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.categoryID,
             this.categoryName,
             this.createAt});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCategory.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCategory.EnableHeadersVisualStyles = false;
             this.dgvCategory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvCategory.Location = new System.Drawing.Point(12, 173);
+            this.dgvCategory.Location = new System.Drawing.Point(12, 89);
             this.dgvCategory.Name = "dgvCategory";
+            this.dgvCategory.ReadOnly = true;
+            this.dgvCategory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCategory.RowHeadersVisible = false;
+            this.dgvCategory.RowTemplate.Height = 30;
             this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategory.Size = new System.Drawing.Size(776, 265);
+            this.dgvCategory.Size = new System.Drawing.Size(776, 349);
             this.dgvCategory.TabIndex = 9;
             this.dgvCategory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCategory.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -198,17 +216,17 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.dgvCategory.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.dgvCategory.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCategory.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvCategory.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvCategory.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvCategory.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvCategory.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvCategory.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvCategory.ThemeStyle.HeaderStyle.Height = 21;
-            this.dgvCategory.ThemeStyle.ReadOnly = false;
+            this.dgvCategory.ThemeStyle.HeaderStyle.Height = 36;
+            this.dgvCategory.ThemeStyle.ReadOnly = true;
             this.dgvCategory.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvCategory.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvCategory.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvCategory.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvCategory.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvCategory.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvCategory.ThemeStyle.RowsStyle.Height = 30;
             this.dgvCategory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCategory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellContentClick);
@@ -225,6 +243,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.categoryName.DataPropertyName = "Name";
             this.categoryName.HeaderText = "Tên danh mục";
             this.categoryName.Name = "categoryName";
+            this.categoryName.ReadOnly = true;
             // 
             // createAt
             // 
@@ -242,7 +261,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.close.HoverState.FillColor = System.Drawing.Color.Red;
             this.close.HoverState.Parent = this.close;
             this.close.IconColor = System.Drawing.Color.Black;
-            this.close.Location = new System.Drawing.Point(770, 0);
+            this.close.Location = new System.Drawing.Point(768, -1);
             this.close.Name = "close";
             this.close.ShadowDecoration.Parent = this.close;
             this.close.Size = new System.Drawing.Size(32, 25);
@@ -277,13 +296,13 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnCancel.HoverState.Parent = this.btnCancel;
-            this.btnCancel.Location = new System.Drawing.Point(499, 75);
+            this.btnCancel.Location = new System.Drawing.Point(688, 46);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.BorderRadius = 15;
             this.btnCancel.ShadowDecoration.Depth = 10;
             this.btnCancel.ShadowDecoration.Enabled = true;
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
-            this.btnCancel.Size = new System.Drawing.Size(100, 50);
+            this.btnCancel.Size = new System.Drawing.Size(100, 36);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.Visible = false;

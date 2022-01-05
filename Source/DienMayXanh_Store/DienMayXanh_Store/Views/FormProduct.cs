@@ -57,11 +57,6 @@ namespace DienMayXanh_Store.Views
             cbmFilter.DataSource = table;
         }
 
-        private void btnAddProduct_Click(object sender, EventArgs e)
-        {
-            new FormAddProduct().ShowDialog();
-        }
-
         private void loadData(string cate = "0")
         {
             var data = !currKey.Equals("") ?
@@ -96,6 +91,16 @@ namespace DienMayXanh_Store.Views
             cbmFilter.SelectedIndex = 0;
             loadData();
             currKey = "";
+        }
+
+        private void btnAddCatagory_Click(object sender, EventArgs e)
+        {
+            new Dialogs.FormAddCategory().ShowDialog();
+        }
+
+        private void btnAddProducer_Click(object sender, EventArgs e)
+        {
+            new Dialogs.FormAddProducer().ShowDialog();
         }
     }
 }

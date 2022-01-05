@@ -43,7 +43,11 @@ namespace DienMayXanh_Store.Views.Dialogs
         private void close_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            FormImportProduct.instance.loadCbmFilter();
+            if(FormImportProduct.instance != null)
+            {
+                FormImportProduct.instance.loadCbmFilter();
+            }
+           
         }
 
         private bool checkNull()

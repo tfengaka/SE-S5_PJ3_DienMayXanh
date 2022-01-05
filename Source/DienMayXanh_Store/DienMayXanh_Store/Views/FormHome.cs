@@ -30,6 +30,13 @@ namespace DienMayXanh_Store.Views
             initLoad();
         }
 
+        private decimal getTotalIeslip()
+        {
+            decimal total = 0;
+            var ieslips = context.IESLIPS.ToList();
+            ieslips.ForEach(item => total += item.TotalPrice);
+            return total;
+        }
         private void initLoad()
         {
             var orders = (from reciept in context.RECIEPTS
@@ -57,8 +64,11 @@ namespace DienMayXanh_Store.Views
             decimal totalSales = 0;
             orders.ForEach(o => totalProfit += o.TotalPrice);
             carts.ForEach(item => totalSales += item.Quantity);
+            decimal totalCosts = getTotalIeslip() - totalProfit;
+
             lb_totalSales.Text = totalSales + " Sản Phẩm";
             lb_totalProfit.Text = String.Format("{0:n0}", totalProfit) + " VNĐ";
+            lb_totalCost.Text = String.Format("{0:n0}", totalCosts) + " VNĐ";
         }
 
         private void btn_detail_click(object sender, DataGridViewCellEventArgs e)

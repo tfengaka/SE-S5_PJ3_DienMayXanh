@@ -317,11 +317,17 @@ namespace DienMayXanh_Store.Views
             context.SaveChanges();
             MessageBox.Show("Hàng đã được nhập");
             resetInput();
+            if (FormExportProduct.instance != null)
+            {
+                FormExportProduct.instance.loadData();
+            }
             lblTotalPrice.Text = "Thành tiền: 0";
             containerY = 60;
             currIndex = 0;
             this.listProduct.Clear();
             this.gbListProduct.Controls.Clear();
+
+            
         }
 
         public void setLayout()

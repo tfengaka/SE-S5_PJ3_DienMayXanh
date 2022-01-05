@@ -42,7 +42,7 @@ namespace DienMayXanh_Store.Views
             loadCmbFilter();
         }
 
-        private void loadData(string cateID = "0")
+        public void loadData(string cateID = "0")
         {
             var data = cateID != "0" ?
                 context.PRODUCTAVAILABLES

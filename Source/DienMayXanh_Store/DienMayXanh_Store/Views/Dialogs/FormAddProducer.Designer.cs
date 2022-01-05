@@ -33,6 +33,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.lblProducer = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -40,13 +41,13 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtProducerAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvProducer = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddProducer = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEditProducer = new Guna.UI2.WinForms.Guna2Button();
             this.BrandID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameProducer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddProducer = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEditProducer = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,6 @@ namespace DienMayXanh_Store.Views.Dialogs
             // 
             // ShadowForm
             // 
-            this.ShadowForm.BorderRadius = 15;
             this.ShadowForm.ShadowColor = System.Drawing.Color.Gray;
             this.ShadowForm.TargetForm = this;
             // 
@@ -66,7 +66,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.lblProducer.BackColor = System.Drawing.Color.Transparent;
             this.lblProducer.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.lblProducer.Location = new System.Drawing.Point(266, 12);
+            this.lblProducer.Location = new System.Drawing.Point(286, 12);
             this.lblProducer.Name = "lblProducer";
             this.lblProducer.Size = new System.Drawing.Size(209, 27);
             this.lblProducer.TabIndex = 5;
@@ -109,7 +109,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.txtProducerName.HoverState.Parent = this.txtProducerName;
             this.txtProducerName.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtProducerName.Location = new System.Drawing.Point(10, 66);
+            this.txtProducerName.Location = new System.Drawing.Point(12, 46);
             this.txtProducerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProducerName.MaxLength = 30;
             this.txtProducerName.Name = "txtProducerName";
@@ -145,7 +145,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.txtProducerAddress.HoverState.Parent = this.txtProducerAddress;
             this.txtProducerAddress.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtProducerAddress.Location = new System.Drawing.Point(380, 66);
+            this.txtProducerAddress.Location = new System.Drawing.Point(380, 46);
             this.txtProducerAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProducerAddress.MaxLength = 30;
             this.txtProducerAddress.Name = "txtProducerAddress";
@@ -156,28 +156,34 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerAddress.ShadowDecoration.Depth = 10;
             this.txtProducerAddress.ShadowDecoration.Enabled = true;
             this.txtProducerAddress.ShadowDecoration.Parent = this.txtProducerAddress;
-            this.txtProducerAddress.Size = new System.Drawing.Size(395, 45);
+            this.txtProducerAddress.Size = new System.Drawing.Size(408, 45);
             this.txtProducerAddress.TabIndex = 13;
             this.txtProducerAddress.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // dgvProducer
             // 
+            this.dgvProducer.AllowUserToAddRows = false;
+            this.dgvProducer.AllowUserToDeleteRows = false;
+            this.dgvProducer.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvProducer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProducer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProducer.BackgroundColor = System.Drawing.Color.White;
             this.dgvProducer.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProducer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvProducer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvProducer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProducer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProducer.ColumnHeadersHeight = 21;
+            this.dgvProducer.ColumnHeadersHeight = 36;
             this.dgvProducer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BrandID,
             this.nameProducer,
@@ -185,19 +191,30 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.address});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProducer.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProducer.EnableHeadersVisualStyles = false;
             this.dgvProducer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvProducer.Location = new System.Drawing.Point(12, 173);
+            this.dgvProducer.Location = new System.Drawing.Point(12, 140);
             this.dgvProducer.Name = "dgvProducer";
+            this.dgvProducer.ReadOnly = true;
+            this.dgvProducer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducer.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProducer.RowHeadersVisible = false;
+            this.dgvProducer.RowTemplate.Height = 30;
             this.dgvProducer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProducer.Size = new System.Drawing.Size(776, 265);
+            this.dgvProducer.Size = new System.Drawing.Size(776, 298);
             this.dgvProducer.TabIndex = 14;
             this.dgvProducer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvProducer.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -207,48 +224,20 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.dgvProducer.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.dgvProducer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProducer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvProducer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvProducer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvProducer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvProducer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvProducer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvProducer.ThemeStyle.HeaderStyle.Height = 21;
-            this.dgvProducer.ThemeStyle.ReadOnly = false;
+            this.dgvProducer.ThemeStyle.HeaderStyle.Height = 36;
+            this.dgvProducer.ThemeStyle.ReadOnly = true;
             this.dgvProducer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvProducer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvProducer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvProducer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvProducer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvProducer.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvProducer.ThemeStyle.RowsStyle.Height = 30;
             this.dgvProducer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProducer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvProducer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducer_CellContentClick);
-            // 
-            // BrandID
-            // 
-            this.BrandID.DataPropertyName = "BrandID";
-            this.BrandID.HeaderText = "Mã NCC";
-            this.BrandID.Name = "BrandID";
-            this.BrandID.ReadOnly = true;
-            // 
-            // nameProducer
-            // 
-            this.nameProducer.DataPropertyName = "Name";
-            this.nameProducer.HeaderText = "Tên NCC";
-            this.nameProducer.Name = "nameProducer";
-            this.nameProducer.ReadOnly = true;
-            // 
-            // createAt
-            // 
-            this.createAt.DataPropertyName = "CreateAt";
-            this.createAt.HeaderText = "Ngày lưu";
-            this.createAt.Name = "createAt";
-            this.createAt.ReadOnly = true;
-            // 
-            // address
-            // 
-            this.address.DataPropertyName = "Address";
-            this.address.HeaderText = "Địa chỉ NCC";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
             // 
             // btnCancel
             // 
@@ -268,13 +257,13 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnCancel.HoverState.Parent = this.btnCancel;
-            this.btnCancel.Location = new System.Drawing.Point(541, 117);
+            this.btnCancel.Location = new System.Drawing.Point(542, 98);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.ShadowDecoration.BorderRadius = 15;
             this.btnCancel.ShadowDecoration.Depth = 10;
             this.btnCancel.ShadowDecoration.Enabled = true;
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
-            this.btnCancel.Size = new System.Drawing.Size(100, 50);
+            this.btnCancel.Size = new System.Drawing.Size(100, 36);
             this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.Visible = false;
@@ -298,13 +287,13 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnAddProducer.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnAddProducer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnAddProducer.HoverState.Parent = this.btnAddProducer;
-            this.btnAddProducer.Location = new System.Drawing.Point(675, 117);
+            this.btnAddProducer.Location = new System.Drawing.Point(675, 98);
             this.btnAddProducer.Name = "btnAddProducer";
             this.btnAddProducer.ShadowDecoration.BorderRadius = 15;
             this.btnAddProducer.ShadowDecoration.Depth = 10;
             this.btnAddProducer.ShadowDecoration.Enabled = true;
             this.btnAddProducer.ShadowDecoration.Parent = this.btnAddProducer;
-            this.btnAddProducer.Size = new System.Drawing.Size(100, 50);
+            this.btnAddProducer.Size = new System.Drawing.Size(100, 36);
             this.btnAddProducer.TabIndex = 17;
             this.btnAddProducer.Text = "Thêm";
             this.btnAddProducer.Click += new System.EventHandler(this.btnAddProducer_Click);
@@ -327,17 +316,50 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnEditProducer.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnEditProducer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnEditProducer.HoverState.Parent = this.btnEditProducer;
-            this.btnEditProducer.Location = new System.Drawing.Point(675, 117);
+            this.btnEditProducer.Location = new System.Drawing.Point(675, 98);
             this.btnEditProducer.Name = "btnEditProducer";
             this.btnEditProducer.ShadowDecoration.BorderRadius = 15;
             this.btnEditProducer.ShadowDecoration.Depth = 10;
             this.btnEditProducer.ShadowDecoration.Enabled = true;
             this.btnEditProducer.ShadowDecoration.Parent = this.btnEditProducer;
-            this.btnEditProducer.Size = new System.Drawing.Size(100, 50);
+            this.btnEditProducer.Size = new System.Drawing.Size(100, 36);
             this.btnEditProducer.TabIndex = 18;
             this.btnEditProducer.Text = "Sửa";
             this.btnEditProducer.Visible = false;
             this.btnEditProducer.Click += new System.EventHandler(this.btnEditProducer_Click);
+            // 
+            // BrandID
+            // 
+            this.BrandID.DataPropertyName = "BrandID";
+            this.BrandID.FillWeight = 71.82564F;
+            this.BrandID.HeaderText = "Mã số thuế";
+            this.BrandID.Name = "BrandID";
+            this.BrandID.ReadOnly = true;
+            // 
+            // nameProducer
+            // 
+            this.nameProducer.DataPropertyName = "Name";
+            this.nameProducer.FillWeight = 91.37056F;
+            this.nameProducer.HeaderText = "Tên doanh nghiệp";
+            this.nameProducer.Name = "nameProducer";
+            this.nameProducer.ReadOnly = true;
+            // 
+            // createAt
+            // 
+            this.createAt.DataPropertyName = "CreateAt";
+            this.createAt.FillWeight = 72.08369F;
+            this.createAt.HeaderText = "Ngày ký kết";
+            this.createAt.Name = "createAt";
+            this.createAt.ReadOnly = true;
+            // 
+            // address
+            // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.address.DataPropertyName = "Address";
+            this.address.FillWeight = 164.7201F;
+            this.address.HeaderText = "Địa chỉ";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
             // 
             // FormAddProducer
             // 
@@ -375,10 +397,10 @@ namespace DienMayXanh_Store.Views.Dialogs
         private Guna.UI2.WinForms.Guna2DataGridView dgvProducer;
         private Guna.UI2.WinForms.Guna2Button btnAddProducer;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2Button btnEditProducer;
         private System.Windows.Forms.DataGridViewTextBoxColumn BrandID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameProducer;
         private System.Windows.Forms.DataGridViewTextBoxColumn createAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private Guna.UI2.WinForms.Guna2Button btnEditProducer;
     }
 }
