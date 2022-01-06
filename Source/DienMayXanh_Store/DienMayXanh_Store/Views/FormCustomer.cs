@@ -37,7 +37,7 @@ namespace DienMayXanh_Store.Views
                      customer.Address,
                      Gender = customer.Gender ? "Nam" : "Nữ",
                      customer.Phone,
-                 }).ToList(); ;
+                 }).ToList();
         }
 
         private void btn_ViewDetail_Click(object sender, DataGridViewCellEventArgs e)

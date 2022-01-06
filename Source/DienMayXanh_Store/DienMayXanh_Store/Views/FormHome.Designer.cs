@@ -72,7 +72,6 @@ namespace DienMayXanh_Store.Views
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgv_fullOrder = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.oDataInstantFeedbackSource1 = new DevExpress.Data.ODataLinq.ODataInstantFeedbackSource();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RecieptID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +79,7 @@ namespace DienMayXanh_Store.Views
             this.CreateAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_detail = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.oDataInstantFeedbackSource1 = new DevExpress.Data.ODataLinq.ODataInstantFeedbackSource();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -172,7 +172,7 @@ namespace DienMayXanh_Store.Views
             this.lb_totalCost.Name = "lb_totalCost";
             this.lb_totalCost.Size = new System.Drawing.Size(213, 31);
             this.lb_totalCost.TabIndex = 2;
-            this.lb_totalCost.Text = "guna2HtmlLabel5";
+            this.lb_totalCost.Text = "0 VNĐ";
             this.lb_totalCost.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel6
@@ -185,7 +185,7 @@ namespace DienMayXanh_Store.Views
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(213, 27);
             this.guna2HtmlLabel6.TabIndex = 1;
-            this.guna2HtmlLabel6.Text = "Tổng Chi Phí";
+            this.guna2HtmlLabel6.Text = "Tổng Nhập Hàng";
             this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2PictureBox3
@@ -226,7 +226,7 @@ namespace DienMayXanh_Store.Views
             this.lb_totalProfit.Name = "lb_totalProfit";
             this.lb_totalProfit.Size = new System.Drawing.Size(213, 31);
             this.lb_totalProfit.TabIndex = 2;
-            this.lb_totalProfit.Text = "guna2HtmlLabel3";
+            this.lb_totalProfit.Text = "0 VNĐ";
             this.lb_totalProfit.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel4
@@ -280,7 +280,7 @@ namespace DienMayXanh_Store.Views
             this.lb_totalSales.Name = "lb_totalSales";
             this.lb_totalSales.Size = new System.Drawing.Size(213, 31);
             this.lb_totalSales.TabIndex = 2;
-            this.lb_totalSales.Text = "guna2HtmlLabel2";
+            this.lb_totalSales.Text = "0 VNĐ";
             this.lb_totalSales.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel1
@@ -490,6 +490,7 @@ namespace DienMayXanh_Store.Views
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.chart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormHome";
             this.Text = "FormHome";
             this.Load += new System.EventHandler(this.FormHome_Load);

@@ -16,8 +16,8 @@ namespace DienMayXanh_Store.Charts
 
             var datasetRevenue = new GunaLineDataset();
             datasetRevenue.PointRadius = 3;
-            datasetRevenue.FillColor = Color.Red;
-            datasetRevenue.BorderColor = Color.Red;
+            datasetRevenue.FillColor = Color.White;
+            datasetRevenue.BorderColor = Color.FromArgb(242, 153, 74);
             datasetRevenue.Label = label;
             datasetRevenue.PointStyle = PointStyle.Circle;
 

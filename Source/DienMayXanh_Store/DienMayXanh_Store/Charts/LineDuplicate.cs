@@ -23,8 +23,8 @@ namespace DienMayXanh_Store.Charts
             //Create a new dataset 
             var datasetRevenue = new GunaLineDataset();
             datasetRevenue.PointRadius = 3;
-            datasetRevenue.FillColor = Color.Red;
-            datasetRevenue.BorderColor = Color.Red;
+            datasetRevenue.FillColor = Color.FromArgb(242, 153, 74);
+            datasetRevenue.BorderColor = Color.FromArgb(242, 153, 74);
             datasetRevenue.Label = "Doanh thu";
             datasetRevenue.PointStyle = PointStyle.Circle;
             var r = new Random();
@@ -32,8 +32,8 @@ namespace DienMayXanh_Store.Charts
                 datasetRevenue.DataPoints.Add(date[i], (double)revenue[i]);
             var datasetProfit = new GunaLineDataset();
             datasetProfit.PointRadius = 3;
-            datasetProfit.FillColor = Color.Black;
-            datasetProfit.BorderColor = Color.Black;
+            datasetProfit.FillColor = Color.FromArgb(51, 200, 99);
+            datasetProfit.BorderColor = Color.FromArgb(51, 200, 99);
             datasetProfit.Label = "Doanh số";
             datasetProfit.PointStyle = PointStyle.Circle;
             for (int i = 0; i < date.Count; i++)

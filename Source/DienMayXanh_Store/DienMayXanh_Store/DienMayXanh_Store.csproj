@@ -188,6 +188,12 @@
     <Compile Include="Views\Dialogs\FormStatistical.Designer.cs">
       <DependentUpon>FormStatistical.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dialogs\PreLoginOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dialogs\PreLoginOverlay.Designer.cs">
+      <DependentUpon>PreLoginOverlay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dialogs\resetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dialogs\FormStatistical.resx">
       <DependentUpon>FormStatistical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dialogs\PreLoginOverlay.resx">
+      <DependentUpon>PreLoginOverlay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dialogs\resetPassword.resx">
       <DependentUpon>resetPassword.cs</DependentUpon>

@@ -41,13 +41,13 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtProducerAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvProducer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddProducer = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEditProducer = new Guna.UI2.WinForms.Guna2Button();
             this.BrandID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameProducer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddProducer = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEditProducer = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,7 +147,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerAddress.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtProducerAddress.Location = new System.Drawing.Point(380, 46);
             this.txtProducerAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtProducerAddress.MaxLength = 30;
+            this.txtProducerAddress.MaxLength = 3000;
             this.txtProducerAddress.Name = "txtProducerAddress";
             this.txtProducerAddress.PasswordChar = '\0';
             this.txtProducerAddress.PlaceholderText = "Địa chỉ nhà cung cấp";
@@ -239,6 +239,39 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.dgvProducer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvProducer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducer_CellContentClick);
             // 
+            // BrandID
+            // 
+            this.BrandID.DataPropertyName = "BrandID";
+            this.BrandID.FillWeight = 71.82564F;
+            this.BrandID.HeaderText = "Mã số thuế";
+            this.BrandID.Name = "BrandID";
+            this.BrandID.ReadOnly = true;
+            // 
+            // nameProducer
+            // 
+            this.nameProducer.DataPropertyName = "Name";
+            this.nameProducer.FillWeight = 91.37056F;
+            this.nameProducer.HeaderText = "Tên doanh nghiệp";
+            this.nameProducer.Name = "nameProducer";
+            this.nameProducer.ReadOnly = true;
+            // 
+            // createAt
+            // 
+            this.createAt.DataPropertyName = "CreateAt";
+            this.createAt.FillWeight = 72.08369F;
+            this.createAt.HeaderText = "Ngày ký kết";
+            this.createAt.Name = "createAt";
+            this.createAt.ReadOnly = true;
+            // 
+            // address
+            // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.address.DataPropertyName = "Address";
+            this.address.FillWeight = 164.7201F;
+            this.address.HeaderText = "Địa chỉ";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            // 
             // btnCancel
             // 
             this.btnCancel.Animated = true;
@@ -327,39 +360,6 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnEditProducer.Text = "Sửa";
             this.btnEditProducer.Visible = false;
             this.btnEditProducer.Click += new System.EventHandler(this.btnEditProducer_Click);
-            // 
-            // BrandID
-            // 
-            this.BrandID.DataPropertyName = "BrandID";
-            this.BrandID.FillWeight = 71.82564F;
-            this.BrandID.HeaderText = "Mã số thuế";
-            this.BrandID.Name = "BrandID";
-            this.BrandID.ReadOnly = true;
-            // 
-            // nameProducer
-            // 
-            this.nameProducer.DataPropertyName = "Name";
-            this.nameProducer.FillWeight = 91.37056F;
-            this.nameProducer.HeaderText = "Tên doanh nghiệp";
-            this.nameProducer.Name = "nameProducer";
-            this.nameProducer.ReadOnly = true;
-            // 
-            // createAt
-            // 
-            this.createAt.DataPropertyName = "CreateAt";
-            this.createAt.FillWeight = 72.08369F;
-            this.createAt.HeaderText = "Ngày ký kết";
-            this.createAt.Name = "createAt";
-            this.createAt.ReadOnly = true;
-            // 
-            // address
-            // 
-            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.address.DataPropertyName = "Address";
-            this.address.FillWeight = 164.7201F;
-            this.address.HeaderText = "Địa chỉ";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
             // 
             // FormAddProducer
             // 

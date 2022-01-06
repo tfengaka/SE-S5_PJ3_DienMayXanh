@@ -1,5 +1,6 @@
 ﻿using DienMayXanh_Store.Models;
 using DienMayXanh_Store.Views;
+using DienMayXanh_Store.Views.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,6 @@ namespace DienMayXanh_Store
         public static FormLogin instance;
         public STAFF info = null;
 
-        private ContextDB context = Program.context;
         private bool isShowPassword = false;
         private Bitmap hide = global::DienMayXanh_Store.Properties.Resources.hide;
         private Bitmap show = global::DienMayXanh_Store.Properties.Resources.show;
@@ -52,20 +52,13 @@ namespace DienMayXanh_Store
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            login(); 
-        }
-
-        private void login()
-        {
-            if (txbLoginName.Text.Equals("") || txbPassword.Text.Equals(""))
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else if (!checkLogin())
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
-            {
-                new FormMenu().Show();
-                this.Visible = false;
+            if (!txbLoginName.Text.Equals("") && !txbPassword.Text.Equals(""))
+            { 
+                new PreLoginOverlay(txbLoginName.Text, txbPassword.Text).ShowDialog();
+                return;
             }
+            MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+           
         }
 
         public static string Base64Encode(string plainText)
@@ -73,8 +66,6 @@ namespace DienMayXanh_Store
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
             return System.Convert.ToBase64String(plainTextBytes);
         }
-
-
 
         public static string MD5Hash(string input)
         {
@@ -89,18 +80,6 @@ namespace DienMayXanh_Store
             return hash.ToString();
         }
 
-        private bool checkLogin()
-        {
-            string encodePassword = MD5Hash(Base64Encode(txbPassword.Text));
-            ACCOUNT getAccount = context.ACCOUNTS
-                .FirstOrDefault(x => x.LoginName.Equals(txbLoginName.Text)
-                && x.Password.Equals(encodePassword));
-            if (getAccount != null)
-            {
-                info = getAccount.STAFF;
-                return true;
-            }
-            return false;
-        }
+      
     }
 }

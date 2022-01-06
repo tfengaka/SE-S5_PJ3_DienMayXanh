@@ -12,6 +12,10 @@ namespace DienMayXanh_Store.Report
         {
             InitializeComponent();
         }
+        public void setImportID(string importID)
+        {
+            p_importID.Value = importID;
+        }
 
     }
 }

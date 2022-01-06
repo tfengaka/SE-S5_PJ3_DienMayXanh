@@ -28,7 +28,17 @@ namespace DienMayXanh_Store.Report
             documentViewer1.DocumentSource = report;
             report.CreateDocument();
         }
-
+        public void printImportBill(string importID)
+        {
+            ImportProducts report = new ImportProducts();
+            foreach (DevExpress.XtraReports.Parameters.Parameter p in report.Parameters)
+            {
+                p.Visible = false;
+            }
+            report.setImportID(importID);
+            documentViewer1.DocumentSource = report;
+            report.CreateDocument();
+        }
         public void printInvoice(string recieptID)
         {
             CustomerInvoice report = new CustomerInvoice();

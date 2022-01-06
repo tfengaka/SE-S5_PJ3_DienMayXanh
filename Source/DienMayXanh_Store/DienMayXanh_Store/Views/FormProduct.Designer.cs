@@ -39,16 +39,16 @@ namespace DienMayXanh_Store.Views
             this.lblPosition = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvProduct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.btnAddProducer = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnAddCategory = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.Img = new System.Windows.Forms.DataGridViewImageColumn();
             this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BrandName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.btnAddProducer = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnAddCategory = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -198,6 +198,57 @@ namespace DienMayXanh_Store.Views
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Img
+            // 
+            this.Img.DataPropertyName = "Img";
+            this.Img.FillWeight = 60.9137F;
+            this.Img.HeaderText = "Ảnh";
+            this.Img.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Img.Name = "Img";
+            this.Img.ReadOnly = true;
+            // 
+            // ProductID
+            // 
+            this.ProductID.DataPropertyName = "ProductID";
+            this.ProductID.FillWeight = 107.8173F;
+            this.ProductID.HeaderText = "Mã sản phẩm";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.ReadOnly = true;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "Name";
+            this.ProductName.FillWeight = 107.8173F;
+            this.ProductName.HeaderText = "Tên sản phẩm";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "Price";
+            dataGridViewCellStyle3.Format = "N0";
+            this.Price.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Price.FillWeight = 107.8173F;
+            this.Price.HeaderText = "Đơn giá";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.FillWeight = 107.8173F;
+            this.CategoryName.HeaderText = "Danh mục";
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
+            // 
+            // BrandName
+            // 
+            this.BrandName.DataPropertyName = "BrandName";
+            this.BrandName.FillWeight = 107.8173F;
+            this.BrandName.HeaderText = "Thương hiệu";
+            this.BrandName.Name = "BrandName";
+            this.BrandName.ReadOnly = true;
+            // 
             // btnAddProducer
             // 
             this.btnAddProducer.Animated = true;
@@ -268,57 +319,6 @@ namespace DienMayXanh_Store.Views
             this.guna2GroupBox1.Text = "Danh Sách Sản Phẩm";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2GroupBox1.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
-            // 
-            // Img
-            // 
-            this.Img.DataPropertyName = "Img";
-            this.Img.FillWeight = 60.9137F;
-            this.Img.HeaderText = "Ảnh";
-            this.Img.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Img.Name = "Img";
-            this.Img.ReadOnly = true;
-            // 
-            // ProductID
-            // 
-            this.ProductID.DataPropertyName = "ProductID";
-            this.ProductID.FillWeight = 107.8173F;
-            this.ProductID.HeaderText = "Mã sản phẩm";
-            this.ProductID.Name = "ProductID";
-            this.ProductID.ReadOnly = true;
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "Name";
-            this.ProductName.FillWeight = 107.8173F;
-            this.ProductName.HeaderText = "Tên sản phẩm";
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.DataPropertyName = "Price";
-            dataGridViewCellStyle3.Format = "N0";
-            this.Price.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Price.FillWeight = 107.8173F;
-            this.Price.HeaderText = "Đơn giá";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // CategoryName
-            // 
-            this.CategoryName.DataPropertyName = "CategoryName";
-            this.CategoryName.FillWeight = 107.8173F;
-            this.CategoryName.HeaderText = "Danh mục";
-            this.CategoryName.Name = "CategoryName";
-            this.CategoryName.ReadOnly = true;
-            // 
-            // BrandName
-            // 
-            this.BrandName.DataPropertyName = "BrandName";
-            this.BrandName.FillWeight = 107.8173F;
-            this.BrandName.HeaderText = "Thương hiệu";
-            this.BrandName.Name = "BrandName";
-            this.BrandName.ReadOnly = true;
             // 
             // FormProduct
             // 

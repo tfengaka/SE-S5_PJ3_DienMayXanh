@@ -211,7 +211,7 @@ namespace DienMayXanh_Store.Views
             resetInput();
             setLayout();
             lblTotalPrice.Text = "Thành tiền: " + calculTotalPrice() + " VNĐ";
-            MessageBox.Show("Thêm sản phẩm thành công");
+            MessageBox.Show("Đã Thêm Sản Phẩm Vào Giỏ Hàng!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -220,16 +220,16 @@ namespace DienMayXanh_Store.Views
             {
                 if (txtPrice.Text == ""
                || nudQuantity.Value == 0)
-                    MessageBox.Show("Vui lòng nhập đủ thông tin");
+                    MessageBox.Show("Vui Lòng Điền Đầy Đủ Thông Tin Sản Phẩm", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else addProdut();
             }
             else
             {
                 if (txtProductName.Text == "" || txtPrice.Text == ""
                 || nudQuantity.Value == 0)
-                    MessageBox.Show("Vui lòng nhập đủ thông tin");
+                    MessageBox.Show("Vui Lòng Điền Đầy Đủ Thông Tin Sản Phẩm", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else if (ptbAddImg.Image == null)
-                    MessageBox.Show("Vui lòng chọn ảnh cho sản phẩm");
+                    MessageBox.Show("Vui Lòng Thêm Ảnh Sản Phẩm", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                     addProdut();
             }
@@ -245,9 +245,13 @@ namespace DienMayXanh_Store.Views
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-            if (listProduct.Count == 0)
-                MessageBox.Show("Vui lòng thêm sản phẩm");
-            else importProduct();
+            if (listProduct.Count != 0)
+            {
+                importProduct();
+                return;
+            }
+            MessageBox.Show("Giỏ Hàng Đang Trống!\nVui Lòng Thêm Sản Phẩm Vàp Giỏ Hàng", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+ 
         }
 
         private void importProduct()
@@ -316,12 +320,15 @@ namespace DienMayXanh_Store.Views
             });
 
             context.SaveChanges();
-            MessageBox.Show("Hàng đã được nhập");
+            MessageBox.Show("Nhập Kho Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             resetInput();
             if (FormExportProduct.instance != null)
             {
                 FormExportProduct.instance.loadData();
             }
+            Report.PrintReports report = new Report.PrintReports();
+            report.printImportBill(newIE.IESlipID);
+            report.Show();
             lblTotalPrice.Text = "Thành tiền: 0";
             containerY = 60;
             currIndex = 0;
@@ -445,7 +452,7 @@ namespace DienMayXanh_Store.Views
                 ImportSlip check = listProduct.FirstOrDefault(x => x.Name.Equals(txtProductName.Text));
                 if(check != null)
                 {
-                    MessageBox.Show("Tên sản phẩm đã có trong danh sách");
+                    MessageBox.Show("Sản Phẩm Đã Tồn Tại!", "Cảnh Báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 currItem.Name = txtProductName.Text;
@@ -469,7 +476,7 @@ namespace DienMayXanh_Store.Views
             btnEditProduct.Visible = false;
             btnCancel.Visible = false;
             resetInput();
-            MessageBox.Show("Sửa thành công");
+            MessageBox.Show("Thay Đổi Thông Tin Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -513,7 +520,7 @@ namespace DienMayXanh_Store.Views
             this.gbListProduct.Controls.Clear();
             lblTotalPrice.Text = "Thành tiền: " + calculTotalPrice() + " VNĐ";
             listProduct.ForEach(x => setLayout());
-            MessageBox.Show("Đã xóa sản phẩm ra khỏi danh sách");
+            MessageBox.Show("Sản Phẩm Đã Được Loại Bỏ Khỏi Giỏ Hàng!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 

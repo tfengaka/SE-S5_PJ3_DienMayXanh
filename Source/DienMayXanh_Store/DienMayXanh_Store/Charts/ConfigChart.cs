@@ -27,7 +27,8 @@ namespace DienMayXanh_Store.Charts
             };
             List<Color> colorsPoint = new List<Color>()
             {
-                Color.Red
+                Color.FromArgb(242, 153, 74),
+                Color.FromArgb(51, 200, 99),
             };
 
             var chartFont = new Guna.Charts.WinForms.ChartFont()
@@ -61,7 +62,7 @@ namespace DienMayXanh_Store.Charts
 
             config.PaletteCustomColors.FillColors.AddRange(colors);
             config.PaletteCustomColors.BorderColors.AddRange(colors);
-            config.PaletteCustomColors.PointFillColors.AddRange(new List<Color>() { Color.FromArgb(229, 9, 20) });
+            config.PaletteCustomColors.PointFillColors.AddRange(new List<Color>() { Color.White });
             config.PaletteCustomColors.PointBorderColors.AddRange(colorsPoint);
 
             return config;
