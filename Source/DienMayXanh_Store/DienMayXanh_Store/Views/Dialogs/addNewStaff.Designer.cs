@@ -34,8 +34,6 @@
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btn_addAvatar = new Guna.UI2.WinForms.Guna2Button();
-            this.tb_AvatarPath = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_addStaff = new Guna.UI2.WinForms.Guna2Button();
             this.cb_Position = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -55,7 +53,10 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tb_StaffName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btn_addAvatar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -108,8 +109,8 @@
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BorderRadius = 4;
+            this.guna2GroupBox1.Controls.Add(this.avatar);
             this.guna2GroupBox1.Controls.Add(this.btn_addAvatar);
-            this.guna2GroupBox1.Controls.Add(this.tb_AvatarPath);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel10);
             this.guna2GroupBox1.Controls.Add(this.btn_addStaff);
             this.guna2GroupBox1.Controls.Add(this.cb_Position);
@@ -139,58 +140,12 @@
             this.guna2GroupBox1.Text = "Thông Tin Cá Nhân";
             this.guna2GroupBox1.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             // 
-            // btn_addAvatar
-            // 
-            this.btn_addAvatar.BorderRadius = 4;
-            this.btn_addAvatar.CheckedState.Parent = this.btn_addAvatar;
-            this.btn_addAvatar.CustomImages.Parent = this.btn_addAvatar;
-            this.btn_addAvatar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_addAvatar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_addAvatar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_addAvatar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_addAvatar.DisabledState.Parent = this.btn_addAvatar;
-            this.btn_addAvatar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(91)))), ((int)(((byte)(208)))));
-            this.btn_addAvatar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addAvatar.ForeColor = System.Drawing.Color.White;
-            this.btn_addAvatar.HoverState.Parent = this.btn_addAvatar;
-            this.btn_addAvatar.Location = new System.Drawing.Point(385, 125);
-            this.btn_addAvatar.Name = "btn_addAvatar";
-            this.btn_addAvatar.ShadowDecoration.Parent = this.btn_addAvatar;
-            this.btn_addAvatar.Size = new System.Drawing.Size(99, 36);
-            this.btn_addAvatar.TabIndex = 21;
-            this.btn_addAvatar.Text = "Chọn";
-            this.btn_addAvatar.Click += new System.EventHandler(this.btn_addAvatar_Click);
-            // 
-            // tb_AvatarPath
-            // 
-            this.tb_AvatarPath.BorderRadius = 4;
-            this.tb_AvatarPath.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_AvatarPath.DefaultText = "";
-            this.tb_AvatarPath.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_AvatarPath.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_AvatarPath.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_AvatarPath.DisabledState.Parent = this.tb_AvatarPath;
-            this.tb_AvatarPath.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_AvatarPath.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_AvatarPath.FocusedState.Parent = this.tb_AvatarPath;
-            this.tb_AvatarPath.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_AvatarPath.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_AvatarPath.HoverState.Parent = this.tb_AvatarPath;
-            this.tb_AvatarPath.Location = new System.Drawing.Point(95, 125);
-            this.tb_AvatarPath.Name = "tb_AvatarPath";
-            this.tb_AvatarPath.PasswordChar = '\0';
-            this.tb_AvatarPath.PlaceholderText = "";
-            this.tb_AvatarPath.SelectedText = "";
-            this.tb_AvatarPath.ShadowDecoration.Parent = this.tb_AvatarPath;
-            this.tb_AvatarPath.Size = new System.Drawing.Size(284, 36);
-            this.tb_AvatarPath.TabIndex = 20;
-            // 
             // guna2HtmlLabel10
             // 
             this.guna2HtmlLabel10.AutoSize = false;
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(6, 125);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(6, 137);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(83, 36);
             this.guna2HtmlLabel10.TabIndex = 19;
@@ -211,7 +166,7 @@
             this.btn_addStaff.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addStaff.ForeColor = System.Drawing.Color.White;
             this.btn_addStaff.HoverState.Parent = this.btn_addStaff;
-            this.btn_addStaff.Location = new System.Drawing.Point(95, 272);
+            this.btn_addStaff.Location = new System.Drawing.Point(95, 299);
             this.btn_addStaff.Name = "btn_addStaff";
             this.btn_addStaff.ShadowDecoration.Parent = this.btn_addStaff;
             this.btn_addStaff.Size = new System.Drawing.Size(180, 45);
@@ -435,7 +390,7 @@
             this.tb_StaffAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_StaffAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_StaffAddress.HoverState.Parent = this.tb_StaffAddress;
-            this.tb_StaffAddress.Location = new System.Drawing.Point(95, 209);
+            this.tb_StaffAddress.Location = new System.Drawing.Point(95, 236);
             this.tb_StaffAddress.Multiline = true;
             this.tb_StaffAddress.Name = "tb_StaffAddress";
             this.tb_StaffAddress.PasswordChar = '\0';
@@ -450,7 +405,7 @@
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(3, 209);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(3, 236);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(86, 57);
             this.guna2HtmlLabel4.TabIndex = 4;
@@ -472,7 +427,8 @@
             this.tb_StaffPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_StaffPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_StaffPhone.HoverState.Parent = this.tb_StaffPhone;
-            this.tb_StaffPhone.Location = new System.Drawing.Point(95, 167);
+            this.tb_StaffPhone.Location = new System.Drawing.Point(95, 194);
+            this.tb_StaffPhone.MaxLength = 10;
             this.tb_StaffPhone.Name = "tb_StaffPhone";
             this.tb_StaffPhone.PasswordChar = '\0';
             this.tb_StaffPhone.PlaceholderText = "";
@@ -486,7 +442,7 @@
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(3, 167);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(3, 194);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(86, 36);
             this.guna2HtmlLabel3.TabIndex = 2;
@@ -529,6 +485,44 @@
             this.guna2HtmlLabel2.Text = "Họ và tên";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // avatar
+            // 
+            this.avatar.BackColor = System.Drawing.Color.White;
+            this.avatar.FillColor = System.Drawing.Color.Silver;
+            this.avatar.ImageRotate = 0F;
+            this.avatar.Location = new System.Drawing.Point(95, 124);
+            this.avatar.Name = "avatar";
+            this.avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.avatar.ShadowDecoration.Parent = this.avatar;
+            this.avatar.Size = new System.Drawing.Size(64, 64);
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatar.TabIndex = 22;
+            this.avatar.TabStop = false;
+            this.avatar.DragDrop += new System.Windows.Forms.DragEventHandler(this.avatar_DragDrop);
+            this.avatar.DragEnter += new System.Windows.Forms.DragEventHandler(this.avatar_DragEnter);
+            // 
+            // btn_addAvatar
+            // 
+            this.btn_addAvatar.BorderRadius = 4;
+            this.btn_addAvatar.CheckedState.Parent = this.btn_addAvatar;
+            this.btn_addAvatar.CustomImages.Parent = this.btn_addAvatar;
+            this.btn_addAvatar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_addAvatar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_addAvatar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_addAvatar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_addAvatar.DisabledState.Parent = this.btn_addAvatar;
+            this.btn_addAvatar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(91)))), ((int)(((byte)(208)))));
+            this.btn_addAvatar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addAvatar.ForeColor = System.Drawing.Color.White;
+            this.btn_addAvatar.HoverState.Parent = this.btn_addAvatar;
+            this.btn_addAvatar.Location = new System.Drawing.Point(183, 140);
+            this.btn_addAvatar.Name = "btn_addAvatar";
+            this.btn_addAvatar.ShadowDecoration.Parent = this.btn_addAvatar;
+            this.btn_addAvatar.Size = new System.Drawing.Size(99, 36);
+            this.btn_addAvatar.TabIndex = 21;
+            this.btn_addAvatar.Text = "Chọn";
+            this.btn_addAvatar.Click += new System.EventHandler(this.btn_addAvatar_Click);
+            // 
             // addNewStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,6 +541,7 @@
             this.Load += new System.EventHandler(this.addNewStaff_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -577,8 +572,8 @@
         private Guna.UI2.WinForms.Guna2TextBox tb_LoginName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2Button btn_addStaff;
-        private Guna.UI2.WinForms.Guna2Button btn_addAvatar;
-        private Guna.UI2.WinForms.Guna2TextBox tb_AvatarPath;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox avatar;
+        private Guna.UI2.WinForms.Guna2Button btn_addAvatar;
     }
 }

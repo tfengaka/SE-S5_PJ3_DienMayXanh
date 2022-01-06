@@ -14,9 +14,12 @@ namespace DienMayXanh_Store.Views.Dialogs
     public partial class addNewStaff : Form
     {
         private ContextDB context = Program.context;
+        private Image img;
+        private string selectedFile;
         public addNewStaff()
         {
             InitializeComponent();
+            avatar.AllowDrop = true;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -48,21 +51,17 @@ namespace DienMayXanh_Store.Views.Dialogs
                 newAccount.Password = FormLogin.MD5Hash(FormLogin.Base64Encode(tb_password.Text));
                 newAccount.Permission = cb_Position.Text;
                 context.ACCOUNTS.Add(newAccount);
-                try
-                {
-                    context.SaveChanges();
-                    string FileExtension = System.IO.Path.GetExtension(tb_AvatarPath.Text);
-                    string resultFileCopy = @"..\..\Images\" + newStaff.StaffID + FileExtension;
-                    System.IO.File.Copy(tb_AvatarPath.Text, resultFileCopy);
-                    MessageBox.Show("Thêm Mới Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FormMenu.instance.openChildForm(new formStaff());
-                    this.Dispose();
-                    return;
-                }catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-               
+
+                context.SaveChanges();
+                string FileExtension = System.IO.Path.GetExtension(selectedFile);
+                string resultFileCopy = @"..\..\Images\" + newStaff.StaffID + FileExtension;
+                System.IO.File.Copy(selectedFile, resultFileCopy);
+                MessageBox.Show("Thêm Mới Thành Công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormMenu.instance.openChildForm(new formStaff());
+                this.Dispose();
+                return;
+
+
             }
             MessageBox.Show("Mật Khẩu Không Khớp!\nVui Lòng Nhập Lại", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
            
@@ -77,9 +76,25 @@ namespace DienMayXanh_Store.Views.Dialogs
 
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
-                    tb_AvatarPath.Text = dlg.FileName;
-                }
+                    selectedFile = dlg.FileName;
+                    avatar.ImageLocation = dlg.FileName;
+                }    
             }
+        }
+
+        private void avatar_DragDrop(object sender, DragEventArgs e)
+        {
+            foreach (string pic in ((string[])e.Data.GetData(DataFormats.FileDrop)))
+            {
+                selectedFile = pic;
+                img = Image.FromFile(pic);
+                avatar.Image = img;
+            }
+        }
+
+        private void avatar_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
         }
     }
 }

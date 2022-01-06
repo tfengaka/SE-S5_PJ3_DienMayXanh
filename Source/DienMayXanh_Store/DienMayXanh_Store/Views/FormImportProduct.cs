@@ -92,10 +92,11 @@ namespace DienMayXanh_Store.Views
         private void setAutoSelectCmbProduct(string id)
         {
             PRODUCT product = context.PRODUCTS.Find(id);
-            txtPrice.Text = product.Price.ToString();
+            txtPrice.Text = String.Format("{0:n0}", product.Price);
             nudQuantity.Value = 0;
             ptbAddImg.ImageLocation = string.Format(@"..\..\Images\Products\" + product.ProductID + ".jpg");
             cmbFilterProducer.SelectedValue = product.BrandID;
+            btnAddImg.Visible = false;
         }
 
         public void loadCbmFilter()
@@ -235,11 +236,11 @@ namespace DienMayXanh_Store.Views
             
         }
 
-        private decimal calculTotalPrice()
+        private string calculTotalPrice()
         {
             total = 0;
             listProduct.ForEach(x => total += (x.Quantity * x.Price));
-            return total;
+            return String.Format("{0:n0}", total);
         }
 
         private void btnImport_Click(object sender, EventArgs e)
@@ -341,13 +342,13 @@ namespace DienMayXanh_Store.Views
             setPanelProduct(id, containerX, containerY);
             setPictureProduct(id);
 
-            setLabelProduct("productName" + id, "Tên sản phẩm: " + item.Name, labelX, labelY);
-            setLabelProduct("productPrice" + id, "Đơn giá: " + item.Price + " VNĐ", labelX, labelY += 30);
+            setLabelProduct("productName" + id, item.Name, labelX, labelY);
+            setLabelProduct("productPrice" + id, String.Format("{0:n0}", item.Price) + " VNĐ", labelX, labelY += 30);
             setLabelProduct("productQuantity" + id, "Số lượng: " + item.Quantity, labelX, labelY += 30);
 
-            setLabelProduct("category" + id, "Danh mục: " + category, labelX += 250, labelY = 15);
+            setLabelProduct("category" + id, "Danh mục: " + category, labelX += 200, labelY = 15);
             setLabelProduct("producer" + id, "Nhà cung cấp: " + producer, labelX, labelY += 30);
-            setLabelProduct("totalPrice" + id, "Tổng tiền: " + Math.Round(item.Price * item.Quantity) + " VNĐ"
+            setLabelProduct("totalPrice" + id, "Tổng tiền: " + String.Format("{0:n0}", Math.Round(item.Price * item.Quantity)) + " VNĐ"
                 , labelX, labelY += 30);
 
             containerY += 135;
@@ -377,7 +378,7 @@ namespace DienMayXanh_Store.Views
         {
             this.lblInfo = new Guna2HtmlLabel();
             this.lblInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lblInfo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.lblInfo.Location = new System.Drawing.Point(x, y);
             this.lblInfo.Name = id;
@@ -427,6 +428,12 @@ namespace DienMayXanh_Store.Views
             this.btnDelete.Size = new System.Drawing.Size(35, 36);
             this.btnDelete.Click += btnDelete_Click;
             this.pnlProduct.Controls.Add(this.btnDelete);
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
 
         private void btnEditProduct_Click(object sender, EventArgs e)
@@ -518,6 +525,13 @@ namespace DienMayXanh_Store.Views
         public int Quantity { get; set; }
         public string CategoryID { get; set; }
         public string BrandID { get; set; }
+        public Image Img
+        {
+            get
+            {
+                return Image.FromFile(string.Format(@"..\..\Images\Products\" + ProductID + ".jpg"));
+            }
+        }
         public ImportSlip()
         { }
         public ImportSlip(string ProductID, string Name, decimal Price, int Quantity,

@@ -10,36 +10,20 @@ namespace DienMayXanh_Store.Charts
 {
     class Line
     {
-        public static void loadChart(Guna.Charts.WinForms.GunaChart chart, List<decimal> revenue)
+        public static void loadChart(Guna.Charts.WinForms.GunaChart chart, List<double> data, List<string> date, string label)
         {
-            List<string> date = new List<string>();
-            int index = 30;
-            while (index >= 0)
-                date.Add(DateTime.Today.AddDays(-index--).Date.ToString("dd/MM"));
-
-            //Chart configuration 
             chart.YAxes.GridLines.Display = false;
 
-            //Create a new dataset 
             var datasetRevenue = new GunaLineDataset();
             datasetRevenue.PointRadius = 3;
             datasetRevenue.FillColor = Color.Red;
             datasetRevenue.BorderColor = Color.Red;
-            datasetRevenue.Label = "Tổng thu";
+            datasetRevenue.Label = label;
             datasetRevenue.PointStyle = PointStyle.Circle;
-            var r = new Random();
+
             for (int i = 0; i < date.Count; i++)
-            {
-                //random number
-                int num = r.Next(10, 1000);
-
-                datasetRevenue.DataPoints.Add(date[i], (double)revenue[i]);
-            }
-
-          
-            //Add a new dataset to a chart.Datasets
+                datasetRevenue.DataPoints.Add(date[i], (double)data[i]);
             chart.Datasets.Add(datasetRevenue);
-
             //An update was made to re-render the chart
             chart.Update();
         }

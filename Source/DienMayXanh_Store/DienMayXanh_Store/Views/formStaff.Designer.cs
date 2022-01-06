@@ -63,6 +63,7 @@
             this.StaffGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnStatistical = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_Del = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listStaff)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -89,7 +90,6 @@
             this.dgv_listStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_listStaff.BackgroundColor = System.Drawing.Color.White;
             this.dgv_listStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_listStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_listStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
@@ -108,6 +108,7 @@
             this.StaffGender,
             this.StaffPhone,
             this.StaffAddress,
+            this.btnStatistical,
             this.btn_Del});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -570,7 +571,7 @@
             // 
             this.StaffName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.StaffName.DataPropertyName = "StaffName";
-            this.StaffName.FillWeight = 150.2591F;
+            this.StaffName.FillWeight = 156.9358F;
             this.StaffName.HeaderText = "Họ và Tên";
             this.StaffName.Name = "StaffName";
             this.StaffName.ReadOnly = true;
@@ -578,7 +579,7 @@
             // StaffID
             // 
             this.StaffID.DataPropertyName = "StaffID";
-            this.StaffID.FillWeight = 114.7967F;
+            this.StaffID.FillWeight = 119.8977F;
             this.StaffID.HeaderText = "Mã Số Nhân Viên";
             this.StaffID.Name = "StaffID";
             this.StaffID.ReadOnly = true;
@@ -586,7 +587,7 @@
             // StaffPosition
             // 
             this.StaffPosition.DataPropertyName = "StaffPosition";
-            this.StaffPosition.FillWeight = 61.27576F;
+            this.StaffPosition.FillWeight = 63.99853F;
             this.StaffPosition.HeaderText = "Chức Vụ";
             this.StaffPosition.Name = "StaffPosition";
             this.StaffPosition.ReadOnly = true;
@@ -594,7 +595,7 @@
             // StaffGender
             // 
             this.StaffGender.DataPropertyName = "StaffGender";
-            this.StaffGender.FillWeight = 66.33512F;
+            this.StaffGender.FillWeight = 69.2827F;
             this.StaffGender.HeaderText = "Giới tính";
             this.StaffGender.Name = "StaffGender";
             this.StaffGender.ReadOnly = true;
@@ -602,7 +603,7 @@
             // StaffPhone
             // 
             this.StaffPhone.DataPropertyName = "StaffPhone";
-            this.StaffPhone.FillWeight = 74.90945F;
+            this.StaffPhone.FillWeight = 78.23802F;
             this.StaffPhone.HeaderText = "Số điện thoại";
             this.StaffPhone.Name = "StaffPhone";
             this.StaffPhone.ReadOnly = true;
@@ -611,14 +612,23 @@
             // 
             this.StaffAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.StaffAddress.DataPropertyName = "StaffAddress";
-            this.StaffAddress.FillWeight = 274.5128F;
+            this.StaffAddress.FillWeight = 286.7107F;
             this.StaffAddress.HeaderText = "Địa chỉ";
             this.StaffAddress.Name = "StaffAddress";
             this.StaffAddress.ReadOnly = true;
             // 
+            // btnStatistical
+            // 
+            this.btnStatistical.FillWeight = 64.92192F;
+            this.btnStatistical.HeaderText = "Thống kê";
+            this.btnStatistical.Name = "btnStatistical";
+            this.btnStatistical.ReadOnly = true;
+            this.btnStatistical.Text = "Xem";
+            this.btnStatistical.UseColumnTextForButtonValue = true;
+            // 
             // btn_Del
             // 
-            this.btn_Del.FillWeight = 47.34139F;
+            this.btn_Del.FillWeight = 49.44499F;
             this.btn_Del.HeaderText = "";
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.ReadOnly = true;
@@ -678,6 +688,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffGender;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffAddress;
+        private System.Windows.Forms.DataGridViewButtonColumn btnStatistical;
         private System.Windows.Forms.DataGridViewButtonColumn btn_Del;
     }
 }

@@ -251,6 +251,7 @@ namespace DienMayXanh_Store.Views
             this.txtPrice.Size = new System.Drawing.Size(154, 37);
             this.txtPrice.TabIndex = 15;
             this.txtPrice.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // lblQuantity
             // 

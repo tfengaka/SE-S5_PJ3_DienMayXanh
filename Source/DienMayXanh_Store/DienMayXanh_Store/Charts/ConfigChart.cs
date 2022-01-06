@@ -33,7 +33,7 @@ namespace DienMayXanh_Store.Charts
             var chartFont = new Guna.Charts.WinForms.ChartFont()
             {
                 FontName = "Segoe UI",
-                Size = 12,
+                Size = 8,
                 Style = Guna.Charts.WinForms.ChartFontStyle.Bold
             };
 

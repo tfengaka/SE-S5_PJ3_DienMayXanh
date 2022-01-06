@@ -25,8 +25,8 @@ namespace DienMayXanh_Store.Views
         private void FormHome_Load(object sender, EventArgs e)
         {
             chart.Datasets.Clear();
-            chart.ApplyConfig(ConfigChart.Config(), System.Drawing.Color.FromArgb(25, 26, 31));
-            //loadData();
+            chart.ApplyConfig(ConfigChart.Config(), System.Drawing.Color.FromArgb(238, 238, 242));
+            loadData();
             initLoad();
         }
 
@@ -105,14 +105,16 @@ namespace DienMayXanh_Store.Views
 
         private void loadData()
         {
+            chart.Datasets.Clear();
             this.revenue = new List<decimal>();
             this.profit = new List<decimal>();
-            decimal? money = 0, totalSpendInMonth = 0, totalProfit = 0;
+            decimal? money = 0, totalProfitInDate = 0, totalProfit = 0;
             DateTime startDate;
-            int day = 30, month = 12, currMonth = 0, currYear = DateTime.Now.Year;
+            int day = 30;
 
             // revenue
             var revenue = context.RECIEPTS;
+            var spend = context.IESLIPS.Where(x => x.IESlipID.StartsWith("I"));
             while (day >= 0)
             {
                 startDate = DateTime.Today.AddDays(-day--).Date;
@@ -121,26 +123,15 @@ namespace DienMayXanh_Store.Views
                     .Sum(x => (decimal?)x.Total).GetValueOrDefault();
                 this.revenue.Add((decimal)money);
 
-            }
-
-            // profit
-            var spend = context.IESLIPS;
-            while (month >= 1)
-            {
-                currMonth = DateTime.Now.AddMonths(-month--).Month;
-                totalSpendInMonth = (decimal?)spend.Where(x =>
-                x.CreateAt.Month == currMonth && x.CreateAt.Year == currYear
-                && x.IESlipID.StartsWith("I"))
-                    .Sum(x => (decimal?)x.TotalPrice).GetValueOrDefault();
-
-                money = (decimal?)revenue.Where(x => x.CreateAt.Month == currMonth
-                && x.CreateAt.Year == currYear)
-                    .Sum(x => (decimal?)x.Total).GetValueOrDefault();
-                totalProfit = money - totalSpendInMonth;
+                totalProfitInDate = (decimal?)spend.Where(x =>
+                DbFunctions.TruncateTime(x.CreateAt) == startDate)
+                   .Sum(x => (decimal?)x.TotalPrice).GetValueOrDefault();
+              
+                totalProfit = money - totalProfitInDate;
                 this.profit.Add((decimal)totalProfit);
             }
 
-            Line.loadChart(chart, this.revenue);
+            LineDuplicate.loadChart(chart, this.revenue, this.profit);
         }
     }
 }

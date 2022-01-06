@@ -1,4 +1,5 @@
 ﻿using DienMayXanh_Store.Models;
+using DienMayXanh_Store.Views.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -114,9 +115,17 @@ namespace DienMayXanh_Store.Views
         private void btn_delStaff_click(object sender, DataGridViewCellEventArgs e)
         {
             var dataGridView = (DataGridView)sender;
+            string staffID = dgv_listStaff.Rows[e.RowIndex].Cells["StaffID"].Value.ToString();
+
+            if (dataGridView.Columns[e.ColumnIndex].Name.Equals("btnStatistical")
+                && dataGridView.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                new FormStatistical(staffID).ShowDialog();
+                return;
+            }    
+
             if (dataGridView.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                string staffID = dgv_listStaff.Rows[e.RowIndex].Cells["StaffID"].Value.ToString();
                 if(staffID == FormLogin.instance.info.StaffID)
                 {
                     MessageBox.Show("Mày Bị Điên Hay Sao Mà Đi Đuổi Việc Chính Mình?", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
