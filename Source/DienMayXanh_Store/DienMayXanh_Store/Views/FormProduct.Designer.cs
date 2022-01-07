@@ -58,7 +58,7 @@ namespace DienMayXanh_Store.Views
             this.cbmFilter.BackColor = System.Drawing.Color.Transparent;
             this.cbmFilter.BorderColor = System.Drawing.Color.Black;
             this.cbmFilter.BorderRadius = 5;
-            this.cbmFilter.BorderThickness = 2;
+            this.cbmFilter.BorderThickness = 0;
             this.cbmFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbmFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -69,8 +69,11 @@ namespace DienMayXanh_Store.Views
             this.cbmFilter.HoverState.Parent = this.cbmFilter;
             this.cbmFilter.ItemHeight = 30;
             this.cbmFilter.ItemsAppearance.Parent = this.cbmFilter;
-            this.cbmFilter.Location = new System.Drawing.Point(144, 12);
+            this.cbmFilter.Location = new System.Drawing.Point(141, 12);
             this.cbmFilter.Name = "cbmFilter";
+            this.cbmFilter.ShadowDecoration.BorderRadius = 10;
+            this.cbmFilter.ShadowDecoration.Depth = 10;
+            this.cbmFilter.ShadowDecoration.Enabled = true;
             this.cbmFilter.ShadowDecoration.Parent = this.cbmFilter;
             this.cbmFilter.Size = new System.Drawing.Size(224, 36);
             this.cbmFilter.TabIndex = 0;
@@ -90,9 +93,10 @@ namespace DienMayXanh_Store.Views
             // txtSearch
             // 
             this.txtSearch.Animated = true;
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
             this.txtSearch.BorderColor = System.Drawing.Color.Black;
             this.txtSearch.BorderRadius = 5;
-            this.txtSearch.BorderThickness = 2;
+            this.txtSearch.BorderThickness = 0;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "Tìm kiếm";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -114,6 +118,9 @@ namespace DienMayXanh_Store.Views
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "";
             this.txtSearch.SelectedText = "";
+            this.txtSearch.ShadowDecoration.BorderRadius = 10;
+            this.txtSearch.ShadowDecoration.Depth = 10;
+            this.txtSearch.ShadowDecoration.Enabled = true;
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
             this.txtSearch.Size = new System.Drawing.Size(273, 36);
             this.txtSearch.TabIndex = 2;
@@ -165,7 +172,7 @@ namespace DienMayXanh_Store.Views
             this.dgvProduct.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -252,7 +259,6 @@ namespace DienMayXanh_Store.Views
             // btnAddProducer
             // 
             this.btnAddProducer.Animated = true;
-            this.btnAddProducer.BorderThickness = 2;
             this.btnAddProducer.CheckedState.Parent = this.btnAddProducer;
             this.btnAddProducer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddProducer.CustomImages.Parent = this.btnAddProducer;
@@ -268,7 +274,7 @@ namespace DienMayXanh_Store.Views
             this.btnAddProducer.Image = global::DienMayXanh_Store.Properties.Resources.add_producer;
             this.btnAddProducer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddProducer.ImageOffset = new System.Drawing.Point(-1, 0);
-            this.btnAddProducer.Location = new System.Drawing.Point(741, 12);
+            this.btnAddProducer.Location = new System.Drawing.Point(738, 12);
             this.btnAddProducer.Name = "btnAddProducer";
             this.btnAddProducer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddProducer.ShadowDecoration.Parent = this.btnAddProducer;
@@ -280,7 +286,6 @@ namespace DienMayXanh_Store.Views
             // btnAddCategory
             // 
             this.btnAddCategory.Animated = true;
-            this.btnAddCategory.BorderThickness = 2;
             this.btnAddCategory.CheckedState.Parent = this.btnAddCategory;
             this.btnAddCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCategory.CustomImages.Parent = this.btnAddCategory;
@@ -307,12 +312,17 @@ namespace DienMayXanh_Store.Views
             // 
             // guna2GroupBox1
             // 
-            this.guna2GroupBox1.BorderRadius = 4;
+            this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GroupBox1.BorderRadius = 5;
+            this.guna2GroupBox1.BorderThickness = 0;
             this.guna2GroupBox1.Controls.Add(this.dgvProduct);
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(12, 56);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.ShadowDecoration.BorderRadius = 10;
+            this.guna2GroupBox1.ShadowDecoration.Depth = 10;
+            this.guna2GroupBox1.ShadowDecoration.Enabled = true;
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(1143, 517);
             this.guna2GroupBox1.TabIndex = 7;

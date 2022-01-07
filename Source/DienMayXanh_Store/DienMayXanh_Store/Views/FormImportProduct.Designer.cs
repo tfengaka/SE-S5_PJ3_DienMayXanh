@@ -76,7 +76,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterCategory.BackColor = System.Drawing.Color.Transparent;
             this.cmbFilterCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.cmbFilterCategory.BorderRadius = 5;
-            this.cmbFilterCategory.BorderThickness = 2;
+            this.cmbFilterCategory.BorderThickness = 0;
             this.cmbFilterCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbFilterCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFilterCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -89,7 +89,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterCategory.ItemsAppearance.Parent = this.cmbFilterCategory;
             this.cmbFilterCategory.Location = new System.Drawing.Point(147, 12);
             this.cmbFilterCategory.Name = "cmbFilterCategory";
-            this.cmbFilterCategory.ShadowDecoration.BorderRadius = 15;
+            this.cmbFilterCategory.ShadowDecoration.BorderRadius = 10;
             this.cmbFilterCategory.ShadowDecoration.Depth = 10;
             this.cmbFilterCategory.ShadowDecoration.Enabled = true;
             this.cmbFilterCategory.ShadowDecoration.Parent = this.cmbFilterCategory;
@@ -113,7 +113,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterProducer.BackColor = System.Drawing.Color.Transparent;
             this.cmbFilterProducer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.cmbFilterProducer.BorderRadius = 5;
-            this.cmbFilterProducer.BorderThickness = 2;
+            this.cmbFilterProducer.BorderThickness = 0;
             this.cmbFilterProducer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbFilterProducer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFilterProducer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -126,7 +126,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterProducer.ItemsAppearance.Parent = this.cmbFilterProducer;
             this.cmbFilterProducer.Location = new System.Drawing.Point(147, 61);
             this.cmbFilterProducer.Name = "cmbFilterProducer";
-            this.cmbFilterProducer.ShadowDecoration.BorderRadius = 15;
+            this.cmbFilterProducer.ShadowDecoration.BorderRadius = 10;
             this.cmbFilterProducer.ShadowDecoration.Depth = 10;
             this.cmbFilterProducer.ShadowDecoration.Enabled = true;
             this.cmbFilterProducer.ShadowDecoration.Parent = this.cmbFilterProducer;
@@ -139,7 +139,7 @@ namespace DienMayXanh_Store.Views
             this.txtProductName.BackColor = System.Drawing.Color.Transparent;
             this.txtProductName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.txtProductName.BorderRadius = 5;
-            this.txtProductName.BorderThickness = 2;
+            this.txtProductName.BorderThickness = 0;
             this.txtProductName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProductName.DefaultText = "";
             this.txtProductName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -161,7 +161,7 @@ namespace DienMayXanh_Store.Views
             this.txtProductName.PasswordChar = '\0';
             this.txtProductName.PlaceholderText = "Tên sản phẩm";
             this.txtProductName.SelectedText = "";
-            this.txtProductName.ShadowDecoration.BorderRadius = 15;
+            this.txtProductName.ShadowDecoration.BorderRadius = 10;
             this.txtProductName.ShadowDecoration.Depth = 10;
             this.txtProductName.ShadowDecoration.Enabled = true;
             this.txtProductName.ShadowDecoration.Parent = this.txtProductName;
@@ -173,14 +173,13 @@ namespace DienMayXanh_Store.Views
             // 
             this.gbListProduct.AutoScroll = true;
             this.gbListProduct.BackColor = System.Drawing.Color.Transparent;
-            this.gbListProduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.gbListProduct.BorderThickness = 2;
-            this.gbListProduct.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
+            this.gbListProduct.BorderRadius = 5;
+            this.gbListProduct.BorderThickness = 0;
             this.gbListProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.gbListProduct.ForeColor = System.Drawing.Color.Black;
             this.gbListProduct.Location = new System.Drawing.Point(448, 2);
             this.gbListProduct.Name = "gbListProduct";
-            this.gbListProduct.ShadowDecoration.BorderRadius = 15;
+            this.gbListProduct.ShadowDecoration.BorderRadius = 10;
             this.gbListProduct.ShadowDecoration.Depth = 10;
             this.gbListProduct.ShadowDecoration.Enabled = true;
             this.gbListProduct.ShadowDecoration.Parent = this.gbListProduct;
@@ -194,7 +193,7 @@ namespace DienMayXanh_Store.Views
             this.cmbProduct.BackColor = System.Drawing.Color.Transparent;
             this.cmbProduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.cmbProduct.BorderRadius = 5;
-            this.cmbProduct.BorderThickness = 2;
+            this.cmbProduct.BorderThickness = 0;
             this.cmbProduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProduct.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -207,7 +206,7 @@ namespace DienMayXanh_Store.Views
             this.cmbProduct.ItemsAppearance.Parent = this.cmbProduct;
             this.cmbProduct.Location = new System.Drawing.Point(7, 153);
             this.cmbProduct.Name = "cmbProduct";
-            this.cmbProduct.ShadowDecoration.BorderRadius = 15;
+            this.cmbProduct.ShadowDecoration.BorderRadius = 10;
             this.cmbProduct.ShadowDecoration.Depth = 10;
             this.cmbProduct.ShadowDecoration.Enabled = true;
             this.cmbProduct.ShadowDecoration.Parent = this.cmbProduct;
@@ -222,7 +221,7 @@ namespace DienMayXanh_Store.Views
             this.txtPrice.BackColor = System.Drawing.Color.Transparent;
             this.txtPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.txtPrice.BorderRadius = 5;
-            this.txtPrice.BorderThickness = 2;
+            this.txtPrice.BorderThickness = 0;
             this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPrice.DefaultText = "";
             this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -244,7 +243,7 @@ namespace DienMayXanh_Store.Views
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "Đơn giá";
             this.txtPrice.SelectedText = "";
-            this.txtPrice.ShadowDecoration.BorderRadius = 15;
+            this.txtPrice.ShadowDecoration.BorderRadius = 10;
             this.txtPrice.ShadowDecoration.Depth = 10;
             this.txtPrice.ShadowDecoration.Enabled = true;
             this.txtPrice.ShadowDecoration.Parent = this.txtPrice;
@@ -269,7 +268,7 @@ namespace DienMayXanh_Store.Views
             this.nudQuantity.BackColor = System.Drawing.Color.Transparent;
             this.nudQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.nudQuantity.BorderRadius = 5;
-            this.nudQuantity.BorderThickness = 2;
+            this.nudQuantity.BorderThickness = 0;
             this.nudQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nudQuantity.DisabledState.Parent = this.nudQuantity;
             this.nudQuantity.FocusedState.Parent = this.nudQuantity;
@@ -278,7 +277,7 @@ namespace DienMayXanh_Store.Views
             this.nudQuantity.Location = new System.Drawing.Point(104, 200);
             this.nudQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.ShadowDecoration.BorderRadius = 15;
+            this.nudQuantity.ShadowDecoration.BorderRadius = 10;
             this.nudQuantity.ShadowDecoration.Depth = 10;
             this.nudQuantity.ShadowDecoration.Enabled = true;
             this.nudQuantity.ShadowDecoration.Parent = this.nudQuantity;
@@ -292,8 +291,7 @@ namespace DienMayXanh_Store.Views
             this.btnChangeImg.Animated = true;
             this.btnChangeImg.BackColor = System.Drawing.Color.Transparent;
             this.btnChangeImg.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.btnChangeImg.BorderRadius = 10;
-            this.btnChangeImg.BorderThickness = 2;
+            this.btnChangeImg.BorderRadius = 5;
             this.btnChangeImg.CheckedState.Parent = this.btnChangeImg;
             this.btnChangeImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangeImg.CustomImages.Parent = this.btnChangeImg;
@@ -308,7 +306,7 @@ namespace DienMayXanh_Store.Views
             this.btnChangeImg.HoverState.Parent = this.btnChangeImg;
             this.btnChangeImg.Location = new System.Drawing.Point(260, 425);
             this.btnChangeImg.Name = "btnChangeImg";
-            this.btnChangeImg.ShadowDecoration.BorderRadius = 15;
+            this.btnChangeImg.ShadowDecoration.BorderRadius = 10;
             this.btnChangeImg.ShadowDecoration.Depth = 10;
             this.btnChangeImg.ShadowDecoration.Enabled = true;
             this.btnChangeImg.ShadowDecoration.Parent = this.btnChangeImg;
@@ -323,8 +321,7 @@ namespace DienMayXanh_Store.Views
             this.btnAddProduct.Animated = true;
             this.btnAddProduct.BackColor = System.Drawing.Color.Transparent;
             this.btnAddProduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.btnAddProduct.BorderRadius = 10;
-            this.btnAddProduct.BorderThickness = 2;
+            this.btnAddProduct.BorderRadius = 5;
             this.btnAddProduct.CheckedState.Parent = this.btnAddProduct;
             this.btnAddProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddProduct.CustomImages.Parent = this.btnAddProduct;
@@ -339,7 +336,7 @@ namespace DienMayXanh_Store.Views
             this.btnAddProduct.HoverState.Parent = this.btnAddProduct;
             this.btnAddProduct.Location = new System.Drawing.Point(260, 369);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.ShadowDecoration.BorderRadius = 15;
+            this.btnAddProduct.ShadowDecoration.BorderRadius = 10;
             this.btnAddProduct.ShadowDecoration.Depth = 10;
             this.btnAddProduct.ShadowDecoration.Enabled = true;
             this.btnAddProduct.ShadowDecoration.Parent = this.btnAddProduct;
@@ -351,11 +348,11 @@ namespace DienMayXanh_Store.Views
             // lblTotalPrice
             // 
             this.lblTotalPrice.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalPrice.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.lblTotalPrice.Location = new System.Drawing.Point(7, 498);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(118, 27);
+            this.lblTotalPrice.Size = new System.Drawing.Size(102, 23);
             this.lblTotalPrice.TabIndex = 22;
             this.lblTotalPrice.Text = "Thành tiền: 0";
             // 
@@ -364,8 +361,7 @@ namespace DienMayXanh_Store.Views
             this.btnImport.Animated = true;
             this.btnImport.BackColor = System.Drawing.Color.Transparent;
             this.btnImport.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.btnImport.BorderRadius = 10;
-            this.btnImport.BorderThickness = 2;
+            this.btnImport.BorderRadius = 5;
             this.btnImport.CheckedState.Parent = this.btnImport;
             this.btnImport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImport.CustomImages.Parent = this.btnImport;
@@ -380,7 +376,7 @@ namespace DienMayXanh_Store.Views
             this.btnImport.HoverState.Parent = this.btnImport;
             this.btnImport.Location = new System.Drawing.Point(260, 481);
             this.btnImport.Name = "btnImport";
-            this.btnImport.ShadowDecoration.BorderRadius = 15;
+            this.btnImport.ShadowDecoration.BorderRadius = 10;
             this.btnImport.ShadowDecoration.Depth = 10;
             this.btnImport.ShadowDecoration.Enabled = true;
             this.btnImport.ShadowDecoration.Parent = this.btnImport;
@@ -405,7 +401,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterWarehouse.BackColor = System.Drawing.Color.Transparent;
             this.cmbFilterWarehouse.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.cmbFilterWarehouse.BorderRadius = 5;
-            this.cmbFilterWarehouse.BorderThickness = 2;
+            this.cmbFilterWarehouse.BorderThickness = 0;
             this.cmbFilterWarehouse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbFilterWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFilterWarehouse.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -418,7 +414,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterWarehouse.ItemsAppearance.Parent = this.cmbFilterWarehouse;
             this.cmbFilterWarehouse.Location = new System.Drawing.Point(147, 110);
             this.cmbFilterWarehouse.Name = "cmbFilterWarehouse";
-            this.cmbFilterWarehouse.ShadowDecoration.BorderRadius = 15;
+            this.cmbFilterWarehouse.ShadowDecoration.BorderRadius = 10;
             this.cmbFilterWarehouse.ShadowDecoration.Depth = 10;
             this.cmbFilterWarehouse.ShadowDecoration.Enabled = true;
             this.cmbFilterWarehouse.ShadowDecoration.Parent = this.cmbFilterWarehouse;
@@ -430,8 +426,7 @@ namespace DienMayXanh_Store.Views
             this.btnEditProduct.Animated = true;
             this.btnEditProduct.BackColor = System.Drawing.Color.Transparent;
             this.btnEditProduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.btnEditProduct.BorderRadius = 10;
-            this.btnEditProduct.BorderThickness = 2;
+            this.btnEditProduct.BorderRadius = 5;
             this.btnEditProduct.CheckedState.Parent = this.btnEditProduct;
             this.btnEditProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditProduct.CustomImages.Parent = this.btnEditProduct;
@@ -446,7 +441,7 @@ namespace DienMayXanh_Store.Views
             this.btnEditProduct.HoverState.Parent = this.btnEditProduct;
             this.btnEditProduct.Location = new System.Drawing.Point(260, 253);
             this.btnEditProduct.Name = "btnEditProduct";
-            this.btnEditProduct.ShadowDecoration.BorderRadius = 15;
+            this.btnEditProduct.ShadowDecoration.BorderRadius = 10;
             this.btnEditProduct.ShadowDecoration.Depth = 10;
             this.btnEditProduct.ShadowDecoration.Enabled = true;
             this.btnEditProduct.ShadowDecoration.Parent = this.btnEditProduct;
@@ -461,8 +456,7 @@ namespace DienMayXanh_Store.Views
             this.btnCancel.Animated = true;
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.btnCancel.BorderRadius = 10;
-            this.btnCancel.BorderThickness = 2;
+            this.btnCancel.BorderRadius = 5;
             this.btnCancel.CheckedState.Parent = this.btnCancel;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.CustomImages.Parent = this.btnCancel;
@@ -477,7 +471,7 @@ namespace DienMayXanh_Store.Views
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.Location = new System.Drawing.Point(260, 309);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.ShadowDecoration.BorderRadius = 15;
+            this.btnCancel.ShadowDecoration.BorderRadius = 10;
             this.btnCancel.ShadowDecoration.Depth = 10;
             this.btnCancel.ShadowDecoration.Enabled = true;
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
@@ -515,12 +509,12 @@ namespace DienMayXanh_Store.Views
             // ptbAddImg
             // 
             this.ptbAddImg.BackColor = System.Drawing.Color.Transparent;
-            this.ptbAddImg.BorderRadius = 10;
+            this.ptbAddImg.BorderRadius = 5;
             this.ptbAddImg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.ptbAddImg.ImageRotate = 0F;
             this.ptbAddImg.Location = new System.Drawing.Point(7, 257);
             this.ptbAddImg.Name = "ptbAddImg";
-            this.ptbAddImg.ShadowDecoration.BorderRadius = 15;
+            this.ptbAddImg.ShadowDecoration.BorderRadius = 10;
             this.ptbAddImg.ShadowDecoration.Depth = 10;
             this.ptbAddImg.ShadowDecoration.Enabled = true;
             this.ptbAddImg.ShadowDecoration.Parent = this.ptbAddImg;
@@ -534,7 +528,6 @@ namespace DienMayXanh_Store.Views
             // btnAddProducer
             // 
             this.btnAddProducer.Animated = true;
-            this.btnAddProducer.BorderThickness = 2;
             this.btnAddProducer.CheckedState.Parent = this.btnAddProducer;
             this.btnAddProducer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddProducer.CustomImages.Parent = this.btnAddProducer;
@@ -552,6 +545,7 @@ namespace DienMayXanh_Store.Views
             this.btnAddProducer.ImageOffset = new System.Drawing.Point(-1, 0);
             this.btnAddProducer.Location = new System.Drawing.Point(393, 61);
             this.btnAddProducer.Name = "btnAddProducer";
+            this.btnAddProducer.ShadowDecoration.BorderRadius = 100;
             this.btnAddProducer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddProducer.ShadowDecoration.Parent = this.btnAddProducer;
             this.btnAddProducer.Size = new System.Drawing.Size(35, 36);
@@ -562,7 +556,6 @@ namespace DienMayXanh_Store.Views
             // btnAddCategory
             // 
             this.btnAddCategory.Animated = true;
-            this.btnAddCategory.BorderThickness = 2;
             this.btnAddCategory.CheckedState.Parent = this.btnAddCategory;
             this.btnAddCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCategory.CustomImages.Parent = this.btnAddCategory;
@@ -580,6 +573,7 @@ namespace DienMayXanh_Store.Views
             this.btnAddCategory.ImageOffset = new System.Drawing.Point(-1, 0);
             this.btnAddCategory.Location = new System.Drawing.Point(393, 12);
             this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.ShadowDecoration.BorderRadius = 100;
             this.btnAddCategory.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnAddCategory.ShadowDecoration.Parent = this.btnAddCategory;
             this.btnAddCategory.Size = new System.Drawing.Size(35, 36);
@@ -602,6 +596,7 @@ namespace DienMayXanh_Store.Views
             this.toogleSwitch.Animated = true;
             this.toogleSwitch.BackColor = System.Drawing.Color.Transparent;
             this.toogleSwitch.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.toogleSwitch.CheckedState.BorderRadius = 5;
             this.toogleSwitch.CheckedState.FillColor = System.Drawing.Color.White;
             this.toogleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.toogleSwitch.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
@@ -615,6 +610,7 @@ namespace DienMayXanh_Store.Views
             this.toogleSwitch.Size = new System.Drawing.Size(35, 20);
             this.toogleSwitch.TabIndex = 28;
             this.toogleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
+            this.toogleSwitch.UncheckedState.BorderRadius = 5;
             this.toogleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.toogleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.toogleSwitch.UncheckedState.InnerColor = System.Drawing.Color.White;

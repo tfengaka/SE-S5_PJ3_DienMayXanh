@@ -45,12 +45,13 @@
             this.btn_resetPassword = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tb_searchStaff = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_search = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Staff)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 4;
+            this.guna2Elipse1.BorderRadius = 5;
             this.guna2Elipse1.TargetControl = this;
             // 
             // guna2HtmlLabel1
@@ -218,7 +219,10 @@
             // 
             // tb_searchStaff
             // 
-            this.tb_searchStaff.BorderRadius = 4;
+            this.tb_searchStaff.Animated = true;
+            this.tb_searchStaff.BackColor = System.Drawing.Color.Transparent;
+            this.tb_searchStaff.BorderRadius = 5;
+            this.tb_searchStaff.BorderThickness = 0;
             this.tb_searchStaff.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_searchStaff.DefaultText = "";
             this.tb_searchStaff.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -231,18 +235,25 @@
             this.tb_searchStaff.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_searchStaff.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_searchStaff.HoverState.Parent = this.tb_searchStaff;
+            this.tb_searchStaff.IconRight = global::DienMayXanh_Store.Properties.Resources.search;
+            this.tb_searchStaff.IconRightOffset = new System.Drawing.Point(5, 0);
             this.tb_searchStaff.Location = new System.Drawing.Point(12, 44);
             this.tb_searchStaff.Name = "tb_searchStaff";
             this.tb_searchStaff.PasswordChar = '\0';
             this.tb_searchStaff.PlaceholderText = "Tìm kiếm nhân viên";
             this.tb_searchStaff.SelectedText = "";
+            this.tb_searchStaff.ShadowDecoration.BorderRadius = 10;
+            this.tb_searchStaff.ShadowDecoration.Depth = 10;
+            this.tb_searchStaff.ShadowDecoration.Enabled = true;
             this.tb_searchStaff.ShadowDecoration.Parent = this.tb_searchStaff;
             this.tb_searchStaff.Size = new System.Drawing.Size(353, 36);
             this.tb_searchStaff.TabIndex = 10;
             // 
             // btn_search
             // 
-            this.btn_search.BorderRadius = 4;
+            this.btn_search.Animated = true;
+            this.btn_search.BackColor = System.Drawing.Color.Transparent;
+            this.btn_search.BorderRadius = 5;
             this.btn_search.CheckedState.Parent = this.btn_search;
             this.btn_search.CustomImages.Parent = this.btn_search;
             this.btn_search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -256,10 +267,18 @@
             this.btn_search.HoverState.Parent = this.btn_search;
             this.btn_search.Location = new System.Drawing.Point(371, 44);
             this.btn_search.Name = "btn_search";
+            this.btn_search.ShadowDecoration.BorderRadius = 10;
+            this.btn_search.ShadowDecoration.Depth = 10;
+            this.btn_search.ShadowDecoration.Enabled = true;
             this.btn_search.ShadowDecoration.Parent = this.btn_search;
             this.btn_search.Size = new System.Drawing.Size(164, 36);
             this.btn_search.TabIndex = 11;
             this.btn_search.Text = "Tìm kiếm";
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 10;
+            this.guna2ShadowForm1.TargetForm = this;
             // 
             // resetPassword
             // 
@@ -297,5 +316,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffPosition;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffPhone;
         private System.Windows.Forms.DataGridViewButtonColumn btn_resetPassword;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

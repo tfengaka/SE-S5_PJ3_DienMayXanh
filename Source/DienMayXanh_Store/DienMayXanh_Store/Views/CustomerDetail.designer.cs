@@ -28,18 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cb_Gender = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tb_CustomerAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tb_CustomerName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tb_CustomerPhone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tb_CustomerID = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -61,12 +67,6 @@
             this.lb_totalPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_EditInfo = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.tb_CustomerID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tb_CustomerPhone = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tb_CustomerName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tb_CustomerAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cb_Gender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListInvoice)).BeginInit();
@@ -77,7 +77,8 @@
             // guna2Button1
             // 
             this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderRadius = 4;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 5;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -91,6 +92,9 @@
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Location = new System.Drawing.Point(12, 172);
             this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.BorderRadius = 10;
+            this.guna2Button1.ShadowDecoration.Depth = 10;
+            this.guna2Button1.ShadowDecoration.Enabled = true;
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(140, 36);
             this.guna2Button1.TabIndex = 0;
@@ -99,7 +103,9 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox1.BorderRadius = 5;
+            this.guna2GroupBox1.BorderThickness = 0;
             this.guna2GroupBox1.Controls.Add(this.cb_Gender);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2GroupBox1.Controls.Add(this.tb_CustomerAddress);
@@ -111,14 +117,181 @@
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(12, 12);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox1.Location = new System.Drawing.Point(12, 9);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.ShadowDecoration.BorderRadius = 10;
+            this.guna2GroupBox1.ShadowDecoration.Depth = 10;
+            this.guna2GroupBox1.ShadowDecoration.Enabled = true;
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(740, 154);
             this.guna2GroupBox1.TabIndex = 6;
             this.guna2GroupBox1.Text = "Thông tin khách hàng";
             this.guna2GroupBox1.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            // 
+            // cb_Gender
+            // 
+            this.cb_Gender.BackColor = System.Drawing.Color.Transparent;
+            this.cb_Gender.BorderRadius = 5;
+            this.cb_Gender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_Gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Gender.Enabled = false;
+            this.cb_Gender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_Gender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_Gender.FocusedState.Parent = this.cb_Gender;
+            this.cb_Gender.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.cb_Gender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cb_Gender.HoverState.Parent = this.cb_Gender;
+            this.cb_Gender.ItemHeight = 30;
+            this.cb_Gender.Items.AddRange(new object[] {
+            "Nữ",
+            "Nam"});
+            this.cb_Gender.ItemsAppearance.Parent = this.cb_Gender;
+            this.cb_Gender.Location = new System.Drawing.Point(503, 77);
+            this.cb_Gender.Name = "cb_Gender";
+            this.cb_Gender.ShadowDecoration.BorderRadius = 10;
+            this.cb_Gender.ShadowDecoration.Depth = 10;
+            this.cb_Gender.ShadowDecoration.Enabled = true;
+            this.cb_Gender.ShadowDecoration.Parent = this.cb_Gender;
+            this.cb_Gender.Size = new System.Drawing.Size(225, 36);
+            this.cb_Gender.TabIndex = 12;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.AutoSize = false;
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(400, 81);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(97, 30);
+            this.guna2HtmlLabel4.TabIndex = 11;
+            this.guna2HtmlLabel4.Text = "Giới tính:";
+            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tb_CustomerAddress
+            // 
+            this.tb_CustomerAddress.Animated = true;
+            this.tb_CustomerAddress.BackColor = System.Drawing.Color.Transparent;
+            this.tb_CustomerAddress.BorderRadius = 5;
+            this.tb_CustomerAddress.BorderThickness = 0;
+            this.tb_CustomerAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_CustomerAddress.DefaultText = "";
+            this.tb_CustomerAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_CustomerAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_CustomerAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_CustomerAddress.DisabledState.Parent = this.tb_CustomerAddress;
+            this.tb_CustomerAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_CustomerAddress.Enabled = false;
+            this.tb_CustomerAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_CustomerAddress.FocusedState.Parent = this.tb_CustomerAddress;
+            this.tb_CustomerAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_CustomerAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_CustomerAddress.HoverState.Parent = this.tb_CustomerAddress;
+            this.tb_CustomerAddress.Location = new System.Drawing.Point(91, 116);
+            this.tb_CustomerAddress.Name = "tb_CustomerAddress";
+            this.tb_CustomerAddress.PasswordChar = '\0';
+            this.tb_CustomerAddress.PlaceholderText = "";
+            this.tb_CustomerAddress.SelectedText = "";
+            this.tb_CustomerAddress.ShadowDecoration.BorderRadius = 10;
+            this.tb_CustomerAddress.ShadowDecoration.Depth = 10;
+            this.tb_CustomerAddress.ShadowDecoration.Enabled = true;
+            this.tb_CustomerAddress.ShadowDecoration.Parent = this.tb_CustomerAddress;
+            this.tb_CustomerAddress.Size = new System.Drawing.Size(637, 30);
+            this.tb_CustomerAddress.TabIndex = 10;
+            // 
+            // tb_CustomerName
+            // 
+            this.tb_CustomerName.Animated = true;
+            this.tb_CustomerName.BackColor = System.Drawing.Color.Transparent;
+            this.tb_CustomerName.BorderRadius = 5;
+            this.tb_CustomerName.BorderThickness = 0;
+            this.tb_CustomerName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_CustomerName.DefaultText = "";
+            this.tb_CustomerName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_CustomerName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_CustomerName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_CustomerName.DisabledState.Parent = this.tb_CustomerName;
+            this.tb_CustomerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_CustomerName.Enabled = false;
+            this.tb_CustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_CustomerName.FocusedState.Parent = this.tb_CustomerName;
+            this.tb_CustomerName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_CustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_CustomerName.HoverState.Parent = this.tb_CustomerName;
+            this.tb_CustomerName.Location = new System.Drawing.Point(91, 80);
+            this.tb_CustomerName.Name = "tb_CustomerName";
+            this.tb_CustomerName.PasswordChar = '\0';
+            this.tb_CustomerName.PlaceholderText = "";
+            this.tb_CustomerName.SelectedText = "";
+            this.tb_CustomerName.ShadowDecoration.BorderRadius = 10;
+            this.tb_CustomerName.ShadowDecoration.Depth = 10;
+            this.tb_CustomerName.ShadowDecoration.Enabled = true;
+            this.tb_CustomerName.ShadowDecoration.Parent = this.tb_CustomerName;
+            this.tb_CustomerName.Size = new System.Drawing.Size(297, 30);
+            this.tb_CustomerName.TabIndex = 9;
+            // 
+            // tb_CustomerPhone
+            // 
+            this.tb_CustomerPhone.Animated = true;
+            this.tb_CustomerPhone.BackColor = System.Drawing.Color.Transparent;
+            this.tb_CustomerPhone.BorderRadius = 5;
+            this.tb_CustomerPhone.BorderThickness = 0;
+            this.tb_CustomerPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_CustomerPhone.DefaultText = "";
+            this.tb_CustomerPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_CustomerPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_CustomerPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_CustomerPhone.DisabledState.Parent = this.tb_CustomerPhone;
+            this.tb_CustomerPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_CustomerPhone.Enabled = false;
+            this.tb_CustomerPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_CustomerPhone.FocusedState.Parent = this.tb_CustomerPhone;
+            this.tb_CustomerPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_CustomerPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_CustomerPhone.HoverState.Parent = this.tb_CustomerPhone;
+            this.tb_CustomerPhone.Location = new System.Drawing.Point(503, 44);
+            this.tb_CustomerPhone.Name = "tb_CustomerPhone";
+            this.tb_CustomerPhone.PasswordChar = '\0';
+            this.tb_CustomerPhone.PlaceholderText = "";
+            this.tb_CustomerPhone.SelectedText = "";
+            this.tb_CustomerPhone.ShadowDecoration.BorderRadius = 10;
+            this.tb_CustomerPhone.ShadowDecoration.Depth = 10;
+            this.tb_CustomerPhone.ShadowDecoration.Enabled = true;
+            this.tb_CustomerPhone.ShadowDecoration.Parent = this.tb_CustomerPhone;
+            this.tb_CustomerPhone.Size = new System.Drawing.Size(225, 30);
+            this.tb_CustomerPhone.TabIndex = 8;
+            // 
+            // tb_CustomerID
+            // 
+            this.tb_CustomerID.Animated = true;
+            this.tb_CustomerID.BackColor = System.Drawing.Color.Transparent;
+            this.tb_CustomerID.BorderRadius = 5;
+            this.tb_CustomerID.BorderThickness = 0;
+            this.tb_CustomerID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_CustomerID.DefaultText = "";
+            this.tb_CustomerID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_CustomerID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_CustomerID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_CustomerID.DisabledState.Parent = this.tb_CustomerID;
+            this.tb_CustomerID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_CustomerID.Enabled = false;
+            this.tb_CustomerID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_CustomerID.FocusedState.Parent = this.tb_CustomerID;
+            this.tb_CustomerID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_CustomerID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_CustomerID.HoverState.Parent = this.tb_CustomerID;
+            this.tb_CustomerID.Location = new System.Drawing.Point(91, 44);
+            this.tb_CustomerID.Name = "tb_CustomerID";
+            this.tb_CustomerID.PasswordChar = '\0';
+            this.tb_CustomerID.PlaceholderText = "";
+            this.tb_CustomerID.SelectedText = "";
+            this.tb_CustomerID.ShadowDecoration.BorderRadius = 10;
+            this.tb_CustomerID.ShadowDecoration.Depth = 10;
+            this.tb_CustomerID.ShadowDecoration.Enabled = true;
+            this.tb_CustomerID.ShadowDecoration.Parent = this.tb_CustomerID;
+            this.tb_CustomerID.Size = new System.Drawing.Size(297, 30);
+            this.tb_CustomerID.TabIndex = 7;
             // 
             // guna2HtmlLabel5
             // 
@@ -174,13 +347,17 @@
             // 
             // guna2GroupBox3
             // 
+            this.guna2GroupBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox3.BorderRadius = 5;
+            this.guna2GroupBox3.BorderThickness = 0;
             this.guna2GroupBox3.Controls.Add(this.dgv_ListInvoice);
             this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox3.Location = new System.Drawing.Point(12, 214);
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox3.Location = new System.Drawing.Point(12, 218);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.ShadowDecoration.BorderRadius = 5;
+            this.guna2GroupBox3.ShadowDecoration.BorderRadius = 10;
+            this.guna2GroupBox3.ShadowDecoration.Depth = 10;
+            this.guna2GroupBox3.ShadowDecoration.Enabled = true;
             this.guna2GroupBox3.ShadowDecoration.Parent = this.guna2GroupBox3;
             this.guna2GroupBox3.Size = new System.Drawing.Size(1149, 359);
             this.guna2GroupBox3.TabIndex = 8;
@@ -192,24 +369,24 @@
             this.dgv_ListInvoice.AllowUserToAddRows = false;
             this.dgv_ListInvoice.AllowUserToDeleteRows = false;
             this.dgv_ListInvoice.AllowUserToResizeRows = false;
-            dataGridViewCellStyle51.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle51.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(209)))), ((int)(((byte)(236)))));
-            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgv_ListInvoice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(209)))), ((int)(((byte)(236)))));
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_ListInvoice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
             this.dgv_ListInvoice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ListInvoice.BackgroundColor = System.Drawing.Color.White;
             this.dgv_ListInvoice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_ListInvoice.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle52.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_ListInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ListInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.dgv_ListInvoice.ColumnHeadersHeight = 32;
             this.dgv_ListInvoice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.No,
@@ -219,14 +396,14 @@
             this.MethodPay,
             this.TotalPrice,
             this.dgv_Button});
-            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle59.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle59.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle59.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(209)))), ((int)(((byte)(236)))));
-            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_ListInvoice.DefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(209)))), ((int)(((byte)(236)))));
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ListInvoice.DefaultCellStyle = dataGridViewCellStyle39;
             this.dgv_ListInvoice.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_ListInvoice.EnableHeadersVisualStyles = false;
             this.dgv_ListInvoice.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -234,14 +411,14 @@
             this.dgv_ListInvoice.Name = "dgv_ListInvoice";
             this.dgv_ListInvoice.ReadOnly = true;
             this.dgv_ListInvoice.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle60.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle60.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle60.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_ListInvoice.RowHeadersDefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ListInvoice.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
             this.dgv_ListInvoice.RowHeadersVisible = false;
             this.dgv_ListInvoice.RowTemplate.Height = 30;
             this.dgv_ListInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -273,8 +450,8 @@
             // No
             // 
             this.No.DataPropertyName = "No";
-            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.No.DefaultCellStyle = dataGridViewCellStyle53;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.No.DefaultCellStyle = dataGridViewCellStyle33;
             this.No.FillWeight = 28.4264F;
             this.No.HeaderText = "STT";
             this.No.Name = "No";
@@ -283,8 +460,8 @@
             // InvoiceID
             // 
             this.InvoiceID.DataPropertyName = "RecieptID";
-            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.InvoiceID.DefaultCellStyle = dataGridViewCellStyle54;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.InvoiceID.DefaultCellStyle = dataGridViewCellStyle34;
             this.InvoiceID.FillWeight = 122.2264F;
             this.InvoiceID.HeaderText = "Mã Hóa Đơn";
             this.InvoiceID.Name = "InvoiceID";
@@ -293,8 +470,8 @@
             // dgvc_Staff
             // 
             this.dgvc_Staff.DataPropertyName = "Name";
-            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dgvc_Staff.DefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dgvc_Staff.DefaultCellStyle = dataGridViewCellStyle35;
             this.dgvc_Staff.FillWeight = 122.2264F;
             this.dgvc_Staff.HeaderText = "Tên Nhân Viên";
             this.dgvc_Staff.Name = "dgvc_Staff";
@@ -303,10 +480,10 @@
             // CreateAt
             // 
             this.CreateAt.DataPropertyName = "CreateAt";
-            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle56.Format = "g";
-            dataGridViewCellStyle56.NullValue = null;
-            this.CreateAt.DefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle36.Format = "g";
+            dataGridViewCellStyle36.NullValue = null;
+            this.CreateAt.DefaultCellStyle = dataGridViewCellStyle36;
             this.CreateAt.FillWeight = 122.2264F;
             this.CreateAt.HeaderText = "Ngày Lập Hóa Đơn";
             this.CreateAt.Name = "CreateAt";
@@ -315,8 +492,8 @@
             // MethodPay
             // 
             this.MethodPay.DataPropertyName = "PaymentMethod";
-            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MethodPay.DefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MethodPay.DefaultCellStyle = dataGridViewCellStyle37;
             this.MethodPay.FillWeight = 122.2264F;
             this.MethodPay.HeaderText = "Phương Thức Thanh Toán";
             this.MethodPay.Name = "MethodPay";
@@ -325,10 +502,10 @@
             // TotalPrice
             // 
             this.TotalPrice.DataPropertyName = "Total";
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle58.Format = "N0";
-            dataGridViewCellStyle58.NullValue = null;
-            this.TotalPrice.DefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle38.Format = "N0";
+            dataGridViewCellStyle38.NullValue = null;
+            this.TotalPrice.DefaultCellStyle = dataGridViewCellStyle38;
             this.TotalPrice.FillWeight = 122.2264F;
             this.TotalPrice.HeaderText = "Tổng Thanh Toán";
             this.TotalPrice.Name = "TotalPrice";
@@ -346,17 +523,21 @@
             // FromDate
             // 
             this.FromDate.Animated = true;
-            this.FromDate.BorderRadius = 4;
+            this.FromDate.BackColor = System.Drawing.Color.Transparent;
+            this.FromDate.BorderRadius = 5;
             this.FromDate.Checked = true;
             this.FromDate.CheckedState.Parent = this.FromDate;
             this.FromDate.FillColor = System.Drawing.Color.White;
             this.FromDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.FromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FromDate.HoverState.Parent = this.FromDate;
-            this.FromDate.Location = new System.Drawing.Point(649, 172);
+            this.FromDate.Location = new System.Drawing.Point(642, 172);
             this.FromDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.FromDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.FromDate.Name = "FromDate";
+            this.FromDate.ShadowDecoration.BorderRadius = 10;
+            this.FromDate.ShadowDecoration.Depth = 10;
+            this.FromDate.ShadowDecoration.Enabled = true;
             this.FromDate.ShadowDecoration.Parent = this.FromDate;
             this.FromDate.Size = new System.Drawing.Size(180, 36);
             this.FromDate.TabIndex = 11;
@@ -366,17 +547,20 @@
             // 
             this.ToDate.Animated = true;
             this.ToDate.BackColor = System.Drawing.Color.Transparent;
-            this.ToDate.BorderRadius = 4;
+            this.ToDate.BorderRadius = 5;
             this.ToDate.Checked = true;
             this.ToDate.CheckedState.Parent = this.ToDate;
             this.ToDate.FillColor = System.Drawing.Color.White;
             this.ToDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.ToDate.HoverState.Parent = this.ToDate;
-            this.ToDate.Location = new System.Drawing.Point(835, 172);
+            this.ToDate.Location = new System.Drawing.Point(832, 172);
             this.ToDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.ToDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.ToDate.Name = "ToDate";
+            this.ToDate.ShadowDecoration.BorderRadius = 10;
+            this.ToDate.ShadowDecoration.Depth = 10;
+            this.ToDate.ShadowDecoration.Enabled = true;
             this.ToDate.ShadowDecoration.Parent = this.ToDate;
             this.ToDate.Size = new System.Drawing.Size(180, 36);
             this.ToDate.TabIndex = 12;
@@ -385,7 +569,8 @@
             // btn_filter
             // 
             this.btn_filter.Animated = true;
-            this.btn_filter.BorderRadius = 4;
+            this.btn_filter.BackColor = System.Drawing.Color.Transparent;
+            this.btn_filter.BorderRadius = 5;
             this.btn_filter.CheckedState.Parent = this.btn_filter;
             this.btn_filter.CustomImages.Parent = this.btn_filter;
             this.btn_filter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -399,6 +584,9 @@
             this.btn_filter.HoverState.Parent = this.btn_filter;
             this.btn_filter.Location = new System.Drawing.Point(1021, 172);
             this.btn_filter.Name = "btn_filter";
+            this.btn_filter.ShadowDecoration.BorderRadius = 10;
+            this.btn_filter.ShadowDecoration.Depth = 10;
+            this.btn_filter.ShadowDecoration.Enabled = true;
             this.btn_filter.ShadowDecoration.Parent = this.btn_filter;
             this.btn_filter.Size = new System.Drawing.Size(140, 36);
             this.btn_filter.TabIndex = 13;
@@ -407,12 +595,17 @@
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox2.BorderRadius = 5;
+            this.guna2GroupBox2.BorderThickness = 0;
             this.guna2GroupBox2.Controls.Add(this.lb_totalQuantity);
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox2.Location = new System.Drawing.Point(758, 12);
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox2.Location = new System.Drawing.Point(758, 9);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
+            this.guna2GroupBox2.ShadowDecoration.BorderRadius = 10;
+            this.guna2GroupBox2.ShadowDecoration.Depth = 10;
+            this.guna2GroupBox2.ShadowDecoration.Enabled = true;
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
             this.guna2GroupBox2.Size = new System.Drawing.Size(200, 154);
             this.guna2GroupBox2.TabIndex = 14;
@@ -449,7 +642,8 @@
             // btn_EditInfo
             // 
             this.btn_EditInfo.Animated = true;
-            this.btn_EditInfo.BorderRadius = 4;
+            this.btn_EditInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_EditInfo.BorderRadius = 5;
             this.btn_EditInfo.CheckedState.Parent = this.btn_EditInfo;
             this.btn_EditInfo.CustomImages.Parent = this.btn_EditInfo;
             this.btn_EditInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -463,6 +657,9 @@
             this.btn_EditInfo.HoverState.Parent = this.btn_EditInfo;
             this.btn_EditInfo.Location = new System.Drawing.Point(185, 172);
             this.btn_EditInfo.Name = "btn_EditInfo";
+            this.btn_EditInfo.ShadowDecoration.BorderRadius = 10;
+            this.btn_EditInfo.ShadowDecoration.Depth = 10;
+            this.btn_EditInfo.ShadowDecoration.Enabled = true;
             this.btn_EditInfo.ShadowDecoration.Parent = this.btn_EditInfo;
             this.btn_EditInfo.Size = new System.Drawing.Size(159, 36);
             this.btn_EditInfo.TabIndex = 15;
@@ -471,155 +668,23 @@
             // 
             // guna2GroupBox4
             // 
+            this.guna2GroupBox4.BackColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox4.BorderRadius = 5;
+            this.guna2GroupBox4.BorderThickness = 0;
             this.guna2GroupBox4.Controls.Add(this.lb_totalPrice);
             this.guna2GroupBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox4.Location = new System.Drawing.Point(964, 12);
+            this.guna2GroupBox4.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox4.Location = new System.Drawing.Point(964, 9);
             this.guna2GroupBox4.Name = "guna2GroupBox4";
+            this.guna2GroupBox4.ShadowDecoration.BorderRadius = 10;
+            this.guna2GroupBox4.ShadowDecoration.Depth = 10;
+            this.guna2GroupBox4.ShadowDecoration.Enabled = true;
             this.guna2GroupBox4.ShadowDecoration.Parent = this.guna2GroupBox4;
             this.guna2GroupBox4.Size = new System.Drawing.Size(200, 154);
             this.guna2GroupBox4.TabIndex = 16;
             this.guna2GroupBox4.Text = "Tổng Thanh Toán (VNĐ)";
             this.guna2GroupBox4.TextOffset = new System.Drawing.Point(12, 0);
             this.guna2GroupBox4.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
-            // 
-            // tb_CustomerID
-            // 
-            this.tb_CustomerID.BorderRadius = 4;
-            this.tb_CustomerID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_CustomerID.DefaultText = "";
-            this.tb_CustomerID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_CustomerID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_CustomerID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_CustomerID.DisabledState.Parent = this.tb_CustomerID;
-            this.tb_CustomerID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_CustomerID.Enabled = false;
-            this.tb_CustomerID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_CustomerID.FocusedState.Parent = this.tb_CustomerID;
-            this.tb_CustomerID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_CustomerID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_CustomerID.HoverState.Parent = this.tb_CustomerID;
-            this.tb_CustomerID.Location = new System.Drawing.Point(91, 44);
-            this.tb_CustomerID.Name = "tb_CustomerID";
-            this.tb_CustomerID.PasswordChar = '\0';
-            this.tb_CustomerID.PlaceholderText = "";
-            this.tb_CustomerID.SelectedText = "";
-            this.tb_CustomerID.ShadowDecoration.Parent = this.tb_CustomerID;
-            this.tb_CustomerID.Size = new System.Drawing.Size(303, 30);
-            this.tb_CustomerID.TabIndex = 7;
-            // 
-            // tb_CustomerPhone
-            // 
-            this.tb_CustomerPhone.BorderRadius = 4;
-            this.tb_CustomerPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_CustomerPhone.DefaultText = "";
-            this.tb_CustomerPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_CustomerPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_CustomerPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_CustomerPhone.DisabledState.Parent = this.tb_CustomerPhone;
-            this.tb_CustomerPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_CustomerPhone.Enabled = false;
-            this.tb_CustomerPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_CustomerPhone.FocusedState.Parent = this.tb_CustomerPhone;
-            this.tb_CustomerPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_CustomerPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_CustomerPhone.HoverState.Parent = this.tb_CustomerPhone;
-            this.tb_CustomerPhone.Location = new System.Drawing.Point(503, 44);
-            this.tb_CustomerPhone.Name = "tb_CustomerPhone";
-            this.tb_CustomerPhone.PasswordChar = '\0';
-            this.tb_CustomerPhone.PlaceholderText = "";
-            this.tb_CustomerPhone.SelectedText = "";
-            this.tb_CustomerPhone.ShadowDecoration.Parent = this.tb_CustomerPhone;
-            this.tb_CustomerPhone.Size = new System.Drawing.Size(234, 30);
-            this.tb_CustomerPhone.TabIndex = 8;
-            // 
-            // tb_CustomerName
-            // 
-            this.tb_CustomerName.BorderRadius = 4;
-            this.tb_CustomerName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_CustomerName.DefaultText = "";
-            this.tb_CustomerName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_CustomerName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_CustomerName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_CustomerName.DisabledState.Parent = this.tb_CustomerName;
-            this.tb_CustomerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_CustomerName.Enabled = false;
-            this.tb_CustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_CustomerName.FocusedState.Parent = this.tb_CustomerName;
-            this.tb_CustomerName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_CustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_CustomerName.HoverState.Parent = this.tb_CustomerName;
-            this.tb_CustomerName.Location = new System.Drawing.Point(91, 80);
-            this.tb_CustomerName.Name = "tb_CustomerName";
-            this.tb_CustomerName.PasswordChar = '\0';
-            this.tb_CustomerName.PlaceholderText = "";
-            this.tb_CustomerName.SelectedText = "";
-            this.tb_CustomerName.ShadowDecoration.Parent = this.tb_CustomerName;
-            this.tb_CustomerName.Size = new System.Drawing.Size(303, 30);
-            this.tb_CustomerName.TabIndex = 9;
-            // 
-            // tb_CustomerAddress
-            // 
-            this.tb_CustomerAddress.BorderRadius = 4;
-            this.tb_CustomerAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_CustomerAddress.DefaultText = "";
-            this.tb_CustomerAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_CustomerAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_CustomerAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_CustomerAddress.DisabledState.Parent = this.tb_CustomerAddress;
-            this.tb_CustomerAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_CustomerAddress.Enabled = false;
-            this.tb_CustomerAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_CustomerAddress.FocusedState.Parent = this.tb_CustomerAddress;
-            this.tb_CustomerAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_CustomerAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_CustomerAddress.HoverState.Parent = this.tb_CustomerAddress;
-            this.tb_CustomerAddress.Location = new System.Drawing.Point(91, 116);
-            this.tb_CustomerAddress.Name = "tb_CustomerAddress";
-            this.tb_CustomerAddress.PasswordChar = '\0';
-            this.tb_CustomerAddress.PlaceholderText = "";
-            this.tb_CustomerAddress.SelectedText = "";
-            this.tb_CustomerAddress.ShadowDecoration.Parent = this.tb_CustomerAddress;
-            this.tb_CustomerAddress.Size = new System.Drawing.Size(646, 30);
-            this.tb_CustomerAddress.TabIndex = 10;
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.AutoSize = false;
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(400, 81);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(97, 30);
-            this.guna2HtmlLabel4.TabIndex = 11;
-            this.guna2HtmlLabel4.Text = "Giới tính:";
-            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cb_Gender
-            // 
-            this.cb_Gender.BackColor = System.Drawing.Color.Transparent;
-            this.cb_Gender.BorderRadius = 4;
-            this.cb_Gender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_Gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Gender.Enabled = false;
-            this.cb_Gender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cb_Gender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cb_Gender.FocusedState.Parent = this.cb_Gender;
-            this.cb_Gender.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.cb_Gender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cb_Gender.HoverState.Parent = this.cb_Gender;
-            this.cb_Gender.ItemHeight = 30;
-            this.cb_Gender.Items.AddRange(new object[] {
-            "Nữ",
-            "Nam"});
-            this.cb_Gender.ItemsAppearance.Parent = this.cb_Gender;
-            this.cb_Gender.Location = new System.Drawing.Point(503, 77);
-            this.cb_Gender.Name = "cb_Gender";
-            this.cb_Gender.ShadowDecoration.Parent = this.cb_Gender;
-            this.cb_Gender.Size = new System.Drawing.Size(234, 36);
-            this.cb_Gender.TabIndex = 12;
             // 
             // CustomerDetail
             // 

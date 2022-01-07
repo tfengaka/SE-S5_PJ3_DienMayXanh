@@ -65,8 +65,8 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtCategory.Animated = true;
             this.txtCategory.BackColor = System.Drawing.Color.Transparent;
             this.txtCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.txtCategory.BorderRadius = 8;
-            this.txtCategory.BorderThickness = 2;
+            this.txtCategory.BorderRadius = 5;
+            this.txtCategory.BorderThickness = 0;
             this.txtCategory.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCategory.DefaultText = "";
             this.txtCategory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -88,7 +88,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtCategory.PasswordChar = '\0';
             this.txtCategory.PlaceholderText = "Tên danh mục";
             this.txtCategory.SelectedText = "";
-            this.txtCategory.ShadowDecoration.BorderRadius = 15;
+            this.txtCategory.ShadowDecoration.BorderRadius = 10;
             this.txtCategory.ShadowDecoration.Depth = 10;
             this.txtCategory.ShadowDecoration.Enabled = true;
             this.txtCategory.ShadowDecoration.Parent = this.txtCategory;
@@ -100,8 +100,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             // 
             this.btnAddCatergory.Animated = true;
             this.btnAddCatergory.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddCatergory.BorderRadius = 10;
-            this.btnAddCatergory.BorderThickness = 1;
+            this.btnAddCatergory.BorderRadius = 5;
             this.btnAddCatergory.CheckedState.Parent = this.btnAddCatergory;
             this.btnAddCatergory.CustomImages.Parent = this.btnAddCatergory;
             this.btnAddCatergory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -115,7 +114,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnAddCatergory.HoverState.Parent = this.btnAddCatergory;
             this.btnAddCatergory.Location = new System.Drawing.Point(582, 46);
             this.btnAddCatergory.Name = "btnAddCatergory";
-            this.btnAddCatergory.ShadowDecoration.BorderRadius = 15;
+            this.btnAddCatergory.ShadowDecoration.BorderRadius = 10;
             this.btnAddCatergory.ShadowDecoration.Depth = 10;
             this.btnAddCatergory.ShadowDecoration.Enabled = true;
             this.btnAddCatergory.ShadowDecoration.Parent = this.btnAddCatergory;
@@ -128,8 +127,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             // 
             this.btnEditCategory.Animated = true;
             this.btnEditCategory.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditCategory.BorderRadius = 10;
-            this.btnEditCategory.BorderThickness = 1;
+            this.btnEditCategory.BorderRadius = 5;
             this.btnEditCategory.CheckedState.Parent = this.btnEditCategory;
             this.btnEditCategory.CustomImages.Parent = this.btnEditCategory;
             this.btnEditCategory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -143,7 +141,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnEditCategory.HoverState.Parent = this.btnEditCategory;
             this.btnEditCategory.Location = new System.Drawing.Point(582, 46);
             this.btnEditCategory.Name = "btnEditCategory";
-            this.btnEditCategory.ShadowDecoration.BorderRadius = 15;
+            this.btnEditCategory.ShadowDecoration.BorderRadius = 10;
             this.btnEditCategory.ShadowDecoration.Depth = 10;
             this.btnEditCategory.ShadowDecoration.Enabled = true;
             this.btnEditCategory.ShadowDecoration.Parent = this.btnEditCategory;
@@ -270,21 +268,19 @@ namespace DienMayXanh_Store.Views.Dialogs
             // 
             // Elipse
             // 
-            this.Elipse.BorderRadius = 15;
+            this.Elipse.BorderRadius = 5;
             this.Elipse.TargetControl = this;
             // 
             // ShadowForm
             // 
-            this.ShadowForm.BorderRadius = 15;
-            this.ShadowForm.ShadowColor = System.Drawing.Color.Gray;
+            this.ShadowForm.BorderRadius = 10;
             this.ShadowForm.TargetForm = this;
             // 
             // btnCancel
             // 
             this.btnCancel.Animated = true;
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BorderRadius = 10;
-            this.btnCancel.BorderThickness = 1;
+            this.btnCancel.BorderRadius = 5;
             this.btnCancel.CheckedState.Parent = this.btnCancel;
             this.btnCancel.CustomImages.Parent = this.btnCancel;
             this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -298,7 +294,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.Location = new System.Drawing.Point(688, 46);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.ShadowDecoration.BorderRadius = 15;
+            this.btnCancel.ShadowDecoration.BorderRadius = 10;
             this.btnCancel.ShadowDecoration.Depth = 10;
             this.btnCancel.ShadowDecoration.Enabled = true;
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;

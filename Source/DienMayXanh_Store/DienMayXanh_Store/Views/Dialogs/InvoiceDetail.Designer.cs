@@ -49,6 +49,12 @@
             this.btn_printInvoice = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgv_listProduct = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductQuantiy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lb_recieptTotal = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lb_customerAddress = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -66,12 +72,7 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductQuantiy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
@@ -81,7 +82,7 @@
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 4;
+            this.guna2Elipse1.BorderRadius = 5;
             this.guna2Elipse1.TargetControl = this;
             // 
             // guna2HtmlLabel1
@@ -154,7 +155,8 @@
             // btn_printExportBill
             // 
             this.btn_printExportBill.Animated = true;
-            this.btn_printExportBill.BorderRadius = 4;
+            this.btn_printExportBill.BackColor = System.Drawing.Color.Transparent;
+            this.btn_printExportBill.BorderRadius = 5;
             this.btn_printExportBill.CheckedState.Parent = this.btn_printExportBill;
             this.btn_printExportBill.CustomImages.Parent = this.btn_printExportBill;
             this.btn_printExportBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -168,6 +170,9 @@
             this.btn_printExportBill.HoverState.Parent = this.btn_printExportBill;
             this.btn_printExportBill.Location = new System.Drawing.Point(942, 27);
             this.btn_printExportBill.Name = "btn_printExportBill";
+            this.btn_printExportBill.ShadowDecoration.BorderRadius = 10;
+            this.btn_printExportBill.ShadowDecoration.Depth = 10;
+            this.btn_printExportBill.ShadowDecoration.Enabled = true;
             this.btn_printExportBill.ShadowDecoration.Parent = this.btn_printExportBill;
             this.btn_printExportBill.Size = new System.Drawing.Size(180, 45);
             this.btn_printExportBill.TabIndex = 3;
@@ -178,7 +183,7 @@
             // 
             this.btn_printInvoice.Animated = true;
             this.btn_printInvoice.BackColor = System.Drawing.Color.Transparent;
-            this.btn_printInvoice.BorderRadius = 4;
+            this.btn_printInvoice.BorderRadius = 5;
             this.btn_printInvoice.CheckedState.Parent = this.btn_printInvoice;
             this.btn_printInvoice.CustomImages.Parent = this.btn_printInvoice;
             this.btn_printInvoice.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -192,6 +197,9 @@
             this.btn_printInvoice.HoverState.Parent = this.btn_printInvoice;
             this.btn_printInvoice.Location = new System.Drawing.Point(942, 78);
             this.btn_printInvoice.Name = "btn_printInvoice";
+            this.btn_printInvoice.ShadowDecoration.BorderRadius = 10;
+            this.btn_printInvoice.ShadowDecoration.Depth = 10;
+            this.btn_printInvoice.ShadowDecoration.Enabled = true;
             this.btn_printInvoice.ShadowDecoration.Parent = this.btn_printInvoice;
             this.btn_printInvoice.Size = new System.Drawing.Size(180, 45);
             this.btn_printInvoice.TabIndex = 2;
@@ -200,13 +208,18 @@
             // 
             // guna2GroupBox2
             // 
-            this.guna2GroupBox2.BorderRadius = 4;
+            this.guna2GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GroupBox2.BorderRadius = 5;
+            this.guna2GroupBox2.BorderThickness = 0;
             this.guna2GroupBox2.Controls.Add(this.dgv_listProduct);
             this.guna2GroupBox2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox2.Location = new System.Drawing.Point(3, 129);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
+            this.guna2GroupBox2.ShadowDecoration.BorderRadius = 10;
+            this.guna2GroupBox2.ShadowDecoration.Depth = 10;
+            this.guna2GroupBox2.ShadowDecoration.Enabled = true;
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
             this.guna2GroupBox2.Size = new System.Drawing.Size(1119, 300);
             this.guna2GroupBox2.TabIndex = 1;
@@ -227,7 +240,6 @@
             this.dgv_listProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_listProduct.BackgroundColor = System.Drawing.Color.White;
             this.dgv_listProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_listProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_listProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
@@ -262,7 +274,7 @@
             this.dgv_listProduct.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -296,9 +308,76 @@
             this.dgv_listProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(210)))), ((int)(((byte)(235)))));
             this.dgv_listProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // No
+            // 
+            this.No.DataPropertyName = "No";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.No.DefaultCellStyle = dataGridViewCellStyle3;
+            this.No.FillWeight = 28.49731F;
+            this.No.HeaderText = "STT";
+            this.No.Name = "No";
+            this.No.ReadOnly = true;
+            // 
+            // ProductID
+            // 
+            this.ProductID.DataPropertyName = "ProductID";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ProductID.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ProductID.FillWeight = 109.6263F;
+            this.ProductID.HeaderText = "Mã Sản Phẩm";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.ReadOnly = true;
+            // 
+            // ProductName
+            // 
+            this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductName.DataPropertyName = "ProductName";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ProductName.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ProductName.FillWeight = 181.4328F;
+            this.ProductName.HeaderText = "Tên Sản Phẩm";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // ProductQuantiy
+            // 
+            this.ProductQuantiy.DataPropertyName = "Quantity";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ProductQuantiy.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ProductQuantiy.FillWeight = 45.67317F;
+            this.ProductQuantiy.HeaderText = "Số Lượng";
+            this.ProductQuantiy.Name = "ProductQuantiy";
+            this.ProductQuantiy.ReadOnly = true;
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.DataPropertyName = "UnitPrice";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N0";
+            dataGridViewCellStyle7.NullValue = null;
+            this.UnitPrice.DefaultCellStyle = dataGridViewCellStyle7;
+            this.UnitPrice.FillWeight = 112.9429F;
+            this.UnitPrice.HeaderText = "Đơn giá (VNĐ)";
+            this.UnitPrice.Name = "UnitPrice";
+            this.UnitPrice.ReadOnly = true;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.DataPropertyName = "SubTotal";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N0";
+            dataGridViewCellStyle8.NullValue = null;
+            this.SubTotal.DefaultCellStyle = dataGridViewCellStyle8;
+            this.SubTotal.FillWeight = 121.8274F;
+            this.SubTotal.HeaderText = "Thành Tiền (VNĐ)";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            // 
             // guna2GroupBox1
             // 
-            this.guna2GroupBox1.BorderRadius = 4;
+            this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GroupBox1.BorderRadius = 5;
+            this.guna2GroupBox1.BorderThickness = 0;
             this.guna2GroupBox1.Controls.Add(this.lb_recieptTotal);
             this.guna2GroupBox1.Controls.Add(this.lb_customerAddress);
             this.guna2GroupBox1.Controls.Add(this.lb_customerPhone);
@@ -316,10 +395,13 @@
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(3, 4);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.ShadowDecoration.BorderRadius = 10;
+            this.guna2GroupBox1.ShadowDecoration.Depth = 10;
+            this.guna2GroupBox1.ShadowDecoration.Enabled = true;
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(933, 119);
             this.guna2GroupBox1.TabIndex = 0;
@@ -494,70 +576,10 @@
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Mã số hóa đơn:";
             // 
-            // No
+            // guna2ShadowForm1
             // 
-            this.No.DataPropertyName = "No";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.No.DefaultCellStyle = dataGridViewCellStyle3;
-            this.No.FillWeight = 28.49731F;
-            this.No.HeaderText = "STT";
-            this.No.Name = "No";
-            this.No.ReadOnly = true;
-            // 
-            // ProductID
-            // 
-            this.ProductID.DataPropertyName = "ProductID";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ProductID.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ProductID.FillWeight = 109.6263F;
-            this.ProductID.HeaderText = "Mã Sản Phẩm";
-            this.ProductID.Name = "ProductID";
-            this.ProductID.ReadOnly = true;
-            // 
-            // ProductName
-            // 
-            this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductName.DataPropertyName = "ProductName";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ProductName.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ProductName.FillWeight = 181.4328F;
-            this.ProductName.HeaderText = "Tên Sản Phẩm";
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
-            // 
-            // ProductQuantiy
-            // 
-            this.ProductQuantiy.DataPropertyName = "Quantity";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ProductQuantiy.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ProductQuantiy.FillWeight = 45.67317F;
-            this.ProductQuantiy.HeaderText = "Số Lượng";
-            this.ProductQuantiy.Name = "ProductQuantiy";
-            this.ProductQuantiy.ReadOnly = true;
-            // 
-            // UnitPrice
-            // 
-            this.UnitPrice.DataPropertyName = "UnitPrice";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N0";
-            dataGridViewCellStyle7.NullValue = null;
-            this.UnitPrice.DefaultCellStyle = dataGridViewCellStyle7;
-            this.UnitPrice.FillWeight = 112.9429F;
-            this.UnitPrice.HeaderText = "Đơn giá (VNĐ)";
-            this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.ReadOnly = true;
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.DataPropertyName = "SubTotal";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N0";
-            dataGridViewCellStyle8.NullValue = null;
-            this.SubTotal.DefaultCellStyle = dataGridViewCellStyle8;
-            this.SubTotal.FillWeight = 121.8274F;
-            this.SubTotal.HeaderText = "Thành Tiền (VNĐ)";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
+            this.guna2ShadowForm1.BorderRadius = 10;
+            this.guna2ShadowForm1.TargetForm = this;
             // 
             // InvoiceDetail
             // 
@@ -619,5 +641,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductQuantiy;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

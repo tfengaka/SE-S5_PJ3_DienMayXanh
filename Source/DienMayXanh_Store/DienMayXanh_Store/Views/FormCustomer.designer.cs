@@ -237,7 +237,7 @@
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Tìm kiếm khách hàng";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.ShadowDecoration.BorderRadius = 5;
+            this.txtSearch.ShadowDecoration.BorderRadius = 10;
             this.txtSearch.ShadowDecoration.Depth = 10;
             this.txtSearch.ShadowDecoration.Enabled = true;
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
@@ -255,7 +255,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(12, 54);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.ShadowDecoration.BorderRadius = 5;
+            this.guna2GroupBox1.ShadowDecoration.BorderRadius = 10;
             this.guna2GroupBox1.ShadowDecoration.Depth = 10;
             this.guna2GroupBox1.ShadowDecoration.Enabled = true;
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;

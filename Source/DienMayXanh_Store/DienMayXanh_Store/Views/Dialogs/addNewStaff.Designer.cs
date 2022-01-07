@@ -34,6 +34,8 @@
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btn_addAvatar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_addStaff = new Guna.UI2.WinForms.Guna2Button();
             this.cb_Position = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -53,15 +55,14 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tb_StaffName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btn_addAvatar = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 4;
+            this.guna2Elipse1.BorderRadius = 5;
             this.guna2Elipse1.TargetControl = this;
             // 
             // btn_exit
@@ -108,7 +109,9 @@
             // 
             // guna2GroupBox1
             // 
-            this.guna2GroupBox1.BorderRadius = 4;
+            this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GroupBox1.BorderRadius = 5;
+            this.guna2GroupBox1.BorderThickness = 0;
             this.guna2GroupBox1.Controls.Add(this.avatar);
             this.guna2GroupBox1.Controls.Add(this.btn_addAvatar);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel10);
@@ -130,15 +133,61 @@
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GroupBox1.Controls.Add(this.tb_StaffName);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(12, 44);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.ShadowDecoration.BorderRadius = 10;
+            this.guna2GroupBox1.ShadowDecoration.Depth = 10;
+            this.guna2GroupBox1.ShadowDecoration.Enabled = true;
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(916, 350);
             this.guna2GroupBox1.TabIndex = 6;
             this.guna2GroupBox1.Text = "Thông Tin Cá Nhân";
             this.guna2GroupBox1.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            // 
+            // avatar
+            // 
+            this.avatar.BackColor = System.Drawing.Color.White;
+            this.avatar.FillColor = System.Drawing.Color.Silver;
+            this.avatar.ImageRotate = 0F;
+            this.avatar.Location = new System.Drawing.Point(95, 124);
+            this.avatar.Name = "avatar";
+            this.avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.avatar.ShadowDecoration.Parent = this.avatar;
+            this.avatar.Size = new System.Drawing.Size(64, 64);
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatar.TabIndex = 22;
+            this.avatar.TabStop = false;
+            this.avatar.DragDrop += new System.Windows.Forms.DragEventHandler(this.avatar_DragDrop);
+            this.avatar.DragEnter += new System.Windows.Forms.DragEventHandler(this.avatar_DragEnter);
+            // 
+            // btn_addAvatar
+            // 
+            this.btn_addAvatar.Animated = true;
+            this.btn_addAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addAvatar.BorderRadius = 5;
+            this.btn_addAvatar.CheckedState.Parent = this.btn_addAvatar;
+            this.btn_addAvatar.CustomImages.Parent = this.btn_addAvatar;
+            this.btn_addAvatar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_addAvatar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_addAvatar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_addAvatar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_addAvatar.DisabledState.Parent = this.btn_addAvatar;
+            this.btn_addAvatar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(91)))), ((int)(((byte)(208)))));
+            this.btn_addAvatar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addAvatar.ForeColor = System.Drawing.Color.White;
+            this.btn_addAvatar.HoverState.Parent = this.btn_addAvatar;
+            this.btn_addAvatar.Location = new System.Drawing.Point(183, 140);
+            this.btn_addAvatar.Name = "btn_addAvatar";
+            this.btn_addAvatar.ShadowDecoration.BorderRadius = 10;
+            this.btn_addAvatar.ShadowDecoration.Depth = 10;
+            this.btn_addAvatar.ShadowDecoration.Enabled = true;
+            this.btn_addAvatar.ShadowDecoration.Parent = this.btn_addAvatar;
+            this.btn_addAvatar.Size = new System.Drawing.Size(99, 36);
+            this.btn_addAvatar.TabIndex = 21;
+            this.btn_addAvatar.Text = "Chọn";
+            this.btn_addAvatar.Click += new System.EventHandler(this.btn_addAvatar_Click);
             // 
             // guna2HtmlLabel10
             // 
@@ -154,7 +203,9 @@
             // 
             // btn_addStaff
             // 
-            this.btn_addStaff.BorderRadius = 4;
+            this.btn_addStaff.Animated = true;
+            this.btn_addStaff.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addStaff.BorderRadius = 5;
             this.btn_addStaff.CheckedState.Parent = this.btn_addStaff;
             this.btn_addStaff.CustomImages.Parent = this.btn_addStaff;
             this.btn_addStaff.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -168,6 +219,9 @@
             this.btn_addStaff.HoverState.Parent = this.btn_addStaff;
             this.btn_addStaff.Location = new System.Drawing.Point(95, 299);
             this.btn_addStaff.Name = "btn_addStaff";
+            this.btn_addStaff.ShadowDecoration.BorderRadius = 10;
+            this.btn_addStaff.ShadowDecoration.Depth = 10;
+            this.btn_addStaff.ShadowDecoration.Enabled = true;
             this.btn_addStaff.ShadowDecoration.Parent = this.btn_addStaff;
             this.btn_addStaff.Size = new System.Drawing.Size(180, 45);
             this.btn_addStaff.TabIndex = 18;
@@ -177,7 +231,8 @@
             // cb_Position
             // 
             this.cb_Position.BackColor = System.Drawing.Color.Transparent;
-            this.cb_Position.BorderRadius = 4;
+            this.cb_Position.BorderRadius = 5;
+            this.cb_Position.BorderThickness = 0;
             this.cb_Position.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_Position.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Position.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
@@ -193,13 +248,19 @@
             this.cb_Position.ItemsAppearance.Parent = this.cb_Position;
             this.cb_Position.Location = new System.Drawing.Point(619, 182);
             this.cb_Position.Name = "cb_Position";
+            this.cb_Position.ShadowDecoration.BorderRadius = 10;
+            this.cb_Position.ShadowDecoration.Depth = 10;
+            this.cb_Position.ShadowDecoration.Enabled = true;
             this.cb_Position.ShadowDecoration.Parent = this.cb_Position;
             this.cb_Position.Size = new System.Drawing.Size(206, 36);
             this.cb_Position.TabIndex = 17;
             // 
             // tb_repassword
             // 
-            this.tb_repassword.BorderRadius = 4;
+            this.tb_repassword.Animated = true;
+            this.tb_repassword.BackColor = System.Drawing.Color.Transparent;
+            this.tb_repassword.BorderRadius = 5;
+            this.tb_repassword.BorderThickness = 0;
             this.tb_repassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_repassword.DefaultText = "";
             this.tb_repassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -217,6 +278,9 @@
             this.tb_repassword.PasswordChar = '●';
             this.tb_repassword.PlaceholderText = "";
             this.tb_repassword.SelectedText = "";
+            this.tb_repassword.ShadowDecoration.BorderRadius = 10;
+            this.tb_repassword.ShadowDecoration.Depth = 10;
+            this.tb_repassword.ShadowDecoration.Enabled = true;
             this.tb_repassword.ShadowDecoration.Parent = this.tb_repassword;
             this.tb_repassword.Size = new System.Drawing.Size(290, 36);
             this.tb_repassword.TabIndex = 16;
@@ -248,7 +312,10 @@
             // 
             // tb_password
             // 
-            this.tb_password.BorderRadius = 4;
+            this.tb_password.Animated = true;
+            this.tb_password.BackColor = System.Drawing.Color.Transparent;
+            this.tb_password.BorderRadius = 5;
+            this.tb_password.BorderThickness = 0;
             this.tb_password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_password.DefaultText = "";
             this.tb_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -266,6 +333,9 @@
             this.tb_password.PasswordChar = '●';
             this.tb_password.PlaceholderText = "";
             this.tb_password.SelectedText = "";
+            this.tb_password.ShadowDecoration.BorderRadius = 10;
+            this.tb_password.ShadowDecoration.Depth = 10;
+            this.tb_password.ShadowDecoration.Enabled = true;
             this.tb_password.ShadowDecoration.Parent = this.tb_password;
             this.tb_password.Size = new System.Drawing.Size(290, 36);
             this.tb_password.TabIndex = 13;
@@ -285,7 +355,10 @@
             // 
             // tb_LoginName
             // 
-            this.tb_LoginName.BorderRadius = 4;
+            this.tb_LoginName.Animated = true;
+            this.tb_LoginName.BackColor = System.Drawing.Color.Transparent;
+            this.tb_LoginName.BorderRadius = 5;
+            this.tb_LoginName.BorderThickness = 0;
             this.tb_LoginName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_LoginName.DefaultText = "";
             this.tb_LoginName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -303,6 +376,9 @@
             this.tb_LoginName.PasswordChar = '\0';
             this.tb_LoginName.PlaceholderText = "";
             this.tb_LoginName.SelectedText = "";
+            this.tb_LoginName.ShadowDecoration.BorderRadius = 10;
+            this.tb_LoginName.ShadowDecoration.Depth = 10;
+            this.tb_LoginName.ShadowDecoration.Enabled = true;
             this.tb_LoginName.ShadowDecoration.Parent = this.tb_LoginName;
             this.tb_LoginName.Size = new System.Drawing.Size(290, 36);
             this.tb_LoginName.TabIndex = 11;
@@ -377,7 +453,10 @@
             // 
             // tb_StaffAddress
             // 
-            this.tb_StaffAddress.BorderRadius = 4;
+            this.tb_StaffAddress.Animated = true;
+            this.tb_StaffAddress.BackColor = System.Drawing.Color.Transparent;
+            this.tb_StaffAddress.BorderRadius = 5;
+            this.tb_StaffAddress.BorderThickness = 0;
             this.tb_StaffAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_StaffAddress.DefaultText = "";
             this.tb_StaffAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -396,6 +475,9 @@
             this.tb_StaffAddress.PasswordChar = '\0';
             this.tb_StaffAddress.PlaceholderText = "";
             this.tb_StaffAddress.SelectedText = "";
+            this.tb_StaffAddress.ShadowDecoration.BorderRadius = 10;
+            this.tb_StaffAddress.ShadowDecoration.Depth = 10;
+            this.tb_StaffAddress.ShadowDecoration.Enabled = true;
             this.tb_StaffAddress.ShadowDecoration.Parent = this.tb_StaffAddress;
             this.tb_StaffAddress.Size = new System.Drawing.Size(389, 57);
             this.tb_StaffAddress.TabIndex = 5;
@@ -414,7 +496,10 @@
             // 
             // tb_StaffPhone
             // 
-            this.tb_StaffPhone.BorderRadius = 4;
+            this.tb_StaffPhone.Animated = true;
+            this.tb_StaffPhone.BackColor = System.Drawing.Color.Transparent;
+            this.tb_StaffPhone.BorderRadius = 5;
+            this.tb_StaffPhone.BorderThickness = 0;
             this.tb_StaffPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_StaffPhone.DefaultText = "";
             this.tb_StaffPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -433,6 +518,9 @@
             this.tb_StaffPhone.PasswordChar = '\0';
             this.tb_StaffPhone.PlaceholderText = "";
             this.tb_StaffPhone.SelectedText = "";
+            this.tb_StaffPhone.ShadowDecoration.BorderRadius = 10;
+            this.tb_StaffPhone.ShadowDecoration.Depth = 10;
+            this.tb_StaffPhone.ShadowDecoration.Enabled = true;
             this.tb_StaffPhone.ShadowDecoration.Parent = this.tb_StaffPhone;
             this.tb_StaffPhone.Size = new System.Drawing.Size(389, 36);
             this.tb_StaffPhone.TabIndex = 3;
@@ -451,7 +539,10 @@
             // 
             // tb_StaffName
             // 
-            this.tb_StaffName.BorderRadius = 4;
+            this.tb_StaffName.Animated = true;
+            this.tb_StaffName.BackColor = System.Drawing.Color.Transparent;
+            this.tb_StaffName.BorderRadius = 5;
+            this.tb_StaffName.BorderThickness = 0;
             this.tb_StaffName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_StaffName.DefaultText = "";
             this.tb_StaffName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -469,6 +560,9 @@
             this.tb_StaffName.PasswordChar = '\0';
             this.tb_StaffName.PlaceholderText = "";
             this.tb_StaffName.SelectedText = "";
+            this.tb_StaffName.ShadowDecoration.BorderRadius = 10;
+            this.tb_StaffName.ShadowDecoration.Depth = 10;
+            this.tb_StaffName.ShadowDecoration.Enabled = true;
             this.tb_StaffName.ShadowDecoration.Parent = this.tb_StaffName;
             this.tb_StaffName.Size = new System.Drawing.Size(389, 36);
             this.tb_StaffName.TabIndex = 1;
@@ -485,43 +579,10 @@
             this.guna2HtmlLabel2.Text = "Họ và tên";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // avatar
+            // guna2ShadowForm1
             // 
-            this.avatar.BackColor = System.Drawing.Color.White;
-            this.avatar.FillColor = System.Drawing.Color.Silver;
-            this.avatar.ImageRotate = 0F;
-            this.avatar.Location = new System.Drawing.Point(95, 124);
-            this.avatar.Name = "avatar";
-            this.avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.avatar.ShadowDecoration.Parent = this.avatar;
-            this.avatar.Size = new System.Drawing.Size(64, 64);
-            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.avatar.TabIndex = 22;
-            this.avatar.TabStop = false;
-            this.avatar.DragDrop += new System.Windows.Forms.DragEventHandler(this.avatar_DragDrop);
-            this.avatar.DragEnter += new System.Windows.Forms.DragEventHandler(this.avatar_DragEnter);
-            // 
-            // btn_addAvatar
-            // 
-            this.btn_addAvatar.BorderRadius = 4;
-            this.btn_addAvatar.CheckedState.Parent = this.btn_addAvatar;
-            this.btn_addAvatar.CustomImages.Parent = this.btn_addAvatar;
-            this.btn_addAvatar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_addAvatar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_addAvatar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_addAvatar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_addAvatar.DisabledState.Parent = this.btn_addAvatar;
-            this.btn_addAvatar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(91)))), ((int)(((byte)(208)))));
-            this.btn_addAvatar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_addAvatar.ForeColor = System.Drawing.Color.White;
-            this.btn_addAvatar.HoverState.Parent = this.btn_addAvatar;
-            this.btn_addAvatar.Location = new System.Drawing.Point(183, 140);
-            this.btn_addAvatar.Name = "btn_addAvatar";
-            this.btn_addAvatar.ShadowDecoration.Parent = this.btn_addAvatar;
-            this.btn_addAvatar.Size = new System.Drawing.Size(99, 36);
-            this.btn_addAvatar.TabIndex = 21;
-            this.btn_addAvatar.Text = "Chọn";
-            this.btn_addAvatar.Click += new System.EventHandler(this.btn_addAvatar_Click);
+            this.guna2ShadowForm1.BorderRadius = 10;
+            this.guna2ShadowForm1.TargetForm = this;
             // 
             // addNewStaff
             // 
@@ -575,5 +636,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2CirclePictureBox avatar;
         private Guna.UI2.WinForms.Guna2Button btn_addAvatar;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

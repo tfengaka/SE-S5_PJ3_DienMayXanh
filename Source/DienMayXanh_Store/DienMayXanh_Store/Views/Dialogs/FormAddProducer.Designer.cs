@@ -53,12 +53,12 @@ namespace DienMayXanh_Store.Views.Dialogs
             // 
             // Elipse
             // 
-            this.Elipse.BorderRadius = 15;
+            this.Elipse.BorderRadius = 5;
             this.Elipse.TargetControl = this;
             // 
             // ShadowForm
             // 
-            this.ShadowForm.ShadowColor = System.Drawing.Color.Gray;
+            this.ShadowForm.BorderRadius = 10;
             this.ShadowForm.TargetForm = this;
             // 
             // lblProducer
@@ -93,8 +93,8 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerName.Animated = true;
             this.txtProducerName.BackColor = System.Drawing.Color.Transparent;
             this.txtProducerName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.txtProducerName.BorderRadius = 8;
-            this.txtProducerName.BorderThickness = 2;
+            this.txtProducerName.BorderRadius = 5;
+            this.txtProducerName.BorderThickness = 0;
             this.txtProducerName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProducerName.DefaultText = "";
             this.txtProducerName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -116,7 +116,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerName.PasswordChar = '\0';
             this.txtProducerName.PlaceholderText = "Tên nhà cung cấp";
             this.txtProducerName.SelectedText = "";
-            this.txtProducerName.ShadowDecoration.BorderRadius = 15;
+            this.txtProducerName.ShadowDecoration.BorderRadius = 10;
             this.txtProducerName.ShadowDecoration.Depth = 10;
             this.txtProducerName.ShadowDecoration.Enabled = true;
             this.txtProducerName.ShadowDecoration.Parent = this.txtProducerName;
@@ -129,8 +129,8 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerAddress.Animated = true;
             this.txtProducerAddress.BackColor = System.Drawing.Color.Transparent;
             this.txtProducerAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.txtProducerAddress.BorderRadius = 8;
-            this.txtProducerAddress.BorderThickness = 2;
+            this.txtProducerAddress.BorderRadius = 5;
+            this.txtProducerAddress.BorderThickness = 0;
             this.txtProducerAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtProducerAddress.DefaultText = "";
             this.txtProducerAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -145,14 +145,14 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.txtProducerAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(225)))));
             this.txtProducerAddress.HoverState.Parent = this.txtProducerAddress;
             this.txtProducerAddress.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtProducerAddress.Location = new System.Drawing.Point(380, 46);
+            this.txtProducerAddress.Location = new System.Drawing.Point(367, 46);
             this.txtProducerAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProducerAddress.MaxLength = 3000;
             this.txtProducerAddress.Name = "txtProducerAddress";
             this.txtProducerAddress.PasswordChar = '\0';
             this.txtProducerAddress.PlaceholderText = "Địa chỉ nhà cung cấp";
             this.txtProducerAddress.SelectedText = "";
-            this.txtProducerAddress.ShadowDecoration.BorderRadius = 15;
+            this.txtProducerAddress.ShadowDecoration.BorderRadius = 10;
             this.txtProducerAddress.ShadowDecoration.Depth = 10;
             this.txtProducerAddress.ShadowDecoration.Enabled = true;
             this.txtProducerAddress.ShadowDecoration.Parent = this.txtProducerAddress;
@@ -276,8 +276,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             // 
             this.btnCancel.Animated = true;
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BorderRadius = 10;
-            this.btnCancel.BorderThickness = 1;
+            this.btnCancel.BorderRadius = 5;
             this.btnCancel.CheckedState.Parent = this.btnCancel;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.CustomImages.Parent = this.btnCancel;
@@ -292,7 +291,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnCancel.HoverState.Parent = this.btnCancel;
             this.btnCancel.Location = new System.Drawing.Point(542, 98);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.ShadowDecoration.BorderRadius = 15;
+            this.btnCancel.ShadowDecoration.BorderRadius = 10;
             this.btnCancel.ShadowDecoration.Depth = 10;
             this.btnCancel.ShadowDecoration.Enabled = true;
             this.btnCancel.ShadowDecoration.Parent = this.btnCancel;
@@ -306,8 +305,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             // 
             this.btnAddProducer.Animated = true;
             this.btnAddProducer.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddProducer.BorderRadius = 10;
-            this.btnAddProducer.BorderThickness = 1;
+            this.btnAddProducer.BorderRadius = 5;
             this.btnAddProducer.CheckedState.Parent = this.btnAddProducer;
             this.btnAddProducer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddProducer.CustomImages.Parent = this.btnAddProducer;
@@ -322,7 +320,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnAddProducer.HoverState.Parent = this.btnAddProducer;
             this.btnAddProducer.Location = new System.Drawing.Point(675, 98);
             this.btnAddProducer.Name = "btnAddProducer";
-            this.btnAddProducer.ShadowDecoration.BorderRadius = 15;
+            this.btnAddProducer.ShadowDecoration.BorderRadius = 10;
             this.btnAddProducer.ShadowDecoration.Depth = 10;
             this.btnAddProducer.ShadowDecoration.Enabled = true;
             this.btnAddProducer.ShadowDecoration.Parent = this.btnAddProducer;
@@ -335,8 +333,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             // 
             this.btnEditProducer.Animated = true;
             this.btnEditProducer.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditProducer.BorderRadius = 10;
-            this.btnEditProducer.BorderThickness = 1;
+            this.btnEditProducer.BorderRadius = 5;
             this.btnEditProducer.CheckedState.Parent = this.btnEditProducer;
             this.btnEditProducer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditProducer.CustomImages.Parent = this.btnEditProducer;
@@ -351,7 +348,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btnEditProducer.HoverState.Parent = this.btnEditProducer;
             this.btnEditProducer.Location = new System.Drawing.Point(675, 98);
             this.btnEditProducer.Name = "btnEditProducer";
-            this.btnEditProducer.ShadowDecoration.BorderRadius = 15;
+            this.btnEditProducer.ShadowDecoration.BorderRadius = 10;
             this.btnEditProducer.ShadowDecoration.Depth = 10;
             this.btnEditProducer.ShadowDecoration.Enabled = true;
             this.btnEditProducer.ShadowDecoration.Parent = this.btnEditProducer;

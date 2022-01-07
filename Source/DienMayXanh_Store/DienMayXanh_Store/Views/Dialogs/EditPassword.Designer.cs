@@ -42,11 +42,12 @@
             this.tb_repressPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_confirm = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.SuspendLayout();
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 4;
+            this.guna2Elipse1.BorderRadius = 5;
             this.guna2Elipse1.TargetControl = this;
             // 
             // btn_exit
@@ -103,7 +104,10 @@
             // 
             // tb_currPassword
             // 
-            this.tb_currPassword.BorderRadius = 4;
+            this.tb_currPassword.Animated = true;
+            this.tb_currPassword.BackColor = System.Drawing.Color.Transparent;
+            this.tb_currPassword.BorderRadius = 5;
+            this.tb_currPassword.BorderThickness = 0;
             this.tb_currPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_currPassword.DefaultText = "";
             this.tb_currPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -121,6 +125,9 @@
             this.tb_currPassword.PasswordChar = '●';
             this.tb_currPassword.PlaceholderText = "";
             this.tb_currPassword.SelectedText = "";
+            this.tb_currPassword.ShadowDecoration.BorderRadius = 10;
+            this.tb_currPassword.ShadowDecoration.Depth = 10;
+            this.tb_currPassword.ShadowDecoration.Enabled = true;
             this.tb_currPassword.ShadowDecoration.Parent = this.tb_currPassword;
             this.tb_currPassword.Size = new System.Drawing.Size(340, 41);
             this.tb_currPassword.TabIndex = 7;
@@ -128,7 +135,10 @@
             // 
             // tb_newPassword
             // 
-            this.tb_newPassword.BorderRadius = 4;
+            this.tb_newPassword.Animated = true;
+            this.tb_newPassword.BackColor = System.Drawing.Color.Transparent;
+            this.tb_newPassword.BorderRadius = 5;
+            this.tb_newPassword.BorderThickness = 0;
             this.tb_newPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_newPassword.DefaultText = "";
             this.tb_newPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -146,6 +156,9 @@
             this.tb_newPassword.PasswordChar = '●';
             this.tb_newPassword.PlaceholderText = "";
             this.tb_newPassword.SelectedText = "";
+            this.tb_newPassword.ShadowDecoration.BorderRadius = 10;
+            this.tb_newPassword.ShadowDecoration.Depth = 10;
+            this.tb_newPassword.ShadowDecoration.Enabled = true;
             this.tb_newPassword.ShadowDecoration.Parent = this.tb_newPassword;
             this.tb_newPassword.Size = new System.Drawing.Size(340, 41);
             this.tb_newPassword.TabIndex = 9;
@@ -163,7 +176,10 @@
             // 
             // tb_StaffID
             // 
-            this.tb_StaffID.BorderRadius = 4;
+            this.tb_StaffID.Animated = true;
+            this.tb_StaffID.BackColor = System.Drawing.Color.Transparent;
+            this.tb_StaffID.BorderRadius = 5;
+            this.tb_StaffID.BorderThickness = 0;
             this.tb_StaffID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_StaffID.DefaultText = "";
             this.tb_StaffID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -182,6 +198,9 @@
             this.tb_StaffID.PasswordChar = '\0';
             this.tb_StaffID.PlaceholderText = "";
             this.tb_StaffID.SelectedText = "";
+            this.tb_StaffID.ShadowDecoration.BorderRadius = 10;
+            this.tb_StaffID.ShadowDecoration.Depth = 10;
+            this.tb_StaffID.ShadowDecoration.Enabled = true;
             this.tb_StaffID.ShadowDecoration.Parent = this.tb_StaffID;
             this.tb_StaffID.Size = new System.Drawing.Size(340, 41);
             this.tb_StaffID.TabIndex = 11;
@@ -198,7 +217,10 @@
             // 
             // tb_repressPassword
             // 
-            this.tb_repressPassword.BorderRadius = 4;
+            this.tb_repressPassword.Animated = true;
+            this.tb_repressPassword.BackColor = System.Drawing.Color.Transparent;
+            this.tb_repressPassword.BorderRadius = 5;
+            this.tb_repressPassword.BorderThickness = 0;
             this.tb_repressPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_repressPassword.DefaultText = "";
             this.tb_repressPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -216,6 +238,9 @@
             this.tb_repressPassword.PasswordChar = '●';
             this.tb_repressPassword.PlaceholderText = "";
             this.tb_repressPassword.SelectedText = "";
+            this.tb_repressPassword.ShadowDecoration.BorderRadius = 10;
+            this.tb_repressPassword.ShadowDecoration.Depth = 10;
+            this.tb_repressPassword.ShadowDecoration.Enabled = true;
             this.tb_repressPassword.ShadowDecoration.Parent = this.tb_repressPassword;
             this.tb_repressPassword.Size = new System.Drawing.Size(340, 41);
             this.tb_repressPassword.TabIndex = 13;
@@ -233,6 +258,8 @@
             // 
             // btn_confirm
             // 
+            this.btn_confirm.Animated = true;
+            this.btn_confirm.BackColor = System.Drawing.Color.Transparent;
             this.btn_confirm.BorderRadius = 5;
             this.btn_confirm.CheckedState.Parent = this.btn_confirm;
             this.btn_confirm.CustomImages.Parent = this.btn_confirm;
@@ -247,11 +274,19 @@
             this.btn_confirm.HoverState.Parent = this.btn_confirm;
             this.btn_confirm.Location = new System.Drawing.Point(120, 368);
             this.btn_confirm.Name = "btn_confirm";
+            this.btn_confirm.ShadowDecoration.BorderRadius = 10;
+            this.btn_confirm.ShadowDecoration.Depth = 10;
+            this.btn_confirm.ShadowDecoration.Enabled = true;
             this.btn_confirm.ShadowDecoration.Parent = this.btn_confirm;
             this.btn_confirm.Size = new System.Drawing.Size(340, 60);
             this.btn_confirm.TabIndex = 14;
             this.btn_confirm.Text = "Đổi Mật Khẩu";
             this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 10;
+            this.guna2ShadowForm1.TargetForm = this;
             // 
             // EditPassword
             // 
@@ -297,5 +332,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox tb_currPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

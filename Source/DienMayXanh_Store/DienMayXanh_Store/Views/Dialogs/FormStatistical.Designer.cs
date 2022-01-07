@@ -48,22 +48,23 @@ namespace DienMayXanh_Store.Views.Dialogs
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
             this.lblName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblTotalRevenue = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lblTotalBill = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.chart = new Guna.Charts.WinForms.GunaChart();
             this.cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtpMonth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btn_exit = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.lblTotalRevenue = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTotalBill = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
-            this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
@@ -87,41 +88,25 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(400, 49);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.ShadowDecoration.BorderRadius = 5;
+            this.guna2CustomGradientPanel1.ShadowDecoration.BorderRadius = 10;
             this.guna2CustomGradientPanel1.ShadowDecoration.Depth = 10;
             this.guna2CustomGradientPanel1.ShadowDecoration.Enabled = true;
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(234, 80);
             this.guna2CustomGradientPanel1.TabIndex = 3;
             // 
-            // guna2CustomGradientPanel2
+            // lblTotalRevenue
             // 
-            this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.BorderRadius = 5;
-            this.guna2CustomGradientPanel2.Controls.Add(this.lblTotalBill);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2PictureBox3);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2HtmlLabel6);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(640, 49);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.ShadowDecoration.BorderRadius = 5;
-            this.guna2CustomGradientPanel2.ShadowDecoration.Depth = 10;
-            this.guna2CustomGradientPanel2.ShadowDecoration.Enabled = true;
-            this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(234, 80);
-            this.guna2CustomGradientPanel2.TabIndex = 4;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.White;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(3, 15);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(52, 53);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox2.TabIndex = 5;
-            this.guna2PictureBox2.TabStop = false;
+            this.lblTotalRevenue.AutoSize = false;
+            this.lblTotalRevenue.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
+            this.lblTotalRevenue.Location = new System.Drawing.Point(54, 41);
+            this.lblTotalRevenue.Name = "lblTotalRevenue";
+            this.lblTotalRevenue.Size = new System.Drawing.Size(177, 27);
+            this.lblTotalRevenue.TabIndex = 6;
+            this.lblTotalRevenue.Text = "Tổng Doanh Thu";
+            this.lblTotalRevenue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel4
             // 
@@ -136,18 +121,47 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.guna2HtmlLabel4.Text = "Tổng Doanh Thu";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2HtmlLabel6
+            // guna2PictureBox2
             // 
-            this.guna2HtmlLabel6.AutoSize = false;
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(57, 3);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(177, 27);
-            this.guna2HtmlLabel6.TabIndex = 5;
-            this.guna2HtmlLabel6.Text = "Tổng Hoá Đơn";
-            this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.White;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(3, 15);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(52, 53);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox2.TabIndex = 5;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel2.BorderRadius = 5;
+            this.guna2CustomGradientPanel2.Controls.Add(this.lblTotalBill);
+            this.guna2CustomGradientPanel2.Controls.Add(this.guna2PictureBox3);
+            this.guna2CustomGradientPanel2.Controls.Add(this.guna2HtmlLabel6);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(640, 49);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.ShadowDecoration.BorderRadius = 10;
+            this.guna2CustomGradientPanel2.ShadowDecoration.Depth = 10;
+            this.guna2CustomGradientPanel2.ShadowDecoration.Enabled = true;
+            this.guna2CustomGradientPanel2.ShadowDecoration.Parent = this.guna2CustomGradientPanel2;
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(234, 80);
+            this.guna2CustomGradientPanel2.TabIndex = 4;
+            // 
+            // lblTotalBill
+            // 
+            this.lblTotalBill.AutoSize = false;
+            this.lblTotalBill.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalBill.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
+            this.lblTotalBill.Location = new System.Drawing.Point(57, 41);
+            this.lblTotalBill.Name = "lblTotalBill";
+            this.lblTotalBill.Size = new System.Drawing.Size(177, 27);
+            this.lblTotalBill.TabIndex = 7;
+            this.lblTotalBill.Text = "Tổng Hóa đơn";
+            this.lblTotalBill.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2PictureBox3
             // 
@@ -161,6 +175,19 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.guna2PictureBox3.TabIndex = 5;
             this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.AutoSize = false;
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(57, 3);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(177, 27);
+            this.guna2HtmlLabel6.TabIndex = 5;
+            this.guna2HtmlLabel6.Text = "Tổng Hoá Đơn";
+            this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chart
             // 
@@ -217,7 +244,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.cmbFilter.ItemsAppearance.Parent = this.cmbFilter;
             this.cmbFilter.Location = new System.Drawing.Point(12, 93);
             this.cmbFilter.Name = "cmbFilter";
-            this.cmbFilter.ShadowDecoration.BorderRadius = 5;
+            this.cmbFilter.ShadowDecoration.BorderRadius = 10;
             this.cmbFilter.ShadowDecoration.Depth = 10;
             this.cmbFilter.ShadowDecoration.Enabled = true;
             this.cmbFilter.ShadowDecoration.Parent = this.cmbFilter;
@@ -242,7 +269,7 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.dtpMonth.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
             this.dtpMonth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpMonth.Name = "dtpMonth";
-            this.dtpMonth.ShadowDecoration.BorderRadius = 5;
+            this.dtpMonth.ShadowDecoration.BorderRadius = 10;
             this.dtpMonth.ShadowDecoration.Depth = 10;
             this.dtpMonth.ShadowDecoration.Enabled = true;
             this.dtpMonth.ShadowDecoration.Parent = this.dtpMonth;
@@ -263,7 +290,8 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.avatar.ImageRotate = 0F;
             this.avatar.Location = new System.Drawing.Point(12, 15);
             this.avatar.Name = "avatar";
-            this.avatar.ShadowDecoration.BorderRadius = 10;
+            this.avatar.ShadowDecoration.BorderRadius = 100;
+            this.avatar.ShadowDecoration.Depth = 100;
             this.avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.avatar.ShadowDecoration.Parent = this.avatar;
             this.avatar.Size = new System.Drawing.Size(64, 64);
@@ -286,31 +314,10 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.btn_exit.Size = new System.Drawing.Size(57, 38);
             this.btn_exit.TabIndex = 17;
             // 
-            // lblTotalRevenue
+            // guna2ShadowForm1
             // 
-            this.lblTotalRevenue.AutoSize = false;
-            this.lblTotalRevenue.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.lblTotalRevenue.Location = new System.Drawing.Point(54, 41);
-            this.lblTotalRevenue.Name = "lblTotalRevenue";
-            this.lblTotalRevenue.Size = new System.Drawing.Size(177, 27);
-            this.lblTotalRevenue.TabIndex = 6;
-            this.lblTotalRevenue.Text = "Tổng Doanh Thu";
-            this.lblTotalRevenue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTotalBill
-            // 
-            this.lblTotalBill.AutoSize = false;
-            this.lblTotalBill.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalBill.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(146)))), ((int)(((byte)(146)))));
-            this.lblTotalBill.Location = new System.Drawing.Point(57, 41);
-            this.lblTotalBill.Name = "lblTotalBill";
-            this.lblTotalBill.Size = new System.Drawing.Size(177, 27);
-            this.lblTotalBill.TabIndex = 7;
-            this.lblTotalBill.Text = "Tổng Hóa đơn";
-            this.lblTotalBill.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2ShadowForm1.BorderRadius = 10;
+            this.guna2ShadowForm1.TargetForm = this;
             // 
             // FormStatistical
             // 
@@ -332,9 +339,9 @@ namespace DienMayXanh_Store.Views.Dialogs
             this.Load += new System.EventHandler(this.FormStatistical_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);
@@ -358,5 +365,6 @@ namespace DienMayXanh_Store.Views.Dialogs
         private Guna.UI2.WinForms.Guna2ControlBox btn_exit;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalRevenue;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalBill;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }
