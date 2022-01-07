@@ -198,6 +198,7 @@ namespace DienMayXanh_Store.Views
             {
                 newProduct.ProductID = "SP" + date.ToString("yyyyMMddHHmmss");
                 newProduct.Name = txtProductName.Text;
+                newProduct.isNewProduct = true;
                 string fileExt = System.IO.Path.GetExtension(selectedFile);
                 string resultFileCopy = newImg + newProduct.ProductID + fileExt;
                 System.IO.File.Copy(selectedFile, resultFileCopy);
@@ -510,9 +511,12 @@ namespace DienMayXanh_Store.Views
         {
             currBtn = (Guna2CircleButton)sender;
             string id = currBtn.Name.Split('.')[1];
-            string fileExt = System.IO.Path.GetExtension(selectedFile);
-            string oldFile = newImg + id + fileExt;
-            System.IO.File.Delete(oldFile);
+            if(listProduct.Find(x => x.ProductID.Equals(id)).isNewProduct)
+            {
+                string fileExt = System.IO.Path.GetExtension(selectedFile);
+                string oldFile = newImg + id + fileExt;
+                System.IO.File.Delete(oldFile);
+            }
             ImportSlip item = listProduct.FirstOrDefault(x => x.ProductID.Equals(id));
             listProduct.Remove(item);
             currIndex = 0;
@@ -526,6 +530,7 @@ namespace DienMayXanh_Store.Views
 
     public class ImportSlip
     {
+        public bool isNewProduct { get; set; } = false;
         public string ProductID { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }

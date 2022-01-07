@@ -56,6 +56,7 @@ namespace DienMayXanh_Store.Views
             this.lb_title = new System.Windows.Forms.Label();
             this.CtlB_Minimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.CtlB_Exit = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelMenu.SuspendLayout();
             this.pnlFunc.SuspendLayout();
             this.pnlStaff.SuspendLayout();
@@ -525,6 +526,12 @@ namespace DienMayXanh_Store.Views
             this.CtlB_Exit.TabIndex = 1;
             this.CtlB_Exit.Click += new System.EventHandler(this.CtlB_Exit_Click);
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.guna2Shapes1;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,5 +589,6 @@ namespace DienMayXanh_Store.Views
         private Guna.UI2.WinForms.Guna2Panel panelTitle;
         private Guna.UI2.WinForms.Guna2PictureBox ptbTitle;
         private System.Windows.Forms.Label lb_title;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
