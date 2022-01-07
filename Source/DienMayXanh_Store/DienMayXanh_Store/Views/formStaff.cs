@@ -128,14 +128,14 @@ namespace DienMayXanh_Store.Views
             {
                 if(staffID == FormLogin.instance.info.StaffID)
                 {
-                    MessageBox.Show("Mày Bị Điên Hay Sao Mà Đi Đuổi Việc Chính Mình?", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không Thể Đuổi Việc Bản Thân =)))", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 try
                 {
                     var staff = context.STAFFS.Find(staffID);
                     var account = context.ACCOUNTS.Find(staffID);
-                    if (MessageBox.Show("Bạn Có Chắc Là Muốn Đuổi Việc Thằng: " + staff.Name + " Không?", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn Có Chắc Là Muốn Đuổi Việc: " + staff.Name + " Không?", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         context.STAFFS.Remove(staff);
                         context.ACCOUNTS.Remove(account);

@@ -940,3 +940,4 @@ D:\Code\Cshaps\Project\STS5-PJ3\OnGit\STS5-PJ3-DienMayXanh\Source\DienMayXanh_St
 D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.Dialogs.FormStatistical.resources
 D:\Code\Cshaps\Project\STS5-PJ3\DevLocal\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.Dialogs.PreLoginOverlay.resources
 D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.Dialogs.PreLoginOverlay.resources
+D:\Project_C#\Project_E-Store_Manager\Source\DienMayXanh_Store\DienMayXanh_Store\obj\Debug\DienMayXanh_Store.Views.Dialogs.FormEditProduct.resources

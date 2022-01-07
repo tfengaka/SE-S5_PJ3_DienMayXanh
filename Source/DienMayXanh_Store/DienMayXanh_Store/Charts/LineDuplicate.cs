@@ -34,7 +34,7 @@ namespace DienMayXanh_Store.Charts
             datasetProfit.PointRadius = 3;
             datasetProfit.FillColor = Color.FromArgb(51, 200, 99);
             datasetProfit.BorderColor = Color.FromArgb(51, 200, 99);
-            datasetProfit.Label = "Doanh số";
+            datasetProfit.Label = "Lợi nhuận";
             datasetProfit.PointStyle = PointStyle.Circle;
             for (int i = 0; i < date.Count; i++)
                 datasetProfit.DataPoints.Add(date[i], (double)profit[i]);

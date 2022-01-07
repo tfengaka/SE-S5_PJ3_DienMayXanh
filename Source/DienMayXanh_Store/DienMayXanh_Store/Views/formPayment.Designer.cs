@@ -111,6 +111,7 @@
             // tb_Total
             // 
             this.tb_Total.Animated = true;
+            this.tb_Total.BackColor = System.Drawing.Color.Transparent;
             this.tb_Total.BorderRadius = 5;
             this.tb_Total.BorderThickness = 0;
             this.tb_Total.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -384,6 +385,7 @@
             // btn_refresh
             // 
             this.btn_refresh.Animated = true;
+            this.btn_refresh.BackColor = System.Drawing.Color.Transparent;
             this.btn_refresh.BorderRadius = 5;
             this.btn_refresh.CheckedState.Parent = this.btn_refresh;
             this.btn_refresh.CustomImages.Parent = this.btn_refresh;
@@ -424,6 +426,7 @@
             // btn_ConfirmInfo
             // 
             this.btn_ConfirmInfo.Animated = true;
+            this.btn_ConfirmInfo.BackColor = System.Drawing.Color.Transparent;
             this.btn_ConfirmInfo.BorderRadius = 5;
             this.btn_ConfirmInfo.CheckedState.Parent = this.btn_ConfirmInfo;
             this.btn_ConfirmInfo.CustomImages.Parent = this.btn_ConfirmInfo;
@@ -450,6 +453,7 @@
             // tb_Phone
             // 
             this.tb_Phone.Animated = true;
+            this.tb_Phone.BackColor = System.Drawing.Color.Transparent;
             this.tb_Phone.BorderRadius = 5;
             this.tb_Phone.BorderThickness = 0;
             this.tb_Phone.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -465,6 +469,7 @@
             this.tb_Phone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_Phone.HoverState.Parent = this.tb_Phone;
             this.tb_Phone.Location = new System.Drawing.Point(95, 123);
+            this.tb_Phone.MaxLength = 10;
             this.tb_Phone.Name = "tb_Phone";
             this.tb_Phone.PasswordChar = '\0';
             this.tb_Phone.PlaceholderText = "";
@@ -546,6 +551,7 @@
             // tb_address
             // 
             this.tb_address.Animated = true;
+            this.tb_address.BackColor = System.Drawing.Color.Transparent;
             this.tb_address.BorderRadius = 5;
             this.tb_address.BorderThickness = 0;
             this.tb_address.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -575,6 +581,7 @@
             // tb_Name
             // 
             this.tb_Name.Animated = true;
+            this.tb_Name.BackColor = System.Drawing.Color.Transparent;
             this.tb_Name.BorderRadius = 5;
             this.tb_Name.BorderThickness = 0;
             this.tb_Name.Cursor = System.Windows.Forms.Cursors.IBeam;

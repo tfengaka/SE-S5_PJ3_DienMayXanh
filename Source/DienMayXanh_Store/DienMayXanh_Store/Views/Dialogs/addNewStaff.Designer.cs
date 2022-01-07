@@ -243,8 +243,7 @@
             this.cb_Position.HoverState.Parent = this.cb_Position;
             this.cb_Position.ItemHeight = 30;
             this.cb_Position.Items.AddRange(new object[] {
-            "Nhân Viên",
-            "Quản Lý"});
+            "Nhân Viên"});
             this.cb_Position.ItemsAppearance.Parent = this.cb_Position;
             this.cb_Position.Location = new System.Drawing.Point(619, 182);
             this.cb_Position.Name = "cb_Position";

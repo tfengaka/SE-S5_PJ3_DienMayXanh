@@ -72,6 +72,8 @@ namespace DienMayXanh_Store.Views
         }
         private void CustomerDetail_Load(object sender, EventArgs e)
         {
+            FromDate.MaxDate = DateTime.Now;
+            ToDate.MaxDate = DateTime.Now;
             dgv_ListInvoice.Columns["CreateAt"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
             FromDate.CustomFormat = "dd/MM/yyyy";
             ToDate.CustomFormat = "dd/MM/yyyy";

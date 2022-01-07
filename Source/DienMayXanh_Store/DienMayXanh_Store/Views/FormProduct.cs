@@ -1,4 +1,5 @@
 ﻿using DienMayXanh_Store.Models;
+using DienMayXanh_Store.Views.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,10 +20,13 @@ namespace DienMayXanh_Store.Views
         public FormProduct()
         {
             InitializeComponent();
+            if (FormLogin.instance.info.ACCOUNT.Permission.Equals("Manager"))
+                dgvProduct.Columns["btnEdit"].Visible = true;
         }
 
         private void FormProduct_Load(object sender, EventArgs e)
         {
+            dgvProduct.AutoGenerateColumns = false;
             toolTip.SetToolTip(btnAddCategory, "Thêm sản phẩm");
             toolTip.SetToolTip(btnAddCategory, "Thêm nhà cung cấp");
 
@@ -75,7 +79,9 @@ namespace DienMayXanh_Store.Views
                     item.Name,
                     item.Price,
                     CategoryName = item.CATEGORY.Name,
-                    BrandName = item.BRAND.Name
+                    BrandName = item.BRAND.Name,
+                    item.PRODUCTAVAILABLES
+                    .FirstOrDefault(x => x.ProductID.Equals(item.ProductID)).Quantity,
                 }).ToList();
         }
 
@@ -102,5 +108,19 @@ namespace DienMayXanh_Store.Views
         {
             new Dialogs.FormAddProducer().ShowDialog();
         }
+
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                PRODUCT param = context.PRODUCTS.Find(senderGrid.Rows[e.RowIndex].Cells["ProductID"].Value);
+                new FormEditProduct(param).ShowDialog();       
+            }    
+        }
+
+
     }
 }

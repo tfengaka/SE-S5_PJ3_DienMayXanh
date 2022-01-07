@@ -437,6 +437,7 @@
             this.tb_StaffPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_StaffPhone.HoverState.Parent = this.tb_StaffPhone;
             this.tb_StaffPhone.Location = new System.Drawing.Point(472, 39);
+            this.tb_StaffPhone.MaxLength = 10;
             this.tb_StaffPhone.Name = "tb_StaffPhone";
             this.tb_StaffPhone.PasswordChar = '\0';
             this.tb_StaffPhone.PlaceholderText = "";

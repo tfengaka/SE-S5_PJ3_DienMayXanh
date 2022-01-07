@@ -132,6 +132,7 @@ namespace DienMayXanh_Store.Views
             this.cmbFilterProducer.ShadowDecoration.Parent = this.cmbFilterProducer;
             this.cmbFilterProducer.Size = new System.Drawing.Size(224, 36);
             this.cmbFilterProducer.TabIndex = 6;
+            this.cmbFilterProducer.SelectionChangeCommitted += new System.EventHandler(this.cmbFilterProducer_SelectionChangeCommitted);
             // 
             // txtProductName
             // 

@@ -69,17 +69,47 @@ namespace DienMayXanh_Store.Views
 
         }
 
+        private void loadDataCmbFilter()
+        {
+            string cate = cmbFilterCategory.SelectedValue.ToString();
+            string brand = cmbFilterProducer.SelectedValue.ToString();
+            cmbProduct.DataSource = context.PRODUCTS
+               .AsEnumerable()
+               .Where(x => 
+               x.CategoryID.Equals(cate) &&
+               x.BrandID.Equals(brand))
+               .ToList();
+                setAutoSelectCmbProduct(cmbProduct.SelectedValue.ToString());
+        }
+
+
+        private void setDataProducer()
+        {
+            string cate = cmbFilterCategory.SelectedValue.ToString();
+            cmbFilterProducer.DataSource = context.PRODUCTS
+            .Where(x => x.CategoryID.Equals(cate))
+            .ToLookup(x => x.BrandID, x => x.BRAND.Name)
+            .Select(x => new
+            {
+                BrandID = x.Key,
+                Name = x.ToList()[0],
+            })
+            .ToList();
+        }
+
         private void cmbFilterCategory_SelectionChangeCommitted(object sender, EventArgs e)
         {
             if (toogleSwitch.Checked)
             {
-                cmbProduct.DataSource = context.PRODUCTS
-               .AsEnumerable()
-               .Where(x => x.CategoryID.Equals(cmbFilterCategory.SelectedValue.ToString()))
-               .ToList();
-                setAutoSelectCmbProduct(cmbProduct.SelectedValue.ToString());
-            }
-              
+                setDataProducer();
+                loadDataCmbFilter();
+            } 
+        }
+
+        private void cmbFilterProducer_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (toogleSwitch.Checked)
+                loadDataCmbFilter();
         }
 
 
@@ -443,6 +473,7 @@ namespace DienMayXanh_Store.Views
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
+
 
         private void btnEditProduct_Click(object sender, EventArgs e)
         {

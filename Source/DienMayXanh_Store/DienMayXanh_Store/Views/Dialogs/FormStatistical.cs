@@ -29,6 +29,7 @@ namespace DienMayXanh_Store.Views.Dialogs
         {
             STAFF info = context.STAFFS.Find(staffId);
             var total = context.RECIEPTS.Where(x => x.StaffID.Equals(this.staffId));
+            this.dtpMonth.MaxDate = DateTime.Now;
             this.lblTotalRevenue.Text = String.Format("{0:n0}", total.Sum(x => (decimal?)x.Total).GetValueOrDefault()) + " VNĐ";
             this.lblTotalBill.Text = String.Format("{0:n0}", total.Count());
             this.lblName.Text = info.Name;
