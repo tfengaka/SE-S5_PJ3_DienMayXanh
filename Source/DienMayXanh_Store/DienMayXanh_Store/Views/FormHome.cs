@@ -28,6 +28,7 @@ namespace DienMayXanh_Store.Views
             chart.ApplyConfig(ConfigChart.Config(), System.Drawing.Color.FromArgb(238, 238, 242));
             loadData();
             initLoad();
+
         }
 
         private decimal getTotalIeslip()
@@ -64,7 +65,9 @@ namespace DienMayXanh_Store.Views
             decimal totalSales = 0;
             orders.ForEach(o => totalProfit += o.TotalPrice);
             carts.ForEach(item => totalSales += item.Quantity);
-            decimal totalCosts = getTotalIeslip() - totalProfit;
+            decimal totalCosts = context.IESLIPS
+                .Where(x => x.IESlipID.StartsWith("I"))
+                .Sum(x => x.TotalPrice);
 
             lb_totalSales.Text = totalSales + " Sản Phẩm";
             lb_totalProfit.Text = String.Format("{0:n0}", totalProfit) + " VNĐ";
